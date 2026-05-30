@@ -26,3 +26,5 @@ logs
 # Never push
 context/
 .claude/
+
+.vercel
