@@ -1,0 +1,19 @@
+{
+  "title": "Chest X-Ray Multi-Task Research",
+  "subtitle": "Telplastina: foundational multi-task CXR platform for clinical AI-assisted diagnosis",
+  "milestones": [
+    {
+      "year": "2026",
+      "role": "Researcher · Classification and Segmentation Module Lead",
+      "highlights": [
+        "Recruited and onboarded team members to join the multi-task CXR research project",
+        "Pathology classification module: fine-tuned TorchXRayVision DenseNet121 on VinBig (14 labels) and NIH ChestX-ray14 (14 labels); input center-cropped to 224x224 in XRV-native intensity range, probabilities via sigmoid",
+        "Also trained DeiT-based multi-label classification models on standard CXR benchmarks for comparison",
+        "Fine-tuned TorchXRayVision pretrained weights for domain adaptation to the project's target dataset",
+        "Organ segmentation module: TorchXRayVision PSPNet segmenting 3 structures — right lung (idx 5), left lung (idx 4), and heart (idx 8); square-padded to native scale, thresholded at 0.5, outputs binary masks, bounding boxes, and colored overlay PNG with DICOM support via pydicom",
+        "Produced AI inference modules for the FastAPI backend, consumed by both web (React + Next.js) and desktop (Tauri v2) frontends",
+        "System features an interactive ReportCard with doctor-editable findings and impressions, probability bars, and a canvas-based Grounding Editor for organ annotation using an offscreen mask pattern"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "AI Lab Journey",
+  "subtitle": "Telkom University AI Laboratory",
+  "logo": "/images/logo-ai_lab.png",
+  "milestones": [
+    {
+      "year": "2024",
+      "role": "Study Group Member",
+      "highlights": [
+        "Joined AI Lab as a study group member under mentorship",
+        "Developed a deep learning model for plant disease classification using Computer Vision as Team Lead",
+        "Built end-to-end Python pipeline: EDA, preprocessing, training, and Streamlit deployment"
+      ],
+      "images": [
+        "/images/Study Group Member-1.jpg",
+        "/images/Study Group Member-2.jpg",
+        "/images/icoict24-committee.jpg",
+        "/images/cci_summit-1.jpg",
+        "/images/cci_summit-2.jpg"
+      ]
+    },
+    {
+      "year": "2025",
+      "role": "Study Group Coordinator · Focused Group Member",
+      "highlights": [
+        "Promoted to Study Group Coordinator, leading weekly AI/ML sessions for 29 students",
+        "Managed recruitment: screened 70+ applicants to select high-potential candidates",
+        "Joined AI Lab Focused Group, a dedicated research track for advanced members",
+        "Supervised 15 project groups, providing technical mentorship and evaluation"
+      ],
+      "images": [
+        "/images/ieee.jpg",
+        "/images/abdimas-1.jpg",
+        "/images/abdimas-2.jpg",
+        "/images/abdimas-3.jpg"
+      ],
+      "publications": [
+        {
+          "title": "CS Unplugged: Box Sorting Game",
+          "type": "e-Book",
+          "venue": "Telkom University Bandung",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "year": "2026",
+      "role": "Focused Group Coordinator",
+      "highlights": [
+        "Appointed as Focused Group Coordinator, leading the advanced research track",
+        "Directing research strategy and technical mentorship for focused group members",
+        "Bridging AI Lab research output with real-world industrial and academic applications"
+      ],
+      "images": [
+        "/images/Study Group Coordinator.jpg"
+      ]
+    }
+  ]
+}

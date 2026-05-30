@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
+    "venue": "12th International Conference on Information Technology, Computer, and Electrical Engineering (ICITACEE 2025)",
+    "year": 2025,
+    "type": "Conference Paper",
+    "role": "author",
+    "authors": "M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.",
+    "image": "/images/1-Deep Learning for Bird Sound Identification.jpg",
+    "link": "https://ieeexplore.ieee.org/document/11233192"
+  },
+  {
+    "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
+    "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)",
+    "year": 2025,
+    "type": "Journal Paper",
+    "role": "author",
+    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
+    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
+    "link": "https://github.com/Liamours/wbbs-nnunetv2"
+  },
+  {
+    "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
+    "venue": "SSRN Preprint",
+    "year": 2025,
+    "type": "Preprint",
+    "role": "author",
+    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
+    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
+  },
+  {
+    "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",
+    "venue": "Zenodo",
+    "year": 2025,
+    "type": "Dataset",
+    "role": "author",
+    "authors": "Ema Rachmawati (Project leader), M. Rifqi Dzaky Azhad (Researcher)",
+    "link": "https://zenodo.org/records/20342310"
+  },
+  {
+    "title": "CS Unplugged: Box Sorting Game",
+    "venue": "Telkom University Bandung",
+    "year": 2025,
+    "type": "e-Book",
+    "role": "contributor",
+    "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
+    "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
+  }
+]

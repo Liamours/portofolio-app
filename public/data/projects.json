@@ -1,0 +1,194 @@
+[
+  {
+    "id": "bone-metastasis",
+    "title": "Bone Metastasis Diagnosis Framework",
+    "type": "research",
+    "period": "Aug 2024 – Feb 2025",
+    "institution": "Telkom University",
+    "funding": "Ministry of Higher Education RI (grant 125/C3/DT.05.00/PL/2025)",
+    "summary": "Fully automated computer-aided diagnosis pipeline for whole-body bone scintigraphy, targeting clinical replacement of manual radiologist scoring.",
+    "highlights": [
+      "YOLOv8 (anchor-free, CSPDarknet backbone) hotspot detection at mAP@0.5 = 0.599",
+      "nnU-Net v2 skeletal segmentation across 12 anatomical regions: mean DSC = 0.934, IoU = 0.879",
+      "XGBoost AUC = 0.956, LightGBM AUC = 0.947 at patient level; automated BSI correlated with clinical burden at r = 0.82 (p < 0.001)",
+      "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)",
+      "Lead Coder: 3,000-line codebase; annotated 600+ WBBS images for segmentation and detection ground truth"
+    ],
+    "stack": ["Python", "YOLOv8", "nnU-Net v2", "PyRadiomics", "XGBoost", "LightGBM", "PyTorch"],
+    "links": {
+      "github": "https://github.com/Liamours/wbbs-nnunetv2",
+      "paper": "https://ssrn.com/abstract=5187453"
+    }
+  },
+  {
+    "id": "bird-sound",
+    "title": "Deep Learning for Bird Sound Identification",
+    "type": "research",
+    "period": "Nov 2024 – Aug 2025",
+    "institution": "Telkom University · Universiti Malaysia Sarawak",
+    "summary": "Multi-stage noise-robust framework for automated bird species identification from passive acoustic monitoring recordings in Sarawak, targeting 219 species including 17 Borneo endemics and 18 IUCN-threatened species.",
+    "highlights": [
+      "MixIT source separation + fine-tuned BirdNET v2.4; applied to 1,202 training and 115 test recordings",
+      "Endemic/endangered subset (n=115): accuracy = 0.6609, macro F1 = 0.4193 (+26.7% accuracy, +44.1% F1 over baseline; McNemar p < 0.05)",
+      "Full test set (n=1,335, 219 species): accuracy = 0.72, macro F1 = 0.554, weighted F1 = 0.724",
+      "Dataset: 12,511 recordings from Xeno-canto and PBHAR + 8,840 negative samples; 72/18/10 stratified split",
+      "Research Team Lead: 4,500+ lines of Python; presented at ICITACEE 2025"
+    ],
+    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa", "torchaudio", "Conda"],
+    "links": {
+      "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation",
+      "paper": "https://ieeexplore.ieee.org/document/11233192"
+    }
+  },
+  {
+    "id": "cxr-multitask",
+    "title": "Telplastina: Multi-Task CXR Analysis Platform",
+    "type": "research",
+    "period": "2026 – present",
+    "institution": "Telkom University",
+    "summary": "Multi-task medical AI platform for chest X-ray analysis: pathology classification, organ segmentation, report generation, VQA, and visual grounding. Deployed as both a web app (React + Next.js) and desktop app (Tauri v2).",
+    "highlights": [
+      "Pathology classification: fine-tuned TorchXRayVision DenseNet121 on VinBig and NIH ChestX-ray14 (14-class multi-label, sigmoid), also trained DeiT-based models; input center-cropped 224x224 in XRV-native intensity range",
+      "Organ segmentation: TorchXRayVision PSPNet for right lung, left lung, and heart; square-padded, threshold 0.5, outputs binary masks, bounding boxes, and colored overlay PNG; DICOM support via pydicom",
+      "Report generation: CheXpert Plus SRRG HuggingFace models generating structured findings and impression text from CXR images",
+      "Backend: FastAPI + PostgreSQL + Redis + RQ worker + JWT auth, Docker Compose; AI inference served as microservices",
+      "Interactive ReportCard: doctor-editable findings, impressions, probability bars; canvas Grounding Editor with offscreen mask pattern for accurate brush annotation"
+    ],
+    "stack": ["Python", "PyTorch", "TorchXRayVision", "DenseNet121", "PSPNet", "FastAPI", "PostgreSQL", "Redis", "React", "Next.js", "TypeScript", "Tauri v2", "Docker"]
+  },
+  {
+    "id": "chest-xray-vlm",
+    "title": "VLM-Based Chest X-Ray Anomaly Explanation",
+    "type": "research",
+    "period": "2025 – present",
+    "institution": "Telkom University",
+    "summary": "A system that detects anomalies in chest X-rays and generates structured, radiologist-readable text explanations, addressing the gap where saliency methods like Grad-CAM fail to produce clinically meaningful narratives.",
+    "highlights": [
+      "Three-module pipeline: anomaly detection (FPN + CBAM on CheXpert, MIMIC-CXR, VinDr-CXR) → BiomedCLIP visual-text alignment (15M biomedical pairs) → structured finding-location-impression report",
+      "Explanation quality evaluated directly by radiologists on a 100-case curated gold-standard subset, not only BLEU or BERTScore",
+      "Five-year roadmap toward RSNA-style external validation and integration into radiology reporting workflows"
+    ],
+    "stack": ["Python", "BiomedCLIP", "PyTorch", "Vision Transformer", "CBAM", "FPN"],
+    "links": {
+      "github": "https://github.com/Liamours/nlp-cxr_report_generation"
+    }
+  },
+  {
+    "id": "fatigue-detection",
+    "title": "Driver Behaviour Analysis and Fatigue Detection System",
+    "type": "industrial",
+    "period": "Mar 2025 – present",
+    "institution": "Bandung Techno Park · Trans Track",
+    "funding": "Funded industrial collaboration",
+    "summary": "Real-time fatigue and distraction detection for commercial fleet dashcams, processing live video from vehicle-mounted MDVR hardware under a 1/5/10 FPS inference trade-off.",
+    "highlights": [
+      "MediaPipe Holistic: 468 facial landmark coordinates extracted and temporally interpolated per frame",
+      "Multi-modal fusion model (spatial landmarks + cropped face features): test accuracy = 0.85, macro F1 = 0.78, +11% F1 over prior single-modality baseline at 10 FPS",
+      "Async cloud-review API (FastAPI, Python 3.11): HTTP 202 immediate response; background pipeline downloads, runs inference, and posts verdict to TransTrack callback with 30-minute auto-purge",
+      "39-test suite covering unit, pipeline, and live integration tests against the production MDVR server",
+      "Deployed in Docker-containerised environment on RTX 4050 6 GB VRAM"
+    ],
+    "stack": ["Python", "MediaPipe", "PyTorch", "FastAPI", "OpenCV", "httpx", "pytest", "Docker"],
+    "links": {
+      "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
+      "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
+    }
+  },
+  {
+    "id": "telplastina",
+    "title": "Telplastina v1: WBBS Diagnostic Application",
+    "type": "software",
+    "period": "2025 – present",
+    "institution": "Telkom University",
+    "summary": "Full-stack diagnostic application for whole-body bone scintigraphy analysis, integrating the bone segmentation, hotspot detection, and BSI quantification pipeline into a deployable clinical tool.",
+    "highlights": [
+      "Integrates nnU-Net v2 segmentation and YOLOv8 hotspot detection from the funded MoHE bone scan research into a unified web application",
+      "Backend in Rust for high-performance image processing and inference serving",
+      "Frontend in Vue 3 with Docker containerisation for clinical deployment"
+    ],
+    "stack": ["Vue 3", "Rust", "Docker", "Python"]
+  },
+  {
+    "id": "deepfake-detection",
+    "title": "Multimodal Deepfake Detection with Modality-Aware Mixture of Experts",
+    "type": "research",
+    "period": "2025 – present",
+    "institution": "Telkom University · AI Lab Focused Group",
+    "summary": "A unified model detecting both audio-video fakes (TTS + lip-sync) and visual-only face-swaps without knowing manipulation type at test time, a capability absent in all prior single-modality detectors.",
+    "highlights": [
+      "VideoMAE (frozen, 768-dim) + Whisper (frozen, 1024-dim) encoders feed a cross-modal attention module; residuals compute audio_anomaly and visual_anomaly scores without manual labels",
+      "ModalityReliabilityGate MLP maps anomaly scores to alpha ∈ [0,1]; alpha≈0.1 routes to AudioSyncExpert, alpha≈0.85 to VisualArtifactExpert",
+      "DANN gradient-reversal on gate head prevents dataset-identity shortcuts, forcing cross-domain generalisation",
+      "Intra-dataset F1 = 0.94; cross-dataset generalisation (held-out unseen domains) F1 = 0.60 post-DANN",
+      "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++",
+      "Targeting submission to ICODSA 2026"
+    ],
+    "stack": ["PyTorch", "VideoMAE", "Whisper", "MediaPipe", "DANN", "Conda"],
+    "links": {
+      "github": "https://github.com/Liamours/research-deepfake_classification"
+    }
+  },
+  {
+    "id": "transtrack-api",
+    "title": "TransTrack Cloud Review Engine",
+    "type": "software",
+    "period": null,
+    "summary": "Async cloud-side review API for a commercial Driver Monitoring System, receiving fatigue alarm events from vehicle dashcams and returning AI verdicts via callback.",
+    "highlights": [
+      "Endpoint returns HTTP 202 immediately; full pipeline (video download, frame inspection, DL inference, callback POST) runs asynchronously with 30-minute local record auto-purge",
+      "Live polling runner authenticates against TransTrack platform, fetches alarm events, and writes verdicts to structured Excel reports via openpyxl",
+      "39-test suite: unit tests, pipeline integration tests, and real-environment tests against the live MDVR server"
+    ],
+    "stack": ["Python 3.11", "FastAPI", "OpenCV", "httpx", "pytest", "openpyxl"],
+    "links": {
+      "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
+      "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
+    }
+  },
+  {
+    "id": "retogen",
+    "title": "Retogen: Article Management Platform",
+    "type": "software",
+    "period": null,
+    "summary": "Full-stack web platform for publishing and moderating tech-review articles, built as a production-grade system with complete test coverage.",
+    "highlights": [
+      "JWT auth with role separation (user/admin); full article lifecycle with Base64-to-Binary image upload validated by PNG/JPEG magic bytes",
+      "Hierarchical nested comments and 1–5 star ratings with MongoDB aggregation",
+      "185 automated tests covering authentication, CRUD, aggregation pipelines, and edge cases"
+    ],
+    "stack": ["FastAPI", "React 19", "MongoDB Motor", "JWT", "bcrypt", "pytest"],
+    "links": {
+      "github": "https://github.com/Liamours/aplikasi_berbasis_platform-retogen"
+    }
+  },
+  {
+    "id": "anothem",
+    "title": "Anothem: Desktop AI Storytelling Engine",
+    "type": "software",
+    "period": null,
+    "summary": "Local LLM desktop application for AI-assisted creative writing, designed to run entirely on consumer hardware with no cloud dependency.",
+    "highlights": [
+      "Supports Qwen and custom Ouro-1.4B (recurrent, trust_remote_code) on RTX 4050 6 GB VRAM; Mistral-class models loaded at 4-bit NF4 via BitsAndBytes",
+      "Token-streamed live UI via TextIteratorStreamer; background QThread incremental summarisation keeps context within token budget across long sessions",
+      "Auto-skill classifier: keyword-scoring detects narrative intent (physical description, dialogue, scene-setting) and injects structured writing instructions per inference call"
+    ],
+    "stack": ["PyQt6", "Transformers", "BitsAndBytes (NF4)", "PyTorch CUDA", "HuggingFace", "Conda"]
+  },
+  {
+    "id": "ar-face-filter",
+    "title": "Real-Time AR Face Filter App",
+    "type": "software",
+    "period": null,
+    "summary": "Browser-based augmented reality app demonstrating live face-tracking overlays, developed to increase engagement for a local UMKM churos business.",
+    "highlights": [
+      "10 FPS on Streamlit Cloud with no local installation: Haar cascade face detection, 3 animated overlays, EMA smoothing",
+      "WebRTC peer-to-peer video via streamlit-webrtc with STUN/TURN (OpenRelay) NAT traversal; server-side per-pixel BGRA alpha compositing",
+      "Pure OpenCV replacing MediaPipe Tasks API (GPU-dependent, unavailable on Streamlit Cloud) for zero native library dependencies"
+    ],
+    "stack": ["Python", "OpenCV", "Streamlit", "WebRTC", "aiortc"],
+    "links": {
+      "github": "https://github.com/Liamours/kewirausahaan-churcol-website",
+      "demo": "https://face-filter.streamlit.app"
+    }
+  }
+]

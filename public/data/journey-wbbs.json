@@ -1,0 +1,72 @@
+{
+  "title": "Whole-Body Bone Scintigraphy Research",
+  "subtitle": "From annotation to thesis: a 3-year research arc",
+  "milestones": [
+    {
+      "year": "2024",
+      "role": "Lead Coder · Annotator",
+      "images": [
+        "/images/bonescan_research.jpg",
+        "/images/bonescan_research-1.jpg",
+        "/images/bonescan_research-2.jpg"
+      ],
+      "highlights": [
+        "Joined as the primary coder for the MoHE-funded bone scan research project",
+        "Meticulously annotated 600+ whole-body bone scintigraphy (WBBS) images using IbisPaintX, supervised by nuclear medicine physicians at Dr. Hasan Sadikin General Hospital",
+        "Built a 3,000-line Python codebase for confidence scoring, model validation, and BSI quantification",
+        "Architected the YOLOv8 hotspot detection and nnU-Net v2 segmentation pipeline"
+      ]
+    },
+    {
+      "year": "2025",
+      "role": "Researcher · Clinical Collaborator",
+      "highlights": [
+        "Collaborated directly with doctors at the Department of Nuclear Medicine and Molecular Theranostics, Universitas Padjadjaran, including on-site visits to Dr. Hasan Sadikin General Hospital",
+        "Extended the annotation dataset to 3,593 WBBS images (anterior + posterior views across 12 skeletal regions)",
+        "Participated in developing Telplastina v1, the first deployable diagnostic application for the pipeline",
+        "Preprint submitted: 'From Segmentation to Biomarker Quantification' (SSRN)"
+      ]
+    },
+    {
+      "year": "2026",
+      "role": "Thesis Researcher · Application Developer",
+      "highlights": [
+        "Elevated the research to Bachelor's Thesis, formalising the full pipeline as an academic contribution",
+        "Led development of Telplastina v2, a full-stack WBBS diagnostic app (Vue 3 + Rust + Docker)",
+        "Journal paper published: 'Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2' (IJIES-INASS)",
+        "Released annotated dataset of 3,593 images publicly on Zenodo for the research community"
+      ],
+      "images": [
+        "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
+      ],
+      "links": [
+        { "label": "GitHub", "icon": "ph:github-logo", "url": "https://github.com/Liamours/wbbs-nnunetv2" },
+        { "label": "Dataset", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
+        { "label": "Preprint", "icon": "ph:file-text", "url": "https://ssrn.com/abstract=5187453" }
+      ],
+      "publications": [
+        {
+          "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
+          "type": "Journal Paper",
+          "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)",
+          "year": 2025,
+          "link": "https://github.com/Liamours/wbbs-nnunetv2"
+        },
+        {
+          "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
+          "type": "Preprint",
+          "venue": "SSRN Preprint",
+          "year": 2025,
+          "link": "https://ssrn.com/abstract=5187453"
+        },
+        {
+          "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",
+          "type": "Dataset",
+          "venue": "Zenodo",
+          "year": 2025,
+          "link": "https://zenodo.org/records/20342310"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "category": "AI Engineering",
+    "priority": "primary",
+    "items": ["PyTorch", "TensorFlow", "Transformers", "nnU-Net", "BiomedCLIP", "VideoMAE", "Whisper"]
+  },
+  {
+    "category": "MLOps & Infrastructure",
+    "priority": "primary",
+    "items": ["Docker", "Git", "uv", "pytest", "Conda"]
+  },
+  {
+    "category": "Data Science",
+    "priority": "primary",
+    "items": ["OpenCV", "MediaPipe", "librosa", "Scikit-learn"]
+  },
+  {
+    "category": "Languages",
+    "priority": "secondary",
+    "items": ["Python", "C++", "Go"]
+  },
+  {
+    "category": "Backend & APIs",
+    "priority": "secondary",
+    "items": ["FastAPI", "MongoDB Motor", "httpx"]
+  },
+  {
+    "category": "Frontend & Desktop",
+    "priority": "secondary",
+    "items": ["Streamlit", "React 19", "PyQt6"]
+  },
+  {
+    "category": "Academic",
+    "priority": "secondary",
+    "items": ["LaTeX", "Microsoft Office"]
+  }
+]
