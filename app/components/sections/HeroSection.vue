@@ -50,7 +50,7 @@ const linkIcon = (label: string) => iconMap[label] ?? 'ph:arrow-square-out'
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('/images/background.jpg') center / cover no-repeat;
+  background: url('/images/background-hero.jpg') center / cover no-repeat;
   opacity: 0.12;
   z-index: 0;
 }
