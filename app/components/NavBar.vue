@@ -1,6 +1,5 @@
 <template>
   <nav class="navbar">
-    <a href="#hero" class="nav-name">Rifqi</a>
     <div class="nav-links">
       <a v-for="link in navLinks" :key="link.href" :href="link.href" class="nav-link">
         <Icon :name="link.icon" size="15" />
