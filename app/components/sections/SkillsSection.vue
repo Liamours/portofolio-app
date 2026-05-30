@@ -12,15 +12,7 @@
         >
           <span class="row-label">{{ group.category }}</span>
           <div class="row-items">
-            <span v-for="item in group.items" :key="item" class="skill-item">
-              <Icon
-                v-if="iconMap[item]"
-                :name="iconMap[item]"
-                size="15"
-                class="skill-icon"
-              />
-              {{ item }}
-            </span>
+            <span v-for="item in group.items" :key="item" class="skill-item">{{ item }}</span>
           </div>
         </div>
       </div>
