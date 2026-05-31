@@ -49,7 +49,7 @@
       ],
       "links": [
         { "label": "Repository: wbbs-nnunetv2", "icon": "ph:github-logo", "url": "https://github.com/Liamours/wbbs-nnunetv2" },
-        { "label": "Dataset: Segmentation Masks, 3,593 WBBS Images (Zenodo)", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
+        { "label": "Dataset: Segmentation Masks of Bone Area Images (Zenodo)", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
         { "label": "Preprint: From Segmentation to Biomarker Quantification (SSRN)", "icon": "ph:file-text", "url": "https://ssrn.com/abstract=5187453" }
       ],
       "publications": [
