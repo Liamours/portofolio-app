@@ -6,13 +6,16 @@
     "status": "in-progress",
     "period": "2026 – present",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
-    "summary": "A deployable application for passive avian monitoring in the field, built on top of the bird species identification research. Targets conservation teams working with endangered and endemic species in Indonesia and Malaysia.",
+    "summary": "A deployable application for passive avian monitoring in the field, built as a continuation of the bird species identification research. Same codebase, extended for conservation team use in Indonesia and Malaysia.",
     "highlights": [
+      "Continuation of the bird sound identification research — same repository, extended for field deployment",
       "Wraps the BirdNET-based classification pipeline into a field-usable application",
-      "Designed for deployment in jungle monitoring stations with intermittent connectivity",
       "Target users: conservation officers and wildlife researchers in Borneo"
     ],
-    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa"]
+    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa"],
+    "links": {
+      "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation"
+    }
   },
   {
     "id": "petct-segmentation",
@@ -46,16 +49,16 @@
   },
   {
     "id": "ophthalmic-imaging",
-    "title": "Ophthalmic Imaging with AI",
+    "title": "Diabetic Mellitus Detection from Retina Fundus Images",
     "type": "research",
     "status": "in-progress",
-    "period": "2026 – present",
+    "period": "2025 – present",
     "institution": "Telkom University",
-    "summary": "Deep learning for ophthalmic image analysis. Best Paper award at ADIKARA Telkom University.",
+    "summary": "Classification model for diabetic mellitus detection using retina fundus imaging. Best Paper at ADIKARA, School of Computing, Telkom University.",
     "highlights": [
       "Best Paper award at ADIKARA, School of Computing, Telkom University",
-      "Automated analysis of ophthalmic images for clinical decision support",
-      "Extends the medical imaging pipeline approach to ophthalmology"
+      "Diabetic mellitus classification from retina fundus images",
+      "Team of 3, led by M. Rifqi Dzaky Azhad"
     ],
     "stack": ["Python", "PyTorch", "OpenCV"]
   },
