@@ -86,7 +86,6 @@
                         class="pub-chip"
                         :class="[pub.link ? '' : 'no-link']"
                       >
-                        <Icon name="ph:article" size="11" />
                         <span class="pub-chip-type">{{ pub.type }}</span>
                         <span class="pub-chip-title">{{ pub.title }}</span>
                       </a>
@@ -376,29 +375,59 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 .highlights li::before { content: '•'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.7rem; top: 0.25rem; }
 
 /* ── Publications ── */
-.pub-row { display: flex; flex-direction: column; gap: 0.35rem; }
+.pub-row { display: flex; flex-direction: column; gap: 0.5rem; }
+
 .pub-chip {
-  display: flex; align-items: baseline; gap: 0.4rem;
-  font-size: 0.77rem; color: var(--text-muted);
-  text-decoration: none; padding: 0.3rem 0;
-  border-bottom: 1px dashed var(--border);
-  transition: color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: border-color 0.2s ease-out, background 0.2s ease-out;
+  cursor: pointer;
 }
-.pub-chip:last-child { border-bottom: none; }
-.pub-chip:not(.no-link):hover { color: var(--text); }
-.pub-chip-type { font-size: 0.63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); flex-shrink: 0; }
-.pub-chip-title { flex: 1; min-width: 0; }
+.pub-chip:not(.no-link):hover {
+  border-color: var(--accent-1);
+  background: var(--accent-1-sub);
+}
+.pub-chip.no-link { cursor: default; }
+
+.pub-chip-type {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-info);
+}
+
+.pub-chip-title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+}
+.pub-chip:not(.no-link):hover .pub-chip-title {
+  text-decoration-color: var(--accent-1);
+}
 
 /* ── Links ── */
-.m-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.m-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .m-link {
-  display: flex; align-items: center; gap: 0.3rem;
-  font-size: 0.76rem; padding: 0.22rem 0.6rem;
-  border: 1px solid var(--border); border-radius: 4px;
-  color: var(--text-muted); background: var(--surface);
-  transition: border-color 0.2s, color 0.2s;
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.78rem; font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--accent-1); border-radius: 4px;
+  color: var(--accent-1); background: var(--accent-1-sub);
+  transition: background 0.18s ease-out, color 0.18s ease-out, transform 0.15s ease-out;
+  white-space: nowrap;
 }
-.m-link:hover { border-color: var(--accent-1); color: var(--accent-1); }
+.m-link:hover { background: var(--accent-1); color: #fff; transform: translateY(-1px); }
 
 /* ── Reflection ── */
 .reflection-block {
