@@ -2,11 +2,11 @@
   "title": "Driver Fatigue Detection (Trans Track)",
   "subtitle": "Industrial collaboration with Bandung Techno Park and Trans Track: real-time fatigue detection for commercial fleet dashcams",
   "reflection": [
-    "I learned to design a temporal neural network from scratch — MultiscaleTCN was not a tutorial exercise, it had to outperform a model already running in production.",
-    "I learned to work with real industrial data from mining company fleets. It is noisier, messier, and more unbalanced than anything I had processed before.",
-    "I learned to build a production API — async workers, Redis queues, Docker containers, callback endpoints. Not a demo, an actual service.",
-    "I learned to write tests that run against a live server. 39 tests, real MDVR hardware on the other end.",
-    "I learned that edge cases in safety systems are not optional. The night-hour heuristic and driver history rule came from real incidents, not hypotheticals."
+    "MultiscaleTCN had to outperform a model the company was already running in production. That is a different kind of pressure than a benchmark.",
+    "Real industrial data from mining fleets is messier and more unbalanced than anything I had cleaned before. The real world does not come labeled.",
+    "I learned the difference between a demo and a service. A demo runs once. A service runs at 3am when a driver is falling asleep on a highway.",
+    "39 tests, all running against the live MDVR server. I learned to write tests for real hardware, not mock objects.",
+    "The night-hour heuristic and the driver history rule came from real incidents. Edge cases in safety systems are not edge cases — they are the whole point."
   ],
   "milestones": [
     {

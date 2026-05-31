@@ -2,10 +2,10 @@
   "title": "Bird Sound Identification Research",
   "subtitle": "Passive acoustic monitoring for avian conservation in Indonesia and Malaysia",
   "reflection": [
-    "I learned to fine-tune an established model (BirdNET) for a specific classification task rather than building from scratch.",
-    "I learned to process both sound data and image data — spectrograms taught me that audio and vision pipelines share more than I expected.",
-    "I learned to lead a team of capable students — capable people don't need management, they need direction and space.",
-    "I learned to present research at a conference in front of people who know the domain better than I do."
+    "I learned to fine-tune an established model (BirdNET) rather than training from scratch. The question is not always 'can I build this' — sometimes it is 'should I.'",
+    "Spectrograms taught me that audio and vision pipelines are structurally similar. Sound is just images of time.",
+    "Running a research team means knowing when to step in and when to wait. I got that wrong more than once before I got it right.",
+    "I presented at ICITACEE 2025 in front of ornithologists and signal processing researchers. Knowing the room matters as much as knowing the paper."
   ],
   "milestones": [
     {

@@ -3,11 +3,11 @@
   "subtitle": "Telkom University AI Laboratory",
   "logo": "/images/logo-ai_lab.png",
   "reflection": [
-    "I learned that explaining something is harder than doing it. Teaching 29 students weekly forced me to understand ML concepts well enough to answer unexpected questions.",
-    "I learned to run a recruitment process — reviewing 70+ applicants taught me what to actually look for in someone who will do research well.",
-    "I learned that leading capable people is mostly about getting out of their way and providing clear goals, not constant direction.",
-    "I learned to evaluate research quality, not just technical correctness. Supervising 15 project groups showed me how many ways a project can be technically working but scientifically weak.",
-    "I learned that the gap between study group member and coordinator is not just seniority — it is a completely different relationship to the work."
+    "Teaching 29 students weekly forced me to understand ML concepts properly. You cannot bluff a question you did not expect.",
+    "I reviewed 70+ applicants for the study group. What I was actually looking for: people who ask follow-up questions, not people who already know the answers.",
+    "I learned that a coordinator's job is different from a member's job. As a member, you execute. As a coordinator, you make sure other people can execute.",
+    "Supervising 15 project groups showed me how many ways a project can be technically running and scientifically meaningless at the same time.",
+    "I learned to evaluate research quality — not just whether the code runs, but whether the question was worth asking."
   ],
   "milestones": [
     {
