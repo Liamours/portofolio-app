@@ -34,8 +34,8 @@
         "Presented at ICITACEE 2025 in Semarang. Paper accepted and published in IEEE Xplore."
       ],
       "links": [
-        { "label": "Paper", "icon": "ph:file-text", "url": "https://ieeexplore.ieee.org/document/11233192" },
-        { "label": "GitHub", "icon": "ph:github-logo", "url": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation" }
+        { "label": "Paper: Bird Sound Identification in Indonesia and Malaysia (IEEE)", "icon": "ph:file-text", "url": "https://ieeexplore.ieee.org/document/11233192" },
+        { "label": "Repository: Research_Birdsound-Classification_Whisper-Implementation", "icon": "ph:github-logo", "url": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation" }
       ],
       "publications": [
         {

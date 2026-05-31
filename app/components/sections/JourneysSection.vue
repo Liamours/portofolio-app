@@ -417,15 +417,15 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 }
 
 /* ── Links ── */
-.m-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.m-links { display: flex; flex-direction: column; gap: 0.5rem; }
 .m-link {
-  display: flex; align-items: center; gap: 0.35rem;
-  font-size: 0.78rem; font-weight: 500;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid var(--accent-1); border-radius: 4px;
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.88rem; font-weight: 600;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--accent-1); border-radius: 6px;
   color: var(--accent-1); background: var(--accent-1-sub);
   transition: background 0.18s ease-out, color 0.18s ease-out, transform 0.15s ease-out;
-  white-space: nowrap;
+  width: 100%;
 }
 .m-link:hover { background: var(--accent-1); color: #fff; transform: translateY(-1px); }
 

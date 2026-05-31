@@ -20,7 +20,7 @@
         "Awarded 2nd Best Final Project in the Study Group."
       ],
       "links": [
-        { "label": "Plant Disease Project", "icon": "ph:github-logo", "url": "https://github.com/Liamours/Lab-AI-SG_Tugas-Besar" }
+        { "label": "Repository: Lab-AI-SG_Tugas-Besar (Plant Disease Classifier)", "icon": "ph:github-logo", "url": "https://github.com/Liamours/Lab-AI-SG_Tugas-Besar" }
       ],
       "images": [
         "/images/Study Group Member-1.jpg",
@@ -39,7 +39,7 @@
         "Joined the Focused Group and led the multimodal deepfake detection project: a model handling both video and audio modalities with explainability output."
       ],
       "links": [
-        { "label": "Deepfake Detection", "icon": "ph:github-logo", "url": "https://github.com/Liamours/research-deepfake_classification" }
+        { "label": "Repository: research-deepfake_classification (Multimodal Deepfake Detection)", "icon": "ph:github-logo", "url": "https://github.com/Liamours/research-deepfake_classification" }
       ],
       "images": [
         "/images/ieee.jpg",

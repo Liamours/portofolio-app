@@ -48,9 +48,9 @@
         "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
       ],
       "links": [
-        { "label": "Source Code (wbbs-nnunetv2)", "icon": "ph:github-logo", "url": "https://github.com/Liamours/wbbs-nnunetv2" },
-        { "label": "Segmentation Masks Dataset (Zenodo, 3,593 images)", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
-        { "label": "Preprint (SSRN)", "icon": "ph:file-text", "url": "https://ssrn.com/abstract=5187453" }
+        { "label": "Repository: wbbs-nnunetv2", "icon": "ph:github-logo", "url": "https://github.com/Liamours/wbbs-nnunetv2" },
+        { "label": "Dataset: Segmentation Masks, 3,593 WBBS Images (Zenodo)", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
+        { "label": "Preprint: From Segmentation to Biomarker Quantification (SSRN)", "icon": "ph:file-text", "url": "https://ssrn.com/abstract=5187453" }
       ],
       "publications": [
         {
