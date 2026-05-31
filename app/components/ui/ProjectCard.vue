@@ -27,6 +27,14 @@
 
       <p v-if="project.institution" class="card-institution">{{ project.institution }}</p>
       <p class="card-summary">{{ project.summary }}</p>
+
+      <div v-if="project.stats?.length" class="card-stats">
+        <div v-for="s in project.stats" :key="s.label" class="stat-item">
+          <span class="stat-value">{{ s.value }}</span>
+          <span class="stat-label">{{ s.label }}</span>
+        </div>
+      </div>
+
       <div class="card-stack">
         <span v-for="tech in project.stack" :key="tech" class="stack-tag">{{ tech }}</span>
       </div>
@@ -146,6 +154,36 @@ const expanded = ref(false)
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.card-stats {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.stat-value {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
 }
 
 .card-stack {

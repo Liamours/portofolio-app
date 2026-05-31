@@ -24,6 +24,11 @@ export interface ProjectLinks {
   paper?: string
 }
 
+export interface ProjectStat {
+  value: string
+  label: string
+}
+
 export interface Project {
   id: string
   title: string
@@ -32,6 +37,7 @@ export interface Project {
   institution?: string
   funding?: string
   summary: string
+  stats?: ProjectStat[]
   highlights: string[]
   stack: string[]
   links?: ProjectLinks

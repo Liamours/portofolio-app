@@ -6,17 +6,17 @@
     "Real industrial data from mining fleets is messier and more unbalanced than anything I had cleaned before. The real world does not come labeled.",
     "I learned the difference between a demo and a service. A demo runs once. A service runs at 3am when a driver is falling asleep on a highway.",
     "39 tests, all running against the live MDVR server. I learned to write tests for real hardware, not mock objects.",
-    "The night-hour heuristic and the driver history rule came from real incidents. Edge cases in safety systems are not edge cases — they are the whole point."
+    "The night-hour heuristic and the driver history rule came from real incidents. Edge cases in safety systems are not edge cases. They are the whole point."
   ],
   "milestones": [
     {
       "year": "2025",
       "role": "ML Engineer · API Developer",
       "highlights": [
-        "Industry project with Trans Track — real dashcam footage from mining company fleets (BIB, PAMA MTBU, SIS). Not synthetic data.",
+        "Industry project with Trans Track, real dashcam footage from mining company fleets (BIB, PAMA MTBU, SIS). Not synthetic data.",
         "Built the dataset downloader first: pulled alarm events and video clips directly from the TransTrack platform.",
         "Designed MultiscaleTCN from scratch: 3 parallel TCN branches at different dilation scales (fine [1,2,4,8], medium [2,4,8,16], coarse [4,8,16,32]) running on 200-frame sequences of facial landmarks.",
-        "Input: EAR left/right, MAR, head pitch/yaw/roll, nose position — 11 values per frame, extracted by MediaPipe at 10 FPS.",
+        "Input: EAR left/right, MAR, head pitch/yaw/roll, nose position. 11 values per frame, extracted by MediaPipe at 10 FPS.",
         "Three classes: eyes closed, normal, yawning. Test accuracy 0.85, macro F1 0.78. Baseline was 0.67. That is an 11% gain on a model the company already had in production.",
         "FastAPI service: HTTP 202 immediately, full pipeline async. Night-hour heuristic fires 00:00-05:59 when confidence drops below 0.75. Driver history rule escalates on 2+ fatigue events in 60 minutes.",
         "3-service Docker stack. 39 tests passing against the live MDVR server."

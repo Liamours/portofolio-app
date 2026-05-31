@@ -2,7 +2,7 @@
   "title": "Bird Sound Identification Research",
   "subtitle": "Passive acoustic monitoring for avian conservation in Indonesia and Malaysia",
   "reflection": [
-    "I learned to fine-tune an established model (BirdNET) rather than training from scratch. The question is not always 'can I build this' — sometimes it is 'should I.'",
+    "I learned to fine-tune an established model (BirdNET) rather than training from scratch. The question is not always 'can I build this.' Sometimes it is 'should I.'",
     "Spectrograms taught me that audio and vision pipelines are structurally similar. Sound is just images of time.",
     "Running a research team means knowing when to step in and when to wait. I got that wrong more than once before I got it right.",
     "I presented at ICITACEE 2025 in front of ornithologists and signal processing researchers. Knowing the room matters as much as knowing the paper."
@@ -16,9 +16,9 @@
       ],
       "highlights": [
         "Took over as research lead. First task: build the dataset from scratch using Xeno-canto recordings.",
-        "Scoped to 219 species — specifically those endemic or endangered in Indonesia, Malaysia, and Borneo. 17 Borneo endemics. 18 IUCN-threatened.",
+        "Scoped to 219 species, specifically those endemic or endangered in Indonesia, Malaysia, and Borneo. 17 Borneo endemics. 18 IUCN-threatened.",
         "Pulled 12,511 recordings + 8,840 negative samples (noise, speech, silence). Wrote the preprocessing code: 48 kHz resampling, log-mel spectrograms at 96 bins, 96x511 px per clip.",
-        "72/18/10 stratified split by species. No data leakage — split at recording level."
+        "72/18/10 stratified split by species. No data leakage: split at recording level."
       ]
     },
     {
@@ -29,7 +29,7 @@
         "/images/1-Deep Learning for Bird Sound Identification.jpg"
       ],
       "highlights": [
-        "Fine-tuned BirdNET v2.4. Baseline accuracy on the endemic/endangered subset: 52%. After fine-tuning: 66%. F1 went from 0.29 to 0.42 — +44%.",
+        "Fine-tuned BirdNET v2.4. Baseline accuracy on the endemic/endangered subset: 52%. After fine-tuning: 66%. F1 went from 0.29 to 0.42 (+44%).",
         "Tested the model in the field: Bandung Zoo (Indonesia) and Malaysia National Zoo. Real animals, background noise, no controlled conditions.",
         "Presented at ICITACEE 2025 in Semarang. Paper accepted and published in IEEE Xplore."
       ],
@@ -52,7 +52,7 @@
       "role": "Co-Researcher · Journal Submission",
       "highlights": [
         "Working with the lecturers to extend the paper for PeerJ submission.",
-        "Adding MixIT source separation — unsupervised, no clean reference signal needed. Targets overlapping bird calls in noisy recordings.",
+        "Adding MixIT source separation, unsupervised, no clean reference signal needed. Targets overlapping bird calls in noisy recordings.",
         "The hard problem: two birds calling at once over wind and insects. MixIT handles this without labeled pairs."
       ]
     }

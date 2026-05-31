@@ -7,7 +7,7 @@
     "I reviewed 70+ applicants for the study group. What I was actually looking for: people who ask follow-up questions, not people who already know the answers.",
     "I learned that a coordinator's job is different from a member's job. As a member, you execute. As a coordinator, you make sure other people can execute.",
     "Supervising 15 project groups showed me how many ways a project can be technically running and scientifically meaningless at the same time.",
-    "I learned to evaluate research quality — not just whether the code runs, but whether the question was worth asking."
+    "I learned to evaluate research quality: not just whether the code runs, but whether the question was worth asking."
   ],
   "milestones": [
     {
@@ -16,7 +16,7 @@
       "highlights": [
         "First year in AI Lab. Joined as a member, got assigned team lead on the plant disease classifier project.",
         "Built the full pipeline in Python: data cleaning, training DL model for computer vision, Streamlit deployment. Done in one semester.",
-        "Won 3rd place at CCI Summit Kaggle competition the same year — first competition as team lead."
+        "Won 3rd place at CCI Summit Kaggle competition the same year, first competition as team lead."
       ],
       "images": [
         "/images/Study Group Member-1.jpg",
@@ -30,9 +30,9 @@
       "year": "2025",
       "role": "Study Group Coordinator · Focused Group Member",
       "highlights": [
-        "Promoted to coordinator. Now responsible for 29 students every week — not just doing the work, but explaining it.",
+        "Promoted to coordinator. Now responsible for 29 students every week. Not just doing the work, but explaining it.",
         "Ran recruitment: 70+ applicants, filtered down to a cohort. Harder than it sounds.",
-        "Joined the Focused Group — the research track inside AI Lab for members doing active projects.",
+        "Joined the Focused Group, the research track inside AI Lab for members doing active projects.",
         "Supervised 15 project groups from proposal to demo. Saw every way a project can go wrong."
       ],
       "images": [
@@ -54,7 +54,7 @@
       "year": "2026",
       "role": "Focused Group Coordinator",
       "highlights": [
-        "Now running the Focused Group — the advanced research track.",
+        "Now running the Focused Group, the advanced research track.",
         "Setting research direction, reviewing member output, connecting projects to real-world partners.",
         "AI Lab work feeds into active industry collaborations and thesis research."
       ],

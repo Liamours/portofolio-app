@@ -6,7 +6,12 @@
     "period": "Aug 2024 – Feb 2025",
     "institution": "Telkom University",
     "funding": "Ministry of Higher Education RI (grant 125/C3/DT.05.00/PL/2025)",
-    "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956 — above EXINI and BONENAVI, both commercial systems used in clinics today.",
+    "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
+    "stats": [
+      { "value": "0.956", "label": "Patient AUC" },
+      { "value": "0.934", "label": "Seg. DSC" },
+      { "value": "600+", "label": "Images annotated" }
+    ],
     "highlights": [
       "YOLOv8 (anchor-free, CSPDarknet backbone) hotspot detection at mAP@0.5 = 0.599",
       "nnU-Net v2 skeletal segmentation across 12 anatomical regions: mean DSC = 0.934, IoU = 0.879",
@@ -27,6 +32,11 @@
     "period": "Nov 2024 – Aug 2025",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "summary": "219 bird species. 17 Borneo endemics. 18 IUCN-threatened. Trained on jungle recordings, tested at Bandung Zoo and Malaysia National Zoo.",
+    "stats": [
+      { "value": "+44.1%", "label": "F1 improvement" },
+      { "value": "219", "label": "Species" },
+      { "value": "12,511", "label": "Recordings" }
+    ],
     "highlights": [
       "MixIT source separation + fine-tuned BirdNET v2.4; applied to 1,202 training and 115 test recordings",
       "Endemic/endangered subset (n=115): accuracy = 0.6609, macro F1 = 0.4193 (+26.7% accuracy, +44.1% F1 over baseline; McNemar p < 0.05)",
@@ -62,7 +72,7 @@
     "type": "research",
     "period": "2025 – present",
     "institution": "Telkom University",
-    "summary": "Grad-CAM tells you where the model looked. This system tells you what it found — in words a radiologist can actually use.",
+    "summary": "Grad-CAM tells you where the model looked. This system tells you what it found, in words a radiologist can actually use.",
     "highlights": [
       "Three-module pipeline: anomaly detection (FPN + CBAM on CheXpert, MIMIC-CXR, VinDr-CXR) → BiomedCLIP visual-text alignment (15M biomedical pairs) → structured finding-location-impression report",
       "Explanation quality evaluated directly by radiologists on a 100-case curated gold-standard subset, not only BLEU or BERTScore",
@@ -81,6 +91,11 @@
     "institution": "Bandung Techno Park · Trans Track",
     "funding": "Funded industrial collaboration",
     "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
+    "stats": [
+      { "value": "0.78", "label": "Macro F1" },
+      { "value": "+11%", "label": "Over baseline" },
+      { "value": "39", "label": "Tests passing" }
+    ],
     "highlights": [
       "MediaPipe Holistic: 468 facial landmark coordinates extracted and temporally interpolated per frame",
       "Multi-modal fusion model (spatial landmarks + cropped face features): test accuracy = 0.85, macro F1 = 0.78, +11% F1 over prior single-modality baseline at 10 FPS",
@@ -115,6 +130,11 @@
     "period": "2025 – present",
     "institution": "Telkom University · AI Lab Focused Group",
     "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after DANN regularization.",
+    "stats": [
+      { "value": "0.94", "label": "Intra-dataset F1" },
+      { "value": "0.60", "label": "Cross-dataset F1" },
+      { "value": "223K", "label": "Training segments" }
+    ],
     "highlights": [
       "VideoMAE (frozen, 768-dim) + Whisper (frozen, 1024-dim) encoders feed a cross-modal attention module; residuals compute audio_anomaly and visual_anomaly scores without manual labels",
       "ModalityReliabilityGate MLP maps anomaly scores to alpha ∈ [0,1]; alpha≈0.1 routes to AudioSyncExpert, alpha≈0.85 to VisualArtifactExpert",
