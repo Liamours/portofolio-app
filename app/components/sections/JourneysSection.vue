@@ -107,14 +107,16 @@
             </div>
           </div>
 
-          <!-- Reflection -->
-          <div v-if="active.reflection?.length" class="reflection-block">
-            <h4 class="reflection-label">What I learned</h4>
-            <ul class="reflection-list">
-              <li v-for="(r, i) in active.reflection" :key="i">{{ r }}</li>
-            </ul>
-          </div>
+        </div>
+      </Transition>
 
+      <!-- Reflection — outside grid, full width, no sticky overlap -->
+      <Transition name="fade" mode="out-in">
+        <div v-if="active?.reflection?.length" :key="'ref-' + activeIdx" class="reflection-block">
+          <h4 class="reflection-label">What I learned</h4>
+          <ul class="reflection-list">
+            <li v-for="(r, i) in active.reflection" :key="i">{{ r }}</li>
+          </ul>
         </div>
       </Transition>
     </div>
