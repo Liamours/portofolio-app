@@ -19,6 +19,9 @@
         "Won 3rd place at CCI Summit Kaggle competition the same year, first competition as team lead.",
         "Awarded 2nd Best Final Project in the Study Group."
       ],
+      "links": [
+        { "label": "Plant Disease Project", "icon": "ph:github-logo", "url": "https://github.com/Liamours/Lab-AI-SG_Tugas-Besar" }
+      ],
       "images": [
         "/images/Study Group Member-1.jpg",
         "/images/Study Group Member-2.jpg",
@@ -34,6 +37,9 @@
         "Became Study Group Coordinator: recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
         "Supervised 15 project groups from proposal to final demonstration. Provided guidance during development, then judged and awarded at final presentations.",
         "Joined the Focused Group and led the multimodal deepfake detection project: a model handling both video and audio modalities with explainability output."
+      ],
+      "links": [
+        { "label": "Deepfake Detection", "icon": "ph:github-logo", "url": "https://github.com/Liamours/research-deepfake_classification" }
       ],
       "images": [
         "/images/ieee.jpg",
