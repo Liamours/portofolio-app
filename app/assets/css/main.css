@@ -1,27 +1,27 @@
 /* ─── Dark theme (default) ─────────────────────────── */
 :root {
-  --dot-color:      rgba(255, 255, 255, 0.06);
-  --bg:             #0C0C0C;
-  --surface:        #161616;
-  --surface-2:      #1F1F1F;
-  --border:         #2C2C2C;
-  --text:           #EDEBE6;
-  --text-muted:     #737373;
+  --dot-color:      rgba(255, 255, 255, 0.05);
+  --bg:             #0E0C0A;
+  --surface:        #171410;
+  --surface-2:      #211D19;
+  --border:         #2E2A26;
+  --text:           #EDE8DF;
+  --text-muted:     #7A746C;
   --accent-1:       #C9573F;
   --accent-2:       #C9573F;
-  --accent-1-sub:   rgba(201, 87, 63, 0.12);
-  --accent-2-sub:   rgba(201, 87, 63, 0.12);
+  --accent-1-sub:   rgba(201, 87, 63, 0.10);
+  --accent-2-sub:   rgba(201, 87, 63, 0.10);
 }
 
 /* ─── Light theme ──────────────────────────────────── */
 html.light {
-  --dot-color:      rgba(0, 0, 0, 0.045);
-  --bg:             #FAFAF8;
-  --surface:        #FFFFFF;
-  --surface-2:      #F4F2EE;
-  --border:         #E4E0D8;
-  --text:           #080808;
-  --text-muted:     #3D3D3D;
+  --dot-color:      rgba(0, 0, 0, 0.04);
+  --bg:             #F5F0EB;
+  --surface:        #FDFAF6;
+  --surface-2:      #EDE8E0;
+  --border:         #D8D2C8;
+  --text:           #1A1410;
+  --text-muted:     #5A5248;
   --accent-1:       #B84A32;
   --accent-2:       #B84A32;
   --accent-1-sub:   rgba(184, 74, 50, 0.08);
@@ -54,7 +54,7 @@ body {
   background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
   background-size: 24px 24px;
   color: var(--text);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   width: 100%;

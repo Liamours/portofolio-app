@@ -122,13 +122,14 @@ html.light .hero-bg {
   font-size: 0.85rem;
   color: var(--text);
   background: var(--accent-1-sub);
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out, background 0.2s ease-out, transform 0.15s ease-out;
 }
 
 .hero-link:hover {
-  border-color: var(--accent-2);
+  border-color: var(--accent-1);
   color: var(--text);
-  background: var(--accent-2-sub);
+  background: var(--accent-1-sub);
+  transform: translateY(-2px);
 }
 
 .hero-photo-wrap {

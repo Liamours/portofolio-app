@@ -22,6 +22,11 @@
   border-top: 1px solid var(--border);
 }
 
+/* Vary section density — not identical everywhere */
+#about    { padding: 3.5rem 2rem; }
+#skills   { padding: 3.5rem 2rem; }
+#experience { padding: 4rem 2rem; }
+
 .container {
   width: 100%;
   max-width: 1100px;

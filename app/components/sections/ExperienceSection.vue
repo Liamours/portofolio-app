@@ -116,7 +116,7 @@ const groups = computed(() =>
 
 .exp-item:hover,
 .exp-item.open {
-  border-color: var(--accent-2);
+  border-color: var(--text-muted);
 }
 
 .exp-summary {

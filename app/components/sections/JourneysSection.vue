@@ -202,9 +202,9 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out, background 0.2s ease-out, transform 0.15s ease-out;
 }
-.journey-btn:hover { border-color: var(--accent-1); color: var(--text); }
+.journey-btn:hover { border-color: var(--text-muted); color: var(--text); transform: translateY(-1px); }
 .journey-btn.active { background: var(--accent-1); border-color: var(--accent-1); color: #fff; }
 
 /* ── Fade transition ── */
@@ -356,7 +356,7 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   padding-left: 1rem; position: relative;
   line-height: 1.6; overflow-wrap: break-word;
 }
-.highlights li::before { content: '›'; position: absolute; left: 0; color: var(--accent-1); }
+.highlights li::before { content: '›'; position: absolute; left: 0; color: var(--border); }
 
 /* ── Publications ── */
 .pub-row { display: flex; flex-direction: column; gap: 0.35rem; }
@@ -369,7 +369,7 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 }
 .pub-chip:last-child { border-bottom: none; }
 .pub-chip:not(.no-link):hover { color: var(--text); }
-.pub-chip-type { font-size: 0.63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-1); flex-shrink: 0; }
+.pub-chip-type { font-size: 0.63rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); flex-shrink: 0; }
 .pub-chip-title { flex: 1; min-width: 0; }
 
 /* ── Links ── */

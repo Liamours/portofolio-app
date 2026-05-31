@@ -54,7 +54,7 @@ const expanded = ref(false)
 
 .card:hover,
 .card.expanded {
-  border-color: var(--accent-1);
+  border-color: var(--text-muted);
 }
 
 .card-top {
