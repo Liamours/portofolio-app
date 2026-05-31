@@ -40,6 +40,8 @@
   color: var(--text);
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--accent-info);
 }
 
 /* ── Section backgrounds ── */

@@ -11,6 +11,8 @@
   --accent-2:       #C9573F;
   --accent-1-sub:   rgba(201, 87, 63, 0.10);
   --accent-2-sub:   rgba(201, 87, 63, 0.10);
+  --accent-info:    #5A7A96;
+  --accent-info-sub: rgba(90, 122, 150, 0.12);
 }
 
 /* ─── Light theme ──────────────────────────────────── */
@@ -26,6 +28,8 @@ html.light {
   --accent-2:       #B84A32;
   --accent-1-sub:   rgba(184, 74, 50, 0.08);
   --accent-2-sub:   rgba(184, 74, 50, 0.08);
+  --accent-info:    #4A6A84;
+  --accent-info-sub: rgba(74, 106, 132, 0.10);
 }
 
 /* ─── Theme transition ─────────────────────────────── */

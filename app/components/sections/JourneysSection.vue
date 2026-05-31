@@ -327,7 +327,7 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 .milestone-year {
   font-size: 0.7rem;
   font-weight: 700;
-  color: var(--accent-1);
+  color: var(--accent-info);
   letter-spacing: 0.06em;
   flex-shrink: 0;
   min-width: 28px;
@@ -395,8 +395,8 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 .reflection-block {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: var(--surface-2);
-  border-left: 2px solid var(--accent-1);
+  background: var(--accent-info-sub);
+  border-left: 2px solid var(--accent-info);
 }
 
 .reflection-label {
@@ -428,7 +428,7 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   content: 'I';
   position: absolute;
   left: 0;
-  color: var(--accent-1);
+  color: var(--accent-info);
   font-family: 'DM Serif Display', Georgia, serif;
   font-style: italic;
   font-size: 0.85rem;
