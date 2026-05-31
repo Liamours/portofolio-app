@@ -6,14 +6,13 @@
       "year": "2025",
       "role": "ML Engineer · API Developer",
       "highlights": [
-        "Built a dataset downloader pipeline to pull alarm events and dashcam videos directly from the TransTrack platform, covering real-world driving data from mining company fleets: BIB, PAMA MTBU, and SIS",
-        "Designed and trained MultiscaleTCN: 3 parallel TCN branches with different dilation scales (fine [1,2,4,8], medium [2,4,8,16], coarse [4,8,16,32]) for multi-scale temporal fatigue pattern recognition",
-        "Input: 200-frame sequences of facial landmark features (EAR left/right, MAR, head pitch/yaw/roll, nose position) extracted via MediaPipe Holistic at 10 FPS, 11 scalar channels",
-        "3-class output: eyes_closed, normal, yawning; achieved test accuracy = 0.85, macro F1 = 0.78, an 11% F1 improvement over the company's prior single-modality baseline",
-        "Built FastAPI cloud review service with Redis queue: endpoint returns HTTP 202 immediately; background worker downloads MP4, extracts landmarks, runs inference, and POSTs verdict to TransTrack callback URL",
-        "Implemented two business logic rules: night-hour heuristic (00:00-05:59, confidence < 0.75 escalates) and driver history rule (2 or more fatigue events within 1 hour escalates)",
-        "Deployed as 3-service Docker stack: Redis, API (port 8000), and async worker; supported mock servers for local dev testing",
-        "39-test suite covering unit, pipeline, and live integration tests against the production MDVR server"
+        "Industry project with Trans Track — real dashcam footage from mining company fleets (BIB, PAMA MTBU, SIS). Not synthetic data.",
+        "Built the dataset downloader first: pulled alarm events and video clips directly from the TransTrack platform.",
+        "Designed MultiscaleTCN from scratch: 3 parallel TCN branches at different dilation scales (fine [1,2,4,8], medium [2,4,8,16], coarse [4,8,16,32]) running on 200-frame sequences of facial landmarks.",
+        "Input: EAR left/right, MAR, head pitch/yaw/roll, nose position — 11 values per frame, extracted by MediaPipe at 10 FPS.",
+        "Three classes: eyes closed, normal, yawning. Test accuracy 0.85, macro F1 0.78. Baseline was 0.67. That is an 11% gain on a model the company already had in production.",
+        "FastAPI service: HTTP 202 immediately, full pipeline async. Night-hour heuristic fires 00:00-05:59 when confidence drops below 0.75. Driver history rule escalates on 2+ fatigue events in 60 minutes.",
+        "3-service Docker stack. 39 tests passing against the live MDVR server."
       ],
       "links": [
         { "label": "Deployment", "icon": "ph:github-logo", "url": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review" },

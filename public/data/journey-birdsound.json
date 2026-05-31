@@ -9,10 +9,10 @@
         "/images/Birdsound Research 2024.jpg"
       ],
       "highlights": [
-        "Appointed as Research Team Lead on the avian monitoring project",
-        "Sourced and curated recordings from Xeno-canto, focusing on birds endemic and/or endangered in Indonesia, Malaysia, and Borneo island",
-        "Defined the target scope: 219 species including 17 Borneo endemics and 18 IUCN-threatened species",
-        "Built the full audio preprocessing pipeline: 48 kHz resampling, log-mel spectrogram extraction (96 bins, 96x511 px)"
+        "Took over as research lead. First task: build the dataset from scratch using Xeno-canto recordings.",
+        "Scoped to 219 species — specifically those endemic or endangered in Indonesia, Malaysia, and Borneo. 17 Borneo endemics. 18 IUCN-threatened.",
+        "Pulled 12,511 recordings + 8,840 negative samples (noise, speech, silence). Wrote the preprocessing code: 48 kHz resampling, log-mel spectrograms at 96 bins, 96x511 px per clip.",
+        "72/18/10 stratified split by species. No data leakage — split at recording level."
       ]
     },
     {
@@ -23,11 +23,9 @@
         "/images/1-Deep Learning for Bird Sound Identification.jpg"
       ],
       "highlights": [
-        "Developed the multi-stage framework: fine-tuning BirdNET v2.4 on the curated dataset of 12,511 recordings + 8,840 negative samples",
-        "Achieved +26.7% accuracy and +44.1% macro F1 on the endemic and endangered species subset (McNemar p < 0.05)",
-        "Built and deployed the species identification application",
-        "Conducted real-world field testing at Bandung Zoo (Indonesia) and Malaysia National Zoo to validate performance under natural acoustic conditions",
-        "Presented the paper at ICITACEE 2025 (Semarang, Indonesia)"
+        "Fine-tuned BirdNET v2.4. Baseline accuracy on the endemic/endangered subset: 52%. After fine-tuning: 66%. F1 went from 0.29 to 0.42 — +44%.",
+        "Tested the model in the field: Bandung Zoo (Indonesia) and Malaysia National Zoo. Real animals, background noise, no controlled conditions.",
+        "Presented at ICITACEE 2025 in Semarang. Paper accepted and published in IEEE Xplore."
       ],
       "links": [
         { "label": "Paper", "icon": "ph:file-text", "url": "https://ieeexplore.ieee.org/document/11233192" },
@@ -47,9 +45,9 @@
       "year": "2026",
       "role": "Co-Researcher · Journal Submission",
       "highlights": [
-        "Assisting lecturers in preparing a journal submission to PeerJ for the extended research findings",
-        "Improving sound source separation using MixIT (Mixture Invariant Training) combined with unsupervised learning models",
-        "Targeting more robust performance on overlapping bird calls and high-noise passive monitoring recordings"
+        "Working with the lecturers to extend the paper for PeerJ submission.",
+        "Adding MixIT source separation — unsupervised, no clean reference signal needed. Targets overlapping bird calls in noisy recordings.",
+        "The hard problem: two birds calling at once over wind and insects. MixIT handles this without labeled pairs."
       ]
     }
   ]

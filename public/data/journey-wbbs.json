@@ -11,30 +11,30 @@
         "/images/bonescan_research-2.jpg"
       ],
       "highlights": [
-        "Joined as the primary coder for the MoHE-funded bone scan research project",
-        "Meticulously annotated 600+ whole-body bone scintigraphy (WBBS) images using IbisPaintX, supervised by nuclear medicine physicians at Dr. Hasan Sadikin General Hospital",
-        "Built a 3,000-line Python codebase for confidence scoring, model validation, and BSI quantification",
-        "Architected the YOLOv8 hotspot detection and nnU-Net v2 segmentation pipeline"
+        "Got assigned as lead coder on a Ministry of Higher Education-funded project. No prior WBBS experience.",
+        "Annotated 600+ bone scan images in IbisPaintX — every skeletal region manually, supervised by nuclear medicine physicians at Dr. Hasan Sadikin General Hospital, Universitas Padjadjaran.",
+        "Wrote the detection and segmentation code: YOLOv8 for hotspot localization (mAP@0.5 = 0.599), nnU-Net v2 across 12 skeletal regions (DSC = 0.934).",
+        "3,000 lines of Python for BSI quantification. Patient-level AUC hit 0.956 — above EXINI and BONENAVI, both commercial systems."
       ]
     },
     {
       "year": "2025",
       "role": "Researcher · Clinical Collaborator",
       "highlights": [
-        "Collaborated directly with doctors at the Department of Nuclear Medicine and Molecular Theranostics, Universitas Padjadjaran, including on-site visits to Dr. Hasan Sadikin General Hospital",
-        "Extended the annotation dataset to 3,593 WBBS images (anterior + posterior views across 12 skeletal regions)",
-        "Participated in developing Telplastina v1, the first deployable diagnostic application for the pipeline",
-        "Preprint submitted: 'From Segmentation to Biomarker Quantification' (SSRN)"
+        "Started visiting the hospital directly. Worked with nuclear medicine doctors at Dr. Hasan Sadikin to understand how BSI is actually scored in the clinic.",
+        "Grew the dataset from 600 to 3,593 annotated images — anterior and posterior views, 12 regions each.",
+        "Participated in building Telplastina v1, the first time this pipeline became an actual application.",
+        "Submitted the first preprint to SSRN in January 2025."
       ]
     },
     {
       "year": "2026",
       "role": "Thesis Researcher · Application Developer",
       "highlights": [
-        "Elevated the research to Bachelor's Thesis, formalising the full pipeline as an academic contribution",
-        "Led development of Telplastina v2, a full-stack WBBS diagnostic app (Vue 3 + Rust + Docker)",
-        "Journal paper published: 'Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2' (IJIES-INASS)",
-        "Released annotated dataset of 3,593 images publicly on Zenodo for the research community"
+        "Turned 2 years of research into my bachelor's thesis.",
+        "Led development of Telplastina v2 — full stack: Vue 3 frontend, Rust backend, Docker deployment.",
+        "Journal paper accepted in IJIES-INASS. Dataset of 3,593 images released on Zenodo — open to anyone.",
+        "The pipeline now surpasses EXINI (AUC 0.83–0.88) and BONENAVI (0.84–0.89) on patient-level scoring."
       ],
       "images": [
         "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"

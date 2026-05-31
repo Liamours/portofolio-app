@@ -5,9 +5,8 @@
     "period": "2025 – Present",
     "type": "research",
     "highlights": [
-      "Building a foundational multi-task chest X-ray system: classification, organ segmentation, report generation, VQA, and visual grounding",
-      "Lead developer of the pathology classification and organ segmentation modules",
-      "System deployed as both a web application and a standalone desktop application"
+      "Building classification and segmentation modules for a 5-task CXR system: classification, organ segmentation, report generation, VQA, visual grounding",
+      "Deployed as both a web app and desktop app (Tauri v2)"
     ]
   },
   {
@@ -16,9 +15,8 @@
     "period": "Jun 2025 – Present",
     "type": "organization",
     "highlights": [
-      "Led and coordinated weekly AI study sessions for 29 students on core ML/DL concepts",
-      "Managed recruitment: screened 70+ applicants to select high-potential candidates",
-      "Supervise 15 project groups, providing technical mentorship and evaluation for final projects"
+      "Weekly sessions for 29 students. Screened 70+ applicants to fill the cohort.",
+      "Supervising 15 active project groups"
     ]
   },
   {
@@ -27,8 +25,8 @@
     "period": "Jan 2025 – Jan 2026",
     "type": "organization",
     "highlights": [
-      "Provided key information on competitions including IEEE and BELMAWA competitions",
-      "Led team as team leader at YESIST12 – Maker Fair"
+      "Led team at YESIST12 Maker Fair as team leader",
+      "Tracked competition opportunities across IEEE and BELMAWA programs"
     ]
   },
   {
@@ -37,8 +35,8 @@
     "period": "Feb 2025 – Jun 2025",
     "type": "teaching",
     "highlights": [
-      "Supported 40+ undergraduate students during high-stakes programming assessments and quizzes",
-      "Tested, reviewed, and debugged 200+ programming quiz questions with course lecturers"
+      "Ran live support for 40+ students during programming assessments",
+      "Debugged 200+ quiz questions with the course lecturers before release"
     ]
   },
   {
@@ -47,8 +45,7 @@
     "period": "Sep 2024 – Jan 2025",
     "type": "teaching",
     "highlights": [
-      "Assisted 40+ students with problem-solving and conceptual understanding in calculus",
-      "Evaluated and graded four major assignments with accuracy, consistency, and timely feedback"
+      "Tutored 40+ students. Graded four major assignments."
     ]
   },
   {
@@ -57,8 +54,7 @@
     "period": "Nov 2025 – Jan 2026",
     "type": "committee",
     "highlights": [
-      "Coordinated a four-member team to collect, clean, and prepare registration data for 1,000+ participants nationwide",
-      "Used Excel, Python scripts, and Google Workspace to manage data workflows and ensure accuracy"
+      "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets"
     ]
   },
   {
@@ -67,8 +63,8 @@
     "period": "Aug 2024",
     "type": "committee",
     "highlights": [
-      "Reviewed and provided feedback to four conference participants; completed corrections ahead of schedule",
-      "Conducted device checks for four sessions; assisted 22 participants by preparing joint PowerPoint slides"
+      "Reviewed 4 conference papers and returned corrections ahead of deadline",
+      "Managed AV setup for 4 sessions, assisted 22 presenters"
     ]
   },
   {
@@ -77,7 +73,7 @@
     "period": "2025",
     "type": "competition",
     "highlights": [
-      "Qualified (Lolos) in D3/D4/S1 category as team Rethreeno",
+      "Team Rethreeno qualified (Lolos) in the D3/D4/S1 category nationwide",
       "Team: M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Aprilianza Muhammad Yusup"
     ]
   },
@@ -87,7 +83,7 @@
     "period": "Feb 2025",
     "type": "competition",
     "highlights": [
-      "Best Proposal award, team Rethreeno",
+      "Best Proposal award — team Rethreeno",
       "Project: Diabetes Mellitus detection from tongue images using MobileNet & ViT"
     ]
   },
@@ -97,8 +93,8 @@
     "period": "Oct 2024",
     "type": "competition",
     "highlights": [
-      "3rd Place",
-      "Mentored team in Python and basic ML for tabular and text data; analyzed, preprocessed, and trained multiple classification models"
+      "3rd Place out of the competing teams",
+      "Tabular classification: cleaned data, trained multiple models, mentored teammates on ML basics"
     ]
   }
 ]
