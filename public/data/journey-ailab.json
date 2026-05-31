@@ -3,20 +3,21 @@
   "subtitle": "Telkom University AI Laboratory",
   "logo": "/images/logo-ai_lab.png",
   "reflection": [
-    "Teaching 29 students weekly forced me to understand ML concepts properly. You cannot bluff a question you did not expect.",
-    "I reviewed 70+ applicants for the study group. What I was actually looking for: people who ask follow-up questions, not people who already know the answers.",
-    "I learned that a coordinator's job is different from a member's job. As a member, you execute. As a coordinator, you make sure other people can execute.",
-    "Supervising 15 project groups showed me how many ways a project can be technically running and scientifically meaningless at the same time.",
-    "I learned to evaluate research quality: not just whether the code runs, but whether the question was worth asking."
+    "Teaching 29 students weekly required understanding each concept well enough to handle any question on the spot.",
+    "Recruiting 70+ applicants taught me what matters in a research context: track record, not just potential.",
+    "A coordinator's responsibilities are different from a member's. Members execute. Coordinators ensure others can execute consistently.",
+    "Supervising 15 project groups showed me how many ways a project can be technically functional and scientifically weak at the same time.",
+    "Evaluating research quality means asking whether the question was worth answering, not just whether the code ran."
   ],
   "milestones": [
     {
       "year": "2024",
       "role": "Study Group Member",
       "highlights": [
-        "First year in AI Lab. Joined as a member, got assigned team lead on the plant disease classifier project.",
-        "Built the full pipeline in Python: data cleaning, training DL model for computer vision, Streamlit deployment. Done in one semester.",
-        "Won 3rd place at CCI Summit Kaggle competition the same year, first competition as team lead."
+        "First year in AI Lab. Joined as a member, assigned as team lead on the plant disease classifier project.",
+        "Built the full pipeline in Python: data cleaning, training DL model for computer vision, Streamlit deployment. Completed in one semester.",
+        "Won 3rd place at CCI Summit Kaggle competition the same year, first competition as team lead.",
+        "Awarded 2nd Best Final Project in the Study Group."
       ],
       "images": [
         "/images/Study Group Member-1.jpg",
@@ -30,10 +31,9 @@
       "year": "2025",
       "role": "Study Group Coordinator · Focused Group Member",
       "highlights": [
-        "Promoted to coordinator. Now responsible for 29 students every week. Not just doing the work, but explaining it.",
-        "Ran recruitment: 70+ applicants, filtered down to a cohort. Harder than it sounds.",
-        "Joined the Focused Group, the research track inside AI Lab for members doing active projects.",
-        "Supervised 15 project groups from proposal to demo. Saw every way a project can go wrong."
+        "Became Study Group Coordinator: recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
+        "Supervised 15 project groups from proposal to final demonstration. Provided guidance during development, then judged and awarded at final presentations.",
+        "Joined the Focused Group and led the multimodal deepfake detection project: a model handling both video and audio modalities with explainability output."
       ],
       "images": [
         "/images/ieee.jpg",
@@ -54,9 +54,9 @@
       "year": "2026",
       "role": "Focused Group Coordinator",
       "highlights": [
-        "Now running the Focused Group, the advanced research track.",
-        "Setting research direction, reviewing member output, connecting projects to real-world partners.",
-        "AI Lab work feeds into active industry collaborations and thesis research."
+        "Appointed as Focused Group Coordinator, overseeing research-active members within AI Lab.",
+        "Setting research direction, reviewing member output, and connecting projects to industry and academic partners.",
+        "Current projects include medical imaging, NLP, and computer vision research tracks."
       ],
       "images": [
         "/images/Study Group Coordinator.jpg"
