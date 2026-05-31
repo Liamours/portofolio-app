@@ -2,6 +2,13 @@
   "title": "AI Lab Journey",
   "subtitle": "Telkom University AI Laboratory",
   "logo": "/images/logo-ai_lab.png",
+  "reflection": [
+    "I learned that explaining something is harder than doing it. Teaching 29 students weekly forced me to understand ML concepts well enough to answer unexpected questions.",
+    "I learned to run a recruitment process — reviewing 70+ applicants taught me what to actually look for in someone who will do research well.",
+    "I learned that leading capable people is mostly about getting out of their way and providing clear goals, not constant direction.",
+    "I learned to evaluate research quality, not just technical correctness. Supervising 15 project groups showed me how many ways a project can be technically working but scientifically weak.",
+    "I learned that the gap between study group member and coordinator is not just seniority — it is a completely different relationship to the work."
+  ],
   "milestones": [
     {
       "year": "2024",

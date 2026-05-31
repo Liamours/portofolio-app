@@ -1,6 +1,13 @@
 {
   "title": "Chest X-Ray Multi-Task Research",
   "subtitle": "Telplastina: multi-task CXR system for clinical AI-assisted diagnosis",
+  "reflection": [
+    "I learned to fine-tune established medical imaging models — TorchXRayVision DenseNet121 is a well-validated baseline, and adapting it responsibly is a different skill from training from scratch.",
+    "I learned to compare architectures systematically — training both DenseNet and DeiT on the same data and understanding why one performs differently.",
+    "I learned to read and process DICOM files, which are not just images. Pixel intensities, window levels, and metadata all matter in radiology.",
+    "I learned to own a module inside a larger system — my code has to integrate cleanly with the report generation, VQA, and grounding modules that others built.",
+    "I learned to package AI inference as a microservice, not a script. Other people's apps call my endpoints."
+  ],
   "milestones": [
     {
       "year": "2026",
