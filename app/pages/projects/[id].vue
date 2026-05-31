@@ -130,9 +130,8 @@ useHead({
 }
 
 .detail-title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
   color: var(--text);
   line-height: 1.15;
   margin-bottom: 0.5rem;
@@ -190,9 +189,8 @@ useHead({
 }
 
 .detail-section-title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 1.25rem;
   letter-spacing: -0.01em;

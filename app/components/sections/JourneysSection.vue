@@ -360,13 +360,20 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   display: flex; flex-direction: column; gap: 0.9rem;
 }
 
-.highlights { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.highlights {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
 .highlights li {
   font-size: 0.83rem; color: var(--text-muted);
-  padding-left: 1rem; position: relative;
+  padding-left: 1.1rem; position: relative;
   line-height: 1.6; overflow-wrap: break-word;
 }
-.highlights li::before { content: '›'; position: absolute; left: 0; color: var(--border); }
+.highlights li::before { content: '•'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.7rem; top: 0.25rem; }
 
 /* ── Publications ── */
 .pub-row { display: flex; flex-direction: column; gap: 0.35rem; }
@@ -402,9 +409,8 @@ const switchJourney = (i: number) => { activeIdx.value = i }
 }
 
 .reflection-label {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.01em;
   margin-bottom: 0.85rem;
@@ -431,7 +437,7 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   position: absolute;
   left: 0;
   color: var(--accent-info);
-  font-family: 'DM Serif Display', Georgia, serif;
+  
   font-style: italic;
   font-size: 0.85rem;
 }

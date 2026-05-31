@@ -34,9 +34,8 @@
 }
 
 .section-title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 2rem;
   letter-spacing: -0.01em;

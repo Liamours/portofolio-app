@@ -171,9 +171,8 @@ const expanded = ref(false)
 }
 
 .stat-value {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text);
   line-height: 1;
   letter-spacing: -0.02em;
