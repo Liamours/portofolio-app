@@ -33,6 +33,7 @@ export interface Project {
   id: string
   title: string
   type: 'research' | 'industrial' | 'software'
+  status?: 'in-progress' | 'planned'
   period: string
   institution?: string
   funding?: string

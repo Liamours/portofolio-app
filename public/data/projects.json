@@ -1,5 +1,65 @@
 [
   {
+    "id": "bird-conservation-app",
+    "title": "Foundational Bird Conservation Application",
+    "type": "research",
+    "status": "in-progress",
+    "period": "2026 – present",
+    "institution": "Telkom University · Universiti Malaysia Sarawak",
+    "summary": "A deployable application for passive avian monitoring in the field, built on top of the bird species identification research. Targets conservation teams working with endangered and endemic species in Indonesia and Malaysia.",
+    "highlights": [
+      "Wraps the BirdNET-based classification pipeline into a field-usable application",
+      "Designed for deployment in jungle monitoring stations with intermittent connectivity",
+      "Target users: conservation officers and wildlife researchers in Borneo"
+    ],
+    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa"]
+  },
+  {
+    "id": "petct-segmentation",
+    "title": "PET/CT Tumor and Organ Segmentation",
+    "type": "research",
+    "status": "in-progress",
+    "period": "2026 – present",
+    "institution": "Telkom University",
+    "summary": "Automated segmentation of tumors and organs from PET/CT scans, extending the WBBS segmentation work into full-body oncology imaging.",
+    "highlights": [
+      "Targets multi-organ and tumor segmentation from combined PET/CT volumes",
+      "Builds on nnU-Net v2 experience from the WBBS bone scan pipeline",
+      "Collaboration with nuclear medicine imaging specialists"
+    ],
+    "stack": ["Python", "PyTorch", "nnU-Net v2", "SimpleITK", "DICOM"]
+  },
+  {
+    "id": "computational-pathology",
+    "title": "Computational Pathology",
+    "type": "research",
+    "status": "planned",
+    "period": "2026 – present",
+    "institution": "Telkom University",
+    "summary": "Applying deep learning to histopathology slides for disease classification and tissue analysis. Early-stage research direction.",
+    "highlights": [
+      "Whole-slide image (WSI) analysis using patch-based deep learning",
+      "Targeting cancer grading and tissue classification tasks",
+      "Research direction building on medical imaging expertise from WBBS and CXR projects"
+    ],
+    "stack": ["Python", "PyTorch", "OpenSlide", "Vision Transformer"]
+  },
+  {
+    "id": "ophthalmic-imaging",
+    "title": "Ophthalmic Imaging with AI",
+    "type": "research",
+    "status": "in-progress",
+    "period": "2026 – present",
+    "institution": "Telkom University",
+    "summary": "Deep learning for ophthalmic image analysis. Best Paper award at ADIKARA Telkom University.",
+    "highlights": [
+      "Best Paper award at ADIKARA, School of Computing, Telkom University",
+      "Automated analysis of ophthalmic images for clinical decision support",
+      "Extends the medical imaging pipeline approach to ophthalmology"
+    ],
+    "stack": ["Python", "PyTorch", "OpenCV"]
+  },
+  {
     "id": "bone-metastasis",
     "title": "Bone Metastasis Diagnosis Framework",
     "type": "research",

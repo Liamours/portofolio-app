@@ -2,6 +2,11 @@
   <div class="card" :class="{ expanded }">
     <div class="card-top" @click="expanded = !expanded">
       <div class="card-meta">
+        <span v-if="project.status" class="status-badge" :class="`status-${project.status}`">
+          <Icon name="ph:circle-dashed" size="10" v-if="project.status === 'in-progress'" />
+          <Icon name="ph:clock" size="10" v-else />
+          {{ project.status === 'in-progress' ? 'In Progress' : 'Planned' }}
+        </span>
         <span v-if="project.period" class="card-period">{{ project.period }}</span>
         <div class="spacer" />
         <Icon name="ph:caret-down" class="caret" :class="{ rotated: expanded }" size="16" />
@@ -134,6 +139,30 @@ const expanded = ref(false)
 .card-link:hover {
   background: var(--accent-1);
   color: #fff;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 99px;
+}
+
+.status-in-progress {
+  color: #B07D3A;
+  background: rgba(176, 125, 58, 0.1);
+  border: 1px solid rgba(176, 125, 58, 0.3);
+}
+
+.status-planned {
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 
 .card-period {
