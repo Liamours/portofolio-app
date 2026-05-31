@@ -2,8 +2,7 @@
   <nav class="navbar">
     <div class="nav-links">
       <a v-for="link in navLinks" :key="link.href" :href="link.href" class="nav-link">
-        <Icon :name="link.icon" size="15" />
-        <span>{{ link.label }}</span>
+        {{ link.label }}
       </a>
     </div>
     <ThemeToggle />
@@ -12,68 +11,50 @@
 
 <script setup lang="ts">
 const navLinks = [
-  { href: '#about',        label: 'About',        icon: 'ph:user' },
-  { href: '#journeys',     label: 'Journeys',     icon: 'ph:map-trifold' },
-  { href: '#experience',   label: 'Experience',   icon: 'ph:briefcase' },
-  { href: '#projects',     label: 'Projects',     icon: 'ph:folder-open' },
-  { href: '#skills',       label: 'Skills',       icon: 'ph:wrench' },
+  { href: '#about',      label: 'About' },
+  { href: '#journeys',   label: 'Journeys' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects',   label: 'Projects' },
+  { href: '#skills',     label: 'Skills' },
 ]
 </script>
 
 <style scoped>
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.85rem 2rem;
-  background: rgba(12, 12, 12, 0.88);
+  justify-content: flex-end;
+  padding: 0.9rem 2rem;
+  background: rgba(14, 12, 10, 0.90);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
 
 html.light .navbar {
-  background: rgba(250, 250, 248, 0.88);
-}
-
-.nav-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text);
-  letter-spacing: 0.05em;
+  background: rgba(245, 240, 235, 0.92);
 }
 
 .nav-links {
   display: flex;
-  gap: 0.25rem;
+  gap: 0;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem 0.75rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.85rem;
   font-size: 0.82rem;
+  font-weight: 500;
   color: var(--text-muted);
-  transition: color 0.2s, background 0.2s;
+  letter-spacing: 0.01em;
+  transition: color 0.18s ease-out;
+  border-radius: 0;
 }
 
-.nav-link:hover {
-  color: var(--text);
-  background: var(--surface-2);
-}
+.nav-link:hover { color: var(--text); }
 
-@media (max-width: 768px) {
-  .nav-link span { display: none; }
-  .nav-links { gap: 0; }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .nav-links { display: none; }
 }
 </style>

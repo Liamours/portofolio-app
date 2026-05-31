@@ -34,14 +34,12 @@
 }
 
 .section-title {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  padding-left: 0.75rem;
-  border-left: 2px solid var(--accent-1);
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
 }
 
 /* ── Section backgrounds ── */

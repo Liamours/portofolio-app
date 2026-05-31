@@ -9,14 +9,17 @@
 
       <div class="card-title-row">
         <h3 class="card-title">{{ project.title }}</h3>
-        <div v-if="project.links" class="card-links" @click.stop>
-          <a v-if="project.links.github" :href="project.links.github" target="_blank" rel="noopener noreferrer" class="card-link">
+        <div class="card-links" @click.stop>
+          <NuxtLink :to="`/projects/${project.id}`" class="card-link detail-link">
+            <Icon name="ph:arrow-right" size="12" /> Details
+          </NuxtLink>
+          <a v-if="project.links?.github" :href="project.links.github" target="_blank" rel="noopener noreferrer" class="card-link">
             <Icon name="ph:github-logo" size="12" /> GitHub
           </a>
-          <a v-if="project.links.demo" :href="project.links.demo" target="_blank" rel="noopener noreferrer" class="card-link">
+          <a v-if="project.links?.demo" :href="project.links.demo" target="_blank" rel="noopener noreferrer" class="card-link">
             <Icon name="ph:arrow-square-out" size="12" /> Demo
           </a>
-          <a v-if="project.links.paper" :href="project.links.paper" target="_blank" rel="noopener noreferrer" class="card-link">
+          <a v-if="project.links?.paper" :href="project.links.paper" target="_blank" rel="noopener noreferrer" class="card-link">
             <Icon name="ph:file-text" size="12" /> Paper
           </a>
         </div>
@@ -47,7 +50,7 @@ const expanded = ref(false)
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 3px;
   overflow: hidden;
   transition: border-color 0.2s;
 }

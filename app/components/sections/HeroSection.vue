@@ -83,10 +83,11 @@ html.light .hero-bg {
 }
 
 .hero-name {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
   color: var(--text);
   margin-bottom: 0.75rem;
 }
