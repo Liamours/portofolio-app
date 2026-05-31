@@ -107,6 +107,14 @@
             </div>
           </div>
 
+          <!-- Reflection -->
+          <div v-if="active.reflection?.length" class="reflection-block">
+            <h4 class="reflection-label">What I learned</h4>
+            <ul class="reflection-list">
+              <li v-for="(r, i) in active.reflection" :key="i">{{ r }}</li>
+            </ul>
+          </div>
+
         </div>
       </Transition>
     </div>
@@ -382,6 +390,49 @@ const switchJourney = (i: number) => { activeIdx.value = i }
   transition: border-color 0.2s, color 0.2s;
 }
 .m-link:hover { border-color: var(--accent-1); color: var(--accent-1); }
+
+/* ── Reflection ── */
+.reflection-block {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent-1);
+}
+
+.reflection-label {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.85rem;
+  font-style: italic;
+}
+
+.reflection-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.reflection-list li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.65;
+}
+
+.reflection-list li::before {
+  content: 'I';
+  position: absolute;
+  left: 0;
+  color: var(--accent-1);
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 0.85rem;
+}
 
 /* ── Mobile ── */
 @media (max-width: 768px) {

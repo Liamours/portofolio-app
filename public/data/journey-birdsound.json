@@ -1,6 +1,12 @@
 {
   "title": "Bird Sound Identification Research",
   "subtitle": "Passive acoustic monitoring for avian conservation in Indonesia and Malaysia",
+  "reflection": [
+    "I learned to fine-tune an established model (BirdNET) for a specific classification task rather than building from scratch.",
+    "I learned to process both sound data and image data — spectrograms taught me that audio and vision pipelines share more than I expected.",
+    "I learned to lead a team of capable students — capable people don't need management, they need direction and space.",
+    "I learned to present research at a conference in front of people who know the domain better than I do."
+  ],
   "milestones": [
     {
       "year": "2024",

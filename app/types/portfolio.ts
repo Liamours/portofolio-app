@@ -84,6 +84,7 @@ export interface Journey {
   subtitle: string
   logo?: string
   milestones: JourneyMilestone[]
+  reflection?: string[]
 }
 
 export interface SkillGroup {

@@ -1,6 +1,14 @@
 {
   "title": "Whole-Body Bone Scintigraphy Research",
   "subtitle": "From annotation to thesis: a 3-year research arc",
+  "reflection": [
+    "I learned to fully retrain a segmentation model (nnU-Net v2) — not just fine-tune, but set up the full training pipeline from data format to inference.",
+    "I learned to process medical imaging data, including DICOM files, and understand what clinicians actually look at when they read a scan.",
+    "I learned to coordinate with teammates across different backgrounds — coders, doctors, thesis supervisors — and keep the work moving.",
+    "I learned to annotate data properly. 600+ images by hand teaches you exactly where models fail.",
+    "I visited Dr. Hasan Sadikin General Hospital and saw how computer-assisted diagnosis actually gets used — or doesn't — in a real clinic.",
+    "I contributed to building Telplastina: an application that doctors can open and use. That is different from writing a paper about it."
+  ],
   "milestones": [
     {
       "year": "2024",
