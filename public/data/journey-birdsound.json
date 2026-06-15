@@ -25,8 +25,7 @@
       "year": "2025",
       "role": "Research Lead · Published · Field Testing",
       "images": [
-        "/images/Birdsound 2025.jpg",
-        "/images/1-Deep Learning for Bird Sound Identification.jpg"
+        "/images/Birdsound 2025.jpg"
       ],
       "highlights": [
         "Fine-tuned BirdNET v2.4. Baseline accuracy on the endemic/endangered subset: 52%. After fine-tuning: 66%. F1 went from 0.29 to 0.42 (+44%).",
