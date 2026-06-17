@@ -5,8 +5,7 @@
     "I learned to fully retrain a segmentation model (nnU-Net v2), not just fine-tune it. Setting up the full training pipeline from data format to inference is a different task.",
     "I learned to process medical imaging data, including DICOM files, and understand what clinicians actually look at when they read a scan.",
     "I learned to coordinate with teammates across different backgrounds: coders, doctors, thesis supervisors. Keeping the work moving is its own skill.",
-    "I learned to annotate data properly. 600+ images by hand teaches you exactly where models fail.",
-    "I visited Dr. Hasan Sadikin General Hospital and saw how computer-assisted diagnosis actually gets used, or doesn't, in a real clinic.",
+    "Annotating data manually teaches you exactly where models fail.",
     "I contributed to building Telplastina: an application that doctors can open and use. That is different from writing a paper about it."
   ],
   "milestones": [
@@ -20,16 +19,16 @@
       "highlights": [
         "Got assigned as lead coder on a Ministry of Higher Education-funded project. No prior WBBS experience.",
         "Annotated 600+ bone scan images in IbisPaintX, every skeletal region manually, supervised by nuclear medicine physicians at Dr. Hasan Sadikin General Hospital, Universitas Padjadjaran.",
-        "Wrote the detection and segmentation code: YOLOv8 for hotspot localization (mAP@0.5 = 0.599), nnU-Net v2 across 12 skeletal regions (DSC = 0.934).",
-        "3,000 lines of Python for BSI quantification. Patient-level AUC hit 0.956, above EXINI and BONENAVI, both commercial systems."
+        "Wrote the detection and segmentation code: YOLOv8 for hotspot localization, nnU-Net v2 across 12 skeletal regions.",
+        "Built the BSI quantification pipeline. Results surpassed both commercial systems in clinical use."
       ]
     },
     {
       "year": "2025",
       "role": "Researcher · Clinical Collaborator",
       "highlights": [
-        "Started visiting the hospital directly. Worked with nuclear medicine doctors at Dr. Hasan Sadikin to understand how BSI is actually scored in the clinic.",
-        "Grew the dataset from 600 to 3,593 annotated images: anterior and posterior views, 12 regions each.",
+        "Started visiting the hospital directly. Worked with nuclear medicine doctors to understand how BSI is actually scored in the clinic.",
+        "Grew the dataset significantly: anterior and posterior views, 12 regions each.",
         "Participated in building Telplastina v1, the first time this pipeline became an actual application.",
         "Submitted the first preprint to SSRN in January 2025."
       ]
@@ -40,8 +39,7 @@
       "highlights": [
         "Turned 2 years of research into my bachelor's thesis.",
         "Led development of Telplastina v2: Vue 3 frontend, Rust backend, Docker deployment.",
-        "Journal paper accepted in IJIES-INASS. Dataset of 3,593 images released on Zenodo, open to anyone.",
-        "The pipeline now surpasses EXINI (AUC 0.83–0.88) and BONENAVI (0.84–0.89) on patient-level scoring."
+        "Journal paper accepted in IJIES-INASS. Dataset released on Zenodo, open to anyone."
       ],
       "images": [
         "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
@@ -50,29 +48,6 @@
         { "label": "Repository: wbbs-nnunetv2", "icon": "ph:github-logo", "url": "https://github.com/Liamours/wbbs-nnunetv2" },
         { "label": "Dataset: Segmentation Masks of Bone Area Images (Zenodo)", "icon": "ph:database", "url": "https://zenodo.org/records/20342310" },
         { "label": "Preprint: From Segmentation to Biomarker Quantification (SSRN)", "icon": "ph:file-text", "url": "https://ssrn.com/abstract=5187453" }
-      ],
-      "publications": [
-        {
-          "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
-          "type": "Journal Paper",
-          "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)",
-          "year": 2025,
-          "link": "https://github.com/Liamours/wbbs-nnunetv2"
-        },
-        {
-          "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
-          "type": "Preprint",
-          "venue": "SSRN Preprint",
-          "year": 2025,
-          "link": "https://ssrn.com/abstract=5187453"
-        },
-        {
-          "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",
-          "type": "Dataset",
-          "venue": "Zenodo",
-          "year": 2025,
-          "link": "https://zenodo.org/records/20342310"
-        }
       ]
     }
   ]

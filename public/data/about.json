@@ -2,5 +2,6 @@
   "bio": "Third-year Informatics student at Telkom University. I annotated 3,593 bone scan images, wrote 4,500+ lines of audio processing code, and shipped a fatigue detection system now running on mining fleet dashcams. Two published papers. Two funded research projects. One bachelor's thesis in progress.",
   "gpa": "4.0/4.0",
   "institution": "Telkom University, School of Computing",
-  "graduation": "Expected June 2027"
+  "graduation": "Expected June 2027",
+  "hardware": "RTX 4050 6 GB VRAM"
 }

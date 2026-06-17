@@ -56,7 +56,6 @@
     "institution": "Telkom University",
     "summary": "Classification model for diabetic mellitus detection using retina fundus imaging. Best Paper at ADIKARA, School of Computing, Telkom University.",
     "highlights": [
-      "Best Paper award at ADIKARA, School of Computing, Telkom University",
       "Diabetic mellitus classification from retina fundus images",
       "Team of 3, led by M. Rifqi Dzaky Azhad"
     ],
@@ -77,10 +76,10 @@
     ],
     "highlights": [
       "YOLOv8 (anchor-free, CSPDarknet backbone) hotspot detection at mAP@0.5 = 0.599",
-      "nnU-Net v2 skeletal segmentation across 12 anatomical regions: mean DSC = 0.934, IoU = 0.879",
-      "XGBoost AUC = 0.956, LightGBM AUC = 0.947 at patient level; automated BSI correlated with clinical burden at r = 0.82 (p < 0.001)",
+      "nnU-Net v2 skeletal segmentation across 12 anatomical regions: IoU 0.879",
+      "XGBoost and LightGBM (AUC 0.947) at patient level; automated BSI correlated with clinical burden at r = 0.82 (p < 0.001)",
       "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)",
-      "Lead Coder: 3,000-line codebase; annotated 600+ WBBS images for segmentation and detection ground truth"
+      "Lead Coder: 3,000-line codebase"
     ],
     "stack": ["Python", "YOLOv8", "nnU-Net v2", "PyRadiomics", "XGBoost", "LightGBM", "PyTorch"],
     "links": {
@@ -102,10 +101,9 @@
     ],
     "highlights": [
       "MixIT source separation + fine-tuned BirdNET v2.4; applied to 1,202 training and 115 test recordings",
-      "Endemic/endangered subset (n=115): accuracy = 0.6609, macro F1 = 0.4193 (+26.7% accuracy, +44.1% F1 over baseline; McNemar p < 0.05)",
-      "Full test set (n=1,335, 219 species): accuracy = 0.72, macro F1 = 0.554, weighted F1 = 0.724",
-      "Dataset: 12,511 recordings from Xeno-canto and PBHAR + 8,840 negative samples; 72/18/10 stratified split",
-      "Research Team Lead: 4,500+ lines of Python; presented at ICITACEE 2025"
+      "Endemic/endangered subset (n=115): accuracy 0.6609, macro F1 0.4193 (McNemar p < 0.05)",
+      "Full test set (n=1,335): accuracy 0.72, macro F1 0.554, weighted F1 0.724",
+      "Dataset from Xeno-canto and PBHAR with 8,840 negative samples; 72/18/10 stratified split"
     ],
     "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa", "torchaudio", "Conda"],
     "links": {
@@ -161,9 +159,10 @@
     ],
     "highlights": [
       "MediaPipe Holistic: 468 facial landmark coordinates extracted and temporally interpolated per frame",
-      "Multi-modal fusion model (spatial landmarks + cropped face features): test accuracy = 0.85, macro F1 = 0.78, +11% F1 over prior single-modality baseline at 10 FPS",
+      "Multi-modal fusion model (spatial landmarks + cropped face features): test accuracy 0.85 at 10 FPS",
       "Async cloud-review API (FastAPI, Python 3.11): HTTP 202 immediate response; background pipeline downloads, runs inference, and posts verdict to TransTrack callback with 30-minute auto-purge",
-      "39-test suite covering unit, pipeline, and live integration tests against the production MDVR server",
+      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports via openpyxl",
+      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server",
       "Deployed in Docker-containerised environment on RTX 4050 6 GB VRAM"
     ],
     "stack": ["Python", "MediaPipe", "PyTorch", "FastAPI", "OpenCV", "httpx", "pytest", "Docker"],
@@ -189,7 +188,7 @@
   {
     "id": "deepfake-detection",
     "title": "Multimodal Deepfake Detection with Modality-Aware Mixture of Experts",
-    "type": "research",
+    "type": "software",
     "period": "2025 – present",
     "institution": "Telkom University · AI Lab Focused Group",
     "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after DANN regularization.",
@@ -202,30 +201,12 @@
       "VideoMAE (frozen, 768-dim) + Whisper (frozen, 1024-dim) encoders feed a cross-modal attention module; residuals compute audio_anomaly and visual_anomaly scores without manual labels",
       "ModalityReliabilityGate MLP maps anomaly scores to alpha ∈ [0,1]; alpha≈0.1 routes to AudioSyncExpert, alpha≈0.85 to VisualArtifactExpert",
       "DANN gradient-reversal on gate head prevents dataset-identity shortcuts, forcing cross-domain generalisation",
-      "Intra-dataset F1 = 0.94; cross-dataset generalisation (held-out unseen domains) F1 = 0.60 post-DANN",
       "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++",
       "Targeting submission to ICODSA 2026"
     ],
     "stack": ["PyTorch", "VideoMAE", "Whisper", "MediaPipe", "DANN", "Conda"],
     "links": {
       "github": "https://github.com/Liamours/research-deepfake_classification"
-    }
-  },
-  {
-    "id": "transtrack-api",
-    "title": "TransTrack Cloud Review Engine",
-    "type": "software",
-    "period": null,
-    "summary": "Async cloud-side review API for a commercial Driver Monitoring System, receiving fatigue alarm events from vehicle dashcams and returning AI verdicts via callback.",
-    "highlights": [
-      "Endpoint returns HTTP 202 immediately; full pipeline (video download, frame inspection, DL inference, callback POST) runs asynchronously with 30-minute local record auto-purge",
-      "Live polling runner authenticates against TransTrack platform, fetches alarm events, and writes verdicts to structured Excel reports via openpyxl",
-      "39-test suite: unit tests, pipeline integration tests, and real-environment tests against the live MDVR server"
-    ],
-    "stack": ["Python 3.11", "FastAPI", "OpenCV", "httpx", "pytest", "openpyxl"],
-    "links": {
-      "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
-      "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
     }
   },
   {
