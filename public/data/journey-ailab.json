@@ -1,6 +1,6 @@
 {
   "title": "AI Lab Journey",
-  "subtitle": "Telkom University AI Laboratory",
+  "subtitle": "Telkom University AI Laboratory. Study Group Member in 2024, Study Group Coordinator and Focused Group Member in 2025, Focused Group Coordinator from 2026.",
   "logo": "/images/logo-ai_lab.png",
   "reflection": [
     "Teaching weekly required understanding each concept well enough to handle any question on the spot.",
@@ -14,9 +14,9 @@
       "year": "2024",
       "role": "Study Group Member",
       "highlights": [
-        "First year in AI Lab. Joined as a member, assigned as team lead on the plant disease classifier project.",
-        "Built the full pipeline in Python: data cleaning, training DL model for computer vision, Streamlit deployment. Completed in one semester.",
-        "Won 3rd place at CCI Summit Kaggle competition the same year, first competition as team lead.",
+        "Joined as a first-year member and was assigned team lead on the plant disease classifier, the first leadership role in AI Lab.",
+        "Built the full pipeline from scratch: data cleaning, model training for computer vision, and Streamlit deployment. Delivered in one semester.",
+        "Won 3rd place at CCI Summit Kaggle, the first competition as team lead.",
         "Awarded 2nd Best Final Project in the Study Group."
       ],
       "links": [
@@ -34,9 +34,9 @@
       "year": "2025",
       "role": "Study Group Coordinator · Focused Group Member",
       "highlights": [
-        "Became Study Group Coordinator: recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
-        "Supervised 15 project groups from proposal to final demonstration. Provided guidance during development, then judged and awarded at final presentations.",
-        "Joined the Focused Group and led the multimodal deepfake detection project: a model handling both video and audio modalities with explainability output."
+        "Managed 29 students through the full Study Group cycle, from recruitment to final project evaluation, by running weekly teaching sessions and all assessments.",
+        "Supervised 15 project groups end to end, from proposal through final demonstration, providing guidance throughout and serving as evaluator at every stage.",
+        "Led the Focused Group deepfake detection project: one model identifying both video and audio manipulation, with output explaining each decision."
       ],
       "links": [
         { "label": "Repository: research-deepfake_classification (Multimodal Deepfake Detection)", "icon": "ph:github-logo", "url": "https://github.com/Liamours/research-deepfake_classification" }
@@ -60,9 +60,9 @@
       "year": "2026",
       "role": "Focused Group Coordinator",
       "highlights": [
-        "Appointed as Focused Group Coordinator, overseeing research-active members within AI Lab.",
+        "Appointed Focused Group Coordinator, overseeing the research-active tier within AI Lab.",
         "Setting research direction, reviewing member output, and connecting projects to industry and academic partners.",
-        "Current projects include medical imaging, NLP, and computer vision research tracks."
+        "Three concurrent research tracks: medical imaging, NLP, and computer vision."
       ],
       "images": [
         "/images/Study Group Coordinator.jpg"

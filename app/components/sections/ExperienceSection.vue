@@ -2,7 +2,7 @@
   <section id="experience" class="section">
     <div class="container">
       <h2>Experience</h2>
-      <div v-for="group in groups" :key="group.type">
+      <div v-for="group in groups" :key="group.type" class="group">
         <h3>{{ group.label }}</h3>
         <ul>
           <li v-for="(item, i) in group.items" :key="i">
@@ -34,3 +34,13 @@ const groups = computed(() =>
     .filter(g => g.items.length > 0)
 )
 </script>
+
+<style scoped>
+.group + .group {
+  margin-top: 2.5rem;
+}
+
+.group ul > li + li {
+  margin-top: 1rem;
+}
+</style>

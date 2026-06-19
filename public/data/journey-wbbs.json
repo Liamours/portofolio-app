@@ -1,6 +1,6 @@
 {
   "title": "Whole-Body Bone Scintigraphy Research",
-  "subtitle": "From annotation to thesis: a 3-year research arc",
+  "subtitle": "Medical imaging researcher. Three years from manual annotation to a published journal paper, a clinical application, and a bachelor's thesis.",
   "reflection": [
     "I learned to fully retrain a segmentation model (nnU-Net v2), not just fine-tune it. Setting up the full training pipeline from data format to inference is a different task.",
     "I learned to process medical imaging data, including DICOM files, and understand what clinicians actually look at when they read a scan.",
@@ -17,29 +17,29 @@
         "/images/bonescan_research-2.jpg"
       ],
       "highlights": [
-        "Got assigned as lead coder on a Ministry of Higher Education-funded project. No prior WBBS experience.",
-        "Annotated 600+ bone scan images in IbisPaintX, every skeletal region manually, supervised by nuclear medicine physicians at Dr. Hasan Sadikin General Hospital, Universitas Padjadjaran.",
-        "Wrote the detection and segmentation code: YOLOv8 for hotspot localization, nnU-Net v2 across 12 skeletal regions.",
-        "Built the BSI quantification pipeline. Results surpassed both commercial systems in clinical use."
+        "Assigned as lead coder on a Ministry of Higher Education-funded project, with no prior bone scan experience.",
+        "Annotated 600+ scan images manually across all skeletal regions, supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran, working from raw scan data without automated labeling tools.",
+        "Built detection and segmentation code covering 12 anatomical regions, from hotspot localization to full skeletal mapping.",
+        "BSI quantification pipeline surpassed both EXINI and BONENAVI (the two commercial systems in clinical use at the time), measured by patient-level diagnostic accuracy."
       ]
     },
     {
       "year": "2025",
       "role": "Researcher · Clinical Collaborator",
       "highlights": [
-        "Started visiting the hospital directly. Worked with nuclear medicine doctors to understand how BSI is actually scored in the clinic.",
-        "Grew the dataset significantly: anterior and posterior views, 12 regions each.",
-        "Participated in building Telplastina v1, the first time this pipeline became an actual application.",
-        "Submitted the first preprint to SSRN in January 2025."
+        "The pipeline lacked clinical grounding: BSI scoring criteria came from literature, not practice. Visited the hospital directly, working with nuclear medicine doctors to understand how BSI is scored clinically.",
+        "Expanded the dataset to anterior and posterior views across all 12 skeletal regions.",
+        "Took the research from code into a working clinical application for the first time: built Telplastina v1 with the team.",
+        "Submitted the first preprint to SSRN, January 2025."
       ]
     },
     {
       "year": "2026",
       "role": "Thesis Researcher · Application Developer",
       "highlights": [
-        "Turned 2 years of research into my bachelor's thesis.",
-        "Led development of Telplastina v2: Vue 3 frontend, Rust backend, Docker deployment.",
-        "Journal paper accepted in IJIES-INASS. Dataset released on Zenodo, open to anyone."
+        "Two years of bone scan research needed a formal academic capstone. Consolidated the full body of work into my bachelor's thesis.",
+        "Led Telplastina v2 development: full-stack clinical application with Vue 3 frontend, Rust backend, and Docker deployment.",
+        "Journal paper accepted at IJIES-INASS. Full dataset published on Zenodo and open to the public."
       ],
       "images": [
         "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
