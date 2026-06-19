@@ -1,14 +1,14 @@
 [
   {
     "id": "bird-conservation-app",
-    "title": "Foundational Bird Conservation Application",
+    "title": "Bird Conservation Field Application",
     "type": "research",
     "status": "in-progress",
     "period": "2026 – present",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "summary": "A deployable application for passive avian monitoring in the field, built as a continuation of the bird species identification research. Same codebase, extended for conservation team use in Indonesia and Malaysia.",
     "highlights": [
-      "Continuation of the bird sound identification research — same repository, extended for field deployment",
+      "Continuation of the bird sound identification research, same repository, extended for field deployment.",
       "Wraps the BirdNET-based classification pipeline into a field-usable application",
       "Target users: conservation officers and wildlife researchers in Borneo"
     ],
@@ -136,7 +136,7 @@
     "summary": "Grad-CAM tells you where the model looked. This system tells you what it found, in words a radiologist can actually use.",
     "highlights": [
       "Three-module pipeline: anomaly detection (FPN + CBAM on CheXpert, MIMIC-CXR, VinDr-CXR) → BiomedCLIP visual-text alignment (15M biomedical pairs) → structured finding-location-impression report",
-      "Explanation quality evaluated directly by radiologists on a 100-case curated gold-standard subset, not only BLEU or BERTScore",
+      "Explanation quality evaluated directly by radiologists on a 100-case gold-standard subset, not only BLEU or BERTScore",
       "Five-year roadmap toward RSNA-style external validation and integration into radiology reporting workflows"
     ],
     "stack": ["Python", "BiomedCLIP", "PyTorch", "Vision Transformer", "CBAM", "FPN"],

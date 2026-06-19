@@ -15,10 +15,10 @@
         "/images/Birdsound Research 2024.jpg"
       ],
       "highlights": [
-        "Took over as research lead. First task: build the dataset from scratch using Xeno-canto recordings.",
-        "Scoped to species endemic or endangered in Indonesia, Malaysia, and Borneo.",
-        "Built the dataset from audio recordings and negative samples (noise, speech, silence). Preprocessing: log-mel spectrograms, 96x511 px per clip.",
-        "Stratified split by species. No data leakage: split at recording level."
+        "Took over as research lead with no existing dataset. First task: build it from scratch.",
+        "Sourced recordings of 219 species endemic or endangered in Indonesia, Malaysia, and Borneo: 12,511 recordings total.",
+        "Built the dataset from bird call recordings plus negatives (noise, speech, silence) to give the model real-world contrast.",
+        "Split at recording level, not clip level, to prevent data leakage."
       ]
     },
     {
@@ -28,9 +28,9 @@
         "/images/Birdsound 2025.jpg"
       ],
       "highlights": [
-        "Fine-tuned BirdNET v2.4 on the endemic/endangered subset. Significant accuracy and F1 improvement over baseline.",
-        "Tested the model in the field: Bandung Zoo (Indonesia) and Malaysia National Zoo. Real animals, background noise, no controlled conditions.",
-        "Presented at ICITACEE 2025 in Semarang. Paper accepted and published in IEEE Xplore."
+        "Achieved a 44.1% macro F1 improvement over the BirdNET v2.4 baseline on the endemic and endangered species subset, by fine-tuning on the 219-species dataset.",
+        "Field-validated at Bandung Zoo, Indonesia and Malaysia National Zoo: live animals, background noise, no controlled environment.",
+        "Paper accepted and published in IEEE Xplore. Presented at ICITACEE 2025, Semarang."
       ],
       "links": [
         { "label": "Paper: Bird Sound Identification in Indonesia and Malaysia (IEEE)", "icon": "ph:file-text", "url": "https://ieeexplore.ieee.org/document/11233192" },
@@ -41,9 +41,8 @@
       "year": "2026",
       "role": "Co-Researcher · Journal Submission",
       "highlights": [
-        "Working with the lecturers to extend the paper for PeerJ submission.",
-        "Adding MixIT source separation, unsupervised, no clean reference signal needed. Targets overlapping bird calls in noisy recordings.",
-        "The hard problem: two birds calling at once over wind and insects. MixIT handles this without labeled pairs."
+        "Overlapping bird calls in noisy field recordings remained the main failure case after field testing. Adding source separation to handle two species calling simultaneously over ambient noise.",
+        "Extending the paper with supervisors for PeerJ journal submission."
       ]
     }
   ]

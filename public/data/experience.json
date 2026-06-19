@@ -5,8 +5,8 @@
     "period": "2025 – Present",
     "type": "research",
     "highlights": [
-      "Building classification and segmentation modules for a 5-task CXR system: classification, organ segmentation, report generation, VQA, visual grounding",
-      "Deployed as both a web app and desktop app (Tauri v2)"
+      "Building two of five AI modules (pathology classification and organ segmentation) for a multi-task chest X-ray diagnostic platform.",
+      "Both modules delivered as microservices consumed by the team's web app and desktop app through shared endpoints."
     ]
   },
   {
@@ -15,7 +15,7 @@
     "period": "Jun 2025 – Present",
     "type": "organization",
     "highlights": [
-      "Ran weekly study group sessions; led recruitment and final project evaluations"
+      "Led weekly sessions, recruitment, and final project evaluations for 29 students across the Study Group."
     ]
   },
   {
@@ -24,8 +24,8 @@
     "period": "Jan 2025 – Jan 2026",
     "type": "organization",
     "highlights": [
-      "Led team at YESIST12 Maker Fair as team leader",
-      "Tracked competition opportunities across IEEE and BELMAWA programs"
+      "Represented the branch as team leader at YESIST12 Maker Fair.",
+      "Tracked competition opportunities across IEEE and BELMAWA programs."
     ]
   },
   {
@@ -34,8 +34,8 @@
     "period": "Feb 2025 – Jun 2025",
     "type": "teaching",
     "highlights": [
-      "Ran live support for 40+ students during programming assessments",
-      "Debugged 200+ quiz questions with the course lecturers before release"
+      "Reviewed and corrected 200+ quiz questions with course lecturers before assessments were released.",
+      "Provided live support for 40+ students during programming assessments."
     ]
   },
   {
@@ -53,7 +53,7 @@
     "period": "Nov 2025 – Jan 2026",
     "type": "committee",
     "highlights": [
-      "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets"
+      "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."
     ]
   },
   {
@@ -62,8 +62,8 @@
     "period": "Aug 2024",
     "type": "committee",
     "highlights": [
-      "Reviewed 4 conference papers and returned corrections ahead of deadline",
-      "Managed AV setup for 4 sessions, assisted 22 presenters"
+      "Reviewed 4 conference papers and returned corrections ahead of deadline.",
+      "Managed AV setup for 4 sessions, assisted 22 presenters."
     ]
   },
   {
@@ -72,8 +72,8 @@
     "period": "2025",
     "type": "competition",
     "highlights": [
-      "Team Rethreeno qualified (Lolos) in the D3/D4/S1 category nationwide",
-      "Team: M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Aprilianza Muhammad Yusup"
+      "Team Rethreeno qualified in the D3/D4/S1 category at the national level.",
+      "Team: M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Aprilianza Muhammad Yusup."
     ]
   },
   {
@@ -82,8 +82,8 @@
     "period": "2025",
     "type": "competition",
     "highlights": [
-      "Best Paper award for diabetic mellitus detection from retina fundus images",
-      "Team of 3, led by M. Rifqi Dzaky Azhad"
+      "Best Paper for diabetic mellitus detection from retina fundus images.",
+      "Led a team of 3."
     ]
   },
   {
@@ -92,8 +92,8 @@
     "period": "Feb 2025",
     "type": "competition",
     "highlights": [
-      "Best Proposal award, team Rethreeno",
-      "Project: Diabetes Mellitus detection from tongue images using MobileNet & ViT"
+      "Best Proposal award, team Rethreeno.",
+      "Project: Diabetes Mellitus detection from tongue images using MobileNet and ViT."
     ]
   },
   {
@@ -102,8 +102,7 @@
     "period": "Oct 2024",
     "type": "competition",
     "highlights": [
-      "3rd Place out of the competing teams",
-      "Tabular classification: cleaned data, trained multiple models, mentored teammates on ML basics"
+      "Won 3rd place (first competition as team lead) by cleaning the dataset, training multiple models, and coaching teammates on ML fundamentals."
     ]
   }
 ]

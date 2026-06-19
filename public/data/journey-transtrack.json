@@ -1,6 +1,6 @@
 {
   "title": "Driver Fatigue Detection (Trans Track)",
-  "subtitle": "Industrial collaboration with Bandung Techno Park and Trans Track: real-time fatigue detection for commercial fleet dashcams",
+  "subtitle": "Funded industrial collaboration: real-time fatigue detection for commercial mining fleet dashcams.",
   "reflection": [
     "MultiscaleTCN had to outperform a model the company was already running in production. That is a different kind of pressure than a benchmark.",
     "Real industrial data from mining fleets is messier and more unbalanced than anything I had cleaned before. The real world does not come labeled.",
@@ -13,13 +13,12 @@
       "year": "2025",
       "role": "ML Engineer · API Developer",
       "highlights": [
-        "Industry project with Trans Track, real dashcam footage from mining company fleets (BIB, PAMA MTBU, SIS). Not synthetic data.",
-        "Built the dataset downloader first: pulled alarm events and video clips directly from the TransTrack platform.",
-        "Designed MultiscaleTCN from scratch: 3 parallel TCN branches at different dilation scales (fine [1,2,4,8], medium [2,4,8,16], coarse [4,8,16,32]) running on 200-frame sequences of facial landmarks.",
-        "Input: EAR left/right, MAR, head pitch/yaw/roll, nose position. 11 values per frame, extracted by MediaPipe at 10 FPS.",
-        "Three classes: eyes closed, normal, yawning. Baseline was 0.67. That is an 11% gain on a model the company already had in production.",
-        "FastAPI service: HTTP 202 immediately, full pipeline async. Night-hour heuristic fires 00:00-05:59 when confidence drops below 0.75. Driver history rule escalates on 2+ fatigue events in 60 minutes.",
-        "3-service Docker stack. All tests passing against the live MDVR server."
+        "Industry project with Trans Track: real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Not synthetic data.",
+        "No labeled dataset existed at project start. Built a data pipeline to pull alarm events and video clips directly from the Trans Track platform.",
+        "Designed a custom model from scratch analyzing facial landmark sequences at 10 FPS, tracking eye closure, mouth movement, and head orientation to classify driver fatigue state across three classes.",
+        "Baseline was Macro F1 0.67, the score of the model already running in production. Achieved 0.78: an 11% gain.",
+        "Built risk escalation rules: alert severity increases at nighttime hours and when a driver has multiple fatigue events within 60 minutes.",
+        "Deployed as a 3-service Docker stack. 39 tests passing against the live company server."
       ],
       "links": [
         { "label": "Repository: transtrack-cloud-review (API Deployment)", "icon": "ph:github-logo", "url": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review" },

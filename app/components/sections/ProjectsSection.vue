@@ -4,7 +4,7 @@
       <h2>Projects</h2>
 
       <div v-if="projects">
-        <div v-for="group in groups" :key="group.type">
+        <div v-for="group in groups" :key="group.type" class="group">
           <h3>{{ group.type }} ({{ group.items.length }})</h3>
           <ul>
             <ProjectCard
@@ -35,3 +35,13 @@ const groups = computed(() =>
     .filter(g => g.items.length > 0)
 )
 </script>
+
+<style scoped>
+.group + .group {
+  margin-top: 2.5rem;
+}
+
+.group ul > li + li {
+  margin-top: 1rem;
+}
+</style>

@@ -16,3 +16,9 @@
 <script setup lang="ts">
 const { data: publications } = await usePublications()
 </script>
+
+<style scoped>
+ul > li + li {
+  margin-top: 1rem;
+}
+</style>
