@@ -8,7 +8,6 @@
           <li>GPA: {{ about.gpa }}</li>
           <li>Institution: {{ about.institution }}</li>
           <li>Graduation: {{ about.graduation }}</li>
-          <li>Hardware: {{ about.hardware }}</li>
         </ul>
       </div>
     </div>

@@ -64,7 +64,7 @@
     "type": "research",
     "period": "Aug 2024 – Feb 2025",
     "institution": "Telkom University",
-    "funding": "Ministry of Higher Education RI (grant 125/C3/DT.05.00/PL/2025)",
+    "funding": "Ministry of Higher Education RI",
     "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
     "stats": [
       { "value": "0.956", "label": "Patient AUC" },
@@ -150,8 +150,7 @@
     "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
     "stats": [
       { "value": "0.78", "label": "Macro F1" },
-      { "value": "+11%", "label": "Over baseline" },
-      { "value": "39", "label": "Tests passing" }
+      { "value": "+11%", "label": "Over baseline" }
     ],
     "highlights": [
       "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
