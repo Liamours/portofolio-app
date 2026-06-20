@@ -1,23 +1,19 @@
 <template>
-  <section id="hero" class="hero">
-    <span class="hero-r">R</span>
+  <section id="hero" class="section">
+    <div class="container">
+      <div v-if="hero">
+        <h1>{{ hero.name }}</h1>
+        <p>{{ hero.title }}</p>
+        <ul>
+          <li v-for="link in hero.links" :key="link.label">
+            <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 </template>
 
-<style scoped>
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #ffffff;
-}
-
-.hero-r {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30vw;
-  line-height: 1;
-  color: #000000;
-  user-select: none;
-}
-</style>
+<script setup lang="ts">
+const { data: hero } = await useHero()
+</script>

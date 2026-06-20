@@ -3,12 +3,12 @@
     <div class="container">
       <h2>Journeys</h2>
 
-      <div v-for="entry in journeyList" :key="entry.config.key">
+      <div v-for="entry in journeyList" :key="entry.config.key" class="journey-entry">
         <div v-if="entry.data">
           <h3>{{ entry.data.title }}</h3>
           <p>{{ entry.data.subtitle }}</p>
 
-          <div v-for="(m, mi) in entry.data.milestones" :key="mi">
+          <div v-for="(m, mi) in entry.data.milestones" :key="mi" class="milestone">
             <h4>{{ m.year }} — {{ m.role }}</h4>
             <ul>
               <li v-for="(h, hi) in m.highlights" :key="hi">{{ h }}</li>
@@ -65,3 +65,13 @@ const journeyList = configs.map((config, i) => ({
   data: results[i].data.value,
 }))
 </script>
+
+<style scoped>
+.journey-entry + .journey-entry {
+  margin-top: 3rem;
+}
+
+.milestone + .milestone {
+  margin-top: 1.5rem;
+}
+</style>

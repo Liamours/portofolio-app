@@ -41,7 +41,7 @@ const groups = computed(() =>
   margin-top: 2.5rem;
 }
 
-.group ul > li + li {
-  margin-top: 1rem;
+.group :deep(li + li) {
+  margin-top: 1.5rem;
 }
 </style>
