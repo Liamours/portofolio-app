@@ -27,7 +27,7 @@
       "year": "2025",
       "role": "Researcher · Clinical Collaborator",
       "highlights": [
-        "The pipeline lacked clinical grounding: BSI scoring criteria came from literature, not practice. Visited the hospital directly, working with nuclear medicine doctors to understand how BSI is scored clinically.",
+        "Visited Dr. Hasan Sadikin Hospital to recalibrate BSI scoring criteria with nuclear medicine doctors. Prior criteria came from literature, not clinical practice.",
         "Expanded the dataset to anterior and posterior views across all 12 skeletal regions.",
         "Took the research from code into a working clinical application for the first time: built Telplastina v1 with the team.",
         "Submitted the first preprint to SSRN, January 2025."
@@ -37,7 +37,7 @@
       "year": "2026",
       "role": "Thesis Researcher · Application Developer",
       "highlights": [
-        "Two years of bone scan research needed a formal academic capstone. Consolidated the full body of work into my bachelor's thesis.",
+        "Consolidated two years of bone scan research into a bachelor's thesis.",
         "Led Telplastina v2 development: full-stack clinical application with Vue 3 frontend, Rust backend, and Docker deployment.",
         "Journal paper accepted at IJIES-INASS. Full dataset published on Zenodo and open to the public."
       ],

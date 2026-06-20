@@ -40,7 +40,7 @@ const groups = computed(() =>
   margin-top: 2.5rem;
 }
 
-.group ul > li + li {
+.group > ul > li + li {
   margin-top: 1rem;
 }
 </style>

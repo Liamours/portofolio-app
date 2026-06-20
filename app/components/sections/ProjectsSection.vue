@@ -6,7 +6,7 @@
       <div v-if="projects">
         <div v-for="group in groups" :key="group.type" class="group">
           <h3>{{ group.type }} ({{ group.items.length }})</h3>
-          <ul>
+          <ul class="project-list">
             <ProjectCard
               v-for="p in group.items"
               :key="p.id"
@@ -41,7 +41,12 @@ const groups = computed(() =>
   margin-top: 2.5rem;
 }
 
-.group :deep(li + li) {
+.project-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-list :deep(li + li) {
   margin-top: 1.5rem;
 }
 </style>

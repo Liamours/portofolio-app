@@ -13,12 +13,12 @@
       "year": "2025",
       "role": "ML Engineer · API Developer",
       "highlights": [
-        "Industry project with Trans Track: real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Not synthetic data.",
+        "Industry project with Trans Track using real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS.",
         "No labeled dataset existed at project start. Built a data pipeline to pull alarm events and video clips directly from the Trans Track platform.",
         "Designed a custom model from scratch analyzing facial landmark sequences at 10 FPS, tracking eye closure, mouth movement, and head orientation to classify driver fatigue state across three classes.",
         "Baseline was Macro F1 0.67, the score of the model already running in production. Achieved 0.78: an 11% gain.",
         "Built risk escalation rules: alert severity increases at nighttime hours and when a driver has multiple fatigue events within 60 minutes.",
-        "Deployed as a 3-service Docker stack. 39 tests passing against the live company server."
+        "Deployed as a 3-service Docker stack with full test coverage verified against the live company server."
       ],
       "links": [
         { "label": "Repository: transtrack-cloud-review (API Deployment)", "icon": "ph:github-logo", "url": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review" },

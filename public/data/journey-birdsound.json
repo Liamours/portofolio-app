@@ -17,7 +17,7 @@
       "highlights": [
         "Took over as research lead with no existing dataset. First task: build it from scratch.",
         "Sourced recordings of 219 species endemic or endangered in Indonesia, Malaysia, and Borneo: 12,511 recordings total.",
-        "Built the dataset from bird call recordings plus negatives (noise, speech, silence) to give the model real-world contrast.",
+        "Built the dataset from bird call recordings and negatives: noise, speech, and silence.",
         "Split at recording level, not clip level, to prevent data leakage."
       ]
     },

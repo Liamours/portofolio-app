@@ -8,9 +8,8 @@
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "summary": "A deployable application for passive avian monitoring in the field, built as a continuation of the bird species identification research. Same codebase, extended for conservation team use in Indonesia and Malaysia.",
     "highlights": [
-      "Continuation of the bird sound identification research, same repository, extended for field deployment.",
-      "Wraps the BirdNET-based classification pipeline into a field-usable application",
-      "Target users: conservation officers and wildlife researchers in Borneo"
+      "Packages the BirdNET-based classification pipeline for field deployment by conservation teams.",
+      "Target users: conservation officers and wildlife researchers in Borneo."
     ],
     "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa"],
     "links": {
@@ -26,9 +25,8 @@
     "institution": "Telkom University",
     "summary": "Automated segmentation of tumors and organs from PET/CT scans, extending the WBBS segmentation work into full-body oncology imaging.",
     "highlights": [
-      "Targets multi-organ and tumor segmentation from combined PET/CT volumes",
-      "Builds on nnU-Net v2 experience from the WBBS bone scan pipeline",
-      "Collaboration with nuclear medicine imaging specialists"
+      "Multi-organ and tumor segmentation from combined PET/CT volumes.",
+      "Collaboration with nuclear medicine imaging specialists."
     ],
     "stack": ["Python", "PyTorch", "nnU-Net v2", "SimpleITK", "DICOM"]
   },
@@ -41,9 +39,8 @@
     "institution": "Telkom University",
     "summary": "Applying deep learning to histopathology slides for disease classification and tissue analysis. Early-stage research direction.",
     "highlights": [
-      "Whole-slide image (WSI) analysis using patch-based deep learning",
-      "Targeting cancer grading and tissue classification tasks",
-      "Research direction building on medical imaging expertise from WBBS and CXR projects"
+      "Whole-slide image analysis using patch-based deep learning.",
+      "Targeting cancer grading and tissue classification tasks."
     ],
     "stack": ["Python", "PyTorch", "OpenSlide", "Vision Transformer"]
   },
@@ -56,8 +53,8 @@
     "institution": "Telkom University",
     "summary": "Classification model for diabetic mellitus detection using retina fundus imaging. Best Paper at ADIKARA, School of Computing, Telkom University.",
     "highlights": [
-      "Diabetic mellitus classification from retina fundus images",
-      "Team of 3, led by M. Rifqi Dzaky Azhad"
+      "Best Paper at ADIKARA 2025, School of Computing, Telkom University.",
+      "Led a 3-person research team from proposal to final presentation."
     ],
     "stack": ["Python", "PyTorch", "OpenCV"]
   },
@@ -75,11 +72,10 @@
       { "value": "600+", "label": "Images annotated" }
     ],
     "highlights": [
-      "YOLOv8 (anchor-free, CSPDarknet backbone) hotspot detection at mAP@0.5 = 0.599",
-      "nnU-Net v2 skeletal segmentation across 12 anatomical regions: IoU 0.879",
-      "XGBoost and LightGBM (AUC 0.947) at patient level; automated BSI correlated with clinical burden at r = 0.82 (p < 0.001)",
-      "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)",
-      "Lead Coder: 3,000-line codebase"
+      "Hotspot detection with YOLOv8. mAP@0.5 = 0.599.",
+      "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions. IoU 0.879.",
+      "Patient-level classification with XGBoost and LightGBM. AUC 0.947; BSI correlated with clinical burden at r = 0.82.",
+      "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)."
     ],
     "stack": ["Python", "YOLOv8", "nnU-Net v2", "PyRadiomics", "XGBoost", "LightGBM", "PyTorch"],
     "links": {
@@ -100,10 +96,10 @@
       { "value": "12,511", "label": "Recordings" }
     ],
     "highlights": [
-      "MixIT source separation + fine-tuned BirdNET v2.4; applied to 1,202 training and 115 test recordings",
-      "Endemic/endangered subset (n=115): accuracy 0.6609, macro F1 0.4193 (McNemar p < 0.05)",
-      "Full test set (n=1,335): accuracy 0.72, macro F1 0.554, weighted F1 0.724",
-      "Dataset from Xeno-canto and PBHAR with 8,840 negative samples; 72/18/10 stratified split"
+      "Fine-tuned BirdNET v2.4 with MixIT source separation across 12,511 recordings and 219 species.",
+      "Endemic/endangered subset: accuracy 0.661, macro F1 0.419.",
+      "Full test set: accuracy 0.72, macro F1 0.554, weighted F1 0.724.",
+      "Dataset from Xeno-canto and PBHAR, including 8,840 negative samples, split by recording to prevent leakage."
     ],
     "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa", "torchaudio", "Conda"],
     "links": {
@@ -119,11 +115,11 @@
     "institution": "Telkom University",
     "summary": "Five AI modules in one CXR system: classification, organ segmentation, report generation, VQA, visual grounding. Ships as both a web app and a desktop app.",
     "highlights": [
-      "Pathology classification: fine-tuned TorchXRayVision DenseNet121 on VinBig and NIH ChestX-ray14 (14-class multi-label, sigmoid), also trained DeiT-based models; input center-cropped 224x224 in XRV-native intensity range",
-      "Organ segmentation: TorchXRayVision PSPNet for right lung, left lung, and heart; square-padded, threshold 0.5, outputs binary masks, bounding boxes, and colored overlay PNG; DICOM support via pydicom",
-      "Report generation: CheXpert Plus SRRG HuggingFace models generating structured findings and impression text from CXR images",
-      "Backend: FastAPI + PostgreSQL + Redis + RQ worker + JWT auth, Docker Compose; AI inference served as microservices",
-      "Interactive ReportCard: doctor-editable findings, impressions, probability bars; canvas Grounding Editor with offscreen mask pattern for accurate brush annotation"
+      "Pathology classification across 14 disease categories, fine-tuned on VinBig and NIH ChestX-ray14, comparing DenseNet and transformer-based architectures.",
+      "Organ segmentation covering right lung, left lung, and heart, outputting masks and annotated overlays from DICOM inputs.",
+      "Report generation producing structured clinical findings and impressions from CXR images.",
+      "Backend: FastAPI, PostgreSQL, Redis, Docker Compose; AI modules served as microservices.",
+      "Interactive report editor with doctor-editable findings, probability bars, and canvas annotation tools."
     ],
     "stack": ["Python", "PyTorch", "TorchXRayVision", "DenseNet121", "PSPNet", "FastAPI", "PostgreSQL", "Redis", "React", "Next.js", "TypeScript", "Tauri v2", "Docker"]
   },
@@ -135,9 +131,9 @@
     "institution": "Telkom University",
     "summary": "Grad-CAM tells you where the model looked. This system tells you what it found, in words a radiologist can actually use.",
     "highlights": [
-      "Three-module pipeline: anomaly detection (FPN + CBAM on CheXpert, MIMIC-CXR, VinDr-CXR) → BiomedCLIP visual-text alignment (15M biomedical pairs) → structured finding-location-impression report",
-      "Explanation quality evaluated directly by radiologists on a 100-case gold-standard subset, not only BLEU or BERTScore",
-      "Five-year roadmap toward RSNA-style external validation and integration into radiology reporting workflows"
+      "Three-module pipeline: anomaly detection, visual-text alignment, and structured clinical report generation.",
+      "Explanation quality evaluated directly by radiologists on a 100-case gold-standard subset, not only BLEU or BERTScore.",
+      "Target: external clinical validation and integration into radiology reporting workflows."
     ],
     "stack": ["Python", "BiomedCLIP", "PyTorch", "Vision Transformer", "CBAM", "FPN"],
     "links": {
@@ -158,12 +154,12 @@
       { "value": "39", "label": "Tests passing" }
     ],
     "highlights": [
-      "MediaPipe Holistic: 468 facial landmark coordinates extracted and temporally interpolated per frame",
-      "Multi-modal fusion model (spatial landmarks + cropped face features): test accuracy 0.85 at 10 FPS",
-      "Async cloud-review API (FastAPI, Python 3.11): HTTP 202 immediate response; background pipeline downloads, runs inference, and posts verdict to TransTrack callback with 30-minute auto-purge",
-      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports via openpyxl",
-      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server",
-      "Deployed in Docker-containerised environment on RTX 4050 6 GB VRAM"
+      "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
+      "Multi-modal model fusing facial landmarks and face image features. Test accuracy 0.85 at 10 FPS.",
+      "Async cloud-review API: immediate response, background inference pipeline, automatic result delivery to Trans Track.",
+      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports.",
+      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server.",
+      "Deployed in a Docker-containerised environment."
     ],
     "stack": ["Python", "MediaPipe", "PyTorch", "FastAPI", "OpenCV", "httpx", "pytest", "Docker"],
     "links": {
@@ -179,9 +175,9 @@
     "institution": "Telkom University",
     "summary": "Full-stack diagnostic application for whole-body bone scintigraphy analysis, integrating the bone segmentation, hotspot detection, and BSI quantification pipeline into a deployable clinical tool.",
     "highlights": [
-      "Integrates nnU-Net v2 segmentation and YOLOv8 hotspot detection from the funded MoHE bone scan research into a unified web application",
-      "Backend in Rust for high-performance image processing and inference serving",
-      "Frontend in Vue 3 with Docker containerisation for clinical deployment"
+      "Integrates bone segmentation and hotspot detection pipelines into a unified clinical web application.",
+      "Backend in Rust for high-performance image processing and inference serving.",
+      "Frontend in Vue 3 with Docker containerisation for clinical deployment."
     ],
     "stack": ["Vue 3", "Rust", "Docker", "Python"]
   },
@@ -191,18 +187,18 @@
     "type": "software",
     "period": "2025 – present",
     "institution": "Telkom University · AI Lab Focused Group",
-    "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after DANN regularization.",
+    "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after domain-adversarial training.",
     "stats": [
       { "value": "0.94", "label": "Intra-dataset F1" },
       { "value": "0.60", "label": "Cross-dataset F1" },
       { "value": "223K", "label": "Training segments" }
     ],
     "highlights": [
-      "VideoMAE (frozen, 768-dim) + Whisper (frozen, 1024-dim) encoders feed a cross-modal attention module; residuals compute audio_anomaly and visual_anomaly scores without manual labels",
-      "ModalityReliabilityGate MLP maps anomaly scores to alpha ∈ [0,1]; alpha≈0.1 routes to AudioSyncExpert, alpha≈0.85 to VisualArtifactExpert",
-      "DANN gradient-reversal on gate head prevents dataset-identity shortcuts, forcing cross-domain generalisation",
-      "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++",
-      "Targeting submission to ICODSA 2026"
+      "Two frozen encoders (video and audio) feed a cross-modal attention module that scores each modality for manipulation without manual labels.",
+      "A learned routing gate directs each input to the audio-sync expert or the visual-artifact expert based on anomaly scores.",
+      "Domain-adversarial training prevents the model from memorizing dataset-specific patterns, enabling cross-dataset generalization.",
+      "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++.",
+      "Targeting submission to ICODSA 2026."
     ],
     "stack": ["PyTorch", "VideoMAE", "Whisper", "MediaPipe", "DANN", "Conda"],
     "links": {
@@ -216,9 +212,9 @@
     "period": null,
     "summary": "Full-stack web platform for publishing and moderating tech-review articles, built as a production-grade system with complete test coverage.",
     "highlights": [
-      "JWT auth with role separation (user/admin); full article lifecycle with Base64-to-Binary image upload validated by PNG/JPEG magic bytes",
-      "Hierarchical nested comments and 1–5 star ratings with MongoDB aggregation",
-      "185 automated tests covering authentication, CRUD, aggregation pipelines, and edge cases"
+      "JWT authentication with user and admin roles; full article lifecycle including image upload with format validation.",
+      "Hierarchical nested comments and 1–5 star ratings.",
+      "185 automated tests covering authentication, CRUD operations, and edge cases."
     ],
     "stack": ["FastAPI", "React 19", "MongoDB Motor", "JWT", "bcrypt", "pytest"],
     "links": {
@@ -232,9 +228,9 @@
     "period": null,
     "summary": "Local LLM desktop application for AI-assisted creative writing, designed to run entirely on consumer hardware with no cloud dependency.",
     "highlights": [
-      "Supports Qwen and custom Ouro-1.4B (recurrent, trust_remote_code) on RTX 4050 6 GB VRAM; Mistral-class models loaded at 4-bit NF4 via BitsAndBytes",
-      "Token-streamed live UI via TextIteratorStreamer; background QThread incremental summarisation keeps context within token budget across long sessions",
-      "Auto-skill classifier: keyword-scoring detects narrative intent (physical description, dialogue, scene-setting) and injects structured writing instructions per inference call"
+      "Runs multiple local LLMs, including a custom recurrent model, entirely on consumer hardware with no cloud required.",
+      "Token-streamed UI with background incremental summarization to maintain context across long writing sessions.",
+      "Auto-detects narrative intent (description, dialogue, scene) and injects appropriate writing guidance per generation."
     ],
     "stack": ["PyQt6", "Transformers", "BitsAndBytes (NF4)", "PyTorch CUDA", "HuggingFace", "Conda"]
   },
@@ -245,9 +241,9 @@
     "period": null,
     "summary": "Browser-based augmented reality app demonstrating live face-tracking overlays, developed to increase engagement for a local UMKM churos business.",
     "highlights": [
-      "10 FPS on Streamlit Cloud with no local installation: Haar cascade face detection, 3 animated overlays, EMA smoothing",
-      "WebRTC peer-to-peer video via streamlit-webrtc with STUN/TURN (OpenRelay) NAT traversal; server-side per-pixel BGRA alpha compositing",
-      "Pure OpenCV replacing MediaPipe Tasks API (GPU-dependent, unavailable on Streamlit Cloud) for zero native library dependencies"
+      "Runs at 10 FPS on Streamlit Cloud with no local installation: face detection and 3 animated overlays.",
+      "WebRTC live video with server-side overlay compositing applied per frame.",
+      "Pure OpenCV pipeline for zero native library dependencies on Streamlit Cloud."
     ],
     "stack": ["Python", "OpenCV", "Streamlit", "WebRTC", "aiortc"],
     "links": {

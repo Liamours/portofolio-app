@@ -13,11 +13,11 @@
       "year": "2026",
       "role": "Researcher · Classification and Segmentation Module Lead",
       "highlights": [
-        "Recruited and set up the research team. Owned two of five AI modules: pathology classification and organ segmentation.",
+        "Led two of five AI modules within the research team: pathology classification and organ segmentation.",
         "Built a 14-class pathology classifier for chest X-rays, validated on VinBig and NIH ChestX-ray14, by fine-tuning an established medical imaging model and comparing it against a transformer-based alternative.",
         "Built an organ segmentation module covering right lung, left lung, and heart: annotated masks and overlays from DICOM inputs, packaged as a microservice shared with the full team.",
-        "Both modules consumed by the team's web app and desktop app through shared API endpoints.",
-        "The full system covers five tasks. Report generation, VQA, and visual grounding are handled by teammates."
+        "Both modules served the team's web and desktop apps through shared API endpoints.",
+        "Part of a 5-module system covering classification, segmentation, report generation, VQA, and visual grounding."
       ]
     }
   ]
