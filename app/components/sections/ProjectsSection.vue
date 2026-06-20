@@ -46,7 +46,7 @@ const groups = computed(() =>
   padding-left: 0;
 }
 
-.project-list :deep(li + li) {
+.project-list :deep(.project-card + .project-card) {
   margin-top: 1.5rem;
 }
 </style>

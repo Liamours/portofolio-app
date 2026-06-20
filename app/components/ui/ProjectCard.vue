@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="project-card">
     <strong>{{ project.title }}</strong>
     <span v-if="project.status"> ({{ project.status === 'in-progress' ? 'In Progress' : 'Planned' }})</span>
     <span v-if="project.period"> — {{ project.period }}</span>
