@@ -9,9 +9,9 @@
 <script setup lang="ts">
 const navLinks = [
   { href: '#about',      label: 'About' },
-  { href: '#journeys',   label: 'Journeys' },
-  { href: '#experience', label: 'Experience' },
   { href: '#projects',   label: 'Projects' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#journeys',   label: 'Journeys' },
   { href: '#publications', label: 'Publications' },
   { href: '#skills',     label: 'Skills' },
   { href: '#contact',    label: 'Contact' },
@@ -22,6 +22,9 @@ const navLinks = [
 .navbar {
   padding: 1rem 2rem;
   border-bottom: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
 }
 
 .nav-link {

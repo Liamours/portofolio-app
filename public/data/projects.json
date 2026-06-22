@@ -31,20 +31,6 @@
     "stack": ["Python", "PyTorch", "nnU-Net v2", "SimpleITK", "DICOM"]
   },
   {
-    "id": "computational-pathology",
-    "title": "Computational Pathology",
-    "type": "research",
-    "status": "planned",
-    "period": "2026 – present",
-    "institution": "Telkom University",
-    "summary": "Applying deep learning to histopathology slides for disease classification and tissue analysis. Early-stage research direction.",
-    "highlights": [
-      "Whole-slide image analysis using patch-based deep learning.",
-      "Targeting cancer grading and tissue classification tasks."
-    ],
-    "stack": ["Python", "PyTorch", "OpenSlide", "Vision Transformer"]
-  },
-  {
     "id": "ophthalmic-imaging",
     "title": "Diabetic Mellitus Detection from Retina Fundus Images",
     "type": "research",

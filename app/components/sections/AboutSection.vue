@@ -5,8 +5,7 @@
       <div v-if="about">
         <p>{{ about.bio }}</p>
         <ul>
-          <li>GPA: {{ about.gpa }}</li>
-          <li>Institution: {{ about.institution }}</li>
+<li>Institution: {{ about.institution }}</li>
           <li>Graduation: {{ about.graduation }}</li>
         </ul>
       </div>

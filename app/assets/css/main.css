@@ -35,3 +35,8 @@ ul {
 ul li::marker {
   font-size: 0.65em;
 }
+
+@media (max-width: 640px) {
+  .section { padding: 1.5rem 1rem; }
+  .container { padding: 0; }
+}

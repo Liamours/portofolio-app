@@ -4,9 +4,9 @@
     <main>
       <HeroSection />
       <AboutSection />
-      <JourneysSection />
-      <ExperienceSection />
       <ProjectsSection />
+      <ExperienceSection />
+      <JourneysSection />
       <PublicationsSection />
       <SkillsSection />
       <ContactSection />

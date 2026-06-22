@@ -27,13 +27,6 @@
               </li>
             </ul>
           </div>
-
-          <div v-if="entry.data.reflection?.length">
-            <h4>What I learned</h4>
-            <ul>
-              <li v-for="(r, i) in entry.data.reflection" :key="i">{{ r }}</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

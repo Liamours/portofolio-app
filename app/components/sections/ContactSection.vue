@@ -2,7 +2,7 @@
   <section id="contact" class="section">
     <div class="container">
       <h2>Contact</h2>
-      <p>Open to research collaborations, industrial projects, and interesting opportunities.</p>
+      <p>Available for internships and research collaborations. Medical imaging, ML engineering, full-stack deployment.</p>
       <ul v-if="hero">
         <li v-for="link in hero.links" :key="link.label">
           <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
