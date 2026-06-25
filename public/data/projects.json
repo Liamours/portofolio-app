@@ -14,10 +14,17 @@
       "Packages the BirdNET-based classification pipeline for field deployment by conservation teams.",
       "Target users: conservation officers and wildlife researchers in Borneo."
     ],
-    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa"],
+    "stack": [
+      "Python",
+      "BirdNET v2.4",
+      "MixIT",
+      "PyTorch",
+      "librosa"
+    ],
     "links": {
       "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation"
-    }
+    },
+    "featured": false
   },
   {
     "id": "ophthalmic-imaging",
@@ -31,7 +38,12 @@
       "Best Paper at ADIKARA 2025, School of Computing, Telkom University.",
       "Led a 3-person research team from proposal to final presentation."
     ],
-    "stack": ["Python", "PyTorch", "OpenCV"]
+    "stack": [
+      "Python",
+      "PyTorch",
+      "OpenCV"
+    ],
+    "featured": false
   },
   {
     "id": "bone-metastasis",
@@ -47,9 +59,18 @@
     ],
     "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
     "stats": [
-      { "value": "0.956", "label": "Patient AUC" },
-      { "value": "0.934", "label": "Seg. DSC" },
-      { "value": "600+", "label": "Images annotated" }
+      {
+        "value": "0.956",
+        "label": "Patient AUC"
+      },
+      {
+        "value": "0.934",
+        "label": "Seg. DSC"
+      },
+      {
+        "value": "600+",
+        "label": "Images annotated"
+      }
     ],
     "highlights": [
       "Hotspot detection with YOLOv8. mAP@0.5 = 0.599.",
@@ -57,11 +78,20 @@
       "Patient-level classification with XGBoost and LightGBM. AUC 0.947; BSI correlated with clinical burden at r = 0.82.",
       "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)."
     ],
-    "stack": ["Python", "YOLOv8", "nnU-Net v2", "PyRadiomics", "XGBoost", "LightGBM", "PyTorch"],
+    "stack": [
+      "Python",
+      "YOLOv8",
+      "nnU-Net v2",
+      "PyRadiomics",
+      "XGBoost",
+      "LightGBM",
+      "PyTorch"
+    ],
     "links": {
       "github": "https://github.com/Liamours/wbbs-nnunetv2",
       "paper": "https://ssrn.com/abstract=5187453"
-    }
+    },
+    "featured": true
   },
   {
     "id": "bird-sound",
@@ -75,9 +105,18 @@
     ],
     "summary": "219 bird species. 17 Borneo endemics. 18 IUCN-threatened. Trained on jungle recordings, tested at Bandung Zoo and Malaysia National Zoo.",
     "stats": [
-      { "value": "+44.1%", "label": "F1 improvement" },
-      { "value": "219", "label": "Species" },
-      { "value": "12,511", "label": "Recordings" }
+      {
+        "value": "+44.1%",
+        "label": "F1 improvement"
+      },
+      {
+        "value": "219",
+        "label": "Species"
+      },
+      {
+        "value": "12,511",
+        "label": "Recordings"
+      }
     ],
     "highlights": [
       "Fine-tuned BirdNET v2.4 with MixIT source separation across 12,511 recordings and 219 species.",
@@ -85,11 +124,20 @@
       "Full test set: accuracy 0.72, macro F1 0.554, weighted F1 0.724.",
       "Dataset from Xeno-canto and PBHAR, including 8,840 negative samples, split by recording to prevent leakage."
     ],
-    "stack": ["Python", "BirdNET v2.4", "MixIT", "PyTorch", "librosa", "torchaudio", "Conda"],
+    "stack": [
+      "Python",
+      "BirdNET v2.4",
+      "MixIT",
+      "PyTorch",
+      "librosa",
+      "torchaudio",
+      "Conda"
+    ],
     "links": {
       "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation",
       "paper": "https://ieeexplore.ieee.org/document/11233192"
-    }
+    },
+    "featured": true
   },
   {
     "id": "cxr-multitask",
@@ -105,7 +153,22 @@
       "Backend: FastAPI, PostgreSQL, Redis, Docker Compose; AI modules served as microservices.",
       "Interactive report editor with doctor-editable findings, probability bars, and canvas annotation tools."
     ],
-    "stack": ["Python", "PyTorch", "TorchXRayVision", "DenseNet121", "PSPNet", "FastAPI", "PostgreSQL", "Redis", "React", "Next.js", "TypeScript", "Tauri v2", "Docker"]
+    "stack": [
+      "Python",
+      "PyTorch",
+      "TorchXRayVision",
+      "DenseNet121",
+      "PSPNet",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tauri v2",
+      "Docker"
+    ],
+    "featured": true
   },
   {
     "id": "chest-xray-vlm",
@@ -119,10 +182,18 @@
       "Explanation quality evaluated directly by radiologists on a 100-case gold-standard subset, not only BLEU or BERTScore.",
       "Target: external clinical validation and integration into radiology reporting workflows."
     ],
-    "stack": ["Python", "BiomedCLIP", "PyTorch", "Vision Transformer", "CBAM", "FPN"],
+    "stack": [
+      "Python",
+      "BiomedCLIP",
+      "PyTorch",
+      "Vision Transformer",
+      "CBAM",
+      "FPN"
+    ],
     "links": {
       "github": "https://github.com/Liamours/nlp-cxr_report_generation"
-    }
+    },
+    "featured": false
   },
   {
     "id": "fatigue-detection",
@@ -133,8 +204,14 @@
     "funding": "Funded industrial collaboration",
     "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
     "stats": [
-      { "value": "0.78", "label": "Macro F1" },
-      { "value": "+11%", "label": "Over baseline" }
+      {
+        "value": "0.78",
+        "label": "Macro F1"
+      },
+      {
+        "value": "+11%",
+        "label": "Over baseline"
+      }
     ],
     "highlights": [
       "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
@@ -144,11 +221,21 @@
       "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server.",
       "Deployed in a Docker-containerised environment."
     ],
-    "stack": ["Python", "MediaPipe", "PyTorch", "FastAPI", "OpenCV", "httpx", "pytest", "Docker"],
+    "stack": [
+      "Python",
+      "MediaPipe",
+      "PyTorch",
+      "FastAPI",
+      "OpenCV",
+      "httpx",
+      "pytest",
+      "Docker"
+    ],
     "links": {
       "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
       "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
-    }
+    },
+    "featured": true
   },
   {
     "id": "telplastina",
@@ -162,7 +249,13 @@
       "Backend in Rust for high-performance image processing and inference serving.",
       "Frontend in Vue 3 with Docker containerisation for clinical deployment."
     ],
-    "stack": ["Vue 3", "Rust", "Docker", "Python"]
+    "stack": [
+      "Vue 3",
+      "Rust",
+      "Docker",
+      "Python"
+    ],
+    "featured": false
   },
   {
     "id": "deepfake-detection",
@@ -172,9 +265,18 @@
     "institution": "Telkom University · AI Lab Focused Group",
     "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after domain-adversarial training.",
     "stats": [
-      { "value": "0.94", "label": "Intra-dataset F1" },
-      { "value": "0.60", "label": "Cross-dataset F1" },
-      { "value": "223K", "label": "Training segments" }
+      {
+        "value": "0.94",
+        "label": "Intra-dataset F1"
+      },
+      {
+        "value": "0.60",
+        "label": "Cross-dataset F1"
+      },
+      {
+        "value": "223K",
+        "label": "Training segments"
+      }
     ],
     "highlights": [
       "Two frozen encoders (video and audio) feed a cross-modal attention module that scores each modality for manipulation without manual labels.",
@@ -183,10 +285,18 @@
       "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++.",
       "Targeting submission to ICODSA 2026."
     ],
-    "stack": ["PyTorch", "VideoMAE", "Whisper", "MediaPipe", "DANN", "Conda"],
+    "stack": [
+      "PyTorch",
+      "VideoMAE",
+      "Whisper",
+      "MediaPipe",
+      "DANN",
+      "Conda"
+    ],
     "links": {
       "github": "https://github.com/Liamours/research-deepfake_classification"
-    }
+    },
+    "featured": true
   },
   {
     "id": "sentiment-analysis",
@@ -199,10 +309,18 @@
       "Compared LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
       "Achieved 70% accuracy on the baseline model, improved iteratively through embedding and architecture experiments."
     ],
-    "stack": ["Python", "PyTorch", "Transformers", "Scikit-learn", "LightGBM", "XGBoost"],
+    "stack": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "Scikit-learn",
+      "LightGBM",
+      "XGBoost"
+    ],
     "links": {
       "github": "https://github.com/Liamours"
-    }
+    },
+    "featured": false
   },
   {
     "id": "retogen",
@@ -215,10 +333,18 @@
       "Hierarchical nested comments and 1–5 star ratings.",
       "185 automated tests covering authentication, CRUD operations, and edge cases."
     ],
-    "stack": ["FastAPI", "React 19", "MongoDB Motor", "JWT", "bcrypt", "pytest"],
+    "stack": [
+      "FastAPI",
+      "React 19",
+      "MongoDB Motor",
+      "JWT",
+      "bcrypt",
+      "pytest"
+    ],
     "links": {
       "github": "https://github.com/Liamours/aplikasi_berbasis_platform-retogen"
-    }
+    },
+    "featured": false
   },
   {
     "id": "anothem",
@@ -231,7 +357,15 @@
       "Token-streamed UI with background incremental summarization to maintain context across long writing sessions.",
       "Auto-detects narrative intent (description, dialogue, scene) and injects appropriate writing guidance per generation."
     ],
-    "stack": ["PyQt6", "Transformers", "BitsAndBytes (NF4)", "PyTorch CUDA", "HuggingFace", "Conda"]
+    "stack": [
+      "PyQt6",
+      "Transformers",
+      "BitsAndBytes (NF4)",
+      "PyTorch CUDA",
+      "HuggingFace",
+      "Conda"
+    ],
+    "featured": false
   },
   {
     "id": "ar-face-filter",
@@ -244,10 +378,17 @@
       "WebRTC live video with server-side overlay compositing applied per frame.",
       "Pure OpenCV pipeline for zero native library dependencies on Streamlit Cloud."
     ],
-    "stack": ["Python", "OpenCV", "Streamlit", "WebRTC", "aiortc"],
+    "stack": [
+      "Python",
+      "OpenCV",
+      "Streamlit",
+      "WebRTC",
+      "aiortc"
+    ],
     "links": {
       "github": "https://github.com/Liamours/kewirausahaan-churcol-website",
       "demo": "https://face-filter.streamlit.app"
-    }
+    },
+    "featured": false
   }
 ]

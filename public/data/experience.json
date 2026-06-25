@@ -7,7 +7,8 @@
     "highlights": [
       "Developing a hierarchical pathology classifier covering 20+ disease categories with fallback uncertainty estimation for ambiguous cases, aligned to Indonesian healthcare organization standards.",
       "Pathology classifier and organ segmentation module delivered as microservices consumed by the team's web and desktop apps."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "AI Engineer Intern",
@@ -17,7 +18,8 @@
     "highlights": [
       "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
       "Deployed a 3-service Docker stack with an async cloud-review API, risk escalation rules, and full test coverage against the live company server."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "Research Assistant, Bird Sound Identification",
@@ -27,7 +29,8 @@
     "highlights": [
       "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
       "Macro F1 improved 44.1% over baseline. Published at ICITACEE 2025 (IEEE Xplore) as first author."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "Data Scientist Intern",
@@ -36,7 +39,8 @@
     "type": "research",
     "highlights": [
       "Screened and assessed 212+ papers using Zotero and Parsifal, applying PRISMA-aligned quality assessment and data extraction to produce a structured synthesis mapping publication trends by year."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "Research Assistant, Whole-Body Bone Scintigraphy",
@@ -46,7 +50,8 @@
     "highlights": [
       "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
       "Built hotspot detection and skeletal segmentation pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "Study Group Coordinator",
@@ -56,7 +61,8 @@
     "highlights": [
       "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
       "Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."
-    ]
+    ],
+    "portfolio": true
   },
   {
     "role": "Staff, Research and Development",
@@ -66,7 +72,8 @@
     "highlights": [
       "Led the branch team at YESIST12 Maker Fair.",
       "Identified and distributed competition opportunities across IEEE and BELMAWA programs."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Study Group Member",
@@ -76,7 +83,8 @@
     "highlights": [
       "Assigned as team lead on the plant disease classifier. Built the full pipeline: data cleaning, model training, and Streamlit deployment. Delivered in one semester.",
       "Won 3rd place at CCI Summit Kaggle. Awarded 2nd Best Final Project in the Study Group."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Member, Data Research Division",
@@ -86,7 +94,8 @@
     "highlights": [
       "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
       "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Assistant Lecturer, Programming and Algorithms II",
@@ -96,7 +105,8 @@
     "highlights": [
       "Reviewed 200+ quiz questions with course lecturers, correcting errors before release.",
       "Supported 40+ students with real-time debugging during live programming assessments."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Assistant Lecturer, Calculus I",
@@ -105,7 +115,8 @@
     "type": "teaching",
     "highlights": [
       "Tutored 40+ students across weekly sessions. Graded four major assessments."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Registration Committee",
@@ -114,7 +125,8 @@
     "type": "committee",
     "highlights": [
       "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Education Volunteer",
@@ -124,7 +136,8 @@
     "highlights": [
       "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
       "Created game-based exercises to teach problem-solving and algorithmic thinking."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Paper Reviewer and Room Coordinator",
@@ -134,7 +147,8 @@
     "highlights": [
       "Reviewed 4 conference papers and returned corrections ahead of deadline.",
       "Managed AV setup for 4 sessions, assisted 22 presenters."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Team Leader, Samsung Solve for Tomorrow 2025",
@@ -143,7 +157,8 @@
     "type": "competition",
     "highlights": [
       "Team Rethreeno qualified in the D3/D4/S1 category at the national level."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Team Leader · Best Paper Award",
@@ -152,7 +167,8 @@
     "type": "competition",
     "highlights": [
       "Best Paper for diabetic mellitus detection from retina fundus images, leading a team of 3."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Team Leader, Innovation Division · Best Proposal (Honorable Mention)",
@@ -162,7 +178,8 @@
     "highlights": [
       "Best Proposal Honorable Mention.",
       "Project: Diabetes Mellitus detection from tongue images using MobileNet and ViT."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Team Member",
@@ -171,7 +188,8 @@
     "type": "competition",
     "highlights": [
       "Top 25 finish at Data Slayer 2.0 data science competition."
-    ]
+    ],
+    "portfolio": false
   },
   {
     "role": "Team Leader, Kaggle Competition",
@@ -180,6 +198,7 @@
     "type": "competition",
     "highlights": [
       "Won 3rd place (first competition as team lead) by cleaning the dataset, training multiple models, and coaching teammates on ML fundamentals."
-    ]
+    ],
+    "portfolio": false
   }
 ]

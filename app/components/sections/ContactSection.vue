@@ -5,7 +5,7 @@
       <p>Available for internships and research collaborations. Medical imaging, ML engineering, full-stack deployment.</p>
       <ul v-if="hero">
         <li v-for="link in hero.links" :key="link.label">
-          <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+          <a :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.url.startsWith('mailto:') ? link.url.replace('mailto:', '') : link.label }}</a>
         </li>
       </ul>
     </div>

@@ -1,12 +1,12 @@
 [
   {
     "title": "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
-    "venue": "12th International Conference on Information Technology, Computer, and Electrical Engineering (ICITACEE 2025)",
+    "venue": "ICITACEE 2025, IEEE Xplore",
     "year": 2025,
     "type": "Conference Paper",
     "role": "author",
     "authors": "M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.",
-    "image": "/images/Birdsound 2025.jpg",
+    "context": "Macro F1 improved 44.1% over baseline on 219 endemic and endangered species. Field-validated at Bandung Zoo and Malaysia National Zoo. First author.",
     "link": "https://ieeexplore.ieee.org/document/11233192"
   },
   {
@@ -16,8 +16,7 @@
     "type": "Journal Paper",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
-    "note": "Journal link pending — add IJIES-INASS URL when available."
+    "context": "Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author."
   },
   {
     "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
@@ -26,7 +25,7 @@
     "type": "Preprint",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
-    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
+    "context": "Full diagnostic framework from bone scan segmentation through BSI biomarker quantification. Under journal review. Second author.",
     "link": "https://ssrn.com/abstract=5187453"
   },
   {
@@ -36,6 +35,7 @@
     "type": "Dataset",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad",
+    "context": "Publicly released ground-truth segmentation masks for whole-body bone scintigraphy. Open access.",
     "link": "https://zenodo.org/records/20342310"
   },
   {
@@ -45,6 +45,7 @@
     "type": "e-Book",
     "role": "contributor",
     "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
+    "context": "Computational thinking activity book for school outreach. Contributor.",
     "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
   }
 ]

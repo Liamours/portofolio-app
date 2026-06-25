@@ -2,17 +2,17 @@
   {
     "category": "AI Engineering",
     "priority": "primary",
-    "items": ["PyTorch", "TensorFlow", "Transformers", "nnU-Net", "BiomedCLIP", "VideoMAE", "Whisper"]
+    "items": ["PyTorch", "TensorFlow", "Transformers", "nnU-Net", "XGBoost", "LightGBM", "BiomedCLIP", "VideoMAE", "Whisper"]
   },
   {
-    "category": "MLOps & Infrastructure",
-    "priority": "primary",
-    "items": ["Docker", "Git", "uv", "pytest", "Conda"]
-  },
-  {
-    "category": "Data Science",
+    "category": "Computer Vision and Audio",
     "priority": "primary",
     "items": ["OpenCV", "MediaPipe", "librosa", "Scikit-learn"]
+  },
+  {
+    "category": "MLOps and Infrastructure",
+    "priority": "primary",
+    "items": ["Docker", "FastAPI", "Git", "pytest", "Conda"]
   },
   {
     "category": "Languages",
@@ -20,22 +20,12 @@
     "items": ["Python", "C++", "Go"]
   },
   {
-    "category": "Backend & APIs",
+    "category": "Research Tools",
     "priority": "secondary",
-    "items": ["FastAPI", "MongoDB Motor", "httpx"]
+    "items": ["Zotero", "Parsifal", "LaTeX"]
   },
   {
-    "category": "Frontend & Desktop",
-    "priority": "secondary",
-    "items": ["Streamlit", "React 19", "PyQt6"]
-  },
-  {
-    "category": "Academic",
-    "priority": "secondary",
-    "items": ["LaTeX", "Microsoft Office"]
-  },
-  {
-    "category": "Languages",
+    "category": "Spoken Languages",
     "priority": "secondary",
     "items": ["English (Professional)", "Indonesian (Native)"]
   },
