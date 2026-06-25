@@ -10,9 +10,9 @@
     ]
   },
   {
-    "role": "AI Engineer",
+    "role": "AI Engineer Intern",
     "organization": "Bandung Techno Park · Trans Track",
-    "period": "Mar 2025 – Present",
+    "period": "March 2025 – Present",
     "type": "research",
     "highlights": [
       "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
@@ -20,18 +20,38 @@
     ]
   },
   {
+    "role": "Research Assistant, Bird Sound Identification",
+    "organization": "Telkom University",
+    "period": "November 2024 – December 2025",
+    "type": "research",
+    "highlights": [
+      "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+      "Macro F1 improved 44.1% over baseline. Published at ICITACEE 2025 (IEEE Xplore) as first author."
+    ]
+  },
+  {
     "role": "Data Scientist Intern",
     "organization": "HUMIC Engineering",
-    "period": "Apr 2025 – Jun 2025",
+    "period": "April 2025 – June 2025",
     "type": "research",
     "highlights": [
       "Screened and assessed 212+ papers using Zotero and Parsifal, applying PRISMA-aligned quality assessment and data extraction to produce a structured synthesis mapping publication trends by year."
     ]
   },
   {
+    "role": "Research Assistant, Whole-Body Bone Scintigraphy",
+    "organization": "Telkom University",
+    "period": "August 2024 – February 2025",
+    "type": "research",
+    "highlights": [
+      "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
+      "Built hotspot detection and skeletal segmentation pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
+    ]
+  },
+  {
     "role": "Study Group Coordinator",
     "organization": "AI Lab, Telkom University",
-    "period": "Jun 2025 – Feb 2026",
+    "period": "June 2025 – February 2026",
     "type": "organization",
     "highlights": [
       "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
@@ -41,7 +61,7 @@
   {
     "role": "Staff, Research and Development",
     "organization": "IEEE Student Branch, Telkom University",
-    "period": "Jan 2025 – Jan 2026",
+    "period": "January 2025 – January 2026",
     "type": "organization",
     "highlights": [
       "Led the branch team at YESIST12 Maker Fair.",
@@ -49,9 +69,19 @@
     ]
   },
   {
+    "role": "Study Group Member",
+    "organization": "AI Lab, Telkom University",
+    "period": "October 2024 – February 2025",
+    "type": "organization",
+    "highlights": [
+      "Assigned as team lead on the plant disease classifier. Built the full pipeline: data cleaning, model training, and Streamlit deployment. Delivered in one semester.",
+      "Won 3rd place at CCI Summit Kaggle. Awarded 2nd Best Final Project in the Study Group."
+    ]
+  },
+  {
     "role": "Member, Data Research Division",
     "organization": "Central Computer Improvement (CCI), Telkom University",
-    "period": "Aug 2023 – May 2024",
+    "period": "August 2023 – May 2024",
     "type": "organization",
     "highlights": [
       "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
@@ -61,7 +91,7 @@
   {
     "role": "Assistant Lecturer, Programming and Algorithms II",
     "organization": "School of Informatics, Telkom University",
-    "period": "Feb 2025 – Jun 2025",
+    "period": "February 2025 – June 2025",
     "type": "teaching",
     "highlights": [
       "Reviewed 200+ quiz questions with course lecturers, correcting errors before release.",
@@ -71,7 +101,7 @@
   {
     "role": "Assistant Lecturer, Calculus I",
     "organization": "School of Informatics, Telkom University",
-    "period": "Sep 2024 – Jan 2025",
+    "period": "September 2024 – January 2025",
     "type": "teaching",
     "highlights": [
       "Tutored 40+ students across weekly sessions. Graded four major assessments."
@@ -80,7 +110,7 @@
   {
     "role": "Registration Committee",
     "organization": "Bebras – Telkom University Bureau",
-    "period": "Nov 2025 – Jan 2026",
+    "period": "November 2025 – January 2026",
     "type": "committee",
     "highlights": [
       "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."
@@ -89,7 +119,7 @@
   {
     "role": "Education Volunteer",
     "organization": "Bebras – Telkom University",
-    "period": "Sep 2024 – Nov 2024",
+    "period": "September 2024 – November 2024",
     "type": "committee",
     "highlights": [
       "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
@@ -99,7 +129,7 @@
   {
     "role": "Paper Reviewer and Room Coordinator",
     "organization": "ICoICT 2024",
-    "period": "Aug 2024",
+    "period": "August 2024 – September 2024",
     "type": "committee",
     "highlights": [
       "Reviewed 4 conference papers and returned corrections ahead of deadline.",
@@ -125,12 +155,12 @@
     ]
   },
   {
-    "role": "Team Leader, Innovation Division · Best Proposal",
+    "role": "Team Leader, Innovation Division · Best Proposal (Honorable Mention)",
     "organization": "ADIKARA 2024, School of Computing, Telkom University",
-    "period": "Feb 2025",
+    "period": "January 2025",
     "type": "competition",
     "highlights": [
-      "Best Proposal award.",
+      "Best Proposal Honorable Mention.",
       "Project: Diabetes Mellitus detection from tongue images using MobileNet and ViT."
     ]
   },
@@ -146,7 +176,7 @@
   {
     "role": "Team Leader, Kaggle Competition",
     "organization": "CCI Summit, Telkom University",
-    "period": "Oct 2024",
+    "period": "October 2024",
     "type": "competition",
     "highlights": [
       "Won 3rd place (first competition as team lead) by cleaning the dataset, training multiple models, and coaching teammates on ML fundamentals."

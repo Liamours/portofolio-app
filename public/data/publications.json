@@ -17,7 +17,7 @@
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
     "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
-    "link": "https://github.com/Liamours/wbbs-nnunetv2"
+    "note": "Journal link pending — add IJIES-INASS URL when available."
   },
   {
     "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
@@ -26,7 +26,8 @@
     "type": "Preprint",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
-    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg"
+    "image": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
+    "link": "https://ssrn.com/abstract=5187453"
   },
   {
     "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",

@@ -4,7 +4,7 @@
     "title": "Bird Conservation Field Application",
     "type": "research",
     "status": "in-progress",
-    "period": "2026 – present",
+    "period": "2026 – Present",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "images": [
       "/images/Birdsound 2025.jpg"
@@ -24,7 +24,7 @@
     "title": "Diabetic Mellitus Detection from Retina Fundus Images",
     "type": "research",
     "status": "in-progress",
-    "period": "2025 – present",
+    "period": "2025 – Present",
     "institution": "Telkom University",
     "summary": "Classification model for diabetic mellitus detection using retina fundus imaging. Best Paper at ADIKARA, School of Computing, Telkom University.",
     "highlights": [
@@ -37,7 +37,7 @@
     "id": "bone-metastasis",
     "title": "Bone Metastasis Diagnosis Framework",
     "type": "research",
-    "period": "Aug 2024 – Feb 2025",
+    "period": "August 2024 – February 2025",
     "institution": "Telkom University",
     "funding": "Ministry of Higher Education RI",
     "images": [
@@ -67,7 +67,7 @@
     "id": "bird-sound",
     "title": "Deep Learning for Bird Sound Identification",
     "type": "research",
-    "period": "Nov 2024 – Aug 2025",
+    "period": "November 2024 – August 2025",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "images": [
       "/images/Birdsound 2025.jpg",
@@ -95,7 +95,7 @@
     "id": "cxr-multitask",
     "title": "Telplastina: Multi-Task CXR Analysis Platform",
     "type": "research",
-    "period": "2026 – present",
+    "period": "2026 – Present",
     "institution": "Telkom University",
     "summary": "Five AI modules in one CXR system: classification, organ segmentation, report generation, VQA, visual grounding. Ships as both a web app and a desktop app.",
     "highlights": [
@@ -111,7 +111,7 @@
     "id": "chest-xray-vlm",
     "title": "VLM-Based Chest X-Ray Anomaly Explanation",
     "type": "research",
-    "period": "2025 – present",
+    "period": "2025 – Present",
     "institution": "Telkom University",
     "summary": "Grad-CAM tells you where the model looked. This system tells you what it found, in words a radiologist can actually use.",
     "highlights": [
@@ -128,7 +128,7 @@
     "id": "fatigue-detection",
     "title": "Driver Behaviour Analysis and Fatigue Detection System",
     "type": "industrial",
-    "period": "Mar 2025 – present",
+    "period": "March 2025 – Present",
     "institution": "Bandung Techno Park · Trans Track",
     "funding": "Funded industrial collaboration",
     "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
@@ -154,7 +154,7 @@
     "id": "telplastina",
     "title": "Telplastina v1: WBBS Diagnostic Application",
     "type": "software",
-    "period": "2025 – present",
+    "period": "2025 – Present",
     "institution": "Telkom University",
     "summary": "Full-stack diagnostic application for whole-body bone scintigraphy analysis, integrating the bone segmentation, hotspot detection, and BSI quantification pipeline into a deployable clinical tool.",
     "highlights": [
@@ -168,7 +168,7 @@
     "id": "deepfake-detection",
     "title": "Multimodal Deepfake Detection with Modality-Aware Mixture of Experts",
     "type": "software",
-    "period": "2025 – present",
+    "period": "2025 – Present",
     "institution": "Telkom University · AI Lab Focused Group",
     "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after domain-adversarial training.",
     "stats": [
@@ -192,7 +192,7 @@
     "id": "sentiment-analysis",
     "title": "Sentiment Analysis Classification: Multi-Class Text",
     "type": "software",
-    "period": "May 2024 – Aug 2024",
+    "period": "May 2024 – August 2024",
     "institution": "Central Computer Improvement (CCI), Telkom University",
     "summary": "Multi-class text sentiment classifier (positive, neutral, negative) built as a final project for the CCI Data Research Division.",
     "highlights": [
