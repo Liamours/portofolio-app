@@ -20,20 +20,6 @@
     }
   },
   {
-    "id": "petct-segmentation",
-    "title": "PET/CT Tumor and Organ Segmentation",
-    "type": "research",
-    "status": "in-progress",
-    "period": "2026 – present",
-    "institution": "Telkom University",
-    "summary": "Automated segmentation of tumors and organs from PET/CT scans, extending the WBBS segmentation work into full-body oncology imaging.",
-    "highlights": [
-      "Multi-organ and tumor segmentation from combined PET/CT volumes.",
-      "Collaboration with nuclear medicine imaging specialists."
-    ],
-    "stack": ["Python", "PyTorch", "nnU-Net v2", "SimpleITK", "DICOM"]
-  },
-  {
     "id": "ophthalmic-imaging",
     "title": "Diabetic Mellitus Detection from Retina Fundus Images",
     "type": "research",
