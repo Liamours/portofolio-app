@@ -189,6 +189,22 @@
     }
   },
   {
+    "id": "sentiment-analysis",
+    "title": "Sentiment Analysis Classification: Multi-Class Text",
+    "type": "software",
+    "period": "May 2024 – Aug 2024",
+    "institution": "Central Computer Improvement (CCI), Telkom University",
+    "summary": "Multi-class text sentiment classifier (positive, neutral, negative) built as a final project for the CCI Data Research Division.",
+    "highlights": [
+      "Compared LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
+      "Achieved 70% accuracy on the baseline model, improved iteratively through embedding and architecture experiments."
+    ],
+    "stack": ["Python", "PyTorch", "Transformers", "Scikit-learn", "LightGBM", "XGBoost"],
+    "links": {
+      "github": "https://github.com/Liamours"
+    }
+  },
+  {
     "id": "retogen",
     "title": "Retogen: Article Management Platform",
     "type": "software",

@@ -5,27 +5,57 @@
     "period": "2025 – Present",
     "type": "research",
     "highlights": [
-      "Building two of five AI modules (pathology classification and organ segmentation) for a multi-task chest X-ray diagnostic platform.",
-      "Both modules delivered as microservices consumed by the team's web app and desktop app through shared endpoints."
+      "Developing a hierarchical pathology classifier covering 20+ disease categories with fallback uncertainty estimation for ambiguous cases, aligned to Indonesian healthcare organization standards.",
+      "Pathology classifier and organ segmentation module delivered as microservices consumed by the team's web and desktop apps."
     ]
   },
   {
-    "role": "Staff · Study Group Coordinator",
+    "role": "AI Engineer",
+    "organization": "Bandung Techno Park · Trans Track",
+    "period": "Mar 2025 – Present",
+    "type": "research",
+    "highlights": [
+      "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
+      "Deployed a 3-service Docker stack with an async cloud-review API, risk escalation rules, and full test coverage against the live company server."
+    ]
+  },
+  {
+    "role": "Data Scientist Intern",
+    "organization": "HUMIC Engineering",
+    "period": "Apr 2025 – Jun 2025",
+    "type": "research",
+    "highlights": [
+      "Screened and assessed 212+ papers using Zotero and Parsifal, applying PRISMA-aligned quality assessment and data extraction to produce a structured synthesis mapping publication trends by year."
+    ]
+  },
+  {
+    "role": "Study Group Coordinator",
     "organization": "AI Lab, Telkom University",
-    "period": "Jun 2025 – Present",
+    "period": "Jun 2025 – Feb 2026",
     "type": "organization",
     "highlights": [
-      "Led weekly sessions, recruitment, and final project evaluations for 29 students across the Study Group."
+      "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
+      "Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."
     ]
   },
   {
-    "role": "Staff · Research and Development",
+    "role": "Staff, Research and Development",
     "organization": "IEEE Student Branch, Telkom University",
     "period": "Jan 2025 – Jan 2026",
     "type": "organization",
     "highlights": [
-      "Represented the branch as team leader at YESIST12 Maker Fair.",
-      "Tracked competition opportunities across IEEE and BELMAWA programs."
+      "Led the branch team at YESIST12 Maker Fair.",
+      "Identified and distributed competition opportunities across IEEE and BELMAWA programs."
+    ]
+  },
+  {
+    "role": "Member, Data Research Division",
+    "organization": "Central Computer Improvement (CCI), Telkom University",
+    "period": "Aug 2023 – May 2024",
+    "type": "organization",
+    "highlights": [
+      "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
+      "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
     ]
   },
   {
@@ -34,8 +64,8 @@
     "period": "Feb 2025 – Jun 2025",
     "type": "teaching",
     "highlights": [
-      "Reviewed and corrected 200+ quiz questions with course lecturers before assessments were released.",
-      "Provided live support for 40+ students during programming assessments."
+      "Reviewed 200+ quiz questions with course lecturers, correcting errors before release.",
+      "Supported 40+ students with real-time debugging during live programming assessments."
     ]
   },
   {
@@ -44,7 +74,7 @@
     "period": "Sep 2024 – Jan 2025",
     "type": "teaching",
     "highlights": [
-      "Tutored 40+ students. Graded four major assignments."
+      "Tutored 40+ students across weekly sessions. Graded four major assessments."
     ]
   },
   {
@@ -54,6 +84,16 @@
     "type": "committee",
     "highlights": [
       "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."
+    ]
+  },
+  {
+    "role": "Education Volunteer",
+    "organization": "Bebras – Telkom University",
+    "period": "Sep 2024 – Nov 2024",
+    "type": "committee",
+    "highlights": [
+      "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
+      "Created game-based exercises to teach problem-solving and algorithmic thinking."
     ]
   },
   {
@@ -92,6 +132,15 @@
     "highlights": [
       "Best Proposal award.",
       "Project: Diabetes Mellitus detection from tongue images using MobileNet and ViT."
+    ]
+  },
+  {
+    "role": "Team Member",
+    "organization": "Data Slayer 2.0, Hima Data Science Telkom University Purwokerto",
+    "period": "2025",
+    "type": "competition",
+    "highlights": [
+      "Top 25 finish at Data Slayer 2.0 data science competition."
     ]
   },
   {

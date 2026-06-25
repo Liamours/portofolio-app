@@ -33,5 +33,15 @@
     "category": "Academic",
     "priority": "secondary",
     "items": ["LaTeX", "Microsoft Office"]
+  },
+  {
+    "category": "Languages",
+    "priority": "secondary",
+    "items": ["English (Professional)", "Indonesian (Native)"]
+  },
+  {
+    "category": "Certifications",
+    "priority": "secondary",
+    "items": ["Microsoft Azure AI Fundamentals (2026)", "Python Lanjutan Gold – Skilvul (2024)"]
   }
 ]
