@@ -6,11 +6,14 @@ const fs = require('fs');
 
 // A4 with 0.75" margins
 const FONT   = "Calibri";
-const BODY   = 20;   // 10pt (half-points)
+const BODY   = 20;   // 10pt
 const SMALL  = 18;   // 9pt
 const SEC    = 22;   // 11pt section headers
+const SUBSEC = 20;   // 10pt publication sub-headers
 const NAME   = 36;   // 18pt
-const CWIDTH = 9746; // content width in DXA
+const CWIDTH = 9746; // content width DXA
+
+const ME = "M. Rifqi Dzaky Azhad";
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
@@ -18,7 +21,14 @@ function sectionHeader(text) {
   return new Paragraph({
     children: [new TextRun({ text, font: FONT, size: SEC, bold: true, allCaps: true })],
     border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "000000", space: 2 } },
-    spacing: { before: 180, after: 80 },
+    spacing: { before: 200, after: 80 },
+  });
+}
+
+function pubSubHeader(text) {
+  return new Paragraph({
+    children: [new TextRun({ text, font: FONT, size: SUBSEC, bold: true, italics: true })],
+    spacing: { before: 120, after: 40 },
   });
 }
 
@@ -54,14 +64,27 @@ function para(text, size = BODY) {
   });
 }
 
+// Bold ME in author list
 function pubEntry(type, pos, authors, title, venue, link) {
+  const idx = authors.indexOf(ME);
+  const authorRuns = [];
+
+  if (idx === -1) {
+    authorRuns.push(new TextRun({ text: authors, font: FONT, size: BODY }));
+  } else {
+    if (idx > 0) authorRuns.push(new TextRun({ text: authors.slice(0, idx), font: FONT, size: BODY }));
+    authorRuns.push(new TextRun({ text: ME, font: FONT, size: BODY, bold: true }));
+    authorRuns.push(new TextRun({ text: authors.slice(idx + ME.length), font: FONT, size: BODY }));
+  }
+
   const children = [
-    new TextRun({ text: "[" + type + "]  ", font: FONT, size: BODY, bold: true }),
-    new TextRun({ text: authors + " (" + pos + ").  ", font: FONT, size: BODY }),
+    ...authorRuns,
+    new TextRun({ text: " (" + pos + "). ", font: FONT, size: BODY }),
     new TextRun({ text: title, font: FONT, size: BODY, italics: true }),
-    new TextRun({ text: ".  " + venue + ".", font: FONT, size: BODY }),
+    new TextRun({ text: ". " + venue + ".", font: FONT, size: BODY }),
   ];
-  if (link) children.push(new TextRun({ text: "  " + link, font: FONT, size: BODY }));
+  if (link) children.push(new TextRun({ text: " " + link, font: FONT, size: BODY }));
+
   return new Paragraph({ children, spacing: { before: 60, after: 60 } });
 }
 
@@ -85,8 +108,8 @@ function project(title, period, role, bullets) {
 
 function award(title, event, detail) {
   const children = [
-    new TextRun({ text: title + ".  ", font: FONT, size: BODY, bold: true }),
-    new TextRun({ text: event + (detail ? ".  " + detail : "."), font: FONT, size: BODY }),
+    new TextRun({ text: title + ". ", font: FONT, size: BODY, bold: true }),
+    new TextRun({ text: event + (detail ? ". " + detail : "."), font: FONT, size: BODY }),
   ];
   return new Paragraph({ children, spacing: { before: 60, after: 60 } });
 }
@@ -130,7 +153,7 @@ const doc = new Document({
 
       // ── HEADER ──────────────────────────────────────────────────────────
       new Paragraph({
-        children: [new TextRun({ text: "M. RIFQI DZAKY AZHAD", font: FONT, size: NAME, bold: true })],
+        children: [new TextRun({ text: ME, font: FONT, size: NAME, bold: true })],
         alignment: AlignmentType.CENTER,
         spacing: { before: 0, after: 80 },
       }),
@@ -145,12 +168,7 @@ const doc = new Document({
 
       // ── SUMMARY ─────────────────────────────────────────────────────────
       sectionHeader("Summary"),
-      para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Built a bone scan diagnostic pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI (two commercial systems in clinical use). First-authored a conference paper published in IEEE Xplore. ML system in production on commercial mining fleet dashcams."),
-
-      // ── EDUCATION ───────────────────────────────────────────────────────
-      sectionHeader("Education"),
-      roleLine("S1 Informatika (Bachelor of Informatics)", "May 2023 – Expected May 2027"),
-      para("Telkom University  ·  GPA 4.0/4.0"),
+      para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Built a bone scan diagnostic pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI (two commercial systems in clinical use). First-authored an IEEE Xplore conference paper on bird species identification. One ML model running in production on commercial mining fleet dashcams."),
 
       // ── EXPERIENCE ──────────────────────────────────────────────────────
       sectionHeader("Experience"),
@@ -158,11 +176,11 @@ const doc = new Document({
       roleLine("Research Assistant, Multi-Task CXR Foundation Model", "2025 – Present"),
       orgLine("Telkom University"),
       bullet("Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation, aligned to Indonesian healthcare organization disease standards."),
-      bullet("Deployed pathology classifier and organ segmentation as shared microservices consumed by the team’s web and desktop apps through a single API."),
+      bullet("Deployed pathology classifier and organ segmentation as shared microservices consumed by the team's web and desktop apps through a single API."),
 
       roleLine("AI Engineer Intern", "March 2025 – Present"),
       orgLine("Bandung Techno Park · Trans Track"),
-      bullet("Designed a facial landmark sequence model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Achieved Macro F1 0.78, an 11% gain over the company’s production model."),
+      bullet("Designed a facial landmark sequence model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Macro F1 0.78, an 11% gain over the company's production model."),
       bullet("Deployed a 3-service async cloud-review API with night-hour and repeat-event risk escalation rules, verified against the live company MDVR server."),
 
       roleLine("Research Assistant, Bird Sound Identification", "November 2024 – December 2025"),
@@ -214,36 +232,44 @@ const doc = new Document({
 
       roleLine("Registration Committee", "November 2025 – January 2026"),
       orgLine("Bebras – Telkom University Bureau"),
-      bullet("Cleaned and prepared registration data for 1,000+ participants nationwide using Python and Google Sheets."),
+      bullet("Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."),
 
       roleLine("Paper Reviewer and Room Coordinator", "August 2024 – September 2024"),
       orgLine("ICoICT 2024"),
-      bullet("Reviewed 4 conference papers and returned corrections ahead of deadline. Managed AV for 4 sessions, assisted 22 presenters."),
+      bullet("Reviewed 4 conference papers and returned corrections ahead of deadline."),
+      bullet("Managed AV setup for 4 sessions, assisted 22 presenters."),
 
       // ── PUBLICATIONS ────────────────────────────────────────────────────
       sectionHeader("Publications"),
 
+      pubSubHeader("Journal Papers"),
       pubEntry(
-        "Journal Paper", "2nd author",
+        "Journal Paper (Accepted, In Press)", "2nd author",
         "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
         "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
         "International Journal of Intelligent Engineering and Systems (IJIES-INASS), 2025",
         null
       ),
+
+      pubSubHeader("Conference Papers"),
       pubEntry(
         "Conference Paper", "1st author",
         "M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.",
         "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
-        "ICITACEE 2025, indexed IEEE Xplore",
+        "ICITACEE 2025, IEEE Xplore",
         "https://ieeexplore.ieee.org/document/11233192"
       ),
+
+      pubSubHeader("Preprints"),
       pubEntry(
-        "Preprint (under review)", "2nd author",
-        "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
+        "Preprint (Under Review)", "2nd author",
+        "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
         "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
         "SSRN, 2025",
         "https://ssrn.com/abstract=5187453"
       ),
+
+      pubSubHeader("Datasets"),
       pubEntry(
         "Dataset", "2nd author",
         "Ema Rachmawati, M. Rifqi Dzaky Azhad",
@@ -261,7 +287,17 @@ const doc = new Document({
         "Lead Coder · Ministry of Higher Education RI",
         [
           "Hotspot detection with YOLOv8: mAP@0.5 = 0.599. Skeletal segmentation with nnU-Net v2 across 12 anatomical regions: IoU 0.879.",
-          "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89), both commercial systems in clinical use at the time.",
+          "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89), both in clinical use at the time.",
+        ]
+      ),
+
+      ...project(
+        "Deep Learning for Bird Sound Identification",
+        "November 2024 – August 2025",
+        "Research Lead · Telkom University · Universiti Malaysia Sarawak",
+        [
+          "Fine-tuned BirdNET v2.4 with MixIT source separation on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+          "Macro F1 improved 44.1% over baseline. Field-validated at Bandung Zoo and Malaysia National Zoo under uncontrolled conditions.",
         ]
       ),
 
@@ -270,7 +306,7 @@ const doc = new Document({
         "March 2025 – Present",
         "AI Engineer Intern · Bandung Techno Park × Trans Track",
         [
-          "Macro F1 0.78 on real mining fleet dashcam footage, 11% above the company’s existing production model.",
+          "Macro F1 0.78 on real mining fleet dashcam footage, 11% above the company's existing production model.",
           "Deployed a 3-service Docker stack serving a live async cloud-review API with risk escalation for nighttime hours and repeat fatigue events.",
         ]
       ),
@@ -291,13 +327,13 @@ const doc = new Document({
         "Classification and Segmentation Module Lead",
         [
           "Led two of five AI modules within a clinical CXR platform: 20+ disease pathology classifier and organ segmentation.",
-          "Both modules deployed as microservices for the team’s web app and desktop app through shared API endpoints.",
+          "Both modules deployed as microservices for the team's web app and desktop app through shared API endpoints.",
         ]
       ),
 
       // ── AWARDS ──────────────────────────────────────────────────────────
       sectionHeader("Awards"),
-      award("Best Paper Award", "ADIKARA 2025, School of Computing, Telkom University", "Diabetic mellitus detection from retina fundus images. Led a team of 3."),
+      award("Best Paper Award", "ADIKARA 2025, School of Computing, Telkom University", "Diabetic mellitus detection from retina fundus images. Team lead."),
       award("Best Proposal Honorable Mention", "ADIKARA 2024, School of Computing, Telkom University", "Non-invasive diabetes mellitus detection from tongue images using MobileNet and ViT."),
       award("National Qualifier, D3/D4/S1 Category", "Samsung Solve for Tomorrow 2025, Samsung Indonesia", null),
       award("Top 25", "Data Slayer 2.0 Data Science Competition, Hima Data Science Telkom University Purwokerto, 2025", null),
@@ -306,10 +342,15 @@ const doc = new Document({
       // ── SKILLS ──────────────────────────────────────────────────────────
       sectionHeader("Skills"),
       skillRow("ML Frameworks", "PyTorch, TensorFlow, Transformers, nnU-Net v2, XGBoost, LightGBM, BiomedCLIP, VideoMAE, Whisper"),
-      skillRow("Vision and Audio", "OpenCV, MediaPipe, librosa, Scikit-learn"),
+      skillRow("Computer Vision and Audio", "OpenCV, MediaPipe, librosa, Scikit-learn"),
       skillRow("MLOps", "Docker, FastAPI, Git, pytest, Conda"),
       skillRow("Languages", "Python, C++, Go"),
       skillRow("Research Tools", "Zotero, Parsifal, LaTeX"),
+
+      // ── EDUCATION ───────────────────────────────────────────────────────
+      sectionHeader("Education"),
+      roleLine("S1 Informatika (Bachelor of Informatics)", "May 2023 – Expected May 2027"),
+      para("Telkom University  ·  GPA 4.0/4.0"),
 
       // ── LANGUAGES ───────────────────────────────────────────────────────
       sectionHeader("Languages"),
@@ -335,5 +376,5 @@ const doc = new Document({
 
 Packer.toBuffer(doc).then(buf => {
   fs.writeFileSync('rifqi-cv-260624.docx', buf);
-  console.log('done: docs/rifqi-cv-260624.docx');
+  console.log('done: docs/rifqi-cv-260624.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
 });
