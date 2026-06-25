@@ -1,0 +1,117 @@
+[
+  {
+    "file": "/images/me.png",
+    "subject": "portrait",
+    "description": "Rifqi standing with arms crossed, black varsity jacket with yellow trim, glasses, black background. Clean cutout."
+  },
+  {
+    "file": "/images/Study Group Member-1.jpg",
+    "subject": "group",
+    "description": "AI Lab Study Group 2024. Around 20 students in a lab room, posing together."
+  },
+  {
+    "file": "/images/Study Group Member-2.jpg",
+    "subject": "certificate",
+    "description": "Certificate of Appreciation issued to M Rifqi Dzaky Azhad for completing AI Lab Study Group 2024, Telkom University."
+  },
+  {
+    "file": "/images/Study Group Coordinator.jpg",
+    "subject": "group",
+    "description": "Five people in matching black-and-yellow varsity jackets standing with arms crossed inside the AI Lab."
+  },
+  {
+    "file": "/images/cci_summit-1.jpg",
+    "subject": "group",
+    "description": "Three people at an outdoor table at CCI Summit venue, posing casually before the competition."
+  },
+  {
+    "file": "/images/cci_summit-2.jpg",
+    "subject": "award",
+    "description": "Three team members holding a 3rd Winner prize board (Rp 500,000) from the CCI Summit Data Research Competition."
+  },
+  {
+    "file": "/images/icoict24-committee.jpg",
+    "subject": "group",
+    "description": "ICoICT 2024 committee group photo in a hotel ballroom. Three panel shots stacked with caption 'Good Job Team, See You Next Time'."
+  },
+  {
+    "file": "/images/ieee.jpg",
+    "subject": "group",
+    "description": "Three students in navy blue IEEE jackets standing in front of Fakultas Informatika sign at Telkom University."
+  },
+  {
+    "file": "/images/abdimas-1.jpg",
+    "subject": "outreach",
+    "description": "Community service (abdimas) session: large classroom of junior high students posing with visiting university students."
+  },
+  {
+    "file": "/images/abdimas-2.jpg",
+    "subject": "outreach",
+    "description": "Outdoor activity during community service: Rifqi supervising students working on a table exercise in a school courtyard."
+  },
+  {
+    "file": "/images/abdimas-3.jpg",
+    "subject": "teaching",
+    "description": "Study group teaching session: a presenter at a whiteboard with a diagram, five students at laptops in a small room."
+  },
+  {
+    "file": "/images/bonescan_research-1.jpg",
+    "subject": "research",
+    "description": "WBBS research team working session: five people around a desk with laptops, Telkom University lanyards visible."
+  },
+  {
+    "file": "/images/bonescan_research-2.jpg",
+    "subject": "research",
+    "description": "WBBS research meeting at a round table: six people including a supervising lecturer, all working on laptops with notes."
+  },
+  {
+    "file": "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
+    "subject": "figure",
+    "description": "Research figure: whole-body bone scan segmentation result. Shows raw scan, color-coded segmentation mask, and overlay for both anterior and posterior views across 12 skeletal regions."
+  },
+  {
+    "file": "/images/Birdsound Research 2024.jpg",
+    "subject": "research",
+    "description": "Bird sound research meeting: five people around a conference table with laptops, presentation slide on a screen."
+  },
+  {
+    "file": "/images/Birdsound 2025.jpg",
+    "subject": "field",
+    "description": "Wrinkled hornbill perched on a wooden rod in a zoo setting, surrounded by foliage. Taken during field validation at Bandung Zoo."
+  },
+  {
+    "file": "/images/logo-ai_lab.png",
+    "subject": "logo",
+    "description": "AI Laboratory Telkom University logo."
+  },
+  {
+    "file": "/images/background-hero.jpg",
+    "subject": "background",
+    "description": "Background image asset for the hero section."
+  },
+  {
+    "file": "/images/background-projects.jpg",
+    "subject": "background",
+    "description": "Background image asset for the projects section."
+  },
+  {
+    "file": "/images/background-experience.jpg",
+    "subject": "background",
+    "description": "Background image asset for the experience section."
+  },
+  {
+    "file": "/images/background-skills.jpg",
+    "subject": "background",
+    "description": "Background image asset for the skills section."
+  },
+  {
+    "file": "/images/background-journeys.jpg",
+    "subject": "background",
+    "description": "Background image asset for the journeys section."
+  },
+  {
+    "file": "/images/journey-figure.svg",
+    "subject": "diagram",
+    "description": "Research journey convergence diagram: five project lines (AI Lab, Bone Scintigraphy, Bird Sound, Trans Track, Chest X-Ray) converging toward a Medical Imaging label. Medical imaging projects shown in solid black, others in dashed gray."
+  }
+]

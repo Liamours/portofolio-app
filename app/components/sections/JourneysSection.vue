@@ -45,11 +45,11 @@ const configs = [
 ]
 
 const paths = [
-  '/data/journey-ailab.json',
-  '/data/journey-wbbs.json',
-  '/data/journey-birdsound.json',
-  '/data/journey-transtrack.json',
-  '/data/journey-cxr.json',
+  '/data/journeys/journey-ailab.json',
+  '/data/journeys/journey-wbbs.json',
+  '/data/journeys/journey-birdsound.json',
+  '/data/journeys/journey-transtrack.json',
+  '/data/journeys/journey-cxr.json',
 ]
 
 const results = await Promise.all(paths.map(p => useFetch<Journey>(p)))
