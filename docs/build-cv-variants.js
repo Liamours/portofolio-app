@@ -221,7 +221,7 @@ function buildIndustry() {
       properties: { page: PAGE },
       children: [
         ...HEADER("AI Engineer / ML Engineer"),
-        para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Production ML system deployed on commercial mining fleet dashcams — Macro F1 0.78, 11% above the existing model. Bone scan pipeline AUC 0.956, above two commercial clinical systems. First-authored IEEE Xplore paper."),
+        para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Production ML system deployed on commercial mining fleet dashcams: Macro F1 0.78, 11% above the existing model. Bone scan pipeline AUC 0.956, above two commercial clinical systems. First-authored IEEE Xplore paper."),
 
         // Skills early
         ...SKILLS,

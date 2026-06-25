@@ -57,7 +57,7 @@ const doc = new Document({
       blank(),
 
       // Opening
-      p("[OPENING — one sentence on the position, one sentence on why this company specifically.]"),
+      p("[OPENING: one sentence on the position, one sentence on why this company specifically.]"),
       blank(),
 
       // Body 1 — swap per role (see cover-letter-template.md)
