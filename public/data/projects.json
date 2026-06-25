@@ -6,6 +6,9 @@
     "status": "in-progress",
     "period": "2026 – present",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
+    "images": [
+      "/images/Birdsound 2025.jpg"
+    ],
     "summary": "A deployable application for passive avian monitoring in the field, built as a continuation of the bird species identification research. Same codebase, extended for conservation team use in Indonesia and Malaysia.",
     "highlights": [
       "Packages the BirdNET-based classification pipeline for field deployment by conservation teams.",
@@ -51,6 +54,11 @@
     "period": "Aug 2024 – Feb 2025",
     "institution": "Telkom University",
     "funding": "Ministry of Higher Education RI",
+    "images": [
+      "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
+      "/images/bonescan_research-1.jpg",
+      "/images/bonescan_research-2.jpg"
+    ],
     "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
     "stats": [
       { "value": "0.956", "label": "Patient AUC" },
@@ -75,6 +83,10 @@
     "type": "research",
     "period": "Nov 2024 – Aug 2025",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
+    "images": [
+      "/images/Birdsound 2025.jpg",
+      "/images/Birdsound Research 2024.jpg"
+    ],
     "summary": "219 bird species. 17 Borneo endemics. 18 IUCN-threatened. Trained on jungle recordings, tested at Bandung Zoo and Malaysia National Zoo.",
     "stats": [
       { "value": "+44.1%", "label": "F1 improvement" },

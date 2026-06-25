@@ -6,7 +6,6 @@
       <AboutSection />
       <ProjectsSection />
       <ExperienceSection />
-      <JourneysSection />
       <PublicationsSection />
       <SkillsSection />
       <ContactSection />
