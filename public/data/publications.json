@@ -13,10 +13,10 @@
     "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
     "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)",
     "year": 2025,
-    "type": "Journal Paper",
+    "type": "Journal Paper (Accepted, In Press)",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-    "context": "Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author."
+    "context": "Accepted manuscript. Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author."
   },
   {
     "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",

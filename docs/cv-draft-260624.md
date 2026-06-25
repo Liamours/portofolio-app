@@ -88,11 +88,10 @@ Reviewed 4 conference papers and returned corrections ahead of deadline. Managed
 
 PUBLICATIONS
 
-Journal Paper
+Journal Paper (Accepted, In Press)
 Ema Rachmawati, M. Rifqi Dzaky Azhad et al. (2nd author)
 Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2
 International Journal of Intelligent Engineering and Systems (IJIES-INASS), 2025
-[journal link pending]
 
 Conference Paper
 M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al. (1st author)
