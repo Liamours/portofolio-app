@@ -7,17 +7,15 @@
     "linkedin": "https://www.linkedin.com/in/rifqiazhad0210/",
     "location": "Bandung, Indonesia"
   },
-
   "summary": "Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Built a bone scan diagnostic pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI (two commercial systems in clinical use). First-authored an IEEE Xplore conference paper on bird species identification. One ML model running in production on commercial mining fleet dashcams.",
-
   "experience": [
     {
       "role": "Research Assistant, Multi-Task CXR Foundation Model",
       "organization": "Telkom University",
       "period": "2025 – Present",
       "highlights": [
-        "Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation, aligned to Indonesian healthcare organization disease standards.",
-        "Deployed pathology classifier and organ segmentation as shared microservices consumed by the team's web and desktop apps through a single API."
+        "Developing a hierarchical pathology classifier covering 20+ disease categories with fallback uncertainty estimation for ambiguous cases, aligned to Indonesian healthcare organization standards.",
+        "Pathology classifier and organ segmentation module delivered as microservices consumed by the team's web and desktop apps."
       ]
     },
     {
@@ -25,8 +23,8 @@
       "organization": "Bandung Techno Park · Trans Track",
       "period": "March 2025 – Present",
       "highlights": [
-        "Designed a facial landmark sequence model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Achieved Macro F1 0.78, an 11% gain over the company's production model.",
-        "Deployed a 3-service async cloud-review API with night-hour and repeat-event risk escalation rules, verified against the live company MDVR server."
+        "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
+        "Deployed a 3-service Docker stack with an async cloud-review API, risk escalation rules, and full test coverage against the live company server."
       ]
     },
     {
@@ -34,8 +32,8 @@
       "organization": "Telkom University",
       "period": "November 2024 – December 2025",
       "highlights": [
-        "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo. Macro F1 improved 44.1% over baseline on the endemic and endangered subset.",
-        "First-authored a conference paper on the research, published at ICITACEE 2025 (IEEE Xplore)."
+        "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+        "Macro F1 improved 44.1% over baseline. Published at ICITACEE 2025 (IEEE Xplore) as first author."
       ]
     },
     {
@@ -43,8 +41,7 @@
       "organization": "HUMIC Engineering",
       "period": "April 2025 – June 2025",
       "highlights": [
-        "Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction.",
-        "Produced a synthesis mapping publication trends by year, covering the full reviewed corpus."
+        "Screened and assessed 212+ papers using Zotero and Parsifal, applying PRISMA-aligned quality assessment and data extraction to produce a structured synthesis mapping publication trends by year."
       ]
     },
     {
@@ -52,8 +49,8 @@
       "organization": "Telkom University",
       "period": "August 2024 – February 2025",
       "highlights": [
-        "Annotated 600+ whole-body bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
-        "Built hotspot detection with YOLOv8 (mAP@0.5 = 0.599) and skeletal segmentation with nnU-Net v2 across 12 anatomical regions (IoU 0.879). Patient-level AUC 0.956, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89)."
+        "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
+        "Built hotspot detection and skeletal segmentation pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
       ]
     },
     {
@@ -62,7 +59,7 @@
       "period": "June 2025 – February 2026",
       "highlights": [
         "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
-        "Supervised 15 project groups from proposal to final demonstration, assessing technical execution and research quality at each stage."
+        "Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."
       ]
     },
     {
@@ -70,8 +67,8 @@
       "organization": "IEEE Student Branch, Telkom University",
       "period": "January 2025 – January 2026",
       "highlights": [
-        "Led branch team at YESIST12 Maker Fair. Placed Top 25 at Data Slayer 2.0 Data Science Competition.",
-        "Tracked and distributed competition opportunities across IEEE and BELMAWA programs to branch members."
+        "Led the branch team at YESIST12 Maker Fair.",
+        "Identified and distributed competition opportunities across IEEE and BELMAWA programs."
       ]
     },
     {
@@ -79,8 +76,8 @@
       "organization": "AI Lab, Telkom University",
       "period": "October 2024 – February 2025",
       "highlights": [
-        "Led the plant disease classifier project: data cleaning, computer vision model training, and Streamlit deployment. Delivered in one semester.",
-        "Won 3rd place at CCI Summit Kaggle, first time as team lead. Awarded 2nd Best Final Project in the Study Group."
+        "Assigned as team lead on the plant disease classifier. Built the full pipeline: data cleaning, model training, and Streamlit deployment. Delivered in one semester.",
+        "Won 3rd place at CCI Summit Kaggle. Awarded 2nd Best Final Project in the Study Group."
       ]
     },
     {
@@ -88,7 +85,7 @@
       "organization": "School of Informatics, Telkom University",
       "period": "February 2025 – June 2025",
       "highlights": [
-        "Reviewed and corrected 200+ quiz questions with course lecturers before release to students.",
+        "Reviewed 200+ quiz questions with course lecturers, correcting errors before release.",
         "Supported 40+ students with real-time debugging during live programming assessments."
       ]
     },
@@ -105,7 +102,8 @@
       "organization": "Central Computer Improvement (CCI), Telkom University",
       "period": "August 2023 – May 2024",
       "highlights": [
-        "Built a multi-class sentiment detection model achieving 70% accuracy using LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost."
+        "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
+        "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
       ]
     },
     {
@@ -113,7 +111,8 @@
       "organization": "Bebras – Telkom University",
       "period": "September 2024 – November 2024",
       "highlights": [
-        "Designed and delivered computational thinking activities for junior high students at SMP Negeri 1 Pacet."
+        "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
+        "Created game-based exercises to teach problem-solving and algorithmic thinking."
       ]
     },
     {
@@ -134,7 +133,6 @@
       ]
     }
   ],
-
   "publications": [
     {
       "type": "Journal Paper (Accepted, In Press)",
@@ -173,7 +171,6 @@
       "link": "https://zenodo.org/records/20342310"
     }
   ],
-
   "projects": [
     {
       "title": "Bone Metastasis Diagnosis Framework",
@@ -223,7 +220,6 @@
       ]
     }
   ],
-
   "awards": [
     {
       "title": "Best Paper Award",
@@ -253,15 +249,42 @@
       "year": 2024
     }
   ],
-
   "skills": {
-    "ml_frameworks": ["PyTorch", "TensorFlow", "Transformers", "nnU-Net v2", "XGBoost", "LightGBM", "BiomedCLIP", "VideoMAE", "Whisper"],
-    "computer_vision_audio": ["OpenCV", "MediaPipe", "librosa", "Scikit-learn"],
-    "mlops_infrastructure": ["Docker", "FastAPI", "Git", "pytest", "Conda"],
-    "languages": ["Python", "C++", "Go"],
-    "research_tools": ["Zotero", "Parsifal", "LaTeX"]
+    "ml_frameworks": [
+      "PyTorch",
+      "TensorFlow",
+      "Transformers",
+      "nnU-Net v2",
+      "XGBoost",
+      "LightGBM",
+      "BiomedCLIP",
+      "VideoMAE",
+      "Whisper"
+    ],
+    "computer_vision_audio": [
+      "OpenCV",
+      "MediaPipe",
+      "librosa",
+      "Scikit-learn"
+    ],
+    "mlops_infrastructure": [
+      "Docker",
+      "FastAPI",
+      "Git",
+      "pytest",
+      "Conda"
+    ],
+    "languages": [
+      "Python",
+      "C++",
+      "Go"
+    ],
+    "research_tools": [
+      "Zotero",
+      "Parsifal",
+      "LaTeX"
+    ]
   },
-
   "education": [
     {
       "degree": "S1 Informatika (Bachelor of Informatics)",
@@ -270,14 +293,27 @@
       "period": "May 2023 – Expected May 2027"
     }
   ],
-
   "languages": [
-    { "language": "English", "proficiency": "Professional working proficiency" },
-    { "language": "Indonesian", "proficiency": "Native" }
+    {
+      "language": "English",
+      "proficiency": "Professional working proficiency"
+    },
+    {
+      "language": "Indonesian",
+      "proficiency": "Native"
+    }
   ],
-
   "certifications": [
-    { "title": "Microsoft Azure AI Fundamentals", "issuer": "Microsoft", "issued": "March 2026" },
-    { "title": "Python Lanjutan Gold", "issuer": "Skilvul", "issued": "July 2024", "expires": "July 2026" }
+    {
+      "title": "Microsoft Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "issued": "March 2026"
+    },
+    {
+      "title": "Python Lanjutan Gold",
+      "issuer": "Skilvul",
+      "issued": "July 2024",
+      "expires": "July 2026"
+    }
   ]
 }

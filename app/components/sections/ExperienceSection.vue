@@ -4,7 +4,7 @@
       <h2>Experience</h2>
       <ul>
         <li v-for="(item, i) in portfolioItems" :key="i" class="exp-item">
-          <strong>{{ item.role }}</strong> — {{ item.organization }} ({{ item.period }})
+          <strong>{{ item.role }}</strong>, {{ item.organization }} ({{ item.period }})
           <ul>
             <li v-for="(h, j) in item.highlights" :key="j">{{ h }}</li>
           </ul>

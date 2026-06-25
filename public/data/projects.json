@@ -91,7 +91,8 @@
       "github": "https://github.com/Liamours/wbbs-nnunetv2",
       "paper": "https://ssrn.com/abstract=5187453"
     },
-    "featured": true
+    "featured": true,
+    "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task currently done by two proprietary commercial systems with no open alternative. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training detection and segmentation models, and quantifying BSI automatically. The goal was clinical-grade accuracy with complete transparency."
   },
   {
     "id": "bird-sound",
@@ -137,7 +138,8 @@
       "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation",
       "paper": "https://ieeexplore.ieee.org/document/11233192"
     },
-    "featured": true
+    "featured": true,
+    "narrative": "Passive acoustic monitoring is one of the most cost-effective ways to track bird populations across large conservation areas in Southeast Asia. No existing model was trained on the endemic and endangered species of Indonesia, Malaysia, and Borneo. This project built the dataset from scratch, adapted an established model to the regional subset, and validated it in real zoo environments with no controlled conditions."
   },
   {
     "id": "cxr-multitask",
@@ -168,7 +170,8 @@
       "Tauri v2",
       "Docker"
     ],
-    "featured": true
+    "featured": true,
+    "narrative": "Reading a chest X-ray involves multiple simultaneous tasks: identifying pathologies, locating organs, generating a structured report, and answering clinical questions. This project builds a five-module platform where each task is a separate AI module, delivered together as a unified clinical tool for radiologist-assisted diagnosis."
   },
   {
     "id": "chest-xray-vlm",
@@ -235,7 +238,8 @@
       "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
       "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
     },
-    "featured": true
+    "featured": true,
+    "narrative": "Trans Track needed a fatigue detection model that could outperform the system already running on their mining fleet dashcams. Starting from real footage from three active fleets, not synthetic data, made this harder than typical benchmark work. The constraint: beat a production baseline and deploy to live infrastructure."
   },
   {
     "id": "telplastina",
@@ -296,7 +300,8 @@
     "links": {
       "github": "https://github.com/Liamours/research-deepfake_classification"
     },
-    "featured": true
+    "featured": true,
+    "narrative": "Most deepfake detectors handle either video or audio manipulation, not both, and fail on datasets they were not trained on. This project built one model that handles both manipulation types, routes dynamically between experts depending on which modality shows evidence of tampering, and was trained to generalize across five datasets from different attack sources."
   },
   {
     "id": "sentiment-analysis",

@@ -15,6 +15,7 @@
       <p v-if="project.funding">{{ project.funding }}</p>
 
       <p>{{ project.summary }}</p>
+      <p v-if="project.narrative" class="narrative">{{ project.narrative }}</p>
 
       <div v-if="project.images?.length" class="images">
         <img v-for="img in project.images" :key="img" :src="img" :alt="project.title" />
@@ -75,5 +76,10 @@ useHead({
 .images img {
   max-width: 100%;
   display: block;
+}
+
+.narrative {
+  margin-top: 0.75rem;
+  font-style: italic;
 }
 </style>
