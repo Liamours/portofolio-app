@@ -59,7 +59,7 @@ Period: March 2025 – Present
 Role: AI Engineer Intern
 Collaboration: Bandung Techno Park · Trans Track
 Code: github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review
-Demo: github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration
+Demo: transtrack-demonstration.streamlit.app
 
 The problem: Trans Track needed a better fatigue detection model for their commercial mining fleet dashcam system. The existing model was in production but underperforming.
 

@@ -63,37 +63,6 @@ export interface Publication {
   link?: string
 }
 
-export interface JourneyLink {
-  label: string
-  icon: string
-  url: string
-}
-
-export interface JourneyPub {
-  title: string
-  type: string
-  venue: string
-  year: number
-  link?: string
-}
-
-export interface JourneyMilestone {
-  year: string
-  role: string
-  highlights: string[]
-  links?: JourneyLink[]
-  publications?: JourneyPub[]
-  images?: string[]
-}
-
-export interface Journey {
-  title: string
-  subtitle: string
-  logo?: string
-  milestones: JourneyMilestone[]
-  reflection?: string[]
-}
-
 export interface SkillGroup {
   category: string
   priority: 'primary' | 'secondary'

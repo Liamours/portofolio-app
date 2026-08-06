@@ -1,48 +1,32 @@
 [
   {
-    "id": "bird-conservation-app",
-    "title": "Bird Conservation Field Application",
-    "type": "research",
+    "id": "nusa-aves",
+    "title": "NUSA Aves: Passive Bioacoustic Monitoring for Endangered Birds",
+    "type": "industrial",
     "status": "in-progress",
     "period": "2026 – Present",
-    "institution": "Telkom University · Universiti Malaysia Sarawak",
+    "institution": "BRIN AIDeaNation 2026",
     "images": [
-      "/images/Birdsound 2025.jpg"
+      "/images/birdsound/birdsound-field-2025.jpg"
     ],
-    "summary": "A deployable application for passive avian monitoring in the field, built as a continuation of the bird species identification research. Same codebase, extended for conservation team use in Indonesia and Malaysia.",
+    "summary": "The bird classification research turned into something a conservation officer can actually run. Finalist at BRIN AIDeaNation 2026, 1 of 80 teams selected nationally.",
     "highlights": [
-      "Packages the BirdNET-based classification pipeline for field deployment by conservation teams.",
-      "Target users: conservation officers and wildlife researchers in Borneo."
+      "Team leader and AI engineer: built the model, backend, and CLI/API.",
+      "Dockerised inference service with CI/CD, released at v1.0.0, wrapping the fine-tuned BirdNET pipeline for field use.",
+      "Reference data for all 219 species covering descriptions, images, and conservation status, served to a Flutter mobile client.",
+      "Selected as 1 of 80 finalist teams nationally out of the BRIN AIDeaNation 2026 proposal round."
     ],
     "stack": [
       "Python",
       "BirdNET v2.4",
-      "MixIT",
       "PyTorch",
-      "librosa"
+      "Docker",
+      "Flutter",
+      "SQLite"
     ],
     "links": {
-      "github": "https://github.com/Liamours/Research_Birdsound-Classification_Whisper-Implementation"
+      "github": "https://github.com/Liamours/nusa-aves"
     },
-    "featured": false
-  },
-  {
-    "id": "ophthalmic-imaging",
-    "title": "Diabetic Mellitus Detection from Retina Fundus Images",
-    "type": "research",
-    "status": "in-progress",
-    "period": "2025 – Present",
-    "institution": "Telkom University",
-    "summary": "Classification model for diabetic mellitus detection using retina fundus imaging. Best Paper at ADIKARA, School of Computing, Telkom University.",
-    "highlights": [
-      "Best Paper at ADIKARA 2025, School of Computing, Telkom University.",
-      "Led a 3-person research team from proposal to final presentation."
-    ],
-    "stack": [
-      "Python",
-      "PyTorch",
-      "OpenCV"
-    ],
     "featured": false
   },
   {
@@ -53,9 +37,9 @@
     "institution": "Telkom University",
     "funding": "Ministry of Higher Education RI",
     "images": [
-      "/images/1-From Segmentation to Biomarker Quantification A Deep Learning Framework for Metastases Detection in Bone Scans.jpg",
-      "/images/bonescan_research-1.jpg",
-      "/images/bonescan_research-2.jpg"
+      "/images/bonescan/bonescan-paper-figure.jpg",
+      "/images/bonescan/bonescan-team-1.jpg",
+      "/images/bonescan/bonescan-team-2.jpg"
     ],
     "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
     "stats": [
@@ -75,7 +59,7 @@
     "highlights": [
       "Hotspot detection with YOLOv8. mAP@0.5 = 0.599.",
       "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions. IoU 0.879.",
-      "Patient-level classification with XGBoost and LightGBM. AUC 0.947; BSI correlated with clinical burden at r = 0.82.",
+      "Patient-level classification with XGBoost and LightGBM. AUC 0.956; BSI correlated with clinical burden at r = 0.82.",
       "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)."
     ],
     "stack": [
@@ -88,21 +72,69 @@
       "PyTorch"
     ],
     "links": {
-      "github": "https://github.com/Liamours/wbbs-nnunetv2",
-      "paper": "https://ssrn.com/abstract=5187453"
+      "github": "https://github.com/Liamours/wbbs-biomarker-quantification",
+      "paper": "https://doi.org/10.1016/j.knosys.2026.116681"
     },
     "featured": true,
     "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task currently done by two proprietary commercial systems with no open alternative. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training detection and segmentation models, and quantifying BSI automatically. The goal was clinical-grade accuracy with complete transparency."
   },
   {
+    "id": "fatigue-detection",
+    "title": "Driver Behaviour Analysis and Fatigue Detection System",
+    "type": "industrial",
+    "period": "March 2025 – February 2026",
+    "institution": "Bandung Techno Park · Trans Track",
+    "funding": "Funded industrial collaboration",
+    "images": [
+      "/images/transtrack/transtrack-normal.png",
+      "/images/transtrack/transtrack-eyes-closed.png",
+      "/images/transtrack/transtrack-yawning.png"
+    ],
+    "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
+    "stats": [
+      {
+        "value": "0.78",
+        "label": "Macro F1"
+      },
+      {
+        "value": "+11%",
+        "label": "Over baseline"
+      }
+    ],
+    "highlights": [
+      "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
+      "Facial landmark sequence model trained on real dashcam footage. Test accuracy 0.85.",
+      "Async cloud-review API: immediate response, background inference pipeline, automatic result delivery to Trans Track.",
+      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports.",
+      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server.",
+      "Deployed in a Docker-containerised environment. Live demo on Streamlit Cloud."
+    ],
+    "stack": [
+      "Python",
+      "MediaPipe",
+      "PyTorch",
+      "FastAPI",
+      "OpenCV",
+      "httpx",
+      "pytest",
+      "Docker"
+    ],
+    "links": {
+      "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
+      "demo": "https://transtrack-demonstration.streamlit.app"
+    },
+    "featured": true,
+    "narrative": "Trans Track needed a fatigue detection model that could outperform the system already running on their mining fleet dashcams. Starting from real footage from three active fleets, not synthetic data, made this harder than typical benchmark work. The constraint: beat a production baseline and deploy to live infrastructure."
+  },
+  {
     "id": "bird-sound",
     "title": "Deep Learning for Bird Sound Identification",
     "type": "research",
-    "period": "November 2024 – August 2025",
+    "period": "November 2024 – December 2025",
     "institution": "Telkom University · Universiti Malaysia Sarawak",
     "images": [
-      "/images/Birdsound 2025.jpg",
-      "/images/Birdsound Research 2024.jpg"
+      "/images/birdsound/birdsound-field-2025.jpg",
+      "/images/birdsound/birdsound-team-2024.jpg"
     ],
     "summary": "219 bird species. 17 Borneo endemics. 18 IUCN-threatened. Trained on jungle recordings, tested at Bandung Zoo and Malaysia National Zoo.",
     "stats": [
@@ -143,13 +175,13 @@
   },
   {
     "id": "cxr-multitask",
-    "title": "Telplastina: Multi-Task CXR Analysis Platform",
+    "title": "Telrax: Multi-Task Chest X-Ray Analysis Platform",
     "type": "research",
     "period": "2026 – Present",
     "institution": "Telkom University",
     "summary": "Five AI modules in one CXR system: classification, organ segmentation, report generation, VQA, visual grounding. Ships as both a web app and a desktop app.",
     "highlights": [
-      "Pathology classification across 14 disease categories, fine-tuned on VinBig and NIH ChestX-ray14, comparing DenseNet and transformer-based architectures.",
+      "Pathology classification across 14 disease categories, expanding to 20+ aligned to Indonesian Ministry of Health categories. Fine-tuned on VinBig and NIH ChestX-ray14, comparing DenseNet and transformer-based architectures.",
       "Organ segmentation covering right lung, left lung, and heart, outputting masks and annotated overlays from DICOM inputs.",
       "Report generation producing structured clinical findings and impressions from CXR images.",
       "Backend: FastAPI, PostgreSQL, Redis, Docker Compose; AI modules served as microservices.",
@@ -158,9 +190,7 @@
     "stack": [
       "Python",
       "PyTorch",
-      "TorchXRayVision",
       "DenseNet121",
-      "PSPNet",
       "FastAPI",
       "PostgreSQL",
       "Redis",
@@ -172,6 +202,51 @@
     ],
     "featured": true,
     "narrative": "Reading a chest X-ray involves multiple simultaneous tasks: identifying pathologies, locating organs, generating a structured report, and answering clinical questions. This project builds a five-module platform where each task is a separate AI module, delivered together as a unified clinical tool for radiologist-assisted diagnosis."
+  },
+  {
+    "id": "travlr-embeddings",
+    "title": "Provider-Aware Contrastive Learning for B2B Travel Inventory",
+    "type": "industrial",
+    "period": "2026",
+    "institution": "Travlr Data Challenge · ICoICT 2026",
+    "images": [
+      "/images/travlr/travlr-title-slide.png",
+      "/images/travlr/travlr-award-ceremony.png",
+      "/images/travlr/travlr-1st-winner-certificate.jpg"
+    ],
+    "summary": "Four providers, 3.69 million accommodation records, and a five-star rating that means something different depending on who sent it. Contrastive embeddings raise cross-provider neighbour mixing from 16.7% to 59.1%. 1st Winner, ICoICT 2026 Challenge.",
+    "stats": [
+      {
+        "value": "59.1%",
+        "label": "CP-NN@10, from 16.7%"
+      },
+      {
+        "value": "3.69M",
+        "label": "Records"
+      },
+      {
+        "value": "1st",
+        "label": "ICoICT 2026 Challenge"
+      }
+    ],
+    "highlights": [
+      "Trained a contrastive encoder on 3,686,694 records from RateHawk, Expedia, Agoda, and HotelBeds using NT-Xent loss, with positive pairs drawn from destination and quality-tier co-membership.",
+      "Stochastic provider-token masking during training, token always masked at inference. 128-dimensional embeddings from a 204,248-parameter encoder.",
+      "Introduced CP-NN@K, a cross-provider nearest-neighbour mixing protocol for settings with no verified property links. CP-NN@10 rises from 16.7% to 59.1% and mean per-dimension KS divergence falls from 0.304 to 0.130.",
+      "Beat every alignment baseline tested: CORAL 57.9%, MMD 58.2%, gradient reversal 58.4%, provider-token removal 57.9%. None improved on plain stochastic masking.",
+      "Reported honestly as a representation result. Provider identity stays partially recoverable (classifier AUC 0.957 to 0.775) and 59.1% remains 15.9 points under the 75.0% random-mixing ceiling."
+    ],
+    "stack": [
+      "Python",
+      "PyTorch",
+      "NT-Xent",
+      "Contrastive Learning"
+    ],
+    "links": {
+      "github": "https://github.com/Liamours/icoict26-challenge-b2b_travel_platform"
+    },
+    "featured": true,
+    "narrative": "B2B travel platforms resell the same hotel through several providers, and each provider grades quality on its own scale. The worst-separated pair of star-rating distributions in the Travlr data differ by a KS divergence of 0.707, and one provider supplies 53.7% of inventory against 6.4% of bookings. With no verified links between listings of the same physical property, this trains on a weaker signal, destination and tier co-membership, and measures success by how well providers mix in the neighbourhood of each property."
   },
   {
     "id": "chest-xray-vlm",
@@ -189,9 +264,7 @@
       "Python",
       "BiomedCLIP",
       "PyTorch",
-      "Vision Transformer",
-      "CBAM",
-      "FPN"
+      "Vision Transformer"
     ],
     "links": {
       "github": "https://github.com/Liamours/nlp-cxr_report_generation"
@@ -199,51 +272,8 @@
     "featured": false
   },
   {
-    "id": "fatigue-detection",
-    "title": "Driver Behaviour Analysis and Fatigue Detection System",
-    "type": "industrial",
-    "period": "March 2025 – Present",
-    "institution": "Bandung Techno Park · Trans Track",
-    "funding": "Funded industrial collaboration",
-    "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
-    "stats": [
-      {
-        "value": "0.78",
-        "label": "Macro F1"
-      },
-      {
-        "value": "+11%",
-        "label": "Over baseline"
-      }
-    ],
-    "highlights": [
-      "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
-      "Multi-modal model fusing facial landmarks and face image features. Test accuracy 0.85 at 10 FPS.",
-      "Async cloud-review API: immediate response, background inference pipeline, automatic result delivery to Trans Track.",
-      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports.",
-      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server.",
-      "Deployed in a Docker-containerised environment."
-    ],
-    "stack": [
-      "Python",
-      "MediaPipe",
-      "PyTorch",
-      "FastAPI",
-      "OpenCV",
-      "httpx",
-      "pytest",
-      "Docker"
-    ],
-    "links": {
-      "github": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-cloud-review",
-      "demo": "https://github.com/TelU-TransTrack-Fatigue-Detection/transtrack-demonstration"
-    },
-    "featured": true,
-    "narrative": "Trans Track needed a fatigue detection model that could outperform the system already running on their mining fleet dashcams. Starting from real footage from three active fleets, not synthetic data, made this harder than typical benchmark work. The constraint: beat a production baseline and deploy to live infrastructure."
-  },
-  {
     "id": "telplastina",
-    "title": "Telplastina v1: WBBS Diagnostic Application",
+    "title": "Telplastina: WBBS Diagnostic Application",
     "type": "software",
     "period": "2025 – Present",
     "institution": "Telkom University",
@@ -263,56 +293,57 @@
   },
   {
     "id": "deepfake-detection",
-    "title": "Multimodal Deepfake Detection with Modality-Aware Mixture of Experts",
-    "type": "software",
+    "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection",
+    "type": "research",
     "period": "2025 – Present",
     "institution": "Telkom University · AI Lab Focused Group",
-    "summary": "One model, two manipulation types. No label for which attack type at test time. Intra-dataset F1 0.94. Cross-dataset (unseen domains) F1 0.60 after domain-adversarial training.",
+    "summary": "Every segment reports which modality caught the fake. Audio-video forgeries route to the audio expert (α 0.178), video-only forgeries to the visual expert (α 0.880). Runs at 5x real time on a 6GB laptop GPU. Accepted at ICoDSA 2026.",
     "stats": [
       {
-        "value": "0.94",
-        "label": "Intra-dataset F1"
+        "value": "0.9076",
+        "label": "F1, 5-dataset split"
       },
       {
-        "value": "0.60",
-        "label": "Cross-dataset F1"
+        "value": "0.202",
+        "label": "Real-time factor"
       },
       {
         "value": "223K",
-        "label": "Training segments"
+        "label": "Segments"
       }
     ],
     "highlights": [
-      "Two frozen encoders (video and audio) feed a cross-modal attention module that scores each modality for manipulation without manual labels.",
-      "A learned routing gate directs each input to the audio-sync expert or the visual-artifact expert based on anomaly scores.",
-      "Domain-adversarial training prevents the model from memorizing dataset-specific patterns, enabling cross-dataset generalization.",
-      "223,445 segments across 5 datasets: PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, FF++.",
-      "Targeting submission to ICODSA 2026."
+      "A Modality Reliability Gate routes each 2-second segment to an audio or visual expert using two learned anomaly scores: cross-modal attention residual and VideoMAE temporal variance.",
+      "The gate emits a scalar α per segment naming which modality drove the verdict. No compared method (FTCN, LAA-Net, CADDM, CAD) produces this signal.",
+      "F1 0.9076, AUC 0.9744, AP 0.9948 on the combined five-dataset split. Static concatenation edges it at F1 0.9096, so the gain here is interpretability, not accuracy.",
+      "Across five leave-one-dataset-out runs, AP holds (up to 0.9992) but fixed-threshold F1 drops to 0.585 mean. Ranking survives domain shift, the decision threshold does not.",
+      "223,445 segments from PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, and FF++, split at subject level.",
+      "404.7 ms per 2-second window on an RTX 4050 Laptop: a 2-minute video analysed in 24 seconds."
     ],
     "stack": [
       "PyTorch",
       "VideoMAE",
       "Whisper",
       "MediaPipe",
-      "DANN",
+      "GRU",
       "Conda"
     ],
     "links": {
       "github": "https://github.com/Liamours/research-deepfake_classification"
     },
     "featured": true,
-    "narrative": "Most deepfake detectors handle either video or audio manipulation, not both, and fail on datasets they were not trained on. This project built one model that handles both manipulation types, routes dynamically between experts depending on which modality shows evidence of tampering, and was trained to generalize across five datasets from different attack sources."
+    "narrative": "Most audio-visual detectors assume both channels are equally corrupted. They break when only one is: a face-swapped video with genuine audio, or synthesised speech over real footage. This project built a gate that decides per segment which modality to trust, and reports that decision as a number a forensic analyst can read. The accuracy matches static fusion rather than beating it; what static fusion cannot do is tell you why it decided."
   },
   {
     "id": "sentiment-analysis",
     "title": "Sentiment Analysis Classification: Multi-Class Text",
     "type": "software",
-    "period": "May 2024 – August 2024",
+    "period": "August 2023 – May 2024",
     "institution": "Central Computer Improvement (CCI), Telkom University",
     "summary": "Multi-class text sentiment classifier (positive, neutral, negative) built as a final project for the CCI Data Research Division.",
     "highlights": [
       "Compared LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
-      "Achieved 70% accuracy on the baseline model, improved iteratively through embedding and architecture experiments."
+      "Achieved 70% accuracy, improved iteratively through embedding and architecture experiments."
     ],
     "stack": [
       "Python",
@@ -341,9 +372,8 @@
     "stack": [
       "FastAPI",
       "React 19",
-      "MongoDB Motor",
+      "MongoDB",
       "JWT",
-      "bcrypt",
       "pytest"
     ],
     "links": {
@@ -365,8 +395,7 @@
     "stack": [
       "PyQt6",
       "Transformers",
-      "BitsAndBytes (NF4)",
-      "PyTorch CUDA",
+      "PyTorch",
       "HuggingFace",
       "Conda"
     ],
@@ -387,8 +416,7 @@
       "Python",
       "OpenCV",
       "Streamlit",
-      "WebRTC",
-      "aiortc"
+      "WebRTC"
     ],
     "links": {
       "github": "https://github.com/Liamours/kewirausahaan-churcol-website",

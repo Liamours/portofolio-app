@@ -2,36 +2,73 @@
   {
     "category": "AI Engineering",
     "priority": "primary",
-    "items": ["PyTorch", "TensorFlow", "Transformers", "nnU-Net", "XGBoost", "LightGBM", "BiomedCLIP", "VideoMAE", "Whisper"]
+    "items": [
+      "PyTorch",
+      "TensorFlow",
+      "Transformers",
+      "nnU-Net v2",
+      "XGBoost",
+      "LightGBM",
+      "BiomedCLIP",
+      "VideoMAE",
+      "Whisper",
+      "Llama"
+    ]
   },
   {
     "category": "Computer Vision and Audio",
     "priority": "primary",
-    "items": ["OpenCV", "MediaPipe", "librosa", "Scikit-learn"]
+    "items": [
+      "OpenCV",
+      "MediaPipe",
+      "librosa",
+      "Scikit-learn"
+    ]
   },
   {
     "category": "MLOps and Infrastructure",
     "priority": "primary",
-    "items": ["Docker", "FastAPI", "Git", "pytest", "Conda"]
+    "items": [
+      "Docker",
+      "FastAPI",
+      "Git",
+      "pytest",
+      "Conda",
+      "Ollama"
+    ]
   },
   {
     "category": "Languages",
     "priority": "secondary",
-    "items": ["Python", "C++", "Go"]
+    "items": [
+      "Python",
+      "C++",
+      "Go"
+    ]
   },
   {
     "category": "Research Tools",
     "priority": "secondary",
-    "items": ["Zotero", "Parsifal", "LaTeX"]
+    "items": [
+      "Zotero",
+      "Parsifal",
+      "LaTeX"
+    ]
   },
   {
     "category": "Spoken Languages",
     "priority": "secondary",
-    "items": ["English (Professional)", "Indonesian (Native)"]
+    "items": [
+      "English (Professional working proficiency)",
+      "Indonesian (Native)"
+    ]
   },
   {
     "category": "Certifications",
     "priority": "secondary",
-    "items": ["Microsoft Azure AI Fundamentals (2026)", "Python Lanjutan Gold – Skilvul (2024)"]
+    "items": [
+      "Microsoft Azure AI Fundamentals – Microsoft (March 2026)",
+      "Python Lanjutan Gold – Skilvul (July 2024)"
+    ]
   }
 ]

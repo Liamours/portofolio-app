@@ -1,5 +1,15 @@
 [
   {
+    "title": "Deep Learning-based Segmentation of Whole-body Bone Scan Images Using nnU-Netv2",
+    "venue": "International Journal of Intelligent Engineering and Systems, 19(7)",
+    "year": 2026,
+    "type": "Journal Paper",
+    "role": "author",
+    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Nasywa Kamila",
+    "context": "Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author and main coder.",
+    "link": "https://doi.org/10.22266/ijies2026.0731.46"
+  },
+  {
     "title": "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
     "venue": "ICITACEE 2025, IEEE Xplore",
     "year": 2025,
@@ -10,23 +20,51 @@
     "link": "https://ieeexplore.ieee.org/document/11233192"
   },
   {
-    "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
-    "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)",
-    "year": 2025,
-    "type": "Journal Paper (Accepted, In Press)",
-    "role": "author",
-    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-    "context": "Accepted manuscript. Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author."
-  },
-  {
     "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
-    "venue": "SSRN Preprint",
-    "year": 2025,
-    "type": "Preprint",
+    "venue": "Knowledge-Based Systems, Elsevier",
+    "year": 2026,
+    "type": "Journal Paper",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
-    "context": "Full diagnostic framework from bone scan segmentation through BSI biomarker quantification. Under journal review. Second author.",
-    "link": "https://ssrn.com/abstract=5187453"
+    "context": "Full diagnostic framework from bone scan segmentation through BSI biomarker quantification. Second author and main coder.",
+    "link": "https://doi.org/10.1016/j.knosys.2026.116681"
+  },
+  {
+    "title": "Provider-Aware Contrastive Learning for Accommodation Quality Embeddings in Multi-Provider B2B Travel Platforms",
+    "venue": "ICoICT 2026, Challenge Track, IEEE Xplore (pending presentation)",
+    "year": 2026,
+    "type": "Conference Paper (Accepted)",
+    "role": "author",
+    "authors": "M. Rifqi Dzaky Azhad, Hilya Tsaniya",
+    "context": "First author and presenter. Built on the Travlr Data Challenge dataset and placed 1st in that challenge."
+  },
+  {
+    "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection Under Mixed Manipulation Scenarios",
+    "venue": "ICoDSA 2026, IEEE Xplore (pending presentation)",
+    "year": 2026,
+    "type": "Conference Paper (Accepted)",
+    "role": "author",
+    "authors": "Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Agung Toto Wibowo",
+    "context": "Modality Reliability Gate routing each 2-second segment to an audio or visual expert, with a per-segment interpretability signal. Second author."
+  },
+  {
+    "title": "PACT: Compliance Reporting in PPE Detection Based on Pose-Anchored Body Region Assignment",
+    "venue": "ICERA 2026, IEEE Xplore (pending presentation)",
+    "year": 2026,
+    "type": "Conference Paper (Accepted)",
+    "role": "author",
+    "authors": "Nabila Putri Azhari, Fathan Arya Maulana, M. Rifqi Dzaky Azhad, Ema Rachmawati, Hilya Tsaniya",
+    "context": "PPE compliance reporting anchored to pose-derived body regions. Third author."
+  },
+  {
+    "title": "Bone Scan Biomarker Quantification Dataset",
+    "venue": "Zenodo",
+    "year": 2026,
+    "type": "Dataset",
+    "role": "author",
+    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad",
+    "context": "Released alongside the Knowledge-Based Systems paper. Open access.",
+    "link": "https://zenodo.org/records/21450443"
   },
   {
     "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",
@@ -43,9 +81,9 @@
     "venue": "Telkom University Bandung",
     "year": 2025,
     "type": "e-Book",
-    "role": "contributor",
+    "role": "author",
     "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
-    "context": "Computational thinking activity book for school outreach. Contributor.",
+    "context": "Computational thinking activity book for school outreach. Designed and contributed the box sorting game, a team-based sorting activity used during SMP outreach sessions. Teaches sorting concepts without a computer.",
     "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
   }
 ]

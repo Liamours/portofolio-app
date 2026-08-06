@@ -1,30 +1,45 @@
 {
   "personal": {
     "name": "M. Rifqi Dzaky Azhad",
-    "title": "Deep Learning Researcher",
+    "title": "AI Engineer and Researcher",
     "email": "rifqiazhad21@gmail.com",
+    "phone": "+6285336559198",
     "github": "https://github.com/Liamours",
     "linkedin": "https://www.linkedin.com/in/rifqiazhad0210/",
+    "portfolio": "https://portofolio-app-puce.vercel.app",
     "location": "Bandung, Indonesia"
   },
-  "summary": "Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Built a bone scan diagnostic pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI (two commercial systems in clinical use). First-authored an IEEE Xplore conference paper on bird species identification. One ML model running in production on commercial mining fleet dashcams.",
+  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Fatigue detection model running in production on commercial mining fleet dashcams, 11% over the baseline it replaced. Three published papers and three accepted, five as first or second author.",
   "experience": [
     {
       "role": "Research Assistant, Multi-Task CXR Foundation Model",
       "organization": "Telkom University",
-      "period": "2025 – Present",
+      "period": "2026 – Present",
+      "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
+      "_notes": "Classifier is at 14 classes; roadmap is to expand to 20+ aligned to Indonesian Ministry of Health disease categories. Do not claim 20+ as delivered.",
       "highlights": [
-        "Developing a hierarchical pathology classifier covering 20+ disease categories with fallback uncertainty estimation for ambiguous cases, aligned to Indonesian healthcare organization standards.",
-        "Pathology classifier and organ segmentation module delivered as microservices consumed by the team's web and desktop apps."
+        "Built a hierarchical pathology classifier covering 14 disease categories, expanding to 20+ aligned to Indonesian healthcare organization standards, with fallback uncertainty estimation for ambiguous cases.",
+        "Delivered pathology classifier and organ segmentation modules as microservices, serving the team's web and desktop apps."
+      ]
+    },
+    {
+      "role": "Dashboard Automation Specialist",
+      "organization": "CoE BHT, Telkom University",
+      "period": "June 2026 – Present",
+      "_notes": "MBKM Internal program. Full name: Center of Excellence Biomedical & Healthcare Technology. Supervisor: Hesty Susanti. Team of 3: Rifqi (AI/ML, potential PM lead), Caldera Sudibyo (fullstack frontend), Zaenal Abdurrahman (data analyst). Scope: dashboards for CoE BHT research KPIs and automated data pipelines.",
+      "highlights": [
+        "Built a retrieval-augmented generation pipeline on Ollama-served Llama models with regex-based heuristic parsing, structuring CoE BHT's document-based research records for natural-language query.",
+        "Built a scraper pulling researcher publication and citation data from SINTA and the DOI API, automating data collection for CoE BHT's research KPI dashboards."
       ]
     },
     {
       "role": "AI Engineer Intern",
       "organization": "Bandung Techno Park · Trans Track",
-      "period": "March 2025 – Present",
+      "period": "March 2025 – February 2026",
+      "_notes": "Project scope: analyzed, planned, implemented, tested, and ran experiments for a fatigue detection system for dashcam footage. Three client fleets: SIS (Sumber Indo Sejahtera), BIB (Bukit Inti Borneo), PAMA MTBU. Production baseline Macro F1 0.67; delivered 0.78 (11% gain).",
       "highlights": [
-        "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
-        "Deployed a 3-service Docker stack with an async cloud-review API, risk escalation rules, and full test coverage against the live company server."
+        "Designed a fatigue detection model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Macro F1 0.78, an 11% gain over the model in production.",
+        "Deployed a 3-service Docker stack with an async cloud-review API and risk escalation rules, enabling continuous fatigue monitoring on live mining fleet dashcams with full test coverage."
       ]
     },
     {
@@ -33,13 +48,13 @@
       "period": "November 2024 – December 2025",
       "highlights": [
         "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
-        "Macro F1 improved 44.1% over baseline. Published at ICITACEE 2025 (IEEE Xplore) as first author."
+        "Achieved 44.1% Macro F1 improvement over baseline; published at ICITACEE 2025 (IEEE Xplore) as first author."
       ]
     },
     {
       "role": "Data Scientist Intern",
       "organization": "HUMIC Engineering",
-      "period": "April 2025 – June 2025",
+      "period": "April 2026 – June 2026",
       "highlights": [
         "Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction.",
         "Produced a synthesis mapping publication trends by year, covering the full reviewed corpus."
@@ -58,8 +73,9 @@
       "role": "Study Group Coordinator",
       "organization": "AI Lab, Telkom University",
       "period": "June 2025 – February 2026",
+      "_notes": "Focused Group Member began around August 2025, two months after this coordinator role started, and continues past February 2026. Rifqi resigned the 2026/2027 Focused Group Coordinator appointment; never list that role.",
       "highlights": [
-        "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
+        "Recruited, taught, and evaluated 29 students in NLP and computer vision across two semesters of weekly sessions.",
         "Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."
       ]
     },
@@ -67,8 +83,9 @@
       "role": "Staff, Research and Development",
       "organization": "IEEE Student Branch, Telkom University",
       "period": "January 2025 – January 2026",
+      "_notes": "YESIST12 Maker Fair: participant, no award. Designed and led a sound-based pest detection system for Indonesian farm fields: cricket localization and sound classification to identify harmful insects. Divided tasks and analyzed system requirements. Outcome: planned system design, not a deployed product.",
       "highlights": [
-        "Led the branch team at YESIST12 Maker Fair.",
+        "Designed and led a sound-based crop pest detection system at YESIST12 Maker Fair, covering cricket localization and sound classification for Indonesian farm fields.",
         "Identified and distributed competition opportunities across IEEE and BELMAWA programs."
       ]
     },
@@ -76,8 +93,9 @@
       "role": "Study Group Member",
       "organization": "AI Lab, Telkom University",
       "period": "October 2024 – February 2025",
+      "_notes": "Plant disease classifier: PlantVillage Dataset, 10-class tomato disease classification, accuracy 0.97. CCI Summit Kaggle: Team Ferret Forecaster (Fathan Arya Maulana, Nabila Putri Azhari), income prediction from financial records, 3rd place (photo evidence: prize board reads 3rd Winner, Rp 500,000).",
       "highlights": [
-        "Assigned as team lead on the plant disease classifier. Built the full pipeline: data cleaning, model training, and Streamlit deployment. Delivered in one semester.",
+        "Built end-to-end plant disease classifier as team lead on PlantVillage Dataset: data cleaning, model training, and Streamlit deployment. Accuracy 0.97, delivered in one semester.",
         "Won 3rd place at CCI Summit Kaggle. Awarded 2nd Best Final Project in the Study Group."
       ]
     },
@@ -102,24 +120,26 @@
       "role": "Member, Data Research Division",
       "organization": "Central Computer Improvement (CCI), Telkom University",
       "period": "August 2023 – May 2024",
+      "_notes": "Kaggle competition, not deployed. Twitter-based text dataset, 3 labels: positive, negative, neutral.",
       "highlights": [
-        "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
-        "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
+        "Built a 3-class sentiment classifier (positive / negative / neutral) achieving 70% accuracy, comparing LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
+        "Submitted to Kaggle as part of a competitive cycle within the division's annual program."
       ]
     },
     {
       "role": "Education Volunteer",
       "organization": "Bebras – Telkom University",
       "period": "September 2024 – November 2024",
+      "_notes": "~25 middle school students (SMP Negeri 1 Pacet). 3 different game-based activities.",
       "highlights": [
-        "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
-        "Created game-based exercises to teach problem-solving and algorithmic thinking."
+        "Designed and delivered 3 game-based computational thinking activities for 25 middle school students at SMP Negeri 1 Pacet."
       ]
     },
     {
       "role": "Registration Committee",
       "organization": "Bebras – Telkom University Bureau",
       "period": "November 2025 – January 2026",
+      "_notes": "Bebras national computational thinking competition. Registrants from across Indonesia. Operations based in Bandung.",
       "highlights": [
         "Cleaned and prepared registration data for 1,000+ participants nationwide using Python scripts and Google Sheets."
       ]
@@ -128,6 +148,7 @@
       "role": "Paper Reviewer and Room Coordinator",
       "organization": "ICoICT 2024",
       "period": "August 2024 – September 2024",
+      "_notes": "ICoICT (International Conference on Information and Communication Technology) is IEEE Xplore and Scopus indexed. 12th edition in 2024. Organized by Telkom University. Reviewed papers across all tracks.",
       "highlights": [
         "Reviewed 4 conference papers and returned corrections ahead of deadline.",
         "Managed AV setup for 4 sessions, assisted 22 presenters."
@@ -136,12 +157,16 @@
   ],
   "publications": [
     {
-      "type": "Journal Paper (Accepted, In Press)",
-      "year": 2025,
-      "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
+      "type": "Journal Paper",
+      "year": 2026,
+      "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Nasywa Kamila",
       "author_position": "2nd",
-      "title": "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2",
-      "venue": "International Journal of Intelligent Engineering and Systems (IJIES-INASS)"
+      "title": "Deep Learning-based Segmentation of Whole-body Bone Scan Images Using nnU-Netv2",
+      "venue": "International Journal of Intelligent Engineering and Systems, 19(7)",
+      "context": "Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author and main coder.",
+      "link": "https://doi.org/10.22266/ijies2026.0731.46",
+      "code": "https://github.com/Liamours/wbbs-nnunetv2",
+      "dataset": "https://zenodo.org/records/20342310"
     },
     {
       "type": "Conference Paper",
@@ -151,16 +176,63 @@
       "title": "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
       "venue": "ICITACEE 2025",
       "indexed": "IEEE Xplore",
+      "context": "Macro F1 improved 44.1% over baseline on 219 endemic and endangered species. Field-validated at Bandung Zoo and Malaysia National Zoo. First author.",
       "link": "https://ieeexplore.ieee.org/document/11233192"
     },
     {
-      "type": "Preprint (Under Review)",
-      "year": 2025,
+      "type": "Journal Paper",
+      "year": 2026,
       "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
       "author_position": "2nd",
       "title": "From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans",
-      "venue": "SSRN",
-      "link": "https://ssrn.com/abstract=5187453"
+      "venue": "Knowledge-Based Systems, Elsevier",
+      "context": "Full diagnostic framework from bone scan segmentation through BSI biomarker quantification. Second author and main coder.",
+      "link": "https://doi.org/10.1016/j.knosys.2026.116681",
+      "code": "https://github.com/Liamours/wbbs-biomarker-quantification",
+      "dataset": "https://zenodo.org/records/21450443"
+    },
+    {
+      "type": "Conference Paper (Accepted)",
+      "year": 2026,
+      "authors": "M. Rifqi Dzaky Azhad, Hilya Tsaniya",
+      "author_position": "1st",
+      "title": "Provider-Aware Contrastive Learning for Accommodation Quality Embeddings in Multi-Provider B2B Travel Platforms",
+      "venue": "ICoICT 2026, Challenge Track",
+      "indexed": "IEEE Xplore (pending presentation)",
+      "context": "First author and presenter. Built on the Travlr Data Challenge dataset and placed 1st in that challenge.",
+      "_notes": "Presenting 30 July 2026. Accepted 10 June 2026, eCF signed."
+    },
+    {
+      "type": "Conference Paper (Accepted)",
+      "year": 2026,
+      "authors": "Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Agung Toto Wibowo",
+      "author_position": "2nd",
+      "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection Under Mixed Manipulation Scenarios",
+      "venue": "ICoDSA 2026",
+      "indexed": "IEEE Xplore (pending presentation)",
+      "context": "Modality Reliability Gate routing each 2-second segment to an audio or visual expert, with a per-segment interpretability signal. Second author.",
+      "_notes": "Author registration deadline 18 August 2026. Presented by Aprilianza. IEEE indexing requires presentation."
+    },
+    {
+      "type": "Conference Paper (Accepted)",
+      "year": 2026,
+      "authors": "Nabila Putri Azhari, Fathan Arya Maulana, M. Rifqi Dzaky Azhad, Ema Rachmawati, Hilya Tsaniya",
+      "author_position": "3rd",
+      "title": "PACT: Compliance Reporting in PPE Detection Based on Pose-Anchored Body Region Assignment",
+      "venue": "ICERA 2026",
+      "indexed": "IEEE Xplore (pending presentation)",
+      "context": "PPE compliance reporting anchored to pose-derived body regions. Third author.",
+      "_notes": "Presented 25 July 2026, not by Rifqi."
+    },
+    {
+      "type": "Dataset",
+      "year": 2026,
+      "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad",
+      "author_position": "2nd",
+      "title": "Bone Scan Biomarker Quantification Dataset",
+      "venue": "Zenodo",
+      "context": "Released alongside the Knowledge-Based Systems paper. Open access.",
+      "link": "https://zenodo.org/records/21450443"
     },
     {
       "type": "Dataset",
@@ -169,7 +241,18 @@
       "author_position": "2nd",
       "title": "Whole-Body Bone Scintigraphy Segmentation Masks: Ground-Truth Annotations for Bone Area Segmentation",
       "venue": "Zenodo",
+      "context": "Publicly released ground-truth segmentation masks for whole-body bone scintigraphy. Open access.",
       "link": "https://zenodo.org/records/20342310"
+    },
+    {
+      "type": "e-Book",
+      "year": 2025,
+      "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
+      "author_position": "contributor",
+      "title": "CS Unplugged: Box Sorting Game",
+      "venue": "Telkom University Bandung",
+      "context": "Computational thinking activity book for school outreach. Designed and contributed the box sorting game, a team-based sorting activity used during SMP outreach sessions. Teaches sorting concepts without a computer.",
+      "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
     }
   ],
   "projects": [
@@ -178,15 +261,24 @@
       "period": "August 2024 – February 2025",
       "funding": "Ministry of Higher Education RI",
       "role": "Lead Coder",
+      "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
+      "github": "https://github.com/Liamours/wbbs-biomarker-quantification",
+      "github_segmentation": "https://github.com/Liamours/wbbs-nnunetv2",
+      "dataset": "https://zenodo.org/records/21450443",
+      "dataset_masks": "https://zenodo.org/records/20342310",
+      "paper": "https://doi.org/10.1016/j.knosys.2026.116681",
+      "_notes": "600+ bone scan images annotated under physician supervision at Dr. Hasan Sadikin Hospital (RSHS), Universitas Padjadjaran. Patient count not recorded separately.",
       "highlights": [
-        "Hotspot detection with YOLOv8: mAP@0.5 = 0.599. Skeletal segmentation with nnU-Net v2 across 12 anatomical regions: IoU 0.879.",
+        "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions: IoU 0.879.",
         "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89), both in clinical use at the time."
       ]
     },
     {
       "title": "Deep Learning for Bird Sound Identification",
-      "period": "November 2024 – August 2025",
+      "period": "November 2024 – December 2025",
       "role": "Research Lead",
+      "institution": "Telkom University · Universiti Malaysia Sarawak",
+      "_notes": "Co-PI name from Universiti Malaysia Sarawak side not recorded. App repos: https://github.com/aprilianza/birdApp and https://github.com/rafbiii/demo-application-bird-sound-detection. Inference: https://github.com/aprilianza/birdnet_inference.",
       "highlights": [
         "Fine-tuned BirdNET v2.4 with MixIT source separation on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
         "Macro F1 improved 44.1% over baseline on the endemic subset. Field-validated at Bandung Zoo and Malaysia National Zoo under uncontrolled conditions."
@@ -194,60 +286,80 @@
     },
     {
       "title": "Driver Fatigue Detection",
-      "period": "March 2025 – Present",
+      "period": "March 2025 – February 2026",
       "role": "AI Engineer Intern",
       "organization": "Bandung Techno Park · Trans Track",
+      "_notes": "Production baseline Macro F1 was 0.67. Our model 0.78. 11% gain = (0.78 - 0.67) / 0.67 * 100. Fleets: BIB, PAMA MTBU, SIS.",
+      "demo": "https://transtrack-demonstration.streamlit.app",
       "highlights": [
         "Macro F1 0.78 on real mining fleet dashcam footage, 11% above the company's existing production model.",
         "Deployed a 3-service Docker stack serving a live async cloud-review API with risk escalation for nighttime hours and repeat fatigue events."
       ]
     },
     {
-      "title": "Multimodal Deepfake Detection",
+      "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection",
       "period": "2025 – Present",
-      "role": "Research Lead",
+      "role": "Research Lead and Lead Coder",
+      "institution": "AI Lab Focused Group",
+      "supervisor": "Agung Toto Wibowo, S.T., M.T., Ph.D.",
+      "github": "https://github.com/Liamours/research-deepfake_classification",
+      "_notes": "Rifqi led the research and wrote the code; 2nd author. Aprilianza Muhammad Yusup is 1st author and presenter. Student mentor: Ahmad Taufiq Nur Rohman, S.Kom. Accepted at ICoDSA 2026, registration deadline 18 August 2026, IEEE indexing requires presentation. Numbers verified against the final manuscript: do not claim F1 0.94 or cross-dataset 0.60, those were never in the paper. Static concatenation slightly outperforms MoE on the combined split (0.9096 vs 0.9076); the contribution is interpretability and speed.",
       "highlights": [
-        "One model detecting both video and audio manipulation without knowing the manipulation type at inference time.",
-        "Intra-dataset F1 0.94. Cross-dataset F1 0.60 after domain-adversarial training on 223,445 segments from PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, and FF++."
+        "Built a Modality Reliability Gate that routes each 2-second segment to an audio or visual expert and reports which modality drove the verdict, a signal no compared method produces.",
+        "F1 0.9076, AUC 0.9744, AP 0.9948 across 223,445 segments from five datasets. Runs at 0.202 real-time factor on a 6GB laptop GPU. Accepted at ICoDSA 2026."
       ]
     },
     {
-      "title": "Telplastina: Multi-Task CXR Analysis Platform",
+      "title": "Telrax: Multi-Task Chest X-Ray Analysis Platform",
       "period": "2026 – Present",
       "role": "Classification and Segmentation Module Lead",
+      "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
+      "_notes": "Team breakdown by module: classification+segmentation 2 people, VLM report generation 3, VQA 3, visual grounding 4, app development (web+desktop) 4. Total ~16 across modules. GitHub private/internal. Application purpose: multi-use CXR diagnostic tool covering pathology classification, organ segmentation, report generation, VQA, and visual grounding.",
       "highlights": [
-        "Led two of five AI modules within a clinical CXR platform: 20+ disease pathology classifier and organ segmentation.",
+        "Led two of five AI modules within a clinical CXR platform: a 14-class pathology classifier expanding to 20+, and organ segmentation.",
         "Both modules deployed as microservices for the team's web app and desktop app through shared API endpoints."
       ]
     }
   ],
   "awards": [
     {
-      "title": "Best Paper Award",
-      "event": "ADIKARA 2025, School of Computing, Telkom University",
-      "year": 2025,
-      "note": "Diabetic mellitus detection from retina fundus images. Team lead."
+      "title": "1st Winner",
+      "event": "ICoICT 2026 Challenge Track (Travlr Data Challenge), Telkom University and Multimedia University",
+      "year": 2026,
+      "note": "Provider-aware contrastive learning with adversarial training for accommodation quality embeddings across multi-provider B2B travel inventory.",
+      "_notes": "Certificate awarded jointly to M. Rifqi Dzaky Azhad and Hilya Tsaniya. Presented in Bandung 31 July 2026; separate Certificate of Appreciation names Rifqi as Presenter, signed by General Chair Dr. Edward Ferdian. Sponsored by IEEE Indonesia Section and Yayasan Pendidikan Telkom, supported by SoftwareOne and TRAVLR. Accepted as a first-author IEEE paper. Evidence images in public/images/travlr/."
+    },
+    {
+      "title": "Finalist, National Pitching Round",
+      "event": "BRIN AIDeaNation 2026, Badan Riset dan Inovasi Nasional",
+      "year": 2026,
+      "note": "Team leader and AI engineer on NUSA Aves, a passive bioacoustic monitoring system identifying endemic and endangered birds in Indonesia.",
+      "_notes": "Full title: 'Nusa Aves: Sistem Pemantauan Bioakustik Pasif untuk Identifikasi Burung Endemik dan Terancam Punah di Indonesia Berbasis Deep Learning'. Listed as entry 24 of 80 invited teams in BRIN letter B-28323/III.6/TK.07.00/8/2026 dated 5 August 2026, signed by Dr. Eng. Budi Prawara, Kepala Organisasi Riset Elektronika dan Informatika. Team: Rifqi (leader, model, backend, CLI/API), Ihsan (pitch deck, Flutter app), Luqman (proposal, Flutter app). Rifqi withdrew from the 11-12 August pitching round, so the claim stops at finalist. Never state a placing or that the pitch was delivered."
     },
     {
       "title": "Best Proposal Honorable Mention",
       "event": "ADIKARA 2024, School of Computing, Telkom University",
-      "year": 2025,
-      "note": "Non-invasive diabetes mellitus detection from tongue images using MobileNet and ViT."
+      "year": 2024,
+      "note": "Non-invasive diabetic mellitus detection from tongue images using MobileNetV2 and ViT. Team lead.",
+      "_notes": "Team: Aprilianza Muhammad Yusup, Yolanda Rachma Chrysti. Dataset: tongue images from Sumatra, Indonesia (https://data.mendeley.com/datasets/hyb44jf936/2). Models: ViT and MobileNetV2. Award is Best Proposal, 2024, confirmed by Rifqi 2026-08-06; an earlier CV note wrongly recorded this as 'Best Paper Award'. Archived drafts phrase it as 'Best Proposal Honorable Mention', so confirm whether 'Honorable Mention' belongs in the title. Rifqi also entered ADIKARA 2025 as a participant only, non-finalist, not worth listing."
     },
     {
       "title": "National Qualifier, D3/D4/S1 Category",
       "event": "Samsung Solve for Tomorrow 2025, Samsung Indonesia",
-      "year": 2025
+      "year": 2025,
+      "_notes": "Team name: Rethreeno. Project: smart trashbin that classifies trash type and physically sorts it into the correct bin. Reached the 40-team national selection stage (S1 category); did not advance further."
     },
     {
       "title": "Top 25",
       "event": "Data Slayer 2.0 Data Science Competition, Hima Data Science Telkom University Purwokerto",
-      "year": 2025
+      "year": 2025,
+      "_notes": "Task: human fall detection from video frames. Entered via IEEE Student Branch. Every archived CV draft records 'Top 25'; do not restate as 'Finalist'."
     },
     {
       "title": "3rd Place",
       "event": "CCI Summit Kaggle Data Research Competition, Telkom University",
-      "year": 2024
+      "year": 2024,
+      "_notes": "Team: Ferret Forecaster (Fathan Arya Maulana, Nabila Putri Azhari). Task: predict person income from financial records."
     }
   ],
   "skills": {
@@ -260,7 +372,8 @@
       "LightGBM",
       "BiomedCLIP",
       "VideoMAE",
-      "Whisper"
+      "Whisper",
+      "Llama"
     ],
     "computer_vision_audio": [
       "OpenCV",
@@ -273,7 +386,8 @@
       "FastAPI",
       "Git",
       "pytest",
-      "Conda"
+      "Conda",
+      "Ollama"
     ],
     "languages": [
       "Python",
@@ -288,16 +402,30 @@
   },
   "education": [
     {
-      "degree": "S1 Informatika (Bachelor of Informatics)",
+      "degree": "S1 Informatika",
       "institution": "Telkom University",
       "gpa": "4.0/4.0",
-      "period": "May 2023 – Expected May 2027"
+      "period": "May 2023 – Expected 2027"
     }
   ],
   "languages": [
     {
       "language": "English",
-      "proficiency": "Professional working proficiency"
+      "proficiency": "Professional working proficiency",
+      "tests": [
+        {
+          "name": "English Communication Competence Test (ECCT)",
+          "score": "3.75/4.0",
+          "issuer": "Telkom University Language Center",
+          "date": "February 2024"
+        },
+        {
+          "name": "English Proficiency Test (EPrT)",
+          "score": "577/677",
+          "issuer": "Telkom University Language Center",
+          "date": "August 2023"
+        }
+      ]
     },
     {
       "language": "Indonesian",

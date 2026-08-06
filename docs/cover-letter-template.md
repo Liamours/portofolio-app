@@ -30,7 +30,7 @@ Example — industry: I am applying for the [POSITION] role at [COMPANY]. The sc
 [BODY PARAGRAPH 2 — pick from variants below, or omit for shorter letter]
 
 
-I am a third-year S1 Informatika student at Telkom University, GPA 4.0/4.0, graduating May 2027. I am available for [INTERNSHIP / PART-TIME / FULL-TIME] starting [DATE]. My portfolio is at portofolio-app-puce.vercel.app and my CV is attached.
+I am a third-year S1 Informatika student at Telkom University, GPA 4.0/4.0, graduating 2027. I am available for [INTERNSHIP / PART-TIME / FULL-TIME] starting [DATE]. My portfolio is at portofolio-app-puce.vercel.app and my CV is attached.
 
 Sincerely,
 

@@ -29,7 +29,6 @@ public/
     publications.json    # Publications list
     skills.json          # Skills by category
     figures.json         # Image asset descriptions
-    journeys/            # Archived journey data (not displayed)
   images/                # Photos and figures
   favicon.svg
 

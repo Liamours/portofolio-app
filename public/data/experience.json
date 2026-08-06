@@ -2,22 +2,33 @@
   {
     "role": "Research Assistant, Multi-Task CXR Foundation Model",
     "organization": "Telkom University",
-    "period": "2025 – Present",
+    "period": "2026 – Present",
     "type": "research",
     "highlights": [
-      "Developing a hierarchical pathology classifier covering 20+ disease categories with fallback uncertainty estimation for ambiguous cases, aligned to Indonesian healthcare organization standards.",
-      "Pathology classifier and organ segmentation module delivered as microservices consumed by the team's web and desktop apps."
+      "Built a hierarchical pathology classifier covering 14 disease categories, expanding to 20+ aligned to Indonesian healthcare organization standards, with fallback uncertainty estimation for ambiguous cases.",
+      "Delivered pathology classifier and organ segmentation modules as microservices, serving the team's web and desktop apps."
     ],
     "portfolio": true
   },
   {
+    "role": "Dashboard Automation Specialist",
+    "organization": "CoE BHT, Telkom University",
+    "period": "June 2026 – Present",
+    "type": "research",
+    "highlights": [
+      "Built a retrieval-augmented generation pipeline on Ollama-served Llama models with regex-based heuristic parsing, structuring CoE BHT's document-based research records for natural-language query.",
+      "Built a scraper pulling researcher publication and citation data from SINTA and the DOI API, automating data collection for CoE BHT's research KPI dashboards."
+    ],
+    "portfolio": false
+  },
+  {
     "role": "AI Engineer Intern",
     "organization": "Bandung Techno Park · Trans Track",
-    "period": "March 2025 – Present",
+    "period": "March 2025 – February 2026",
     "type": "research",
     "highlights": [
       "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
-      "Deployed a 3-service Docker stack with an async cloud-review API, risk escalation rules, and full test coverage against the live company server."
+      "Deployed a 3-service Docker stack with an async cloud-review API and risk escalation rules, enabling continuous fatigue monitoring on live mining fleet dashcams with full test coverage."
     ],
     "portfolio": true
   },
@@ -28,14 +39,14 @@
     "type": "research",
     "highlights": [
       "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
-      "Macro F1 improved 44.1% over baseline. Published at ICITACEE 2025 (IEEE Xplore) as first author."
+      "Achieved 44.1% Macro F1 improvement over baseline; published at ICITACEE 2025 (IEEE Xplore) as first author."
     ],
     "portfolio": true
   },
   {
     "role": "Data Scientist Intern",
     "organization": "HUMIC Engineering",
-    "period": "April 2025 – June 2025",
+    "period": "April 2026 – June 2026",
     "type": "research",
     "highlights": [
       "Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction.",
@@ -60,7 +71,7 @@
     "period": "June 2025 – February 2026",
     "type": "organization",
     "highlights": [
-      "Recruited, taught, and evaluated 29 students across weekly sessions and a final project.",
+      "Recruited, taught, and evaluated 29 students in NLP and computer vision across two semesters of weekly sessions.",
       "Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."
     ],
     "portfolio": true
@@ -71,7 +82,7 @@
     "period": "January 2025 – January 2026",
     "type": "organization",
     "highlights": [
-      "Led the branch team at YESIST12 Maker Fair.",
+      "Designed and led a sound-based crop pest detection system at YESIST12 Maker Fair, covering cricket localization and sound classification for Indonesian farm fields.",
       "Identified and distributed competition opportunities across IEEE and BELMAWA programs."
     ],
     "portfolio": false
@@ -82,7 +93,7 @@
     "period": "October 2024 – February 2025",
     "type": "organization",
     "highlights": [
-      "Assigned as team lead on the plant disease classifier. Built the full pipeline: data cleaning, model training, and Streamlit deployment. Delivered in one semester.",
+      "Built end-to-end plant disease classifier as team lead on PlantVillage Dataset: data cleaning, model training, and Streamlit deployment. Accuracy 0.97, delivered in one semester.",
       "Won 3rd place at CCI Summit Kaggle. Awarded 2nd Best Final Project in the Study Group."
     ],
     "portfolio": false
@@ -93,7 +104,7 @@
     "period": "August 2023 – May 2024",
     "type": "organization",
     "highlights": [
-      "Built a multi-class sentiment detection model achieving 70% accuracy using Python, Scikit-learn, and pandas.",
+      "Built a multi-class sentiment detection model achieving 70% accuracy, comparing LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
       "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
     ],
     "portfolio": false
@@ -135,8 +146,7 @@
     "period": "September 2024 – November 2024",
     "type": "committee",
     "highlights": [
-      "Designed and delivered computational thinking activities for students at SMP Negeri 1 Pacet.",
-      "Created game-based exercises to teach problem-solving and algorithmic thinking."
+      "Designed and delivered 3 game-based computational thinking activities for 25 middle school students at SMP Negeri 1 Pacet."
     ],
     "portfolio": false
   },
@@ -152,6 +162,26 @@
     "portfolio": false
   },
   {
+    "role": "Team Leader and AI Engineer, BRIN AIDeaNation 2026",
+    "organization": "Badan Riset dan Inovasi Nasional (National Competition)",
+    "period": "2026",
+    "type": "competition",
+    "highlights": [
+      "Led NUSA Aves, a passive bioacoustic monitoring system for endemic and endangered birds in Indonesia. Built the model, backend, and CLI/API. Selected as 1 of 80 national finalists."
+    ],
+    "portfolio": true
+  },
+  {
+    "role": "1st Winner, Travlr Data Challenge 2026",
+    "organization": "ICoICT 2026 Challenge Track",
+    "period": "2026",
+    "type": "competition",
+    "highlights": [
+      "Won the Travlr Data Challenge with provider-aware contrastive learning for accommodation quality embeddings. The submission was accepted as a first-author paper at ICoICT 2026."
+    ],
+    "portfolio": true
+  },
+  {
     "role": "Team Leader, Samsung Solve for Tomorrow 2025",
     "organization": "Samsung Indonesia (National Competition)",
     "period": "2025",
@@ -162,23 +192,12 @@
     "portfolio": false
   },
   {
-    "role": "Team Leader · Best Paper Award",
-    "organization": "ADIKARA, School of Computing, Telkom University",
-    "period": "2025",
-    "type": "competition",
-    "highlights": [
-      "Best Paper for diabetic mellitus detection from retina fundus images, leading a team of 3."
-    ],
-    "portfolio": false
-  },
-  {
-    "role": "Team Leader, Innovation Division · Best Proposal (Honorable Mention)",
+    "role": "Team Leader · Best Proposal Honorable Mention",
     "organization": "ADIKARA 2024, School of Computing, Telkom University",
-    "period": "January 2025",
+    "period": "2024",
     "type": "competition",
     "highlights": [
-      "Best Proposal Honorable Mention.",
-      "Project: Diabetes Mellitus detection from tongue images using MobileNet and ViT."
+      "Best Proposal Honorable Mention for non-invasive diabetic mellitus detection from tongue images using MobileNetV2 and ViT, leading a team of 3."
     ],
     "portfolio": false
   },

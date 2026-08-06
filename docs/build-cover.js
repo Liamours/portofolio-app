@@ -88,6 +88,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync('rifqi-cover-letter.docx', buf);
+  fs.writeFileSync('output/rifqi-cover-letter.docx', buf);
   console.log('done: docs/rifqi-cover-letter.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
 });

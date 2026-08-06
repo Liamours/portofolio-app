@@ -1,11 +1,23 @@
 {
   "name": "M. Rifqi Dzaky Azhad",
-  "title": "Deep Learning Researcher · Telkom University",
-  "tagline": "ML systems for medical imaging. Two papers published, one system in production.",
+  "title": "Medical Imaging and Industrial AI · Telkom University",
+  "tagline": "Bone scan pipeline published in Knowledge-Based Systems. Fatigue model running on live mining fleet dashcams.",
   "links": [
-    { "label": "GitHub", "url": "https://github.com/Liamours" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rifqiazhad0210/" },
-    { "label": "Email", "url": "mailto:rifqiazhad21@gmail.com" },
-    { "label": "Certificates", "url": "https://t.ly/MPcDg" }
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Liamours"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rifqiazhad0210/"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:rifqiazhad21@gmail.com"
+    },
+    {
+      "label": "Certificates",
+      "url": "https://t.ly/MPcDg"
+    }
   ]
 }

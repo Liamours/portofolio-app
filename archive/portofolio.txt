@@ -1,0 +1,61 @@
+M. Rifqi Dzaky Azhad
+Portfolio: portofolio-app-puce.vercel.app
+GitHub: github.com/Liamours
+Email: rifqiazhad21@gmail.com
+
+IDENTITY
+Third-year S1 Informatika, Telkom University. GPA 4.0/4.0. Medical imaging AI researcher.
+Graduating May 2027.
+
+WHAT THIS PORTFOLIO SHOWS
+5 featured projects, 6 curated experience entries, 5 publications.
+All other data (13 projects total, 19 experience entries) exists in JSON but is hidden from the main view.
+
+FEATURED PROJECTS
+1. Bone Metastasis Diagnosis Framework — YOLOv8 + nnU-Net v2, patient AUC 0.956, beats EXINI and BONENAVI. Funded by Ministry of Higher Education RI.
+2. Bird Sound Identification — BirdNET v2.4, 219 species, 44.1% F1 improvement. IEEE Xplore 2025. Field-tested at two zoos.
+3. Driver Fatigue Detection — TransTrack, Macro F1 0.78, 11% over production model. Running on mining fleet dashcams. Demo: transtrack-demonstration.streamlit.app
+4. Multimodal Deepfake Detection — video + audio, intra-dataset F1 0.94, cross-dataset F1 0.60. AI Lab Focused Group.
+5. Telplastina CXR — 5-module clinical CXR platform, pathology classification and organ segmentation modules.
+
+PORTFOLIO EXPERIENCE (shown on page)
+Research Assistant, CXR (2025–Present)
+AI Engineer Intern, TransTrack (March 2025–Present)
+Research Assistant, Bird Sound (November 2024–December 2025)
+Data Scientist Intern, HUMIC Engineering (April 2025–June 2025)
+Research Assistant, Bone Scan (August 2024–February 2025)
+Study Group Coordinator, AI Lab (June 2025–February 2026)
+
+PUBLICATIONS
+Journal Paper (Accepted, In Press): Deep Learning-Based Segmentation of WBBS using nnU-Net v2 — IJIES-INASS 2025 (2nd author)
+Conference Paper: Deep Learning for Bird Sound Identification — ICITACEE 2025 IEEE Xplore (1st author)
+Preprint (Under Review): From Segmentation to Biomarker Quantification — SSRN 2025 (2nd author)
+Dataset: WBBS Segmentation Masks — Zenodo 2025 (2nd author)
+
+SKILLS (primary)
+ML: PyTorch, TensorFlow, Transformers, nnU-Net v2, XGBoost, LightGBM, BiomedCLIP, VideoMAE, Whisper
+Vision/Audio: OpenCV, MediaPipe, librosa, Scikit-learn
+MLOps: Docker, FastAPI, Git, pytest, Conda
+
+AWARDS
+Best Paper — ADIKARA 2025
+Best Proposal Honorable Mention — ADIKARA 2024
+National Qualifier D3/D4/S1 — Samsung Solve for Tomorrow 2025
+Top 25 — Data Slayer 2.0, 2025
+3rd Place — CCI Summit Kaggle, October 2024
+
+TECH STACK (portfolio app)
+Nuxt 4, Vue 3, TypeScript, Vercel (CSR/SPA, SSR: false)
+Data in public/data/*.json — about, experience, hero, projects, publications, skills, figures
+Journey data in public/data/journeys/
+Images in public/images/ organized by project subfolder: bonescan/, birdsound/, transtrack/, ailab/, events/, abdimas/
+Personal docs in docs/ — cv-260624.json (canonical CV data), cv-draft-260624.md (rendered text), build scripts
+DOCX output in docs/output/ — rifqi-cv-260624.docx, rifqi-cv-research.docx, rifqi-cv-ds.docx, rifqi-cv-industry.docx, rifqi-cover-letter.docx
+
+CONTENT RULES (follow these always)
+No AI words: robust, seamless, leverage, comprehensive, innovative, dynamic, curated
+No em dashes
+No overclaiming without proof
+No implementation noise: sigmoid, threshold values, version numbers, HTTP codes, lines of code
+Keep comparisons: EXINI/BONENAVI, 11% over production model — these are outcome evidence
+Full month names, never abbreviated

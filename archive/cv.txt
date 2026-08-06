@@ -1,0 +1,100 @@
+M. RIFQI DZAKY AZHAD
+rifqiazhad21@gmail.com | github.com/Liamours | linkedin.com/in/rifqiazhad0210 | Bandung, Indonesia
+
+SUMMARY
+Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Built a bone scan diagnostic pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI (two commercial systems in clinical use). First-authored an IEEE Xplore conference paper on bird species identification. One ML model running in production on commercial mining fleet dashcams.
+
+EDUCATION
+S1 Informatika (Bachelor of Informatics), Telkom University
+May 2023 – Expected May 2027 | GPA 4.0/4.0
+
+EXPERIENCE
+
+Research Assistant, Multi-Task CXR Foundation Model | Telkom University | 2025 – Present
+Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation, aligned to Indonesian healthcare organization disease standards.
+Deployed pathology classifier and organ segmentation as shared microservices for the team's web and desktop apps.
+
+AI Engineer Intern | Bandung Techno Park · Trans Track | March 2025 – Present
+Designed a fatigue detection model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Macro F1 0.78, an 11% gain over the model in production.
+Deployed a 3-service async cloud-review API with night-hour and repeat-event risk escalation, verified against the live MDVR server.
+
+Research Assistant, Bird Sound Identification | Telkom University | November 2024 – December 2025
+Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species. Macro F1 improved 44.1% over baseline.
+First-authored a conference paper published at ICITACEE 2025 (IEEE Xplore).
+
+Data Scientist Intern | HUMIC Engineering | April 2025 – June 2025
+Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment.
+Produced a synthesis mapping publication trends by year across the full reviewed corpus.
+
+Research Assistant, Whole-Body Bone Scintigraphy | Telkom University | August 2024 – February 2025
+Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.
+Built hotspot detection with YOLOv8 (mAP@0.5 = 0.599) and skeletal segmentation with nnU-Net v2 across 12 regions (IoU 0.879). Patient-level AUC 0.956, surpassing EXINI and BONENAVI.
+
+Study Group Coordinator | AI Lab, Telkom University | June 2025 – February 2026
+Recruited, taught, and evaluated 29 students. Supervised 15 project groups from proposal to final demonstration.
+
+Staff, Research and Development | IEEE Student Branch | January 2025 – January 2026
+Led branch team at YESIST12 Maker Fair. Placed Top 25 at Data Slayer 2.0 Data Science Competition.
+
+Study Group Member | AI Lab, Telkom University | October 2024 – February 2025
+Led plant disease classifier project end to end. Won 3rd place at CCI Summit Kaggle. 2nd Best Final Project.
+
+Assistant Lecturer, Programming and Algorithms II | Telkom University | February 2025 – June 2025
+Reviewed 200+ quiz questions. Supported 40+ students during live programming assessments.
+
+Assistant Lecturer, Calculus I | Telkom University | September 2024 – January 2025
+Tutored 40+ students. Graded four major assessments.
+
+Member, Data Research Division | CCI, Telkom University | August 2023 – May 2024
+Built a multi-class sentiment detection model achieving 70% accuracy using LSTM, GRU, BERT, LightGBM, XGBoost, CatBoost.
+
+Education Volunteer | Bebras – Telkom University | September 2024 – November 2024
+Designed computational thinking activities for students at SMP Negeri 1 Pacet.
+
+Registration Committee | Bebras – Telkom University Bureau | November 2025 – January 2026
+Cleaned and prepared registration data for 1,000+ participants using Python and Google Sheets.
+
+Paper Reviewer and Room Coordinator | ICoICT 2024 | August 2024 – September 2024
+Reviewed 4 conference papers. Managed AV for 4 sessions, assisted 22 presenters.
+
+PUBLICATIONS
+
+Journal Paper (Accepted, In Press) | 2nd author
+Ema Rachmawati, M. Rifqi Dzaky Azhad et al.
+Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2
+IJIES-INASS, 2025
+
+Conference Paper | 1st author
+M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.
+Deep Learning for Bird Identification Using Sound
+ICITACEE 2025, IEEE Xplore | https://ieeexplore.ieee.org/document/11233192
+
+Preprint (Under Review) | 2nd author
+From Segmentation to Biomarker Quantification: A Deep Learning Framework for Metastases Detection in Bone Scans
+SSRN, 2025 | https://ssrn.com/abstract=5187453
+
+Dataset | 2nd author
+Whole-Body Bone Scintigraphy Segmentation Masks
+Zenodo, 2025 | https://zenodo.org/records/20342310
+
+AWARDS
+Best Paper Award | ADIKARA 2025, School of Computing, Telkom University
+Best Proposal Honorable Mention | ADIKARA 2024, School of Computing, Telkom University
+National Qualifier D3/D4/S1 | Samsung Solve for Tomorrow 2025
+Top 25 | Data Slayer 2.0, 2025
+3rd Place | CCI Summit Kaggle Data Research Competition, October 2024
+
+SKILLS
+ML Frameworks: PyTorch, TensorFlow, Transformers, nnU-Net v2, XGBoost, LightGBM, BiomedCLIP, VideoMAE, Whisper
+Computer Vision and Audio: OpenCV, MediaPipe, librosa, Scikit-learn
+MLOps: Docker, FastAPI, Git, pytest, Conda
+Languages: Python, C++, Go
+Research Tools: Zotero, Parsifal, LaTeX
+
+LANGUAGES
+English: Professional working proficiency (ECCT 3.75/4.0, EPrT 577/677)
+Indonesian: Native
+
+CERTIFICATIONS
+Microsoft Azure AI Fundamentals | Microsoft | March 2026
+Python Lanjutan Gold | Skilvul | July 2024 – July 2026
