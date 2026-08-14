@@ -461,7 +461,31 @@
       "degree": "S1 Informatika",
       "institution": "Telkom University",
       "gpa": "4.0/4.0",
-      "period": "May 2023 – Expected 2027"
+      "period": "May 2023 – Expected 2027",
+      "thesis": "Multi-Task Segmentation of Hotspots and Bone Regions in Whole-Body Bone Scintigraphy with Uncertainty Quantification",
+      "_notes": "Transcript 103012330009 as of 21 July 2026: 129 SKS, every grade an A, IPK 4.00. Courses below are curated from that transcript for AI and medical imaging roles, not the full list; the transcript also covers Operating Systems, Computer Networks, Database Systems, OOP, HCI, Cyber Security, Digital Systems, Scientific Writing and the general education subjects. Credits are deliberately omitted because the degree is not finished.",
+      "courses": [
+        {
+          "group": "AI and Machine Learning",
+          "items": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Computer Vision",
+            "Natural Language Processing",
+            "Ethics on AI"
+          ]
+        },
+        {
+          "group": "Mathematics and Statistics",
+          "items": [
+            "Probability Theory",
+            "Statistics",
+            "Matrix and Vector Spaces",
+            "Advanced Calculus",
+            "Discrete Mathematics"
+          ]
+        }
+      ]
     }
   ],
   "languages": [

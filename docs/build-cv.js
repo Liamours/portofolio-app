@@ -233,6 +233,8 @@ const doc = new Document({
       ...cv.education.flatMap(e => [
         roleLine(e.degree, e.period),
         para(`${e.institution}  ·  GPA ${e.gpa}`),
+        ...(e.thesis ? [skillRow('Thesis', e.thesis)] : []),
+        ...(e.courses || []).map(c => skillRow(c.group, c.items.join(', '))),
       ]),
 
       // ── LANGUAGES ───────────────────────────────────────────────────────

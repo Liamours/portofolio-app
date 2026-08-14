@@ -175,11 +175,21 @@ const header = subtitle => [
   }),
 ];
 
+const labelled = (label, text) => new Paragraph({
+  children: [
+    new TextRun({ text: label + ': ', font: FONT, size: BODY, bold: true }),
+    new TextRun({ text, font: FONT, size: BODY }),
+  ],
+  spacing: { before: 0, after: 60 },
+});
+
 const EDUCATION = [
   sectionHeader("Education"),
   ...cv.education.flatMap(e => [
     roleLine(e.degree, e.period),
     para(`${e.institution}  ·  GPA ${e.gpa}`),
+    ...(e.thesis ? [labelled('Thesis', e.thesis)] : []),
+    ...(e.courses || []).map(c => labelled(c.group, c.items.join(', '))),
   ]),
 ];
 
