@@ -16,7 +16,7 @@
     "type": "Conference Paper",
     "role": "author",
     "authors": "M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.",
-    "context": "Macro F1 improved 44.1% over baseline on 219 endemic and endangered species. Field-validated at Bandung Zoo and Malaysia National Zoo. First author.",
+    "context": "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9% on 200 endemic and endangered species. First author.",
     "link": "https://ieeexplore.ieee.org/document/11233192"
   },
   {

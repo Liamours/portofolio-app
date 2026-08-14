@@ -1,4 +1,16 @@
 {
+  "name": "portfolio-cv-pipeline",
+  "private": true,
+  "description": "Builds the CV, its role-targeted variants and the cover letter from cv-260624.json, and generates the site data files that duplicate it.",
+  "scripts": {
+    "sync": "node sync.js",
+    "build:cv": "node build-cv.js",
+    "build:variants": "node build-cv-variants.js",
+    "build:cover": "node build-cover.js",
+    "build:pdf": "node build-pdf.js",
+    "verify": "node verify.js",
+    "build": "npm run sync && npm run build:cv && npm run build:variants && npm run build:cover && npm run build:pdf && npm run verify"
+  },
   "dependencies": {
     "docx": "^9.7.1"
   }

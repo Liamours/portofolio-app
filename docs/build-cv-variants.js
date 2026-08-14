@@ -1,12 +1,16 @@
-// Builds three role-targeted CV variants from the same content.
+// Builds every role-targeted CV variant declared in cv-260624.json.
 // Usage: node build-cv-variants.js
-// Output: rifqi-cv-industry.docx | rifqi-cv-research.docx | rifqi-cv-ds.docx
+//
+// This file holds layout only. Every reader-facing string lives in
+// cv-260624.json, so a corrected fact reaches all variants at once. Adding a
+// variant means adding an entry to cv.variants, not editing this file.
 
 const {
   Document, Packer, Paragraph, TextRun,
   AlignmentType, BorderStyle, TabStopType, LevelFormat
 } = require('./node_modules/docx');
 const fs = require('fs');
+const path = require('path');
 const cv = require('./cv-260624.json');
 
 const FONT   = "Garamond";
@@ -71,7 +75,7 @@ const skillRow = (cat, items) => new Paragraph({
   spacing: { before: 0, after: 60 },
 });
 
-function pubEntry(type, pos, authors, title, venue, link) {
+function pubEntry(pos, authors, title, venue, link) {
   const idx = authors.indexOf(ME);
   const authorRuns = [];
   if (idx === -1) {
@@ -91,7 +95,7 @@ function pubEntry(type, pos, authors, title, venue, link) {
   return new Paragraph({ children, spacing: { before: 60, after: 60 } });
 }
 
-function project(title, period, role, bullets) {
+function projectBlock(title, period, meta, bullets) {
   return [
     new Paragraph({
       children: [
@@ -101,15 +105,32 @@ function project(title, period, role, bullets) {
       tabStops: [{ type: TabStopType.RIGHT, position: CWIDTH }],
       spacing: { before: 120, after: 0 },
     }),
-    new Paragraph({
-      children: [new TextRun({ text: role, font: FONT, size: BODY, italics: true })],
+    ...(meta ? [new Paragraph({
+      children: [new TextRun({ text: meta, font: FONT, size: BODY, italics: true })],
       spacing: { before: 0, after: 40 },
-    }),
-    ...bullets.map(b => bullet(b)),
+    })] : []),
+    ...bullets.map(bullet),
   ];
 }
 
-// ── shared content blocks (read from cv-260624.json) ────────────────────────
+// ── entry lookup ─────────────────────────────────────────────────────────────
+// Variants reference entries by key. An unknown key fails the build rather than
+// silently dropping a section.
+
+const byKey = (list, what) => {
+  const map = new Map(list.map(e => [e.key, e]));
+  return key => {
+    const hit = map.get(key);
+    if (!hit) throw new Error(`unknown ${what} key: "${key}"`);
+    return hit;
+  };
+};
+
+const experienceByKey  = byKey(cv.experience, 'experience');
+const projectByKey     = byKey(cv.projects, 'project');
+const publicationByKey = byKey(cv.publications, 'publication');
+
+// ── shared content blocks ────────────────────────────────────────────────────
 
 const PUB_GROUPS = [
   { prefix: 'Journal Paper',    label: 'Journal Papers' },
@@ -126,11 +147,14 @@ const SKILL_LABELS = {
   research_tools:        'Research Tools',
 };
 
-function pubVenue(p) {
-  return p.indexed ? `${p.venue}, ${p.indexed}, ${p.year}` : `${p.venue}, ${p.year}`;
-}
+const pubVenue = p => p.indexed ? `${p.venue}, ${p.indexed}, ${p.year}` : `${p.venue}, ${p.year}`;
+const pubPos   = p => `${p.author_position} author`;
 
-const HEADER = (subtitle) => [
+// A project's meta line reads role, then whoever funded or hosted it.
+// organization is skipped where role already names the same body.
+const projectMeta = p => [p.role, p.funding, p.institution].filter(Boolean).join(' · ');
+
+const header = subtitle => [
   new Paragraph({
     children: [new TextRun({ text: ME, font: FONT, size: NAME, bold: true })],
     alignment: AlignmentType.CENTER,
@@ -166,20 +190,6 @@ const SKILLS = [
   ),
 ];
 
-const PUBLICATIONS = [
-  sectionHeader("Publications"),
-  ...PUB_GROUPS.flatMap(({ prefix, label }) => {
-    const group = cv.publications.filter(p => p.type.startsWith(prefix));
-    if (!group.length) return [];
-    return [
-      pubSubHeader(label),
-      ...group.map(p => pubEntry(
-        p.type, p.author_position + ' author', p.authors, p.title, pubVenue(p), p.link || null
-      )),
-    ];
-  }),
-];
-
 const AWARDS = [
   sectionHeader("Awards"),
   ...cv.awards.map(a => award(a.title, a.event, a.note || null)),
@@ -190,7 +200,11 @@ const LANGUAGES_CERTS = [
   ...cv.languages.flatMap(l => [
     para(`${l.language} – ${l.proficiency}`),
     ...(l.tests || []).length ? [new Paragraph({
-      children: [new TextRun({ text: (l.tests || []).map(t => `${t.name.replace(/.*\((.+)\)/, '$1')}: ${t.score}`).join('  ·  ') + '  ·  Telkom University Language Center', font: FONT, size: SMALL })],
+      children: [new TextRun({
+        text: (l.tests || []).map(t => `${t.name.replace(/.*\((.+)\)/, '$1')}: ${t.score}`).join('  ·  ')
+          + '  ·  Telkom University Language Center',
+        font: FONT, size: SMALL,
+      })],
       spacing: { before: 0, after: 60 },
     })] : [],
   ]),
@@ -200,7 +214,74 @@ const LANGUAGES_CERTS = [
   ),
 ];
 
-// ── numbering config ─────────────────────────────────────────────────────────
+// ── per-variant sections ─────────────────────────────────────────────────────
+
+const SECTIONS = {
+  summary: v => [para(v.summary)],
+
+  skills: () => SKILLS,
+
+  education: () => EDUCATION,
+
+  awards: () => AWARDS,
+
+  languages_certs: () => LANGUAGES_CERTS,
+
+  experience: v => [
+    sectionHeader(v.experience_heading || 'Experience'),
+    ...v.experience.map(experienceByKey).flatMap(e => [
+      roleLine(e.role, e.period),
+      orgLine(e.organization),
+      ...e.highlights.map(bullet),
+    ]),
+  ],
+
+  projects: v => [
+    sectionHeader(v.projects_heading || 'Projects'),
+    ...v.projects.map(projectByKey).flatMap(p =>
+      projectBlock(p.title, p.period, projectMeta(p), p.highlights)
+    ),
+  ],
+
+  // 'all' renders the full list grouped by type. An array of keys renders a
+  // condensed flat list in the order given.
+  publications: v => {
+    if (v.publications === 'all') {
+      return [
+        sectionHeader('Publications'),
+        ...PUB_GROUPS.flatMap(({ prefix, label }) => {
+          const group = cv.publications.filter(p => p.type.startsWith(prefix));
+          if (!group.length) return [];
+          return [
+            pubSubHeader(label),
+            ...group.map(p => pubEntry(pubPos(p), p.authors, p.title, pubVenue(p), p.link || null)),
+          ];
+        }),
+      ];
+    }
+    return [
+      sectionHeader('Publications'),
+      ...v.publications.map(publicationByKey).map(p =>
+        pubEntry(pubPos(p), p.authors, p.title, pubVenue(p), p.link || null)
+      ),
+    ];
+  },
+};
+
+function buildVariant(v) {
+  const children = [...header(v.subtitle)];
+  for (const name of v.order) {
+    const section = SECTIONS[name];
+    if (!section) throw new Error(`unknown section "${name}" in variant "${v.key}"`);
+    children.push(...section(v));
+  }
+  return new Document({
+    numbering: NUMBERING,
+    sections: [{ properties: { page: PAGE }, children }],
+  });
+}
+
+// ── numbering and page ───────────────────────────────────────────────────────
 
 const NUMBERING = {
   config: [{
@@ -220,303 +301,19 @@ const PAGE = {
   margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 },
 };
 
-// ── VARIANT 1: INDUSTRY AI ENGINEER ─────────────────────────────────────────
-// Order: Skills → Experience (TransTrack first) → Publications (condensed) → Projects → Awards → Education
-
-function buildIndustry() {
-  return new Document({
-    numbering: NUMBERING,
-    sections: [{
-      properties: { page: PAGE },
-      children: [
-        ...HEADER("AI Engineer / ML Engineer"),
-        para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Production ML system deployed on commercial mining fleet dashcams: Macro F1 0.78, 11% above the existing model. Bone scan pipeline AUC 0.956, above two commercial clinical systems. First-authored IEEE Xplore paper."),
-
-        // Skills early
-        ...SKILLS,
-
-        // Experience — TransTrack first
-        sectionHeader("Experience"),
-        roleLine("AI Engineer Intern", "March 2025 – February 2026"),
-        orgLine("Bandung Techno Park · Trans Track"),
-        bullet("Designed a facial landmark sequence model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Macro F1 0.78, an 11% gain over the company's production model."),
-        bullet("Deployed a 3-service async cloud-review API with risk escalation rules, verified against the live company MDVR server."),
-
-        roleLine("Research Assistant, Multi-Task CXR Foundation Model", "2025 – Present"),
-        orgLine("Telkom University"),
-        bullet("Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation."),
-        bullet("Deployed pathology classifier and organ segmentation as shared microservices for the team's web and desktop apps."),
-
-        roleLine("Research Assistant, Whole-Body Bone Scintigraphy", "August 2024 – February 2025"),
-        orgLine("Telkom University"),
-        bullet("Built hotspot detection with YOLOv8 (mAP@0.5 = 0.599) and skeletal segmentation with nnU-Net v2 across 12 regions (IoU 0.879). Patient-level AUC 0.956, surpassing EXINI and BONENAVI."),
-
-        roleLine("Research Assistant, Bird Sound Identification", "November 2024 – December 2025"),
-        orgLine("Telkom University"),
-        bullet("Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 species. Macro F1 improved 44.1%. Published at ICITACEE 2025 (IEEE Xplore) as first author."),
-
-        roleLine("Data Scientist Intern", "April 2026 – June 2026"),
-        orgLine("HUMIC Engineering"),
-        bullet("Screened 212+ papers with AI-assisted triage, applying PRISMA quality assessment to produce a structured synthesis."),
-
-        roleLine("Study Group Coordinator", "June 2025 – February 2026"),
-        orgLine("AI Lab, Telkom University"),
-        bullet("Recruited, taught, and evaluated 29 students. Supervised 15 project groups from proposal to final demonstration."),
-
-        // Projects
-        sectionHeader("Selected Projects"),
-        ...project("Bone Metastasis Diagnosis Framework", "August 2024 – February 2025",
-          "Lead Coder · Ministry of Higher Education RI", [
-            "Hotspot detection YOLOv8 mAP@0.5 = 0.599. Segmentation nnU-Net v2 IoU 0.879. Patient AUC 0.956, above EXINI and BONENAVI.",
-          ]),
-        ...project("Multimodal Deepfake Detection", "2025 – Present", "Research Lead · AI Lab", [
-          "Intra-dataset F1 0.94. Cross-dataset F1 0.60 after domain-adversarial training on 223,445 segments.",
-        ]),
-
-        // Publications condensed
-        sectionHeader("Publications"),
-        pubEntry("Journal Paper (Accepted, In Press)", "2nd", "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2", "IJIES-INASS, 2025", null),
-        pubEntry("Conference Paper", "1st", "M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning for Bird Identification Using Sound", "ICITACEE 2025, IEEE Xplore",
-          "https://ieeexplore.ieee.org/document/11233192"),
-
-        ...AWARDS,
-        ...EDUCATION,
-        ...LANGUAGES_CERTS,
-      ],
-    }],
-  });
-}
-
-// ── VARIANT 2: RESEARCH / ACADEMIC ──────────────────────────────────────────
-// Order: Education → Research Experience → Publications (full) → Projects → Awards → Skills
-
-function buildResearch() {
-  return new Document({
-    numbering: NUMBERING,
-    sections: [{
-      properties: { page: PAGE },
-      children: [
-        ...HEADER("Deep Learning Researcher · Medical Imaging"),
-        para("Medical imaging ML researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. First-authored IEEE Xplore paper. Bone scan pipeline AUC 0.956, above two commercial clinical systems. Preprint under journal review."),
-
-        // Education second
-        ...EDUCATION,
-
-        sectionHeader("Research Experience"),
-        roleLine("Research Assistant, Multi-Task CXR Foundation Model", "2025 – Present"),
-        orgLine("Telkom University"),
-        bullet("Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation, aligned to Indonesian healthcare organization disease standards."),
-        bullet("Deployed pathology classifier and organ segmentation as shared microservices for the team's web and desktop apps."),
-
-        roleLine("Research Assistant, Whole-Body Bone Scintigraphy", "August 2024 – February 2025"),
-        orgLine("Telkom University"),
-        bullet("Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran."),
-        bullet("Built hotspot detection with YOLOv8 (mAP@0.5 = 0.599) and skeletal segmentation with nnU-Net v2 across 12 regions (IoU 0.879). Patient-level AUC 0.956, surpassing EXINI and BONENAVI."),
-
-        roleLine("Research Assistant, Bird Sound Identification", "November 2024 – December 2025"),
-        orgLine("Telkom University · Universiti Malaysia Sarawak"),
-        bullet("Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species. Macro F1 improved 44.1% over baseline."),
-        bullet("First-authored a conference paper, published at ICITACEE 2025 (IEEE Xplore). Field-validated at Bandung Zoo and Malaysia National Zoo."),
-
-        roleLine("Data Scientist Intern", "April 2026 – June 2026"),
-        orgLine("HUMIC Engineering"),
-        bullet("Screened 212+ papers using Zotero and Parsifal, applying PRISMA quality assessment to produce a structured synthesis mapping publication trends by year."),
-
-        roleLine("Study Group Coordinator", "June 2025 – February 2026"),
-        orgLine("AI Lab, Telkom University"),
-        bullet("Recruited, taught, and evaluated 29 students. Supervised 15 project groups from proposal to final demonstration."),
-
-        roleLine("AI Engineer Intern", "March 2025 – February 2026"),
-        orgLine("Bandung Techno Park · Trans Track"),
-        bullet("Deployed fatigue detection model on real mining fleet dashcams. Macro F1 0.78, 11% gain over production model."),
-
-        // Full publications
-        ...PUBLICATIONS,
-
-        sectionHeader("Selected Projects"),
-        ...project("Bone Metastasis Diagnosis Framework", "August 2024 – February 2025",
-          "Lead Coder · Ministry of Higher Education RI", [
-            "Hotspot detection with YOLOv8: mAP@0.5 = 0.599. Skeletal segmentation with nnU-Net v2 across 12 anatomical regions: IoU 0.879.",
-            "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89).",
-          ]),
-        ...project("Multimodal Deepfake Detection", "2025 – Present", "Research Lead · AI Lab", [
-          "Intra-dataset F1 0.94. Cross-dataset F1 0.60 after domain-adversarial training on 223,445 segments.",
-        ]),
-
-        ...AWARDS,
-        ...SKILLS,
-        ...LANGUAGES_CERTS,
-      ],
-    }],
-  });
-}
-
-// ── VARIANT 3: DATA SCIENTIST ────────────────────────────────────────────────
-// Order: Summary → Skills → Experience (HUMIC + CCI Kaggle prominent) → Publications → Projects → Awards → Education
-
-function buildDS() {
-  return new Document({
-    numbering: NUMBERING,
-    sections: [{
-      properties: { page: PAGE },
-      children: [
-        ...HEADER("Data Scientist / ML Engineer"),
-        para("ML engineer with research and internship experience in data analysis, model training, and production deployment. Systematic literature review of 212+ papers at HUMIC Engineering. Bone scan pipeline AUC 0.956, above two commercial clinical systems. GPA 4.0/4.0, Telkom University."),
-
-        ...SKILLS,
-
-        sectionHeader("Experience"),
-        roleLine("Data Scientist Intern", "April 2026 – June 2026"),
-        orgLine("HUMIC Engineering"),
-        bullet("Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction."),
-        bullet("Produced a synthesis mapping publication trends by year across the full reviewed corpus."),
-
-        roleLine("AI Engineer Intern", "March 2025 – February 2026"),
-        orgLine("Bandung Techno Park · Trans Track"),
-        bullet("Designed a fatigue detection model on real mining fleet dashcam footage. Macro F1 0.78, 11% above the production model."),
-        bullet("Deployed a 3-service async cloud-review API with risk escalation rules, verified against the live company MDVR server."),
-
-        roleLine("Research Assistant, Whole-Body Bone Scintigraphy", "August 2024 – February 2025"),
-        orgLine("Telkom University"),
-        bullet("Built hotspot detection (YOLOv8, mAP@0.5 = 0.599) and skeletal segmentation (nnU-Net v2, IoU 0.879) pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI."),
-
-        roleLine("Research Assistant, Bird Sound Identification", "November 2024 – December 2025"),
-        orgLine("Telkom University"),
-        bullet("Fine-tuned BirdNET v2.4 on 12,511 recordings. Macro F1 improved 44.1%. Published at ICITACEE 2025 (IEEE Xplore) as first author."),
-
-        roleLine("Research Assistant, Multi-Task CXR Foundation Model", "2025 – Present"),
-        orgLine("Telkom University"),
-        bullet("Developing a 20+ disease CXR pathology classifier with hierarchical classification aligned to Indonesian healthcare standards."),
-
-        roleLine("Study Group Coordinator", "June 2025 – February 2026"),
-        orgLine("AI Lab, Telkom University"),
-        bullet("Recruited, taught, and evaluated 29 students. Supervised 15 project groups from proposal to demonstration."),
-
-        roleLine("Member, Data Research Division", "August 2023 – May 2024"),
-        orgLine("Central Computer Improvement (CCI), Telkom University"),
-        bullet("Built a multi-class sentiment detection model achieving 70% accuracy comparing LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset."),
-
-        sectionHeader("Selected Projects"),
-        ...project("Bone Metastasis Diagnosis Framework", "August 2024 – February 2025",
-          "Lead Coder · Ministry of Higher Education RI", [
-            "Hotspot detection YOLOv8 mAP@0.5 = 0.599. Segmentation IoU 0.879. Patient AUC 0.956, above EXINI and BONENAVI.",
-            "XGBoost and LightGBM patient-level classifiers. BSI correlated with clinical burden at r = 0.82.",
-          ]),
-        ...project("Sentiment Analysis: Multi-Class Text", "May 2024 – August 2024",
-          "CCI Data Research Division", [
-            "Compared LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset. 70% accuracy baseline.",
-          ]),
-
-        // Publications condensed
-        sectionHeader("Publications"),
-        pubEntry("Journal Paper (Accepted, In Press)", "2nd", "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2", "IJIES-INASS, 2025", null),
-        pubEntry("Conference Paper", "1st", "M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning for Bird Identification Using Sound", "ICITACEE 2025, IEEE Xplore",
-          "https://ieeexplore.ieee.org/document/11233192"),
-
-        ...AWARDS,
-        ...EDUCATION,
-        ...LANGUAGES_CERTS,
-      ],
-    }],
-  });
-}
-
-// ── VARIANT 4: MREC AI ENGINEER (LLM / prompt engineering / applied ML) ─────
-// Order: Skills → Experience (BHT RAG first) → Projects → Publications (condensed) → Awards → Education
-
-function buildMREC() {
-  return new Document({
-    numbering: NUMBERING,
-    sections: [{
-      properties: { page: PAGE },
-      children: [
-        ...HEADER("AI Engineer · LLM Integration & Applied ML"),
-        para("ML engineer building applied AI systems on cloud and local LLMs: retrieval-augmented pipelines on Ollama-served Llama models, audio ML with Whisper and fine-tuned BirdNET, and deployed multimodal classifiers. GPA 4.0/4.0, Telkom University. First-authored an IEEE Xplore paper on audio-based species identification."),
-
-        ...SKILLS,
-
-        sectionHeader("Experience"),
-        roleLine("Dashboard Automation Specialist", "June 2026 – Present"),
-        orgLine("CoE BHT, Telkom University"),
-        bullet("Built a retrieval-augmented generation pipeline on Ollama-served Llama models with regex-based heuristic parsing, structuring research records for natural-language query."),
-        bullet("Built a scraper pulling researcher publication and citation data from SINTA and the DOI API, automating data collection for research KPI dashboards."),
-
-        roleLine("Research Assistant, Multi-Task CXR Foundation Model", "2025 – Present"),
-        orgLine("Telkom University"),
-        bullet("Developing a 20+ disease CXR pathology classifier with hierarchical classification and fallback uncertainty estimation."),
-        bullet("Deployed pathology classifier and organ segmentation as shared microservices for the team's web and desktop apps."),
-
-        roleLine("Study Group Coordinator", "June 2025 – February 2026"),
-        orgLine("AI Lab, Telkom University"),
-        bullet("Recruited, taught, and evaluated 29 students in NLP and computer vision across two semesters of weekly sessions."),
-        bullet("Supervised 15 project groups from proposal to final demonstration, evaluating technical and scientific quality at each stage."),
-
-        roleLine("Research Assistant, Bird Sound Identification", "November 2024 – December 2025"),
-        orgLine("Telkom University · Universiti Malaysia Sarawak"),
-        bullet("Fine-tuned BirdNET v2.4 with MixIT source separation on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo."),
-        bullet("Macro F1 improved 44.1% over baseline, published at ICITACEE 2025 (IEEE Xplore) as first author."),
-        bullet("Field-validated at Bandung Zoo and Malaysia National Zoo under uncontrolled real-world conditions."),
-
-        roleLine("AI Engineer Intern", "March 2025 – February 2026"),
-        orgLine("Bandung Techno Park · Trans Track"),
-        bullet("Designed a fatigue detection model on real dashcam footage from active mining fleet drivers. Macro F1 0.78, an 11% gain over the company's production model."),
-        bullet("Deployed a 3-service async cloud-review API with risk escalation rules, verified against the live company MDVR server."),
-
-        roleLine("Data Scientist Intern", "April 2026 – June 2026"),
-        orgLine("HUMIC Engineering"),
-        bullet("Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction."),
-        bullet("Produced a synthesis mapping publication trends by year, covering the full reviewed corpus."),
-
-        roleLine("Research Assistant, Whole-Body Bone Scintigraphy", "August 2024 – February 2025"),
-        orgLine("Telkom University"),
-        bullet("Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran."),
-        bullet("Built hotspot detection with YOLOv8 (mAP@0.5 = 0.599) and skeletal segmentation with nnU-Net v2 across 12 regions (IoU 0.879). Patient-level AUC 0.956, surpassing EXINI and BONENAVI."),
-
-        sectionHeader("Projects"),
-        ...project("Telplastina: Multi-Task CXR Analysis Platform", "2026 – Present",
-          "Classification and Segmentation Module Lead", [
-            "Led two of five AI modules within a clinical CXR platform built by a 16-person multidisciplinary team spanning classification, segmentation, VLM report generation, VQA, visual grounding, and web/desktop app development.",
-            "Both modules deployed as microservices for the team's web and desktop app through shared API endpoints.",
-          ]),
-        ...project("Multimodal Deepfake Detection", "2025 – Present", "Research Lead · AI Lab", [
-          "One model detecting both video and audio manipulation without knowing the manipulation type at inference time.",
-          "Intra-dataset F1 0.94. Cross-dataset F1 0.60 after domain-adversarial training on 223,445 segments from PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, and FF++.",
-        ]),
-
-        sectionHeader("Publications"),
-        pubEntry("Conference Paper", "1st", "M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning for Bird Identification Using Sound", "ICITACEE 2025, IEEE Xplore",
-          "https://ieeexplore.ieee.org/document/11233192"),
-        pubEntry("Journal Paper (Accepted, In Press)", "2nd", "Ema Rachmawati, M. Rifqi Dzaky Azhad et al.",
-          "Deep Learning-Based Segmentation of Whole-Body Bone Scan Images Using nnU-Netv2", "IJIES-INASS, 2025", null),
-
-        ...AWARDS,
-        ...EDUCATION,
-        ...LANGUAGES_CERTS,
-      ],
-    }],
-  });
-}
-
-// ── build all ──────────────────────────────────────────────────────────────
+// ── build all ────────────────────────────────────────────────────────────────
 
 async function buildAll() {
-  const variants = [
-    { name: 'output/rifqi-cv-industry.docx',  doc: buildIndustry(),  label: 'Industry AI Engineer' },
-    { name: 'output/rifqi-cv-research.docx',  doc: buildResearch(),  label: 'Research / Academic' },
-    { name: 'output/rifqi-cv-ds.docx',        doc: buildDS(),        label: 'Data Scientist' },
-    { name: 'output/rifqi-cv-mrec.docx',      doc: buildMREC(),      label: 'MREC AI Engineer' },
-  ];
-
-  for (const { name, doc, label } of variants) {
-    const buf = await Packer.toBuffer(doc);
-    fs.writeFileSync(name, buf);
-    console.log(label + ' -> ' + name + ' (' + (buf.length / 1024).toFixed(1) + ' KB)');
+  const outDir = path.join(__dirname, 'output');
+  for (const v of cv.variants) {
+    const buf = await Packer.toBuffer(buildVariant(v));
+    const out = path.join(outDir, v.file);
+    fs.writeFileSync(out, buf);
+    console.log(`${v.label} -> output/${v.file} (${(buf.length / 1024).toFixed(1)} KB)`);
   }
 }
 
-buildAll();
+buildAll().catch(err => {
+  console.error(err.message);
+  process.exit(1);
+});

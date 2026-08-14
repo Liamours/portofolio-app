@@ -31,6 +31,8 @@
     "items": [
       "Docker",
       "FastAPI",
+      "Tauri 2",
+      "SQLite",
       "Git",
       "pytest",
       "Conda",
@@ -42,6 +44,7 @@
     "priority": "secondary",
     "items": [
       "Python",
+      "Rust",
       "C++",
       "Go"
     ]

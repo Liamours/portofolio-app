@@ -27,4 +27,7 @@ logs
 context/
 .claude/
 
+# CV build outputs, reproducible with: cd docs && npm run build
+docs/output/
+
 .vercel

@@ -24,11 +24,11 @@
   {
     "role": "AI Engineer Intern",
     "organization": "Bandung Techno Park · Trans Track",
-    "period": "March 2025 – February 2026",
+    "period": "March 2025 – June 2026",
     "type": "research",
     "highlights": [
-      "Designed a fatigue detection model on real mining fleet dashcam footage. Achieved Macro F1 0.78, an 11% gain over the model in production.",
-      "Deployed a 3-service Docker stack with an async cloud-review API and risk escalation rules, enabling continuous fatigue monitoring on live mining fleet dashcams with full test coverage."
+      "Built the data cleaning, labelling, and pairing pipeline that produced the 71,129-clip training set from raw MDVR alarm footage across three mining fleets.",
+      "Primary engineer on the production inference service: a FastAPI, Celery, and Redis Docker stack on a CPU-only VM, serving 40,000 to 50,000 videos for a fleet telematics client, with 163 tests and a documented API contract."
     ],
     "portfolio": true
   },
@@ -38,8 +38,8 @@
     "period": "November 2024 – December 2025",
     "type": "research",
     "highlights": [
-      "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
-      "Achieved 44.1% Macro F1 improvement over baseline; published at ICITACEE 2025 (IEEE Xplore) as first author."
+      "Fine-tuned BirdNET on 12,511 recordings across 200 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+      "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9%. Published at ICITACEE 2025 (IEEE Xplore) as first author."
     ],
     "portfolio": true
   },
@@ -61,7 +61,7 @@
     "type": "research",
     "highlights": [
       "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
-      "Built hotspot detection and skeletal segmentation pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
+      "Built a skeletal segmentation and biomarker quantification pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
     ],
     "portfolio": true
   },
@@ -104,8 +104,8 @@
     "period": "August 2023 – May 2024",
     "type": "organization",
     "highlights": [
-      "Built a multi-class sentiment detection model achieving 70% accuracy, comparing LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
-      "Developed proficiency in the standard data analysis stack: NumPy, pandas, seaborn, Scikit-learn."
+      "Built a 3-class sentiment classifier (positive / negative / neutral) achieving 70% accuracy, comparing LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset.",
+      "Submitted to Kaggle as part of a competitive cycle within the division's annual program."
     ],
     "portfolio": false
   },

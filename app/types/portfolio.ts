@@ -34,14 +34,19 @@ export interface Project {
   title: string
   type: 'research' | 'industrial' | 'software'
   status?: 'in-progress' | 'planned'
-  period: string
+  period: string | null
   institution?: string
   funding?: string
+  images?: string[]
   summary: string
   stats?: ProjectStat[]
   highlights: string[]
   stack: string[]
   links?: ProjectLinks
+  /** Shown on the homepage. Order follows the position in projects.json. */
+  featured: boolean
+  /** Long-form context on the project detail page. */
+  narrative?: string
 }
 
 export interface Experience {
@@ -50,6 +55,8 @@ export interface Experience {
   period: string
   type: 'research' | 'teaching' | 'organization' | 'committee' | 'competition'
   highlights: string[]
+  /** Shown in the portfolio experience section rather than the full list. */
+  portfolio: boolean
 }
 
 export interface Publication {

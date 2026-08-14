@@ -1,7 +1,7 @@
 {
   "name": "M. Rifqi Dzaky Azhad",
   "title": "Medical Imaging and Industrial AI · Telkom University",
-  "tagline": "Bone scan pipeline published in Knowledge-Based Systems. Fatigue model running on live mining fleet dashcams.",
+  "tagline": "Bone scan pipeline published in Knowledge-Based Systems. Production inference service running on live mining fleet dashcams.",
   "links": [
     {
       "label": "GitHub",

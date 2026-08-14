@@ -1,0 +1,144 @@
+{
+  "_readme": "Site-only presentation for experience.json. Facts (role, organization, period, highlights) come from cv-260624.json; this file supplies ordering, the type badge, the portfolio flag, and the competition entries, which exist only on the site. Regenerate with: node docs/sync.js",
+  "experience_order": [
+    "cxr-ra",
+    "coe-bht",
+    "transtrack",
+    "birdsound-ra",
+    "humic",
+    "wbbs-ra",
+    "sg-coordinator",
+    "ieee-sb",
+    "sg-member",
+    "cci",
+    "ta-prog2",
+    "ta-calculus",
+    "bebras-committee",
+    "bebras-volunteer",
+    "icoict-committee"
+  ],
+  "experience_meta": {
+    "cxr-ra": {
+      "type": "research",
+      "portfolio": true
+    },
+    "coe-bht": {
+      "type": "research",
+      "portfolio": false
+    },
+    "transtrack": {
+      "type": "research",
+      "portfolio": true
+    },
+    "birdsound-ra": {
+      "type": "research",
+      "portfolio": true
+    },
+    "humic": {
+      "type": "research",
+      "portfolio": true
+    },
+    "wbbs-ra": {
+      "type": "research",
+      "portfolio": true
+    },
+    "sg-coordinator": {
+      "type": "organization",
+      "portfolio": true
+    },
+    "ieee-sb": {
+      "type": "organization",
+      "portfolio": false
+    },
+    "sg-member": {
+      "type": "organization",
+      "portfolio": false
+    },
+    "cci": {
+      "type": "organization",
+      "portfolio": false
+    },
+    "ta-prog2": {
+      "type": "teaching",
+      "portfolio": false
+    },
+    "ta-calculus": {
+      "type": "teaching",
+      "portfolio": false
+    },
+    "bebras-committee": {
+      "type": "committee",
+      "portfolio": false
+    },
+    "bebras-volunteer": {
+      "type": "committee",
+      "portfolio": false
+    },
+    "icoict-committee": {
+      "type": "committee",
+      "portfolio": false
+    }
+  },
+  "competitions": [
+    {
+      "role": "Team Leader and AI Engineer, BRIN AIDeaNation 2026",
+      "organization": "Badan Riset dan Inovasi Nasional (National Competition)",
+      "period": "2026",
+      "type": "competition",
+      "highlights": [
+        "Led NUSA Aves, a passive bioacoustic monitoring system for endemic and endangered birds in Indonesia. Built the model, backend, and CLI/API. Selected as 1 of 80 national finalists."
+      ],
+      "portfolio": true
+    },
+    {
+      "role": "1st Winner, Travlr Data Challenge 2026",
+      "organization": "ICoICT 2026 Challenge Track",
+      "period": "2026",
+      "type": "competition",
+      "highlights": [
+        "Won the Travlr Data Challenge with provider-aware contrastive learning for accommodation quality embeddings. The submission was accepted as a first-author paper at ICoICT 2026."
+      ],
+      "portfolio": true
+    },
+    {
+      "role": "Team Leader, Samsung Solve for Tomorrow 2025",
+      "organization": "Samsung Indonesia (National Competition)",
+      "period": "2025",
+      "type": "competition",
+      "highlights": [
+        "Team Rethreeno qualified in the D3/D4/S1 category at the national level."
+      ],
+      "portfolio": false
+    },
+    {
+      "role": "Team Leader · Best Proposal Honorable Mention",
+      "organization": "ADIKARA 2024, School of Computing, Telkom University",
+      "period": "2024",
+      "type": "competition",
+      "highlights": [
+        "Best Proposal Honorable Mention for non-invasive diabetic mellitus detection from tongue images using MobileNetV2 and ViT, leading a team of 3."
+      ],
+      "portfolio": false
+    },
+    {
+      "role": "Team Member",
+      "organization": "Data Slayer 2.0, Hima Data Science Telkom University Purwokerto",
+      "period": "2025",
+      "type": "competition",
+      "highlights": [
+        "Top 25 finish at Data Slayer 2.0 data science competition."
+      ],
+      "portfolio": false
+    },
+    {
+      "role": "Team Leader, Kaggle Competition",
+      "organization": "CCI Summit, Telkom University",
+      "period": "October 2024",
+      "type": "competition",
+      "highlights": [
+        "Won 3rd place (first competition as team lead) by cleaning the dataset, training multiple models, and coaching teammates on ML fundamentals."
+      ],
+      "portfolio": false
+    }
+  ]
+}

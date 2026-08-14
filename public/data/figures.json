@@ -1,5 +1,25 @@
 [
   {
+    "file": "/images/nusa-aves/nusa-aves-finetuning-results.png",
+    "subject": "diagram",
+    "description": "Accuracy, weighted F1, and macro F1 for the original and fine-tuned BirdNET model on 200 species."
+  },
+  {
+    "file": "/images/nusa-aves/nusa-aves-pipeline.png",
+    "subject": "diagram",
+    "description": "NUSA Aves inference pipeline: audio split into 3-second segments, each classified, species assigned by majority vote above 0.5 confidence."
+  },
+  {
+    "file": "/images/nusa-aves/nusa-aves-app-screens.png",
+    "subject": "product",
+    "description": "NUSA Aves Flutter app screens: home with recent detections, live detection, species detail, and history."
+  },
+  {
+    "file": "/images/nusa-aves/nusa-aves-hero.jpg",
+    "subject": "product",
+    "description": "NUSA Aves application hero image: the bird identification app in use."
+  },
+  {
     "file": "/images/travlr/travlr-title-slide.png",
     "subject": "award",
     "description": "ICoICT 2026 Challenge track title slide with a 1st place badge, showing the paper title and authors M. Rifqi Dzaky Azhad and Hilya Tsaniya, Telkom University."

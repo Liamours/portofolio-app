@@ -9,9 +9,10 @@
     "portfolio": "https://portofolio-app-puce.vercel.app",
     "location": "Bandung, Indonesia"
   },
-  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Fatigue detection model running in production on commercial mining fleet dashcams, 11% over the baseline it replaced. Three published papers and three accepted, five as first or second author.",
+  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers and three accepted, five as first or second author.",
   "experience": [
     {
+      "key": "cxr-ra",
       "role": "Research Assistant, Multi-Task CXR Foundation Model",
       "organization": "Telkom University",
       "period": "2026 – Present",
@@ -23,6 +24,7 @@
       ]
     },
     {
+      "key": "coe-bht",
       "role": "Dashboard Automation Specialist",
       "organization": "CoE BHT, Telkom University",
       "period": "June 2026 – Present",
@@ -33,25 +35,29 @@
       ]
     },
     {
+      "key": "transtrack",
       "role": "AI Engineer Intern",
       "organization": "Bandung Techno Park · Trans Track",
-      "period": "March 2025 – February 2026",
-      "_notes": "Project scope: analyzed, planned, implemented, tested, and ran experiments for a fatigue detection system for dashcam footage. Three client fleets: SIS (Sumber Indo Sejahtera), BIB (Bukit Inti Borneo), PAMA MTBU. Production baseline Macro F1 0.67; delivered 0.78 (11% gain).",
+      "period": "March 2025 – June 2026",
+      "_notes": "Project scope: analyzed, planned, implemented, tested, and ran experiments for a fatigue detection system for dashcam footage. Three client fleets: SIS (Sumber Indo Sejahtera), BIB (Bukit Inti Borneo), PAMA MTBU. DO NOT CLAIM Macro F1 0.78 or an 11% gain: unsupported. Deployed model pooled macro F1 is 0.7016 (n=11,782) and that model was trained by Rafly, not Rifqi. On the one like-for-like comparison (19 May 2026, 41k alarms) the system scored F1 59.46% against TransTrack existing 66.19%, i.e. below the incumbent. Rifqi did NOT train the model or design the architecture. His scope: data cleaning/labelling/pairing pipeline (71,129 clips), primary author of the cloud inference service (23 of 30 commits), sole author of the Streamlit demo (50 of 50). No edge deployment, no ONNX/TensorRT. Integration tests hit mocks, not production. Engagement ran to June 2026, not February.",
       "highlights": [
-        "Designed a fatigue detection model from scratch on real dashcam footage from active mining fleet drivers at BIB, PAMA MTBU, and SIS. Macro F1 0.78, an 11% gain over the model in production.",
-        "Deployed a 3-service Docker stack with an async cloud-review API and risk escalation rules, enabling continuous fatigue monitoring on live mining fleet dashcams with full test coverage."
+        "Built the data cleaning, labelling, and pairing pipeline that produced the 71,129-clip training set from raw MDVR alarm footage across three mining fleets.",
+        "Primary engineer on the production inference service: a FastAPI, Celery, and Redis Docker stack on a CPU-only VM, serving 40,000 to 50,000 videos for a fleet telematics client, with 163 tests and a documented API contract."
       ]
     },
     {
+      "key": "birdsound-ra",
       "role": "Research Assistant, Bird Sound Identification",
       "organization": "Telkom University",
       "period": "November 2024 – December 2025",
+      "_notes": "Two research phases, different publication status. Phase 1: 200 species, accuracy 69.0 to 76.3, macro F1 53.6 to 65.9, published ICITACEE 2025, Rifqi FIRST AUTHOR. Phase 2: 219 species with MixIT source separation, macro F1 29.1 to 41.9 on a 29-species subset, submitted to JOIV (Journal of Informatics and Visualization). Rifqi was MAIN CODER on phase 2 but is NOT LISTED AS AN AUTHOR. Never cite the 44.1% improvement or the JOIV paper as his. The 219-species figure describes only the model deployed in NUSA Aves. Two apps exist: the first ran the model on a server and was field-tested at zoos in Bandung and Sarawak (confirmed by Rifqi 2026-08-11; the repo README says Zoo Negara, which is wrong and should be corrected there); the second, NUSA Aves, runs on device with no connection.",
       "highlights": [
-        "Fine-tuned BirdNET v2.4 on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
-        "Achieved 44.1% Macro F1 improvement over baseline; published at ICITACEE 2025 (IEEE Xplore) as first author."
+        "Fine-tuned BirdNET on 12,511 recordings across 200 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+        "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9%. Published at ICITACEE 2025 (IEEE Xplore) as first author."
       ]
     },
     {
+      "key": "humic",
       "role": "Data Scientist Intern",
       "organization": "HUMIC Engineering",
       "period": "April 2026 – June 2026",
@@ -61,15 +67,17 @@
       ]
     },
     {
+      "key": "wbbs-ra",
       "role": "Research Assistant, Whole-Body Bone Scintigraphy",
       "organization": "Telkom University",
       "period": "August 2024 – February 2025",
       "highlights": [
         "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
-        "Built hotspot detection and skeletal segmentation pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
+        "Built a skeletal segmentation and biomarker quantification pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
       ]
     },
     {
+      "key": "sg-coordinator",
       "role": "Study Group Coordinator",
       "organization": "AI Lab, Telkom University",
       "period": "June 2025 – February 2026",
@@ -80,6 +88,7 @@
       ]
     },
     {
+      "key": "ieee-sb",
       "role": "Staff, Research and Development",
       "organization": "IEEE Student Branch, Telkom University",
       "period": "January 2025 – January 2026",
@@ -90,6 +99,7 @@
       ]
     },
     {
+      "key": "sg-member",
       "role": "Study Group Member",
       "organization": "AI Lab, Telkom University",
       "period": "October 2024 – February 2025",
@@ -100,6 +110,7 @@
       ]
     },
     {
+      "key": "ta-prog2",
       "role": "Assistant Lecturer, Programming and Algorithms II",
       "organization": "School of Informatics, Telkom University",
       "period": "February 2025 – June 2025",
@@ -109,6 +120,7 @@
       ]
     },
     {
+      "key": "ta-calculus",
       "role": "Assistant Lecturer, Calculus I",
       "organization": "School of Informatics, Telkom University",
       "period": "September 2024 – January 2025",
@@ -117,6 +129,7 @@
       ]
     },
     {
+      "key": "cci",
       "role": "Member, Data Research Division",
       "organization": "Central Computer Improvement (CCI), Telkom University",
       "period": "August 2023 – May 2024",
@@ -127,6 +140,7 @@
       ]
     },
     {
+      "key": "bebras-volunteer",
       "role": "Education Volunteer",
       "organization": "Bebras – Telkom University",
       "period": "September 2024 – November 2024",
@@ -136,6 +150,7 @@
       ]
     },
     {
+      "key": "bebras-committee",
       "role": "Registration Committee",
       "organization": "Bebras – Telkom University Bureau",
       "period": "November 2025 – January 2026",
@@ -145,6 +160,7 @@
       ]
     },
     {
+      "key": "icoict-committee",
       "role": "Paper Reviewer and Room Coordinator",
       "organization": "ICoICT 2024",
       "period": "August 2024 – September 2024",
@@ -157,6 +173,7 @@
   ],
   "publications": [
     {
+      "key": "ijies-segmentation",
       "type": "Journal Paper",
       "year": 2026,
       "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Nasywa Kamila",
@@ -169,6 +186,7 @@
       "dataset": "https://zenodo.org/records/20342310"
     },
     {
+      "key": "icitacee-birds",
       "type": "Conference Paper",
       "year": 2025,
       "authors": "M. Rifqi Dzaky Azhad, Rafiq Labib, Athila Ramdani Saputra, Edward Ferdian et al.",
@@ -176,10 +194,11 @@
       "title": "Deep Learning for Bird Identification Using Sound: Enhancing Avian Monitoring and Conservation in Indonesia and Malaysia",
       "venue": "ICITACEE 2025",
       "indexed": "IEEE Xplore",
-      "context": "Macro F1 improved 44.1% over baseline on 219 endemic and endangered species. Field-validated at Bandung Zoo and Malaysia National Zoo. First author.",
+      "context": "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9% on 200 endemic and endangered species. First author.",
       "link": "https://ieeexplore.ieee.org/document/11233192"
     },
     {
+      "key": "knosys-biomarker",
       "type": "Journal Paper",
       "year": 2026,
       "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
@@ -192,6 +211,7 @@
       "dataset": "https://zenodo.org/records/21450443"
     },
     {
+      "key": "icoict-travlr",
       "type": "Conference Paper (Accepted)",
       "year": 2026,
       "authors": "M. Rifqi Dzaky Azhad, Hilya Tsaniya",
@@ -203,6 +223,7 @@
       "_notes": "Presenting 30 July 2026. Accepted 10 June 2026, eCF signed."
     },
     {
+      "key": "icodsa-deepfake",
       "type": "Conference Paper (Accepted)",
       "year": 2026,
       "authors": "Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Agung Toto Wibowo",
@@ -214,6 +235,7 @@
       "_notes": "Author registration deadline 18 August 2026. Presented by Aprilianza. IEEE indexing requires presentation."
     },
     {
+      "key": "icera-pact",
       "type": "Conference Paper (Accepted)",
       "year": 2026,
       "authors": "Nabila Putri Azhari, Fathan Arya Maulana, M. Rifqi Dzaky Azhad, Ema Rachmawati, Hilya Tsaniya",
@@ -225,6 +247,7 @@
       "_notes": "Presented 25 July 2026, not by Rifqi."
     },
     {
+      "key": "zenodo-biomarker",
       "type": "Dataset",
       "year": 2026,
       "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad",
@@ -235,6 +258,7 @@
       "link": "https://zenodo.org/records/21450443"
     },
     {
+      "key": "zenodo-masks",
       "type": "Dataset",
       "year": 2025,
       "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad",
@@ -245,6 +269,7 @@
       "link": "https://zenodo.org/records/20342310"
     },
     {
+      "key": "ebook-unplugged",
       "type": "e-Book",
       "year": 2025,
       "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
@@ -257,6 +282,7 @@
   ],
   "projects": [
     {
+      "key": "bone-metastasis",
       "title": "Bone Metastasis Diagnosis Framework",
       "period": "August 2024 – February 2025",
       "funding": "Ministry of Higher Education RI",
@@ -267,36 +293,39 @@
       "dataset": "https://zenodo.org/records/21450443",
       "dataset_masks": "https://zenodo.org/records/20342310",
       "paper": "https://doi.org/10.1016/j.knosys.2026.116681",
-      "_notes": "600+ bone scan images annotated under physician supervision at Dr. Hasan Sadikin Hospital (RSHS), Universitas Padjadjaran. Patient count not recorded separately.",
+      "_notes": "600+ bone scan images annotated under physician supervision at Dr. Hasan Sadikin Hospital (RSHS), Universitas Padjadjaran. Patient count not recorded separately. Hotspot detection with YOLOv8 was another team member's work, not Rifqi's: never list YOLOv8, hotspot detection, or mAP under his contribution. His scope was annotation, skeletal segmentation, BSI quantification, and patient-level classification.",
       "highlights": [
-        "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions: IoU 0.879.",
-        "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI (0.83–0.88) and BONENAVI (0.84–0.89), both in clinical use at the time."
+        "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions, from 600+ scans annotated under nuclear medicine physicians.",
+        "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI and BONENAVI, both in clinical use at the time."
       ]
     },
     {
+      "key": "bird-sound",
       "title": "Deep Learning for Bird Sound Identification",
       "period": "November 2024 – December 2025",
       "role": "Research Lead",
       "institution": "Telkom University · Universiti Malaysia Sarawak",
       "_notes": "Co-PI name from Universiti Malaysia Sarawak side not recorded. App repos: https://github.com/aprilianza/birdApp and https://github.com/rafbiii/demo-application-bird-sound-detection. Inference: https://github.com/aprilianza/birdnet_inference.",
       "highlights": [
-        "Fine-tuned BirdNET v2.4 with MixIT source separation on 12,511 recordings across 219 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
-        "Macro F1 improved 44.1% over baseline on the endemic subset. Field-validated at Bandung Zoo and Malaysia National Zoo under uncontrolled conditions."
+        "Fine-tuned BirdNET on 12,511 recordings across 200 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
+        "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9%. Field-checked at zoos in Bandung and Sarawak under uncontrolled noise."
       ]
     },
     {
+      "key": "fatigue-detection",
       "title": "Driver Fatigue Detection",
-      "period": "March 2025 – February 2026",
+      "period": "March 2025 – June 2026",
       "role": "AI Engineer Intern",
       "organization": "Bandung Techno Park · Trans Track",
-      "_notes": "Production baseline Macro F1 was 0.67. Our model 0.78. 11% gain = (0.78 - 0.67) / 0.67 * 100. Fleets: BIB, PAMA MTBU, SIS.",
+      "_notes": "Fleets: BIB, PAMA MTBU, SIS. NEVER claim Macro F1 0.78 or an 11% gain: both unsupported. Deployed model pooled macro F1 is 0.7016 (n=11,782), and on the only like-for-like comparison (19 May 2026, 41k alarms) it scored F1 59.46% against TransTrack's incumbent 66.19%, below the baseline. Rifqi did not train the model or design the MultiScaleTCN architecture; that was Muhammad Rafly Arjasubrata. Rifqi's scope: data cleaning, labelling and pairing pipeline (71,129 clips), primary author of the cloud inference service (23 of 30 commits), sole author of the Streamlit demo (50 of 50). No edge deployment, no ONNX or TensorRT exists. Integration tests ran against mocks; production contact was manual. Engagement ran to June 2026. FUSION MODEL (interview material, not a CV bullet): Rifqi introduced a multimodal fusion architecture in initial-class-mediapipe-face_crop (train-fusion.py, evaluate-fusion.py), joining an Enhanced1DCNN temporal branch with a SpatialCNN 3D-conv face-crop branch through CrossModalAttention. Verified his: commits 0949be0f and 56ab7756 are the oldest containing those classes. It scored 16 to 22 accuracy points BELOW the landmark-only model across BIB, PAMA and SIS (Monev 2 deck slide 19), and Rifqi wrote at the time that it was not better and used far more compute. It is 541,635 parameters, 4.4x SMALLER than the deployed 2,390,403-parameter MultiScaleTCN, so never claim it had more parameters than what shipped; it is only larger than its own Enhanced1DCNN backbone. No macro F1, no latency and no throughput was ever recorded for it. NEVER claim +11% macro F1 from this model: unrecorded and contradicted by the deck. Usable framing: built it, evaluated it across three fleets, rejected it on evidence.",
       "demo": "https://transtrack-demonstration.streamlit.app",
       "highlights": [
-        "Macro F1 0.78 on real mining fleet dashcam footage, 11% above the company's existing production model.",
-        "Deployed a 3-service Docker stack serving a live async cloud-review API with risk escalation for nighttime hours and repeat fatigue events."
+        "Primary engineer on the production inference service: FastAPI, Celery, and Redis on a CPU-only VM, serving 40,000 to 50,000 videos with 163 tests and a documented API contract.",
+        "Built the data cleaning, labelling, and pairing pipeline producing the 71,129-clip training set, and sole author of the real-time Streamlit demonstration app."
       ]
     },
     {
+      "key": "deepfake-detection",
       "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection",
       "period": "2025 – Present",
       "role": "Research Lead and Lead Coder",
@@ -306,10 +335,23 @@
       "_notes": "Rifqi led the research and wrote the code; 2nd author. Aprilianza Muhammad Yusup is 1st author and presenter. Student mentor: Ahmad Taufiq Nur Rohman, S.Kom. Accepted at ICoDSA 2026, registration deadline 18 August 2026, IEEE indexing requires presentation. Numbers verified against the final manuscript: do not claim F1 0.94 or cross-dataset 0.60, those were never in the paper. Static concatenation slightly outperforms MoE on the combined split (0.9096 vs 0.9076); the contribution is interpretability and speed.",
       "highlights": [
         "Built a Modality Reliability Gate that routes each 2-second segment to an audio or visual expert and reports which modality drove the verdict, a signal no compared method produces.",
-        "F1 0.9076, AUC 0.9744, AP 0.9948 across 223,445 segments from five datasets. Runs at 0.202 real-time factor on a 6GB laptop GPU. Accepted at ICoDSA 2026."
+        "Trained and evaluated across five public deepfake datasets, running faster than real time on a consumer laptop GPU. Accepted at ICoDSA 2026."
       ]
     },
     {
+      "key": "telplastina",
+      "title": "Telplastina: Offline Bone Scintigraphy Workstation",
+      "period": "2025 – Present",
+      "role": "Sole Author, v2",
+      "institution": "Telkom University",
+      "_notes": "Rifqi built all four processes plus the model for v2 and is its sole author. A v1 existed, written by a colleague: never claim he originated the product, and never list v1's work. First author on the accompanying manuscript, 'Multi-Task Segmentation of Hotspots and Bone Regions in Whole-Body Bone Scintigraphy with Uncertainty Quantification', in preparation, author list still placeholder as of 14 August 2026. Supervisor not verified. Lesion Dice is low in absolute terms (0.35 to 0.57) and the multitask-over-single-task gain has overlapping confidence intervals: never state the multitask advantage as established. BSI uses uniform regional weighting, not published anatomical weights, so values are internally consistent and NOT comparable to figures reported elsewhere. No regulatory clearance. Do not merge with the Bone Metastasis Diagnosis Framework entry: that one reports patient-level AUC 0.956, this one reports lesion Dice, different tasks and different manuscripts. Repo not yet public: check fixtures for RSHS patient data and get supervisor sign-off before publishing, since the manuscript is unsubmitted. Training set is BS-80K, which is public.",
+      "highlights": [
+        "Sole author of a four-process offline desktop application for bone scintigraphy: Tauri 2 and Rust shell, Vue 3 interface, Axum application server, and a FastAPI inference service, packaged as one executable that makes no network calls.",
+        "Multitask nnU-Net with two decoders on a shared encoder, trained on 2,925 paired studies and evaluated on 293 held out. Cut the offline installer 65% to 426 MB, verified by pixel-identical output."
+      ]
+    },
+    {
+      "key": "cxr-multitask",
       "title": "Telrax: Multi-Task Chest X-Ray Analysis Platform",
       "period": "2026 – Present",
       "role": "Classification and Segmentation Module Lead",
@@ -319,6 +361,17 @@
         "Led two of five AI modules within a clinical CXR platform: a 14-class pathology classifier expanding to 20+, and organ segmentation.",
         "Both modules deployed as microservices for the team's web app and desktop app through shared API endpoints."
       ]
+    },
+    {
+      "key": "sentiment-analysis",
+      "title": "Sentiment Analysis: Multi-Class Text",
+      "period": "August 2023 – May 2024",
+      "role": "CCI Data Research Division",
+      "organization": "Central Computer Improvement (CCI), Telkom University",
+      "_notes": "Kaggle-style internal project, not deployed. Twitter-based text dataset, 3 labels. Bullet is the same claim as the CCI experience entry; keep the two in agreement.",
+      "highlights": [
+        "Compared LSTM, GRU, BERT, LightGBM, XGBoost, and CatBoost on the same dataset, reaching 70% accuracy."
+      ]
     }
   ],
   "awards": [
@@ -326,7 +379,7 @@
       "title": "1st Winner",
       "event": "ICoICT 2026 Challenge Track (Travlr Data Challenge), Telkom University and Multimedia University",
       "year": 2026,
-      "note": "Provider-aware contrastive learning with adversarial training for accommodation quality embeddings across multi-provider B2B travel inventory.",
+      "note": "Provider-aware contrastive learning for accommodation quality embeddings across multi-provider B2B travel inventory, trained on 3.69 million records from four booking providers.",
       "_notes": "Certificate awarded jointly to M. Rifqi Dzaky Azhad and Hilya Tsaniya. Presented in Bandung 31 July 2026; separate Certificate of Appreciation names Rifqi as Presenter, signed by General Chair Dr. Edward Ferdian. Sponsored by IEEE Indonesia Section and Yayasan Pendidikan Telkom, supported by SoftwareOne and TRAVLR. Accepted as a first-author IEEE paper. Evidence images in public/images/travlr/."
     },
     {
@@ -384,6 +437,8 @@
     "mlops_infrastructure": [
       "Docker",
       "FastAPI",
+      "Tauri 2",
+      "SQLite",
       "Git",
       "pytest",
       "Conda",
@@ -391,6 +446,7 @@
     ],
     "languages": [
       "Python",
+      "Rust",
       "C++",
       "Go"
     ],
@@ -443,6 +499,223 @@
       "issuer": "Skilvul",
       "issued": "July 2024",
       "expires": "July 2026"
+    }
+  ],
+  "_forbidden": [
+    {
+      "pattern": "44\\.1",
+      "reason": "Bird sound macro F1 improvement from the JOIV phase-2 work. Rifqi is not an author on it. Published figure he owns is 53.6% to 65.9% at ICITACEE 2025."
+    },
+    {
+      "pattern": "219 endemic",
+      "reason": "Conflates the phase-2 model with the ICITACEE paper Rifqi first-authored. That paper covers 200 endemic and endangered species. The 219-species figure is legitimate only when describing the model NUSA Aves deploys."
+    },
+    {
+      "pattern": "BirdNET v2\\.4",
+      "reason": "Model version never verified against the manuscript. Write BirdNET with no version."
+    },
+    {
+      "pattern": "Malaysia National Zoo",
+      "reason": "Wrong venue. Field checks were at Bandung and a zoo in Sarawak."
+    },
+    {
+      "pattern": "YOLOv8",
+      "reason": "Hotspot detection with YOLOv8 on the bone metastasis project was another team member's work."
+    },
+    {
+      "pattern": "\\bmAP\\b",
+      "cs": true,
+      "reason": "Detection metric belonging to the teammate-owned YOLOv8 work, never Rifqi's."
+    },
+    {
+      "pattern": "20\\+ disease",
+      "reason": "The CXR classifier is at 14 categories. 20+ is the roadmap and must never be written as delivered."
+    },
+    {
+      "pattern": "Telplastina[^.]*web application",
+      "reason": "Telplastina is an offline desktop workstation with no server and no network access. The web platform is Telrax."
+    },
+    {
+      "pattern": "third-year",
+      "reason": "Stale as of the 2026/2027 academic year. Rifqi is a final-year student graduating May 2027."
+    },
+    {
+      "pattern": "Focused Group Coordinator",
+      "reason": "Rifqi resigned the 2026/2027 appointment. He was and remains a Focused Group member."
+    },
+    {
+      "pattern": "(Macro )?F1 (of )?0\\.78",
+      "reason": "Trans Track fatigue detection figure, unsupported. Deployed pooled macro F1 is 0.7016, and the like-for-like comparison scored below the incumbent."
+    },
+    {
+      "pattern": "\\+?11% (gain|improvement|increase)",
+      "reason": "Claimed fusion-model gain. Unrecorded and contradicted by the Monev 2 deck, which shows it 16 to 22 points below the landmark-only model."
+    },
+    {
+      "pattern": "March 2025 . February 2026",
+      "reason": "Stale Trans Track end date. The engagement ran to June 2026."
+    },
+    {
+      "pattern": "PeerJ",
+      "reason": "The bird sound submission was withdrawn from PeerJ. It is at JOIV, under revision and not yet accepted."
+    },
+    {
+      "pattern": "r = 0\\.82",
+      "reason": "BSI to clinical burden correlation. Appears in no manuscript or results file; never verified."
+    },
+    {
+      "pattern": "EXINI \\(0\\.8",
+      "reason": "Specific EXINI and BONENAVI AUC ranges were never sourced. Claim only that patient-level AUC 0.956 is above both."
+    },
+    {
+      "pattern": "Telplastina: Multi-Task",
+      "reason": "Name collision. Telplastina is the bone scintigraphy workstation; the chest X-ray platform is Telrax."
+    }
+  ],
+  "variants": [
+    {
+      "key": "industry",
+      "file": "rifqi-cv-industry.docx",
+      "label": "Industry AI Engineer",
+      "subtitle": "AI Engineer / ML Engineer",
+      "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos on CPU-only infrastructure. Bone scan pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above the two commercial systems in clinical use. Three published papers and three accepted.",
+      "order": [
+        "summary",
+        "skills",
+        "experience",
+        "projects",
+        "publications",
+        "awards",
+        "education",
+        "languages_certs"
+      ],
+      "experience": [
+        "transtrack",
+        "cxr-ra",
+        "wbbs-ra",
+        "birdsound-ra",
+        "humic",
+        "sg-coordinator"
+      ],
+      "projects": [
+        "bone-metastasis",
+        "telplastina",
+        "deepfake-detection"
+      ],
+      "publications": [
+        "knosys-biomarker",
+        "ijies-segmentation",
+        "icitacee-birds"
+      ],
+      "experience_heading": "Experience",
+      "projects_heading": "Selected Projects"
+    },
+    {
+      "key": "research",
+      "file": "rifqi-cv-research.docx",
+      "label": "Research / Academic",
+      "subtitle": "Deep Learning Researcher · Medical Imaging",
+      "summary": "Medical imaging and industrial AI researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. Bone scan pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above the two commercial systems in clinical use. Three published papers and three accepted at IEEE conferences, five as first or second author.",
+      "order": [
+        "summary",
+        "education",
+        "experience",
+        "publications",
+        "projects",
+        "awards",
+        "skills",
+        "languages_certs"
+      ],
+      "experience": [
+        "cxr-ra",
+        "wbbs-ra",
+        "birdsound-ra",
+        "humic",
+        "sg-coordinator",
+        "transtrack"
+      ],
+      "projects": [
+        "telplastina",
+        "bone-metastasis",
+        "deepfake-detection"
+      ],
+      "publications": "all",
+      "experience_heading": "Research Experience",
+      "projects_heading": "Selected Projects"
+    },
+    {
+      "key": "ds",
+      "file": "rifqi-cv-ds.docx",
+      "label": "Data Scientist",
+      "subtitle": "Data Scientist / ML Engineer",
+      "summary": "ML engineer with research and internship experience in data analysis, model training, and production deployment. Systematic literature review of 212+ papers at HUMIC Engineering. Bone scan pipeline AUC 0.956, above two commercial clinical systems. GPA 4.0/4.0, Telkom University.",
+      "order": [
+        "summary",
+        "skills",
+        "experience",
+        "projects",
+        "publications",
+        "awards",
+        "education",
+        "languages_certs"
+      ],
+      "experience": [
+        "humic",
+        "transtrack",
+        "wbbs-ra",
+        "birdsound-ra",
+        "cxr-ra",
+        "sg-coordinator",
+        "cci"
+      ],
+      "projects": [
+        "bone-metastasis",
+        "sentiment-analysis"
+      ],
+      "publications": [
+        "knosys-biomarker",
+        "ijies-segmentation",
+        "icitacee-birds"
+      ],
+      "experience_heading": "Experience",
+      "projects_heading": "Selected Projects"
+    },
+    {
+      "key": "mrec",
+      "file": "rifqi-cv-mrec.docx",
+      "label": "MREC AI Engineer",
+      "subtitle": "AI Engineer · LLM Integration & Applied ML",
+      "summary": "ML engineer building applied AI systems on cloud and local LLMs: retrieval-augmented pipelines on Ollama-served Llama models, audio ML with Whisper and fine-tuned BirdNET, and deployed multimodal classifiers. GPA 4.0/4.0, Telkom University. First-authored an IEEE Xplore paper on audio-based species identification.",
+      "order": [
+        "summary",
+        "skills",
+        "experience",
+        "projects",
+        "publications",
+        "awards",
+        "education",
+        "languages_certs"
+      ],
+      "experience": [
+        "coe-bht",
+        "cxr-ra",
+        "sg-coordinator",
+        "birdsound-ra",
+        "transtrack",
+        "humic",
+        "wbbs-ra"
+      ],
+      "projects": [
+        "cxr-multitask",
+        "deepfake-detection"
+      ],
+      "publications": [
+        "icitacee-birds",
+        "knosys-biomarker",
+        "ijies-segmentation"
+      ],
+      "experience_heading": "Experience",
+      "projects_heading": "Projects"
     }
   ]
 }

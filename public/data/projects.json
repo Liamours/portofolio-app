@@ -7,19 +7,24 @@
     "period": "2026 – Present",
     "institution": "BRIN AIDeaNation 2026",
     "images": [
+      "/images/nusa-aves/nusa-aves-hero.jpg",
+      "/images/nusa-aves/nusa-aves-app-screens.png",
+      "/images/nusa-aves/nusa-aves-pipeline.png",
       "/images/birdsound/birdsound-field-2025.jpg"
     ],
-    "summary": "The bird classification research turned into something a conservation officer can actually run. Finalist at BRIN AIDeaNation 2026, 1 of 80 teams selected nationally.",
+    "summary": "The second app. The first one needed a server to run the model, which is useless in a forest. This one runs the classifier on the phone itself, no connection required. Finalist at BRIN AIDeaNation 2026, 1 of 80 teams selected nationally.",
     "highlights": [
-      "Team leader and AI engineer: built the model, backend, and CLI/API.",
-      "Dockerised inference service with CI/CD, released at v1.0.0, wrapping the fine-tuned BirdNET pipeline for field use.",
-      "Reference data for all 219 species covering descriptions, images, and conservation status, served to a Flutter mobile client.",
+      "Team leader and AI engineer: built the classifier, the inference server, and the CLI.",
+      "Re-architected from the earlier server-dependent app to on-device inference, so the classifier runs offline where the birds are rather than where the network is.",
+      "A recording is split into 3-second segments, each classified independently, and the species assigned by majority vote across segments above a 0.5 confidence threshold.",
+      "Ships as a self-contained Docker image and as a Flutter app across four screens: home, live detection, species detail, and history.",
+      "Covers 219 species with their endemic region and endangerment status, so a detection returns conservation context rather than a bare label.",
       "Selected as 1 of 80 finalist teams nationally out of the BRIN AIDeaNation 2026 proposal round."
     ],
     "stack": [
       "Python",
-      "BirdNET v2.4",
-      "PyTorch",
+      "BirdNET",
+      "TensorFlow Lite",
       "Docker",
       "Flutter",
       "SQLite"
@@ -27,7 +32,8 @@
     "links": {
       "github": "https://github.com/Liamours/nusa-aves"
     },
-    "featured": false
+    "featured": false,
+    "narrative": "Passive acoustic monitoring is one of the cheapest ways to track bird populations across large conservation areas, but the output of the research was a model, not something a ranger in Borneo could use. This packages the classifier so it runs offline on a phone, and pairs every detection with the species' endemic region and endangerment status."
   },
   {
     "id": "bone-metastasis",
@@ -48,8 +54,8 @@
         "label": "Patient AUC"
       },
       {
-        "value": "0.934",
-        "label": "Seg. DSC"
+        "value": "12",
+        "label": "Anatomical regions"
       },
       {
         "value": "600+",
@@ -57,14 +63,13 @@
       }
     ],
     "highlights": [
-      "Hotspot detection with YOLOv8. mAP@0.5 = 0.599.",
-      "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions. IoU 0.879.",
-      "Patient-level classification with XGBoost and LightGBM. AUC 0.956; BSI correlated with clinical burden at r = 0.82.",
-      "Surpasses commercially deployed EXINI (0.83–0.88) and BONENAVI (0.84–0.89)."
+      "Annotated 600+ whole-body bone scans under nuclear medicine physicians at Dr. Hasan Sadikin Hospital.",
+      "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions, feeding automated Bone Scan Index quantification.",
+      "Patient-level classification with XGBoost and LightGBM reaching AUC 0.956, above the two commercial systems in clinical use at the time.",
+      "Published in Knowledge-Based Systems with code and dataset released open access."
     ],
     "stack": [
       "Python",
-      "YOLOv8",
       "nnU-Net v2",
       "PyRadiomics",
       "XGBoost",
@@ -76,13 +81,13 @@
       "paper": "https://doi.org/10.1016/j.knosys.2026.116681"
     },
     "featured": true,
-    "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task currently done by two proprietary commercial systems with no open alternative. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training detection and segmentation models, and quantifying BSI automatically. The goal was clinical-grade accuracy with complete transparency."
+    "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task currently done by two proprietary commercial systems with no open alternative. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training segmentation models, and quantifying BSI automatically. The goal was clinical-grade accuracy with complete transparency."
   },
   {
     "id": "fatigue-detection",
     "title": "Driver Behaviour Analysis and Fatigue Detection System",
     "type": "industrial",
-    "period": "March 2025 – February 2026",
+    "period": "March 2025 – June 2026",
     "institution": "Bandung Techno Park · Trans Track",
     "funding": "Funded industrial collaboration",
     "images": [
@@ -90,24 +95,29 @@
       "/images/transtrack/transtrack-eyes-closed.png",
       "/images/transtrack/transtrack-yawning.png"
     ],
-    "summary": "Mining fleet dashcams. Real drivers. An 11% F1 gain over the company's existing model. Running in production.",
+    "summary": "Primary engineer on the production inference service for a mining fleet telematics client. FastAPI, Celery and Redis on a CPU-only VM, handling 40,000 to 50,000 dashcam videos.",
     "stats": [
       {
-        "value": "0.78",
-        "label": "Macro F1"
+        "value": "71,129",
+        "label": "Clips prepared"
       },
       {
-        "value": "+11%",
-        "label": "Over baseline"
+        "value": "163",
+        "label": "Tests"
+      },
+      {
+        "value": "9.17 MB",
+        "label": "Model, CPU-only"
       }
     ],
     "highlights": [
-      "Extracted facial landmark sequences per frame covering eye closure, mouth movement, and head orientation.",
-      "Facial landmark sequence model trained on real dashcam footage. Test accuracy 0.85.",
-      "Async cloud-review API: immediate response, background inference pipeline, automatic result delivery to Trans Track.",
-      "Live polling runner fetches alarm events and writes verdicts to structured Excel reports.",
-      "Full test suite covering unit, pipeline, and live integration tests against the production MDVR server.",
-      "Deployed in a Docker-containerised environment. Live demo on Streamlit Cloud."
+      "Primary author of the cloud inference service: a three-service FastAPI, Celery and Redis Docker stack on a 4-vCPU CPU-only VM, with a documented API contract and 163 test functions.",
+      "Built the data cleaning, labelling and pairing pipeline that turned raw MDVR alarm footage into a 71,129-clip, 85 GB training set across three mining fleets.",
+      "Sole author of the real-time Streamlit demonstration app, running landmark extraction at 10 fps with classification over a rolling 20-second buffer.",
+      "Wrote the batch inference path: CSV in, per-clip verdicts out, with worker count and device set by environment variable so hardware changes need no code edit.",
+      "Built a multimodal fusion variant joining the temporal landmark branch to a 3D-CNN face-crop branch through cross-modal attention, evaluated it across all three fleets, and rejected it: 16 to 22 accuracy points below the landmark-only model at roughly a thousand times the input data per sample.",
+      "The 2.39M-parameter model runs entirely on CPU at 9.17 MB, at 700 to 900 MB RAM per worker.",
+      "Still running in production as of August 2026, four months after handover."
     ],
     "stack": [
       "Python",
@@ -124,7 +134,51 @@
       "demo": "https://transtrack-demonstration.streamlit.app"
     },
     "featured": true,
-    "narrative": "Trans Track needed a fatigue detection model that could outperform the system already running on their mining fleet dashcams. Starting from real footage from three active fleets, not synthetic data, made this harder than typical benchmark work. The constraint: beat a production baseline and deploy to live infrastructure."
+    "narrative": "TransTrack needed drowsiness verdicts on dashcam alarms from three active mining fleets. The hard part was not the model, it was everything around it: raw MDVR footage arrived duplicated and unlabelled, landmark extraction failed on roughly two thirds of a graded sample, and the service had to answer a push API and call back reliably on infrastructure with no GPU. I built the data pipeline that made the training set usable and the inference service that put it in front of the client."
+  },
+  {
+    "id": "telplastina",
+    "title": "Telplastina: Offline Bone Scintigraphy Workstation",
+    "type": "software",
+    "period": "2025 – Present",
+    "institution": "Telkom University",
+    "summary": "The studies cannot leave the building, the acquisition workstation has restricted network access, and there is no budget for a vendor licence. So it ships as one offline executable that never opens a socket to the outside.",
+    "stats": [
+      {
+        "value": "0",
+        "label": "Network calls, by design"
+      },
+      {
+        "value": "2,925",
+        "label": "Paired studies trained"
+      },
+      {
+        "value": "426 MB",
+        "label": "Single offline installer"
+      }
+    ],
+    "highlights": [
+      "Four supervised processes on one machine: a Tauri 2 and Rust desktop shell, a Vue 3 interface, a Rust and Axum application server, and a Python and FastAPI inference service, all bound to ephemeral loopback ports.",
+      "DICOM import resolves transfer syntax and photometric interpretation, assigns anterior and posterior views from view code sequences with a documented fallback to frame order, and exports results as a DICOM segmentation object.",
+      "De-identification removes patient name and birth date instead of writing placeholders, derives a stable pseudonym by hash applied to the stored filename as well as the record, and shifts study dates by a patient-derived offset so intervals between a patient's studies survive.",
+      "Multitask nnU-Net with two decoders on a shared encoder, trained on 2,925 paired studies under a fixed patient-level split and evaluated on 293 held out across nine configurations.",
+      "Reader correction across 12 skeletal regions and 2 lesion classes with undo, redo, and dirty-rectangle repaint, and a Bone Scan Index computed from masks saved to disk rather than from canvas state.",
+      "Cut the offline installer from 1,219 MB to 426 MB by excluding static link libraries never opened at runtime, verified by running identical studies through both bundles and comparing mask pixels."
+    ],
+    "stack": [
+      "Rust",
+      "Tauri 2",
+      "Axum",
+      "Vue 3",
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "nnU-Net v2",
+      "SQLite",
+      "DICOM"
+    ],
+    "featured": true,
+    "narrative": "Bone Scan Index quantifies skeletal tumour burden as the percentage of the skeleton involved by metastasis. Reading it by hand is slow and varies between observers, and the automated products that exist are commercial, tied to specific scanner vendors, and priced for well funded departments. Every architectural decision here follows from the deployment target: one executable carrying the interface, both backend processes, a Python runtime and the model weights, with a disposable index on disk that can be deleted and rebuilt from the files themselves. The index is a research instrument. Regional weighting is uniform rather than published anatomical weights, so its values are internally consistent and are not comparable to figures reported elsewhere, and the application carries no regulatory clearance."
   },
   {
     "id": "bird-sound",
@@ -136,14 +190,14 @@
       "/images/birdsound/birdsound-field-2025.jpg",
       "/images/birdsound/birdsound-team-2024.jpg"
     ],
-    "summary": "219 bird species. 17 Borneo endemics. 18 IUCN-threatened. Trained on jungle recordings, tested at Bandung Zoo and Malaysia National Zoo.",
+    "summary": "200 endemic and endangered bird species from Indonesia, Malaysia, and Borneo. Trained on jungle recordings, field-tested at zoos in Bandung and Sarawak under uncontrolled noise.",
     "stats": [
       {
-        "value": "+44.1%",
-        "label": "F1 improvement"
+        "value": "76.3%",
+        "label": "Accuracy, from 69.0%"
       },
       {
-        "value": "219",
+        "value": "200",
         "label": "Species"
       },
       {
@@ -152,18 +206,17 @@
       }
     ],
     "highlights": [
-      "Fine-tuned BirdNET v2.4 with MixIT source separation across 12,511 recordings and 219 species.",
-      "Endemic/endangered subset: accuracy 0.661, macro F1 0.419.",
-      "Full test set: accuracy 0.72, macro F1 0.554, weighted F1 0.724.",
-      "Dataset from Xeno-canto and PBHAR, including 8,840 negative samples, split by recording to prevent leakage."
+      "Fine-tuned BirdNET on 200 endemic and endangered species, raising accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9% on the held-out test set.",
+      "Built the dataset from Xeno-canto and PBHAR, including 8,840 negative samples, split by recording to prevent leakage.",
+      "Built a first application around the classifier and field-tested it at zoos in Bandung and Sarawak. The model ran on a server, so the app needed a connection.",
+      "Results under real noise were mixed, which set the direction for both the follow-on source-separation work and the move to on-device inference.",
+      "First author, published at ICITACEE 2025, IEEE Xplore."
     ],
     "stack": [
       "Python",
-      "BirdNET v2.4",
-      "MixIT",
-      "PyTorch",
+      "BirdNET",
+      "TensorFlow",
       "librosa",
-      "torchaudio",
       "Conda"
     ],
     "links": {
@@ -171,7 +224,7 @@
       "paper": "https://ieeexplore.ieee.org/document/11233192"
     },
     "featured": true,
-    "narrative": "Passive acoustic monitoring is one of the most cost-effective ways to track bird populations across large conservation areas in Southeast Asia. No existing model was trained on the endemic and endangered species of Indonesia, Malaysia, and Borneo. This project built the dataset from scratch, adapted an established model to the regional subset, and validated it in real zoo environments with no controlled conditions."
+    "narrative": "Passive acoustic monitoring is one of the most cost-effective ways to track bird populations across large conservation areas in Southeast Asia, and no existing model was trained on the endemic and endangered species of Indonesia, Malaysia, and Borneo. This built the dataset from scratch and adapted an established model to the regional subset. Testing it at zoos in Bandung and Sarawak exposed the gap between benchmark numbers and real conditions: under uncontrolled noise the results were mixed, and the app depended on a server connection that a forest does not have. Both problems set the direction for what came next."
   },
   {
     "id": "cxr-multitask",
@@ -214,39 +267,38 @@
       "/images/travlr/travlr-award-ceremony.png",
       "/images/travlr/travlr-1st-winner-certificate.jpg"
     ],
-    "summary": "Four providers, 3.69 million accommodation records, and a five-star rating that means something different depending on who sent it. Contrastive embeddings raise cross-provider neighbour mixing from 16.7% to 59.1%. 1st Winner, ICoICT 2026 Challenge.",
+    "summary": "Four providers, 3.69 million accommodation records, and a five-star rating that means something different depending on who sent it. 1st Winner, ICoICT 2026 Challenge.",
     "stats": [
       {
-        "value": "59.1%",
-        "label": "CP-NN@10, from 16.7%"
+        "value": "1st",
+        "label": "ICoICT 2026 Challenge"
       },
       {
         "value": "3.69M",
         "label": "Records"
       },
       {
-        "value": "1st",
-        "label": "ICoICT 2026 Challenge"
+        "value": "4",
+        "label": "Providers reconciled"
       }
     ],
     "highlights": [
-      "Trained a contrastive encoder on 3,686,694 records from RateHawk, Expedia, Agoda, and HotelBeds using NT-Xent loss, with positive pairs drawn from destination and quality-tier co-membership.",
-      "Stochastic provider-token masking during training, token always masked at inference. 128-dimensional embeddings from a 204,248-parameter encoder.",
-      "Introduced CP-NN@K, a cross-provider nearest-neighbour mixing protocol for settings with no verified property links. CP-NN@10 rises from 16.7% to 59.1% and mean per-dimension KS divergence falls from 0.304 to 0.130.",
-      "Beat every alignment baseline tested: CORAL 57.9%, MMD 58.2%, gradient reversal 58.4%, provider-token removal 57.9%. None improved on plain stochastic masking.",
-      "Reported honestly as a representation result. Provider identity stays partially recoverable (classifier AUC 0.957 to 0.775) and 59.1% remains 15.9 points under the 75.0% random-mixing ceiling."
+      "Trained a contrastive encoder on 3.69 million accommodation records from RateHawk, Expedia, Agoda, and HotelBeds, learning from destination and quality-tier co-membership where no verified property links existed.",
+      "Masked provider identity during training so the embedding stops encoding which supplier a listing came from, then measured how well providers mix in each property's neighbourhood.",
+      "Introduced a new evaluation protocol for settings where verified cross-provider links are unavailable, and reported it as a representation result rather than claiming a ranking improvement.",
+      "Outperformed every alignment baseline tested, including CORAL, MMD, and gradient reversal.",
+      "First place in the ICoICT 2026 Challenge track, accepted as a first-author IEEE paper."
     ],
     "stack": [
       "Python",
       "PyTorch",
-      "NT-Xent",
       "Contrastive Learning"
     ],
     "links": {
       "github": "https://github.com/Liamours/icoict26-challenge-b2b_travel_platform"
     },
     "featured": true,
-    "narrative": "B2B travel platforms resell the same hotel through several providers, and each provider grades quality on its own scale. The worst-separated pair of star-rating distributions in the Travlr data differ by a KS divergence of 0.707, and one provider supplies 53.7% of inventory against 6.4% of bookings. With no verified links between listings of the same physical property, this trains on a weaker signal, destination and tier co-membership, and measures success by how well providers mix in the neighbourhood of each property."
+    "narrative": "B2B travel platforms resell the same hotel through several providers, and each provider grades quality on its own scale, so a five-star listing from one supplier is not the same product as a five-star listing from another. One provider in this dataset supplied over half the inventory but a small fraction of the bookings. With no verified links between listings of the same physical property, this trains on a weaker signal, destination and tier co-membership, and measures success by how well providers mix in the neighbourhood of each property."
   },
   {
     "id": "chest-xray-vlm",
@@ -272,53 +324,33 @@
     "featured": false
   },
   {
-    "id": "telplastina",
-    "title": "Telplastina: WBBS Diagnostic Application",
-    "type": "software",
-    "period": "2025 – Present",
-    "institution": "Telkom University",
-    "summary": "Full-stack diagnostic application for whole-body bone scintigraphy analysis, integrating the bone segmentation, hotspot detection, and BSI quantification pipeline into a deployable clinical tool.",
-    "highlights": [
-      "Integrates bone segmentation and hotspot detection pipelines into a unified clinical web application.",
-      "Backend in Rust for high-performance image processing and inference serving.",
-      "Frontend in Vue 3 with Docker containerisation for clinical deployment."
-    ],
-    "stack": [
-      "Vue 3",
-      "Rust",
-      "Docker",
-      "Python"
-    ],
-    "featured": false
-  },
-  {
     "id": "deepfake-detection",
     "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection",
     "type": "research",
     "period": "2025 – Present",
     "institution": "Telkom University · AI Lab Focused Group",
-    "summary": "Every segment reports which modality caught the fake. Audio-video forgeries route to the audio expert (α 0.178), video-only forgeries to the visual expert (α 0.880). Runs at 5x real time on a 6GB laptop GPU. Accepted at ICoDSA 2026.",
+    "summary": "Every segment reports which modality caught the fake. Audio-video forgeries route to the audio expert, video-only forgeries to the visual expert. Runs faster than real time on a consumer laptop GPU. Accepted at ICoDSA 2026.",
     "stats": [
       {
-        "value": "0.9076",
-        "label": "F1, 5-dataset split"
-      },
-      {
-        "value": "0.202",
-        "label": "Real-time factor"
+        "value": "5",
+        "label": "Datasets"
       },
       {
         "value": "223K",
         "label": "Segments"
+      },
+      {
+        "value": "ICoDSA",
+        "label": "Accepted 2026"
       }
     ],
     "highlights": [
-      "A Modality Reliability Gate routes each 2-second segment to an audio or visual expert using two learned anomaly scores: cross-modal attention residual and VideoMAE temporal variance.",
-      "The gate emits a scalar α per segment naming which modality drove the verdict. No compared method (FTCN, LAA-Net, CADDM, CAD) produces this signal.",
-      "F1 0.9076, AUC 0.9744, AP 0.9948 on the combined five-dataset split. Static concatenation edges it at F1 0.9096, so the gain here is interpretability, not accuracy.",
-      "Across five leave-one-dataset-out runs, AP holds (up to 0.9992) but fixed-threshold F1 drops to 0.585 mean. Ranking survives domain shift, the decision threshold does not.",
-      "223,445 segments from PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, and FF++, split at subject level.",
-      "404.7 ms per 2-second window on an RTX 4050 Laptop: a 2-minute video analysed in 24 seconds."
+      "A Modality Reliability Gate routes each 2-second segment to an audio or visual expert based on learned anomaly scores from frozen VideoMAE and Whisper encoders.",
+      "The gate reports which modality drove each verdict, a forensic signal none of the compared methods produce.",
+      "Accuracy matches static fusion rather than beating it. The contribution is interpretability and speed, and the paper says so plainly.",
+      "Ranking quality survives moving to unseen datasets, though the fixed decision threshold does not, which the paper reports as a limitation.",
+      "Trained across PolyglotFake, FakeAVCeleb, HiDF, CelebDFv2, and FF++, split at subject level to prevent leakage.",
+      "Analyses a 2-minute video in around 24 seconds on an RTX 4050 laptop GPU."
     ],
     "stack": [
       "PyTorch",

@@ -61,15 +61,15 @@ const doc = new Document({
       blank(),
 
       // Body 1 — swap per role (see cover-letter-template.md)
-      p("As the lead coder on a Ministry of Higher Education-funded bone scan analysis project, I built a pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI, two commercial systems in clinical use at the time. That result came from annotating 600+ scans under supervision of nuclear medicine physicians at Dr. Hasan Sadikin Hospital, training nnU-Net v2 across 12 skeletal regions, and integrating the pipeline into Telplastina, a clinical web application. I am currently also developing a 20+ disease CXR pathology classifier with hierarchical classification and uncertainty estimation as part of a five-module clinical platform at Telkom University."),
+      p("As the lead coder on a Ministry of Higher Education-funded bone scan analysis project, I built a pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI, two commercial systems in clinical use at the time. That result came from annotating 600+ scans under supervision of nuclear medicine physicians at Dr. Hasan Sadikin Hospital and training nnU-Net v2 across 12 skeletal regions. I went on to build Telplastina, an offline desktop workstation carrying segmentation, reader correction and Bone Scan Index quantification in one executable that makes no network calls. I am currently also developing a 14-disease CXR pathology classifier, expanding to 20 and beyond, with hierarchical classification and uncertainty estimation as part of a five-module clinical platform at Telkom University."),
       blank(),
 
       // Body 2 — swap per role
-      p("As AI Engineer Intern at Bandung Techno Park and Trans Track, I designed a fatigue detection model trained on real mining fleet dashcam footage from three active companies. The system achieved Macro F1 0.78, an 11% gain over the model already running in production, and is deployed on live infrastructure via a 3-service async API. Building against the company's real production server from day one gave me direct experience with the difference between research code and deployed systems."),
+      p("As AI Engineer Intern at Bandung Techno Park and Trans Track, I built the data cleaning, labelling and pairing pipeline that produced a 71,129-clip training set from raw mining fleet dashcam footage across three fleets, and was primary engineer on the production inference service running it: FastAPI, Celery and Redis on a CPU-only VM, serving 40,000 to 50,000 videos with 163 tests and a documented API contract. Building against the company's real production server from day one gave me direct experience with the difference between research code and deployed systems."),
       blank(),
 
       // Closing
-      p("I am a third-year S1 Informatika student at Telkom University, GPA 4.0/4.0, graduating May 2027. I am available for [INTERNSHIP / PART-TIME / FULL-TIME] starting [DATE]. My portfolio is at portofolio-app-puce.vercel.app and my CV is attached."),
+      p("I am a final-year S1 Informatika student at Telkom University, GPA 4.0/4.0, graduating May 2027. I am available for [INTERNSHIP / PART-TIME / FULL-TIME] starting [DATE]. My portfolio is at portofolio-app-puce.vercel.app and my CV is attached."),
       blank(),
 
       // Sign-off
@@ -89,5 +89,5 @@ const doc = new Document({
 
 Packer.toBuffer(doc).then(buf => {
   fs.writeFileSync('output/rifqi-cover-letter.docx', buf);
-  console.log('done: docs/rifqi-cover-letter.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
+  console.log('done: output/rifqi-cover-letter.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
 });
