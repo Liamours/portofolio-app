@@ -50,7 +50,7 @@
       "role": "Research Assistant, Bird Sound Identification",
       "organization": "Telkom University",
       "period": "November 2024 – December 2025",
-      "_notes": "Two research phases, different publication status. Phase 1: 200 species, accuracy 69.0 to 76.3, macro F1 53.6 to 65.9, published ICITACEE 2025, Rifqi FIRST AUTHOR. Phase 2: 219 species with MixIT source separation, macro F1 29.1 to 41.9 on a 29-species subset, submitted to JOIV (Journal of Informatics and Visualization). Rifqi was MAIN CODER on phase 2 but is NOT LISTED AS AN AUTHOR. Never cite the 44.1% improvement or the JOIV paper as his. The 219-species figure describes only the model deployed in NUSA Aves. Two apps exist: the first ran the model on a server and was field-tested at zoos in Bandung and Sarawak (confirmed by Rifqi 2026-08-11; the repo README says Zoo Negara, which is wrong and should be corrected there); the second, NUSA Aves, runs on device with no connection.",
+      "_notes": "Two research phases, different publication status. Phase 1: 200 species, accuracy 69.0 to 76.3, macro F1 53.6 to 65.9, published ICITACEE 2025, Rifqi FIRST AUTHOR. Phase 2: 219 species with MixIT source separation, macro F1 29.1 to 41.9 on a 29-species subset, submitted to JOIV (Journal of Informatics and Visualization). MixIT source separation belongs to phase 2 only, never to the ICITACEE paper (confirmed by Rifqi 2026-08-14). Rifqi was MAIN CODER on phase 2. He stated on 2026-08-14 that he will be a co-author on the JOIV paper, so his exclusion is no longer permanent: until authorship is confirmed in writing and the paper is accepted, do not cite the 44.1% improvement, the 219-species figure, MixIT, or the JOIV paper as his. Once both hold, add JOIV to publications and lift the matching _forbidden rules. The 219-species figure describes only the model deployed in NUSA Aves. Two apps exist: the first ran the model on a server and was field-tested at zoos in Bandung and Sarawak (confirmed by Rifqi 2026-08-11; the repo README says Zoo Negara, which is wrong and should be corrected there); the second, NUSA Aves, runs on device with no connection.",
       "highlights": [
         "Fine-tuned BirdNET on 12,511 recordings across 200 endemic and endangered species in Indonesia, Malaysia, and Borneo.",
         "Raised accuracy from 69.0% to 76.3% and macro F1 from 53.6% to 65.9%. Published at ICITACEE 2025 (IEEE Xplore) as first author."
@@ -504,11 +504,11 @@
   "_forbidden": [
     {
       "pattern": "44\\.1",
-      "reason": "Bird sound macro F1 improvement from the JOIV phase-2 work. Rifqi is not an author on it. Published figure he owns is 53.6% to 65.9% at ICITACEE 2025."
+      "reason": "Bird sound macro F1 improvement from the JOIV phase-2 work. PENDING, not permanent: Rifqi stated on 2026-08-14 that he will be a co-author on the JOIV paper. Lift this rule only when authorship is confirmed in writing AND the paper is accepted; it is under revision as of that date. Until then the published figure he owns is 53.6% to 65.9% at ICITACEE 2025."
     },
     {
       "pattern": "219 endemic",
-      "reason": "Conflates the phase-2 model with the ICITACEE paper Rifqi first-authored. That paper covers 200 endemic and endangered species. The 219-species figure is legitimate only when describing the model NUSA Aves deploys."
+      "reason": "Conflates the phase-2 model with the ICITACEE paper Rifqi first-authored. That paper covers 200 endemic and endangered species. The 219-species figure is legitimate only when describing the model NUSA Aves deploys. Same pending condition as the 44.1 rule: revisit when JOIV authorship is confirmed and the paper is accepted."
     },
     {
       "pattern": "BirdNET v2\\.4",
@@ -561,11 +561,11 @@
     },
     {
       "pattern": "r = 0\\.82",
-      "reason": "BSI to clinical burden correlation. Appears in no manuscript or results file; never verified."
+      "reason": "BSI to clinical burden correlation. Searched and not found, 2026-08-14: matches no EXINI, BONENAVI, or aBSI validation or correlation paper. Nearby real figures are BSI against ALP R=0.71 and automated against manual BSI Pearson r=0.995, neither of which is this claim. Invented, do not restore."
     },
     {
       "pattern": "EXINI \\(0\\.8",
-      "reason": "Specific EXINI and BONENAVI AUC ranges were never sourced. Claim only that patient-level AUC 0.956 is above both."
+      "reason": "Searched and not found, 2026-08-14: no EXINI or BONENAVI paper states these ranges. Real published figures sit HIGHER, clustering around EXINIbone AUC 0.831 to 0.877 by sex and BONENAVI BN1 0.910 to 0.912, BN2 0.932 to 0.934 (Koizumi et al., BONENAVI v2.1.7 validation). Confirm those against the primary paper before citing them anywhere. Claim only what the published KBS and IJIES papers state: patient-level AUC 0.956, above both."
     },
     {
       "pattern": "Telplastina: Multi-Task",
