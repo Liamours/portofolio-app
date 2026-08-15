@@ -85,5 +85,23 @@
     "authors": "Selly Meliana, Rafiq Labib, M. Rifqi Dzaky Azhad et al.",
     "context": "Computational thinking activity book for school outreach. Designed and contributed the box sorting game, a team-based sorting activity used during SMP outreach sessions. Teaches sorting concepts without a computer.",
     "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
+  },
+  {
+    "title": "ScintiGround-38K: A Grounded Visual Question Answering Benchmark for Paired Anterior-Posterior Bone Scintigraphy",
+    "venue": "Journal of Imaging Informatics in Medicine",
+    "year": 2026,
+    "type": "Journal Paper (Under Review)",
+    "role": "author",
+    "authors": "M. Rifqi Dzaky Azhad, Ema Rachmawati",
+    "context": "38,469 instances for visual question answering, image localization and grounded VQA, built from 23,967 anterior and posterior image pairs across 2,815 patients. First author."
+  },
+  {
+    "title": "Enabling Lesion-Level Bone Metastasis Classification from Bounding-Box Annotations in Whole-Body Bone Scintigraphy",
+    "venue": "Engineering Applications of Artificial Intelligence",
+    "year": 2026,
+    "type": "Journal Paper (Under Review)",
+    "role": "author",
+    "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Dzaky Alfaris, Rafiq Labib",
+    "context": "Box-supervised pipeline deriving a lesion mask from each bounding box, making radiomic characterisation of 19,810 lesions feasible without new manual delineation. Second author."
   }
 ]

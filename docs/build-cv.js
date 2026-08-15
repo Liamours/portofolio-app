@@ -124,11 +124,12 @@ function skillRow(category, items) {
 // ── data helpers ─────────────────────────────────────────────────────────────
 
 const PUB_GROUPS = [
-  { prefix: 'Journal Paper',  label: 'Journal Papers' },
-  { prefix: 'Conference Paper', label: 'Conference Papers' },
-  { prefix: 'Preprint',       label: 'Preprints' },
-  { prefix: 'Dataset',        label: 'Datasets' },
-  { prefix: 'e-Book',         label: 'e-Books' },
+  { types: ['Journal Paper'],                 label: 'Journal Papers' },
+  { types: ['Journal Paper (Under Review)'], label: 'Journal Papers (Under Review)' },
+  { types: ['Conference Paper', 'Conference Paper (Accepted)'], label: 'Conference Papers' },
+  { types: ['Preprint'], label: 'Preprints' },
+  { types: ['Dataset'], label: 'Datasets' },
+  { types: ['e-Book'], label: 'e-Books' },
 ];
 
 const SKILL_LABELS = {
@@ -203,8 +204,8 @@ const doc = new Document({
 
       // ── PUBLICATIONS ────────────────────────────────────────────────────
       sectionHeader("Publications"),
-      ...PUB_GROUPS.flatMap(({ prefix, label }) => {
-        const group = cv.publications.filter(p => p.type.startsWith(prefix));
+      ...PUB_GROUPS.flatMap(({ types, label }) => {
+        const group = cv.publications.filter(p => types.includes(p.type));
         if (!group.length) return [];
         return [
           pubSubHeader(label),

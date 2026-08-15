@@ -9,7 +9,7 @@
     "portfolio": "https://portofolio-app-puce.vercel.app",
     "location": "Bandung, Indonesia"
   },
-  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers and three accepted, five as first or second author.",
+  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers, three accepted at IEEE conferences, and two journal manuscripts under review, first author on one.",
   "experience": [
     {
       "key": "cxr-ra",
@@ -278,6 +278,28 @@
       "venue": "Telkom University Bandung",
       "context": "Computational thinking activity book for school outreach. Designed and contributed the box sorting game, a team-based sorting activity used during SMP outreach sessions. Teaches sorting concepts without a computer.",
       "link": "https://btp.telkomuniversity.ac.id/landing/ip/HCNA1501256149"
+    },
+    {
+      "key": "jiim-scintiground",
+      "title": "ScintiGround-38K: A Grounded Visual Question Answering Benchmark for Paired Anterior-Posterior Bone Scintigraphy",
+      "venue": "Journal of Imaging Informatics in Medicine",
+      "year": 2026,
+      "type": "Journal Paper (Under Review)",
+      "authors": "M. Rifqi Dzaky Azhad, Ema Rachmawati",
+      "author_position": "1st",
+      "context": "38,469 instances for visual question answering, image localization and grounded VQA, built from 23,967 anterior and posterior image pairs across 2,815 patients. First author.",
+      "_notes": "Under review, NOT accepted. Never write as published. First author, Ema Rachmawati second and corresponding. Funded by Universitas Telkom 10269/LIT06/PPM-LIT/2026. Composition: 13,371 VQA, 12,549 image-localization, 12,549 grounded, from 54,768 BS-80K source records. Qwen3-VL-2B-Instruct and PaliGemma-3B-pt-224 adapted with LoRA. Headline caution: raw answer accuracy exceeded 0.90 but balanced accuracy reached only 0.528 and 0.535, abnormal-class F1 stayed below 0.15, strict grounded accuracy 0.765 and 0.701. Never quote the 0.90 alone; the papers own conclusion is that high raw accuracy conceals weak minority-class behaviour. Not clinically validated."
+    },
+    {
+      "key": "eaai-lesion-level",
+      "title": "Enabling Lesion-Level Bone Metastasis Classification from Bounding-Box Annotations in Whole-Body Bone Scintigraphy",
+      "venue": "Engineering Applications of Artificial Intelligence",
+      "year": 2026,
+      "type": "Journal Paper (Under Review)",
+      "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Dzaky Alfaris, Rafiq Labib",
+      "author_position": "2nd",
+      "context": "Box-supervised pipeline deriving a lesion mask from each bounding box, making radiomic characterisation of 19,810 lesions feasible without new manual delineation. Second author.",
+      "_notes": "Submitted 7 August 2026 to EAAI, under review, NOT accepted. Ema Rachmawati first and corresponding, Rifqi second. 19,810 expert-annotated lesions from BS-80K (12,142 anterior, 7,668 posterior). Fully crossed ablation over 2 segmentation methods, 3 feature representations, 4 classifiers and 2 views, giving 96 configurations. Key result: an 18-dimensional one-hot bone-region indicator raised mean test accuracy from 0.6157 to 0.8491, recall from 0.5077 to 0.8150 and F1 from 0.5539 to 0.8332, improving all 48 paired comparisons at p<0.001 after Holm correction. Without the anatomical prior only 5 of 48 configurations beat the majority-class baseline; with it, 48 of 48."
     }
   ],
   "projects": [
@@ -344,7 +366,7 @@
       "period": "2025 – Present",
       "role": "Sole Author, v2",
       "institution": "Telkom University",
-      "_notes": "Rifqi built all four processes plus the model for v2 and is its sole author. A v1 existed, written by a colleague: never claim he originated the product, and never list v1's work. First author on the accompanying manuscript, 'Multi-Task Segmentation of Hotspots and Bone Regions in Whole-Body Bone Scintigraphy with Uncertainty Quantification', in preparation, author list still placeholder as of 14 August 2026. Supervisor not verified. Lesion Dice is low in absolute terms (0.35 to 0.57) and the multitask-over-single-task gain has overlapping confidence intervals: never state the multitask advantage as established. BSI uses uniform regional weighting, not published anatomical weights, so values are internally consistent and NOT comparable to figures reported elsewhere. No regulatory clearance. Do not merge with the Bone Metastasis Diagnosis Framework entry: that one reports patient-level AUC 0.956, this one reports lesion Dice, different tasks and different manuscripts. Repo not yet public: check fixtures for RSHS patient data and get supervisor sign-off before publishing, since the manuscript is unsubmitted. Training set is BS-80K, which is public.",
+      "_notes": "Rifqi built all four processes plus the model for v2 and is its sole author. A v1 existed, written by a colleague: never claim he originated the product, and never list v1's work. First author on the accompanying manuscript, 'Multi-Task Segmentation of Hotspots and Bone Regions in Whole-Body Bone Scintigraphy with Uncertainty Quantification', in preparation, author list still placeholder as of 14 August 2026. Supervisor not verified. Lesion Dice is low in absolute terms (0.35 to 0.57) and the multitask-over-single-task gain has overlapping confidence intervals: never state the multitask advantage as established. BSI uses uniform regional weighting, not published anatomical weights, so values are internally consistent and NOT comparable to figures reported elsewhere. No regulatory clearance. Do not merge with the Bone Metastasis Diagnosis Framework entry: that one reports patient-level AUC 0.956, this one reports lesion Dice, different tasks and different manuscripts. Repo not yet public: check fixtures for RSHS patient data and get supervisor sign-off before publishing, since the manuscript is unsubmitted. Training set is BS-80K, which is public. The VQA and visual grounding work on this modality is REAL and his: see the ScintiGround-38K publication entry, where he is first author. What remains planned for Telplastina v2 is folding that model into the application. Do not confuse it with the Telrax chest X-ray project, where VQA and visual grounding were three and four other people's modules.",
       "highlights": [
         "Sole author of a four-process offline desktop application for bone scintigraphy: Tauri 2 and Rust shell, Vue 3 interface, Axum application server, and a FastAPI inference service, packaged as one executable that makes no network calls.",
         "Multitask nnU-Net with two decoders on a shared encoder, trained on 2,925 paired studies and evaluated on 293 held out. Cut the offline installer 65% to 426 MB, verified by pixel-identical output."
@@ -627,6 +649,7 @@
         "deepfake-detection"
       ],
       "publications": [
+        "jiim-scintiground",
         "knosys-biomarker",
         "ijies-segmentation",
         "icitacee-birds"
@@ -734,6 +757,7 @@
         "deepfake-detection"
       ],
       "publications": [
+        "jiim-scintiground",
         "icitacee-birds",
         "knosys-biomarker",
         "ijies-segmentation"
