@@ -6,7 +6,8 @@
     "type": "research",
     "highlights": [
       "Built a hierarchical pathology classifier covering 14 disease categories, expanding to 20+ aligned to Indonesian healthcare organization standards, with fallback uncertainty estimation for ambiguous cases.",
-      "Delivered pathology classifier and organ segmentation modules as microservices, serving the team's web and desktop apps."
+      "Delivered the classifier and organ segmentation as microservices, and contributed to the deployed web application and the report-generation model.",
+      "First-authored a study pooling seven public chest radiograph datasets into 527,745 images to test whether hierarchy-consistency regularization improves multi-label classification. Submitted to IBIOMED 2026."
     ],
     "portfolio": true
   },

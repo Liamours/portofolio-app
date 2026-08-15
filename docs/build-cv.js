@@ -1,5 +1,5 @@
 const {
-  Document, Packer, Paragraph, TextRun,
+  Document, Packer, Paragraph, TextRun, ExternalHyperlink,
   AlignmentType, BorderStyle, TabStopType, LevelFormat
 } = require('./node_modules/docx');
 const fs = require('fs');
@@ -64,22 +64,25 @@ function para(text, size = BODY) {
 }
 
 function pubEntry(pos, authors, title, venue, link) {
-  const idx = authors.indexOf(cv.personal.name);
+  const shortened = authorsUpToMe(authors);
+  const shown = shortened.text;
+  const idx = shown.indexOf(ME);
   const authorRuns = [];
   if (idx === -1) {
-    authorRuns.push(new TextRun({ text: authors, font: FONT, size: BODY }));
+    authorRuns.push(new TextRun({ text: shown, font: FONT, size: BODY }));
   } else {
-    if (idx > 0) authorRuns.push(new TextRun({ text: authors.slice(0, idx), font: FONT, size: BODY }));
-    authorRuns.push(new TextRun({ text: cv.personal.name, font: FONT, size: BODY, bold: true }));
-    authorRuns.push(new TextRun({ text: authors.slice(idx + cv.personal.name.length), font: FONT, size: BODY }));
+    if (idx > 0) authorRuns.push(new TextRun({ text: shown.slice(0, idx), font: FONT, size: BODY }));
+    authorRuns.push(new TextRun({ text: ME, font: FONT, size: BODY, bold: true }));
+    authorRuns.push(new TextRun({ text: shown.slice(idx + ME.length), font: FONT, size: BODY }));
   }
   const children = [
+    new TextRun({ text: '(' + pos + ') ', font: FONT, size: BODY, bold: true }),
     ...authorRuns,
-    new TextRun({ text: " (" + pos + "). ", font: FONT, size: BODY }),
+    new TextRun({ text: shortened.more ? ' et al. ' : '. ', font: FONT, size: BODY }),
     new TextRun({ text: title, font: FONT, size: BODY, italics: true }),
-    new TextRun({ text: ". " + venue + ".", font: FONT, size: BODY }),
+    new TextRun({ text: '. ' + venue + '.', font: FONT, size: BODY }),
   ];
-  if (link) children.push(new TextRun({ text: " " + link, font: FONT, size: BODY }));
+  if (link) children.push(new TextRun({ text: ' ' + link, font: FONT, size: BODY }));
   return new Paragraph({ children, spacing: { before: 60, after: 60 } });
 }
 
@@ -101,14 +104,21 @@ function projectBlock(title, period, roleStr, highlights) {
   ];
 }
 
-function awardLine(title, event, detail) {
-  return new Paragraph({
-    children: [
-      new TextRun({ text: title + ". ", font: FONT, size: BODY, bold: true }),
-      new TextRun({ text: event + (detail ? ". " + detail : "."), font: FONT, size: BODY }),
-    ],
-    spacing: { before: 60, after: 60 },
-  });
+function awardLine(title, year, event, detail) {
+  return [
+    new Paragraph({
+      children: [
+        new TextRun({ text: title, font: FONT, size: BODY, bold: true }),
+        new TextRun({ text: '	' + (year || ''), font: FONT, size: BODY }),
+      ],
+      tabStops: [{ type: TabStopType.RIGHT, position: CWIDTH }],
+      spacing: { before: 80, after: 0 },
+    }),
+    new Paragraph({
+      children: [new TextRun({ text: event + (detail ? '. ' + detail : ''), font: FONT, size: BODY })],
+      spacing: { before: 0, after: 40 },
+    }),
+  ];
 }
 
 function skillRow(category, items) {
@@ -121,12 +131,29 @@ function skillRow(category, items) {
   });
 }
 
+const ME = cv.personal.name;
+
+function hyperlink(text, url) {
+  return new ExternalHyperlink({
+    children: [new TextRun({ text, font: FONT, size: BODY, color: '0563C1', underline: {} })],
+    link: url,
+  });
+}
+
+function authorsUpToMe(authors) {
+  const parts = authors.split(', ');
+  const i = parts.findIndex(p => p.includes(ME));
+  if (i === -1) return { text: authors, more: false };
+  return { text: parts.slice(0, i + 1).join(', '), more: parts.length > i + 1 };
+}
+
 // ── data helpers ─────────────────────────────────────────────────────────────
 
 const PUB_GROUPS = [
   { types: ['Journal Paper'],                 label: 'Journal Papers' },
   { types: ['Journal Paper (Under Review)'], label: 'Journal Papers (Under Review)' },
   { types: ['Conference Paper', 'Conference Paper (Accepted)'], label: 'Conference Papers' },
+  { types: ['Conference Paper (Under Review)'], label: 'Conference Papers (Under Review)' },
   { types: ['Preprint'], label: 'Preprints' },
   { types: ['Dataset'], label: 'Datasets' },
   { types: ['e-Book'], label: 'e-Books' },
@@ -182,10 +209,13 @@ const doc = new Document({
         spacing: { before: 0, after: 80 },
       }),
       new Paragraph({
-        children: [new TextRun({
-          text: `${cv.personal.email}  ·  github.com/Liamours  ·  linkedin.com/in/rifqiazhad0210  ·  ${cv.personal.location}`,
-          font: FONT, size: BODY,
-        })],
+        children: [
+          new TextRun({ text: `${cv.personal.email}  ·  `, font: FONT, size: BODY }),
+          hyperlink('github.com/Liamours', cv.personal.github),
+          new TextRun({ text: '  ·  ', font: FONT, size: BODY }),
+          hyperlink('linkedin.com/in/rifqiazhad0210', cv.personal.linkedin),
+          new TextRun({ text: `  ·  ${cv.personal.location}`, font: FONT, size: BODY }),
+        ],
         alignment: AlignmentType.CENTER,
         spacing: { before: 0, after: 160 },
       }),
@@ -216,12 +246,12 @@ const doc = new Document({
       }),
 
       // ── SELECTED PROJECTS ───────────────────────────────────────────────
-      sectionHeader("Selected Projects"),
+      sectionHeader("Projects"),
       ...cv.projects.flatMap(p => projectBlock(p.title, p.period, projectRole(p), p.highlights)),
 
       // ── AWARDS ──────────────────────────────────────────────────────────
       sectionHeader("Awards"),
-      ...cv.awards.map(a => awardLine(a.title, a.event, a.note || null)),
+      ...cv.awards.flatMap(a => awardLine(a.title, a.year, a.event, a.note || null)),
 
       // ── SKILLS ──────────────────────────────────────────────────────────
       sectionHeader("Skills"),

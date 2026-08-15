@@ -29,14 +29,15 @@
     "category": "MLOps and Infrastructure",
     "priority": "primary",
     "items": [
+      "Ollama (Local LLM)",
       "Docker",
+      "Podman",
       "FastAPI",
       "Tauri 2",
       "SQLite",
       "Git",
       "pytest",
-      "Conda",
-      "Ollama"
+      "Conda"
     ]
   },
   {

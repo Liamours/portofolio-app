@@ -6,7 +6,7 @@
 // variant means adding an entry to cv.variants, not editing this file.
 
 const {
-  Document, Packer, Paragraph, TextRun,
+  Document, Packer, Paragraph, TextRun, ExternalHyperlink,
   AlignmentType, BorderStyle, TabStopType, LevelFormat
 } = require('./node_modules/docx');
 const fs = require('fs');
@@ -59,13 +59,22 @@ const para = (t, size = BODY) => new Paragraph({
   spacing: { before: 0, after: 60 },
 });
 
-const award = (title, event, detail) => new Paragraph({
-  children: [
-    new TextRun({ text: title + ". ", font: FONT, size: BODY, bold: true }),
-    new TextRun({ text: event + (detail ? ". " + detail : "."), font: FONT, size: BODY }),
-  ],
-  spacing: { before: 60, after: 60 },
-});
+// Year sits at the right margin on the title line, matching the experience
+// blocks, so it never duplicates a year already inside the event name.
+const award = (title, year, event, detail) => [
+  new Paragraph({
+    children: [
+      new TextRun({ text: title, font: FONT, size: BODY, bold: true }),
+      new TextRun({ text: "\t" + (year || ""), font: FONT, size: BODY }),
+    ],
+    tabStops: [{ type: TabStopType.RIGHT, position: CWIDTH }],
+    spacing: { before: 80, after: 0 },
+  }),
+  new Paragraph({
+    children: [new TextRun({ text: event + (detail ? ". " + detail : ""), font: FONT, size: BODY })],
+    spacing: { before: 0, after: 40 },
+  }),
+];
 
 const skillRow = (cat, items) => new Paragraph({
   children: [
@@ -75,19 +84,31 @@ const skillRow = (cat, items) => new Paragraph({
   spacing: { before: 0, after: 60 },
 });
 
+// Author position leads, so a reader scanning the column sees it without
+// parsing the author list. Names after his are elided: the list exists to
+// locate him in it, and the full list is in the paper.
+function authorsUpToMe(authors) {
+  const parts = authors.split(', ');
+  const i = parts.findIndex(p => p.includes(ME));
+  if (i === -1) return { text: authors, more: false };
+  return { text: parts.slice(0, i + 1).join(', '), more: parts.length > i + 1 };
+}
+
 function pubEntry(pos, authors, title, venue, link) {
-  const idx = authors.indexOf(ME);
+  const { text: shown, more } = authorsUpToMe(authors);
+  const idx = shown.indexOf(ME);
   const authorRuns = [];
   if (idx === -1) {
-    authorRuns.push(new TextRun({ text: authors, font: FONT, size: BODY }));
+    authorRuns.push(new TextRun({ text: shown, font: FONT, size: BODY }));
   } else {
-    if (idx > 0) authorRuns.push(new TextRun({ text: authors.slice(0, idx), font: FONT, size: BODY }));
+    if (idx > 0) authorRuns.push(new TextRun({ text: shown.slice(0, idx), font: FONT, size: BODY }));
     authorRuns.push(new TextRun({ text: ME, font: FONT, size: BODY, bold: true }));
-    authorRuns.push(new TextRun({ text: authors.slice(idx + ME.length), font: FONT, size: BODY }));
+    authorRuns.push(new TextRun({ text: shown.slice(idx + ME.length), font: FONT, size: BODY }));
   }
   const children = [
+    new TextRun({ text: "(" + pos + ") ", font: FONT, size: BODY, bold: true }),
     ...authorRuns,
-    new TextRun({ text: " (" + pos + "). ", font: FONT, size: BODY }),
+    new TextRun({ text: more ? " et al. " : ". ", font: FONT, size: BODY }),
     new TextRun({ text: title, font: FONT, size: BODY, italics: true }),
     new TextRun({ text: ". " + venue + ".", font: FONT, size: BODY }),
   ];
@@ -136,6 +157,7 @@ const PUB_GROUPS = [
   { types: ['Journal Paper'],                 label: 'Journal Papers' },
   { types: ['Journal Paper (Under Review)'], label: 'Journal Papers (Under Review)' },
   { types: ['Conference Paper', 'Conference Paper (Accepted)'], label: 'Conference Papers' },
+  { types: ['Conference Paper (Under Review)'], label: 'Conference Papers (Under Review)' },
   { types: ['Preprint'], label: 'Preprints' },
   { types: ['Dataset'], label: 'Datasets' },
 ];
@@ -155,6 +177,13 @@ const pubPos   = p => `${p.author_position} author`;
 // organization is skipped where role already names the same body.
 const projectMeta = p => [p.role, p.funding, p.institution].filter(Boolean).join(' · ');
 
+// Styled inline rather than through a named style, so the link renders the same
+// whether or not the document carries a Hyperlink style definition.
+const hyperlink = (text, url) => new ExternalHyperlink({
+  children: [new TextRun({ text, font: FONT, size: BODY, color: '0563C1', underline: {} })],
+  link: url,
+});
+
 const header = subtitle => [
   new Paragraph({
     children: [new TextRun({ text: ME, font: FONT, size: NAME, bold: true })],
@@ -167,10 +196,13 @@ const header = subtitle => [
     spacing: { before: 0, after: 80 },
   }),
   new Paragraph({
-    children: [new TextRun({
-      text: `${cv.personal.email}  ·  github.com/Liamours  ·  linkedin.com/in/rifqiazhad0210  ·  ${cv.personal.location}`,
-      font: FONT, size: BODY,
-    })],
+    children: [
+      new TextRun({ text: `${cv.personal.email}  ·  `, font: FONT, size: BODY }),
+      hyperlink('github.com/Liamours', cv.personal.github),
+      new TextRun({ text: '  ·  ', font: FONT, size: BODY }),
+      hyperlink('linkedin.com/in/rifqiazhad0210', cv.personal.linkedin),
+      new TextRun({ text: `  ·  ${cv.personal.location}`, font: FONT, size: BODY }),
+    ],
     alignment: AlignmentType.CENTER,
     spacing: { before: 0, after: 160 },
   }),
@@ -203,7 +235,7 @@ const SKILLS = [
 
 const AWARDS = [
   sectionHeader("Awards"),
-  ...cv.awards.map(a => award(a.title, a.event, a.note || null)),
+  ...cv.awards.flatMap(a => award(a.title, a.year, a.event, a.note || null)),
 ];
 
 const LANGUAGES_CERTS = [

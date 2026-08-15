@@ -103,5 +103,14 @@
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Dzaky Alfaris, Rafiq Labib",
     "context": "Box-supervised pipeline deriving a lesion mask from each bounding box, making radiomic characterisation of 19,810 lesions feasible without new manual delineation. Second author."
+  },
+  {
+    "title": "Does Hierarchy-Consistency Regularization Help Multi-Label Chest Radiograph Classification? Evidence from a Seven-Dataset Pooled Corpus",
+    "venue": "IBIOMED 2026, 6th International Conference on Biomedical Engineering",
+    "year": 2026,
+    "type": "Conference Paper (Under Review)",
+    "role": "author",
+    "authors": "M. Rifqi Dzaky Azhad, Muhammad Al Abrar, Ema Rachmawati",
+    "context": "Seven public chest radiograph datasets pooled into 527,745 images and evaluated over 25 findings drawn from Indonesian clinical guidelines. First author."
   }
 ]

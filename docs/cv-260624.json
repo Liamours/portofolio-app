@@ -9,7 +9,7 @@
     "portfolio": "https://portofolio-app-puce.vercel.app",
     "location": "Bandung, Indonesia"
   },
-  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above EXINI and BONENAVI, the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers, three accepted at IEEE conferences, and two journal manuscripts under review, first author on one.",
+  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers, three accepted at IEEE conferences, and two journal manuscripts under review, first author on one.",
   "experience": [
     {
       "key": "cxr-ra",
@@ -17,10 +17,11 @@
       "organization": "Telkom University",
       "period": "2026 – Present",
       "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
-      "_notes": "Classifier is at 14 classes; roadmap is to expand to 20+ aligned to Indonesian Ministry of Health disease categories. Do not claim 20+ as delivered.",
+      "_notes": "Classifier is at 14 classes; roadmap is to expand to 20+ aligned to Indonesian Ministry of Health disease categories. Do not claim 20+ as delivered. IBIOMED 2026 submission (paper #57, 1571332442): Rifqi first author, Muhammad Al Abrar second, Ema Rachmawati third. Status is Active (has manuscript), no camera-ready, conference not yet held: never write as accepted or presented. Result is NEGATIVE: the hierarchy penalty does not beat flat training, AUROC macro 0.853 for both at p=0.309, flat wins on threshold decisions and selective prediction at p<0.0001, and only the hierarchy violation rate improves, 36.95% to 33.82%. Do not put those numbers on the CV; the bullet states the question, not the answer. Report generation and the web app were team contributions, not his modules to lead.",
       "highlights": [
         "Built a hierarchical pathology classifier covering 14 disease categories, expanding to 20+ aligned to Indonesian healthcare organization standards, with fallback uncertainty estimation for ambiguous cases.",
-        "Delivered pathology classifier and organ segmentation modules as microservices, serving the team's web and desktop apps."
+        "Delivered the classifier and organ segmentation as microservices, and contributed to the deployed web application and the report-generation model.",
+        "First-authored a study pooling seven public chest radiograph datasets into 527,745 images to test whether hierarchy-consistency regularization improves multi-label classification. Submitted to IBIOMED 2026."
       ]
     },
     {
@@ -300,6 +301,17 @@
       "author_position": "2nd",
       "context": "Box-supervised pipeline deriving a lesion mask from each bounding box, making radiomic characterisation of 19,810 lesions feasible without new manual delineation. Second author.",
       "_notes": "Submitted 7 August 2026 to EAAI, under review, NOT accepted. Ema Rachmawati first and corresponding, Rifqi second. 19,810 expert-annotated lesions from BS-80K (12,142 anterior, 7,668 posterior). Fully crossed ablation over 2 segmentation methods, 3 feature representations, 4 classifiers and 2 views, giving 96 configurations. Key result: an 18-dimensional one-hot bone-region indicator raised mean test accuracy from 0.6157 to 0.8491, recall from 0.5077 to 0.8150 and F1 from 0.5539 to 0.8332, improving all 48 paired comparisons at p<0.001 after Holm correction. Without the anatomical prior only 5 of 48 configurations beat the majority-class baseline; with it, 48 of 48."
+    },
+    {
+      "key": "ibiomed-hierarchy",
+      "title": "Does Hierarchy-Consistency Regularization Help Multi-Label Chest Radiograph Classification? Evidence from a Seven-Dataset Pooled Corpus",
+      "venue": "IBIOMED 2026, 6th International Conference on Biomedical Engineering",
+      "year": 2026,
+      "type": "Conference Paper (Under Review)",
+      "authors": "M. Rifqi Dzaky Azhad, Muhammad Al Abrar, Ema Rachmawati",
+      "author_position": "1st",
+      "context": "Seven public chest radiograph datasets pooled into 527,745 images and evaluated over 25 findings drawn from Indonesian clinical guidelines. First author.",
+      "_notes": "Paper #57, submission 1571332442. Status Active (has manuscript), not accepted, conference not yet held. Never write as accepted or presented. The finding is negative: hierarchy-consistency regularization does not beat flat training."
     }
   ],
   "projects": [
@@ -315,7 +327,7 @@
       "dataset": "https://zenodo.org/records/21450443",
       "dataset_masks": "https://zenodo.org/records/20342310",
       "paper": "https://doi.org/10.1016/j.knosys.2026.116681",
-      "_notes": "600+ bone scan images annotated under physician supervision at Dr. Hasan Sadikin Hospital (RSHS), Universitas Padjadjaran. Patient count not recorded separately. Hotspot detection with YOLOv8 was another team member's work, not Rifqi's: never list YOLOv8, hotspot detection, or mAP under his contribution. His scope was annotation, skeletal segmentation, BSI quantification, and patient-level classification.",
+      "_notes": "This project is Telplastina v1 (confirmed by Rifqi 2026-08-15). It is kept here for its guardrails and for the site, but no CV variant selects it, because Telplastina and Telrax cover the same ground more accurately. 600+ bone scan images annotated under physician supervision at Dr. Hasan Sadikin Hospital (RSHS), Universitas Padjadjaran. Patient count not recorded separately. Hotspot detection with YOLOv8 was another team member's work, not Rifqi's: never list YOLOv8, hotspot detection, or mAP under his contribution. His scope was annotation, skeletal segmentation, BSI quantification, and patient-level classification.",
       "highlights": [
         "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions, from 600+ scans annotated under nuclear medicine physicians.",
         "Patient-level AUC 0.956 with XGBoost and LightGBM, surpassing EXINI and BONENAVI, both in clinical use at the time."
@@ -400,40 +412,40 @@
     {
       "title": "1st Winner",
       "event": "ICoICT 2026 Challenge Track (Travlr Data Challenge), Telkom University and Multimedia University",
-      "year": 2026,
+      "year": "2026",
       "note": "Provider-aware contrastive learning for accommodation quality embeddings across multi-provider B2B travel inventory, trained on 3.69 million records from four booking providers.",
       "_notes": "Certificate awarded jointly to M. Rifqi Dzaky Azhad and Hilya Tsaniya. Presented in Bandung 31 July 2026; separate Certificate of Appreciation names Rifqi as Presenter, signed by General Chair Dr. Edward Ferdian. Sponsored by IEEE Indonesia Section and Yayasan Pendidikan Telkom, supported by SoftwareOne and TRAVLR. Accepted as a first-author IEEE paper. Evidence images in public/images/travlr/."
     },
     {
       "title": "Finalist, National Pitching Round",
       "event": "BRIN AIDeaNation 2026, Badan Riset dan Inovasi Nasional",
-      "year": 2026,
+      "year": "2026",
       "note": "Team leader and AI engineer on NUSA Aves, a passive bioacoustic monitoring system identifying endemic and endangered birds in Indonesia.",
       "_notes": "Full title: 'Nusa Aves: Sistem Pemantauan Bioakustik Pasif untuk Identifikasi Burung Endemik dan Terancam Punah di Indonesia Berbasis Deep Learning'. Listed as entry 24 of 80 invited teams in BRIN letter B-28323/III.6/TK.07.00/8/2026 dated 5 August 2026, signed by Dr. Eng. Budi Prawara, Kepala Organisasi Riset Elektronika dan Informatika. Team: Rifqi (leader, model, backend, CLI/API), Ihsan (pitch deck, Flutter app), Luqman (proposal, Flutter app). Rifqi withdrew from the 11-12 August pitching round, so the claim stops at finalist. Never state a placing or that the pitch was delivered."
     },
     {
       "title": "Best Proposal Honorable Mention",
       "event": "ADIKARA 2024, School of Computing, Telkom University",
-      "year": 2024,
+      "year": "2024",
       "note": "Non-invasive diabetic mellitus detection from tongue images using MobileNetV2 and ViT. Team lead.",
       "_notes": "Team: Aprilianza Muhammad Yusup, Yolanda Rachma Chrysti. Dataset: tongue images from Sumatra, Indonesia (https://data.mendeley.com/datasets/hyb44jf936/2). Models: ViT and MobileNetV2. Award is Best Proposal, 2024, confirmed by Rifqi 2026-08-06; an earlier CV note wrongly recorded this as 'Best Paper Award'. Archived drafts phrase it as 'Best Proposal Honorable Mention', so confirm whether 'Honorable Mention' belongs in the title. Rifqi also entered ADIKARA 2025 as a participant only, non-finalist, not worth listing."
     },
     {
       "title": "National Qualifier, D3/D4/S1 Category",
       "event": "Samsung Solve for Tomorrow 2025, Samsung Indonesia",
-      "year": 2025,
+      "year": "2025",
       "_notes": "Team name: Rethreeno. Project: smart trashbin that classifies trash type and physically sorts it into the correct bin. Reached the 40-team national selection stage (S1 category); did not advance further."
     },
     {
       "title": "Top 25",
       "event": "Data Slayer 2.0 Data Science Competition, Hima Data Science Telkom University Purwokerto",
-      "year": 2025,
+      "year": "2025",
       "_notes": "Task: human fall detection from video frames. Entered via IEEE Student Branch. Every archived CV draft records 'Top 25'; do not restate as 'Finalist'."
     },
     {
       "title": "3rd Place",
       "event": "CCI Summit Kaggle Data Research Competition, Telkom University",
-      "year": 2024,
+      "year": "2024",
       "_notes": "Team: Ferret Forecaster (Fathan Arya Maulana, Nabila Putri Azhari). Task: predict person income from financial records."
     }
   ],
@@ -457,14 +469,15 @@
       "Scikit-learn"
     ],
     "mlops_infrastructure": [
+      "Ollama (Local LLM)",
       "Docker",
+      "Podman",
       "FastAPI",
       "Tauri 2",
       "SQLite",
       "Git",
       "pytest",
-      "Conda",
-      "Ollama"
+      "Conda"
     ],
     "languages": [
       "Python",
@@ -488,23 +501,12 @@
       "_notes": "Transcript 103012330009 as of 21 July 2026: 129 SKS, every grade an A, IPK 4.00. Courses below are curated from that transcript for AI and medical imaging roles, not the full list; the transcript also covers Operating Systems, Computer Networks, Database Systems, OOP, HCI, Cyber Security, Digital Systems, Scientific Writing and the general education subjects. Credits are deliberately omitted because the degree is not finished.",
       "courses": [
         {
-          "group": "AI and Machine Learning",
+          "group": "Relevant subjects",
           "items": [
-            "Artificial Intelligence",
-            "Machine Learning",
             "Computer Vision",
             "Natural Language Processing",
-            "Ethics on AI"
-          ]
-        },
-        {
-          "group": "Mathematics and Statistics",
-          "items": [
-            "Probability Theory",
-            "Statistics",
-            "Matrix and Vector Spaces",
-            "Advanced Calculus",
-            "Discrete Mathematics"
+            "Machine Learning",
+            "Artificial Intelligence"
           ]
         }
       ]
@@ -624,7 +626,7 @@
       "file": "rifqi-cv-industry.docx",
       "label": "Industry AI Engineer",
       "subtitle": "AI Engineer / ML Engineer",
-      "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos on CPU-only infrastructure. Bone scan pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above the two commercial systems in clinical use. Three published papers and three accepted.",
+      "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos on CPU-only infrastructure. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers and three accepted.",
       "order": [
         "summary",
         "skills",
@@ -644,8 +646,8 @@
         "sg-coordinator"
       ],
       "projects": [
-        "bone-metastasis",
         "telplastina",
+        "cxr-multitask",
         "deepfake-detection"
       ],
       "publications": [
@@ -655,14 +657,14 @@
         "icitacee-birds"
       ],
       "experience_heading": "Experience",
-      "projects_heading": "Selected Projects"
+      "projects_heading": "Projects"
     },
     {
       "key": "research",
       "file": "rifqi-cv-research.docx",
       "label": "Research / Academic",
       "subtitle": "Deep Learning Researcher · Medical Imaging",
-      "summary": "Medical imaging and industrial AI researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. Bone scan pipeline published in Knowledge-Based Systems at patient-level AUC 0.956, above the two commercial systems in clinical use. Three published papers and three accepted at IEEE conferences, five as first or second author.",
+      "summary": "Medical imaging and industrial AI researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers and three accepted at IEEE conferences, five as first or second author.",
       "order": [
         "summary",
         "education",
@@ -683,19 +685,19 @@
       ],
       "projects": [
         "telplastina",
-        "bone-metastasis",
+        "cxr-multitask",
         "deepfake-detection"
       ],
       "publications": "all",
       "experience_heading": "Research Experience",
-      "projects_heading": "Selected Projects"
+      "projects_heading": "Projects"
     },
     {
       "key": "ds",
       "file": "rifqi-cv-ds.docx",
       "label": "Data Scientist",
       "subtitle": "Data Scientist / ML Engineer",
-      "summary": "ML engineer with research and internship experience in data analysis, model training, and production deployment. Systematic literature review of 212+ papers at HUMIC Engineering. Bone scan pipeline AUC 0.956, above two commercial clinical systems. GPA 4.0/4.0, Telkom University.",
+      "summary": "ML engineer with research and internship experience in data analysis, model training, and production deployment. Systematic literature review of 212+ papers at HUMIC Engineering. Bone scan pipeline published above the two commercial systems in clinical use. GPA 4.0/4.0, Telkom University.",
       "order": [
         "summary",
         "skills",
@@ -716,7 +718,7 @@
         "cci"
       ],
       "projects": [
-        "bone-metastasis",
+        "cxr-multitask",
         "sentiment-analysis"
       ],
       "publications": [
@@ -725,7 +727,7 @@
         "icitacee-birds"
       ],
       "experience_heading": "Experience",
-      "projects_heading": "Selected Projects"
+      "projects_heading": "Projects"
     },
     {
       "key": "mrec",
