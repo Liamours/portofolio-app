@@ -388,12 +388,13 @@
       "key": "cxr-multitask",
       "title": "Telrax: Multi-Task Chest X-Ray Analysis Platform",
       "period": "2026 – Present",
-      "role": "Classification and Segmentation Module Lead",
+      "role": "Web Application and CI Pipeline",
       "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
-      "_notes": "Team breakdown by module: classification+segmentation 2 people, VLM report generation 3, VQA 3, visual grounding 4, app development (web+desktop) 4. Total ~16 across modules. GitHub private/internal. Application purpose: multi-use CXR diagnostic tool covering pathology classification, organ segmentation, report generation, VQA, and visual grounding.",
+      "_notes": "Contributions verified against git history (telrax-project/api, website, desktop, author mrDA), CONTRIBUTIONS.md generated 2026-08-07. HIS: split the legacy monorepo into three repos; the full website redesign and design system (Georgia serif, near-zero radius, hairline dividers, hand-drawn icons, shared Tag and RibcageMark components); the patients-page filter; Indonesian localisation; CI/CD via PR #1 including all 84 unit and 17 e2e tests and the two CI-only bugs he found (Node version mismatch, third-party Action licence change); running PSPNet on a real chest X-ray for the landing demo. SUPPORTING ONLY: he CONSULTED on the backend agent architecture to align it with MedRAX, and HELPED integrate the classifier and segmentation models. Never write those two as led or built. Line counts (+10,037/-2,476 across 51 files, 18 commits) are deliberately omitted: LOC is on the CV kill-list. Earlier role title \"Classification and Segmentation Module Lead\" is not supported by this document and was replaced. Team breakdown by module: classification+segmentation 2 people, VLM report generation 3, VQA 3, visual grounding 4, app development 4, about 16 total. GitHub private/internal.",
       "highlights": [
-        "Led two of five AI modules within a clinical CXR platform: a 14-class pathology classifier expanding to 20+, and organ segmentation.",
-        "Both modules deployed as microservices for the team's web app and desktop app through shared API endpoints."
+        "Redesigned the clinical web application end to end, defining a muted editorial design system with shared components and carrying it through the landing, patients, patient detail, checkup, login and register pages.",
+        "Built the CI pipeline in a repository that had none: 84 unit and component tests in Vitest and React Testing Library, 17 Playwright end-to-end tests against a mocked backend, and dependency and secret scanning.",
+        "Supported model integration for the pathology classifier, a TorchXRayVision DenseNet121 fine-tuned separately on NIH ChestX-ray14 and VinBigData with selectable checkpoints, and PSPNet organ segmentation covering right lung, left lung and heart."
       ]
     },
     {
