@@ -9,7 +9,7 @@
     "portfolio": "https://portofolio-app-puce.vercel.app",
     "location": "Bandung, Indonesia"
   },
-  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers, three accepted at IEEE conferences, and two journal manuscripts under review, first author on one.",
+  "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Bone scan diagnostic pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos. Three published papers, three accepted at IEEE conferences, and three manuscripts under review, first author on two.",
   "experience": [
     {
       "key": "cxr-ra",
@@ -441,13 +441,13 @@
       "title": "Top 25",
       "event": "Data Slayer 2.0 Data Science Competition, Hima Data Science Telkom University Purwokerto",
       "year": "2025",
-      "_notes": "Task: human fall detection from video frames. Entered via IEEE Student Branch. Every archived CV draft records 'Top 25'; do not restate as 'Finalist'."
+      "_notes": "Task: human fall detection from video frames. Entered via IEEE Student Branch. Every archived CV draft records 'Top 25'; do not restate as 'Finalist'. Year confirmed by Rifqi 2026-08-15."
     },
     {
       "title": "3rd Place",
       "event": "CCI Summit Kaggle Data Research Competition, Telkom University",
       "year": "2024",
-      "_notes": "Team: Ferret Forecaster (Fathan Arya Maulana, Nabila Putri Azhari). Task: predict person income from financial records."
+      "_notes": "Team: Ferret Forecaster (Fathan Arya Maulana, Nabila Putri Azhari). Task: predict person income from financial records. Year confirmed by Rifqi 2026-08-15."
     }
   ],
   "skills": {
@@ -627,7 +627,7 @@
       "file": "rifqi-cv-industry.docx",
       "label": "Industry AI Engineer",
       "subtitle": "AI Engineer / ML Engineer",
-      "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos on CPU-only infrastructure. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers and three accepted.",
+      "summary": "AI engineer and researcher working across medical imaging and industrial AI, GPA 4.0/4.0. Primary engineer on a production inference service still running on commercial mining fleet dashcams, serving 40,000 to 50,000 videos on CPU-only infrastructure. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers, three accepted at IEEE conferences, and three manuscripts under review, first author on two.",
       "order": [
         "summary",
         "skills",
@@ -665,7 +665,7 @@
       "file": "rifqi-cv-research.docx",
       "label": "Research / Academic",
       "subtitle": "Deep Learning Researcher · Medical Imaging",
-      "summary": "Medical imaging and industrial AI researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers and three accepted at IEEE conferences, five as first or second author.",
+      "summary": "Medical imaging and industrial AI researcher at Telkom University, GPA 4.0/4.0. Research focus: automated diagnosis from bone scintigraphy and chest X-ray. Bone scan pipeline published in Knowledge-Based Systems, above the two commercial systems in clinical use. Three published papers, three accepted at IEEE conferences, and three manuscripts under review, first author on two.",
       "order": [
         "summary",
         "education",
