@@ -16,11 +16,12 @@ const CWIDTH = 9746; // content width DXA
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
-function sectionHeader(text) {
+function sectionHeader(text, pageBreak = false) {
   return new Paragraph({
     children: [new TextRun({ text, font: FONT, size: SEC, bold: true, allCaps: true })],
     border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "000000", space: 2 } },
     spacing: { before: 200, after: 80 },
+    pageBreakBefore: pageBreak,
   });
 }
 
@@ -233,7 +234,7 @@ const doc = new Document({
       ]),
 
       // ── PUBLICATIONS ────────────────────────────────────────────────────
-      sectionHeader("Publications"),
+      sectionHeader("Publications", true),
       ...PUB_GROUPS.flatMap(({ types, label }) => {
         const group = cv.publications.filter(p => types.includes(p.type));
         if (!group.length) return [];
@@ -250,7 +251,7 @@ const doc = new Document({
       ...cv.projects.flatMap(p => projectBlock(p.title, p.period, projectRole(p), p.highlights)),
 
       // ── AWARDS ──────────────────────────────────────────────────────────
-      sectionHeader("Awards"),
+      sectionHeader("Awards", true),
       ...cv.awards.flatMap(a => awardLine(a.title, a.year, a.event, a.note || null)),
 
       // ── SKILLS ──────────────────────────────────────────────────────────

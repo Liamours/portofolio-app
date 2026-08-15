@@ -24,10 +24,13 @@ const ME = cv.personal.name;
 
 // ── shared helpers ───────────────────────────────────────────────────────────
 
-const sectionHeader = t => new Paragraph({
+// pageBreak starts the section on a fresh page, so a heading never orphans at
+// the foot of one. Used for Publications and Awards, the two long list sections.
+const sectionHeader = (t, pageBreak = false) => new Paragraph({
   children: [new TextRun({ text: t, font: FONT, size: SEC, bold: true, allCaps: true })],
   border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "000000", space: 2 } },
   spacing: { before: 200, after: 80 },
+  pageBreakBefore: pageBreak,
 });
 
 const pubSubHeader = t => new Paragraph({
@@ -234,7 +237,7 @@ const SKILLS = [
 ];
 
 const AWARDS = [
-  sectionHeader("Awards"),
+  sectionHeader("Awards", true),
   ...cv.awards.flatMap(a => award(a.title, a.year, a.event, a.note || null)),
 ];
 
@@ -291,7 +294,7 @@ const SECTIONS = {
   publications: v => {
     if (v.publications === 'all') {
       return [
-        sectionHeader('Publications'),
+        sectionHeader('Publications', true),
         ...PUB_GROUPS.flatMap(({ types, label }) => {
           const group = cv.publications.filter(p => types.includes(p.type));
           if (!group.length) return [];
@@ -303,7 +306,7 @@ const SECTIONS = {
       ];
     }
     return [
-      sectionHeader('Publications'),
+      sectionHeader('Publications', true),
       ...v.publications.map(publicationByKey).map(p =>
         pubEntry(pubPos(p), p.authors, p.title, pubVenue(p), p.link || null)
       ),
