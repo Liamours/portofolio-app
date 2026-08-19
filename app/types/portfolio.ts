@@ -63,7 +63,7 @@ export interface Publication {
   title: string
   venue: string
   year: number
-  type: 'Conference Paper' | 'Journal Paper' | 'Preprint' | 'Dataset' | 'e-Book' | 'Review'
+  type: 'Conference Paper' | 'Journal Paper' | 'Preprint' | 'Dataset' | 'Copyright' | 'e-Book' | 'Review'
   role: 'author' | 'presenter' | 'reviewer' | 'contributor'
   authors?: string
   image?: string

@@ -157,6 +157,7 @@ const PUB_GROUPS = [
   { types: ['Conference Paper (Under Review)'], label: 'Conference Papers (Under Review)' },
   { types: ['Preprint'], label: 'Preprints' },
   { types: ['Dataset'], label: 'Datasets' },
+  { types: ['Copyright'], label: 'Copyrights (Hak Cipta)' },
   { types: ['e-Book'], label: 'e-Books' },
 ];
 
@@ -241,7 +242,8 @@ const doc = new Document({
         return [
           pubSubHeader(label),
           ...group.map(p => pubEntry(
-            p.author_position + ' author', p.authors, p.title, pubVenue(p), p.link || null
+            p.type === 'Copyright' ? 'Co-inventor' : p.author_position + ' author',
+            p.authors, p.title, pubVenue(p), p.link || null
           )),
         ];
       }),

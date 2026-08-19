@@ -312,6 +312,28 @@
       "author_position": "1st",
       "context": "Seven public chest radiograph datasets pooled into 527,745 images and evaluated over 25 findings drawn from Indonesian clinical guidelines. First author.",
       "_notes": "Paper #57, submission 1571332442. Status Active (has manuscript), not accepted, conference not yet held. Never write as accepted or presented. The finding is negative: hierarchy-consistency regularization does not beat flat training."
+    },
+    {
+      "key": "hki-wbbs-masks",
+      "title": "Mask Image of Whole-Body Bone Scan Image Dataset",
+      "venue": "Hak Cipta, Direktorat Jenderal Kekayaan Intelektual, Kementerian Hukum dan HAM RI",
+      "year": 2025,
+      "type": "Copyright",
+      "authors": "Ema Rachmawati, Ida Bagus Indrabudhi Kusuma, Nasywa Kamila, Fathan Arya Maulana, Athila Ramdani Saputra, Yolanda Rahma Chrysti, M. Rifqi Dzaky Azhad",
+      "author_position": "co-inventor",
+      "context": "Indonesian government copyright registration for the ground-truth segmentation mask dataset. Registration EC002025027814.",
+      "_notes": "Found 2026-08-20 via Ema Rachmawati's official SINTA profile (sinta.kemdiktisaintek.go.id/authors/profile/28721/?view=iprs), IPR tab, status Sertifikat. Rifqi is listed LAST of 7 co-inventors, unlike the Zenodo dataset record (zenodo-masks, 2 authors, he is 2nd) which is very likely the same underlying mask data. Treat these as two separate credentials for the same work, one a DOI-backed open dataset, one a domestic government copyright: never merge them into one entry or imply he holds a higher position on this one than 7th of 7. No public link exists for this registration; it is a registry entry, not a webpage."
+    },
+    {
+      "key": "hki-bone-cancer-app",
+      "title": "Aplikasi Deteksi Penyebaran Kanker pada Citra Sidik Tulang",
+      "venue": "Hak Cipta, Direktorat Jenderal Kekayaan Intelektual, Kementerian Hukum dan HAM RI",
+      "year": 2025,
+      "type": "Copyright",
+      "authors": "Ema Rachmawati, Edward Ferdian, Nasywa Kamila, Athila Ramdani Saputra, M. Rifqi Dzaky Azhad, Aprilianza Muhammad Yusup, Dzaky Alfaris, Fathan Arya Maulana, Rafiq Labib, Muhammad Azriel Saputra, Elga Dina Pertiwi",
+      "author_position": "co-inventor",
+      "context": "Indonesian government copyright registration for the bone scan cancer-spread detection application, the software this body of research produced. Registration EC002025129592.",
+      "_notes": "Found 2026-08-20 via Ema Rachmawati's official SINTA profile (sinta.kemdiktisaintek.go.id/authors/profile/28721/?view=iprs), IPR tab, status Sertifikat. 11 co-inventors, Rifqi is 5th. His confirmed scope on this registration (stated by him 2026-08-20): annotated 600 images, contributed to sorting, filtering and corrections, and led the revision pipeline parts. Never claim primary authorship or a leading role on this specific credential given the 11-person list; describe his contribution using the scope above. This is very likely the copyright covering the same underlying diagnostic pipeline as the Bone Metastasis Diagnosis Framework project and an early iteration of Telplastina, but is a separate legal registration and should not be merged into either entry. No public link exists; it is a registry entry, not a webpage."
     }
   ],
   "projects": [

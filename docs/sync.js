@@ -28,7 +28,7 @@ write('publications.json', cv.publications.map(p => ({
   venue: p.indexed ? `${p.venue}, ${p.indexed}` : p.venue,
   year: p.year,
   type: p.type,
-  role: 'author',
+  role: p.type === 'Copyright' ? 'contributor' : 'author',
   authors: p.authors,
   context: p.context,
   ...(p.link && { link: p.link }),

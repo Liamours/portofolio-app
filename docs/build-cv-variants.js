@@ -163,6 +163,7 @@ const PUB_GROUPS = [
   { types: ['Conference Paper (Under Review)'], label: 'Conference Papers (Under Review)' },
   { types: ['Preprint'], label: 'Preprints' },
   { types: ['Dataset'], label: 'Datasets' },
+  { types: ['Copyright'], label: 'Copyrights (Hak Cipta)' },
 ];
 
 const SKILL_LABELS = {
@@ -174,7 +175,9 @@ const SKILL_LABELS = {
 };
 
 const pubVenue = p => p.indexed ? `${p.venue}, ${p.indexed}, ${p.year}` : `${p.venue}, ${p.year}`;
-const pubPos   = p => `${p.author_position} author`;
+// Copyright registrations list co-inventors, not ranked authors, so they get
+// their own label rather than the "1st author" phrasing journal papers use.
+const pubPos   = p => p.type === 'Copyright' ? 'Co-inventor' : `${p.author_position} author`;
 
 // A project's meta line reads role, then whoever funded or hosted it.
 // organization is skipped where role already names the same body.

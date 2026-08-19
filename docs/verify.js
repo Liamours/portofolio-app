@@ -100,7 +100,7 @@ const schemas = {
     optional: {},
   },
   'publications.json': {
-    required: { title: 'string', venue: 'string', year: 'number', type: ['Conference Paper', 'Conference Paper (Accepted)', 'Conference Paper (Under Review)', 'Journal Paper', 'Journal Paper (Under Review)', 'Preprint', 'Dataset', 'e-Book', 'Review'], role: ['author', 'presenter', 'reviewer', 'contributor'] },
+    required: { title: 'string', venue: 'string', year: 'number', type: ['Conference Paper', 'Conference Paper (Accepted)', 'Conference Paper (Under Review)', 'Journal Paper', 'Journal Paper (Under Review)', 'Preprint', 'Copyright', 'Dataset', 'e-Book', 'Review'], role: ['author', 'presenter', 'reviewer', 'contributor'] },
     optional: { authors: 'string', image: 'string', link: 'string', context: 'string' },
   },
   'skills.json': {
