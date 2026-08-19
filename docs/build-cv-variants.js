@@ -236,8 +236,10 @@ const SKILLS = [
   ),
 ];
 
-const AWARDS = [
-  sectionHeader("Awards", true),
+// pageBreaks defaults to true; a variant sets it false to run as a single
+// flowing document instead of one section per page.
+const awardsSection = pageBreaks => [
+  sectionHeader("Awards", pageBreaks !== false),
   ...cv.awards.flatMap(a => award(a.title, a.year, a.event, a.note || null)),
 ];
 
@@ -269,7 +271,7 @@ const SECTIONS = {
 
   education: () => EDUCATION,
 
-  awards: () => AWARDS,
+  awards: v => awardsSection(v.pageBreaks),
 
   languages_certs: () => LANGUAGES_CERTS,
 
@@ -294,7 +296,7 @@ const SECTIONS = {
   publications: v => {
     if (v.publications === 'all') {
       return [
-        sectionHeader('Publications', true),
+        sectionHeader('Publications', v.pageBreaks !== false),
         ...PUB_GROUPS.flatMap(({ types, label }) => {
           const group = cv.publications.filter(p => types.includes(p.type));
           if (!group.length) return [];
@@ -306,7 +308,7 @@ const SECTIONS = {
       ];
     }
     return [
-      sectionHeader('Publications', true),
+      sectionHeader('Publications', v.pageBreaks !== false),
       ...v.publications.map(publicationByKey).map(p =>
         pubEntry(pubPos(p), p.authors, p.title, pubVenue(p), p.link || null)
       ),

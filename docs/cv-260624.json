@@ -655,10 +655,14 @@
         "jiim-scintiground",
         "knosys-biomarker",
         "ijies-segmentation",
-        "icitacee-birds"
+        "icitacee-birds",
+        "icoict-travlr",
+        "icodsa-deepfake",
+        "ibiomed-hierarchy"
       ],
       "experience_heading": "Experience",
-      "projects_heading": "Projects"
+      "projects_heading": "Projects",
+      "pageBreaks": false
     },
     {
       "key": "research",
