@@ -227,13 +227,13 @@
       "key": "icodsa-deepfake",
       "type": "Conference Paper (Accepted)",
       "year": 2026,
-      "authors": "Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Agung Toto Wibowo",
+      "authors": "Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Ema Rachmawati",
       "author_position": "2nd",
       "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection Under Mixed Manipulation Scenarios",
       "venue": "ICoDSA 2026",
       "indexed": "IEEE Xplore (pending presentation)",
       "context": "Modality Reliability Gate routing each 2-second segment to an audio or visual expert, with a per-segment interpretability signal. Second author.",
-      "_notes": "Author registration deadline 18 August 2026. Presented by Aprilianza. IEEE indexing requires presentation."
+      "_notes": "Author list corrected 2026-08-20 against the official Letter of Acceptance (submission 1571299473, signed by General Chair Prof. Dr. Adiwijaya, dated 18 August 2026): 4th author is Ema Rachmawati. Officially ACCEPTED. Conference held 21-22 September 2026, Holiday Inn Resort, Lombok. IEEE indexing still requires presentation, so keep \"pending presentation\" until Aprilianza presents."
     },
     {
       "key": "icera-pact",
@@ -364,9 +364,9 @@
       "period": "2025 – Present",
       "role": "Research Lead and Lead Coder",
       "institution": "AI Lab Focused Group",
-      "supervisor": "Agung Toto Wibowo, S.T., M.T., Ph.D.",
+      "supervisor": "Ema Rachmawati, Assoc. Prof., Dr., S.T., M.T.",
       "github": "https://github.com/Liamours/research-deepfake_classification",
-      "_notes": "Rifqi led the research and wrote the code; 2nd author. Aprilianza Muhammad Yusup is 1st author and presenter. Student mentor: Ahmad Taufiq Nur Rohman, S.Kom. Accepted at ICoDSA 2026, registration deadline 18 August 2026, IEEE indexing requires presentation. Numbers verified against the final manuscript: do not claim F1 0.94 or cross-dataset 0.60, those were never in the paper. Static concatenation slightly outperforms MoE on the combined split (0.9096 vs 0.9076); the contribution is interpretability and speed.",
+      "_notes": "Rifqi led the research and wrote the code; 2nd author. Aprilianza Muhammad Yusup is 1st author and presenter. Full author list per the official 18 August 2026 Letter of Acceptance: Aprilianza Muhammad Yusup, M. Rifqi Dzaky Azhad, Ahmad Taufiq Nur Rohman, Ema Rachmawati. Agung Toto Wibowo, previously recorded as supervisor, is no longer connected to this work (confirmed by Rifqi 2026-08-20: Agung declined to fund the research); he was replaced by Ema Rachmawati and is not a co-author on the accepted paper. Never list Agung Toto Wibowo on this entry again. Accepted at ICoDSA 2026, held 21-22 September 2026 at Holiday Inn Resort, Lombok. IEEE indexing requires presentation. Numbers verified against the final manuscript: do not claim F1 0.94 or cross-dataset 0.60, those were never in the paper. Static concatenation slightly outperforms MoE on the combined split (0.9096 vs 0.9076); the contribution is interpretability and speed.",
       "highlights": [
         "Built a Modality Reliability Gate that routes each 2-second segment to an audio or visual expert and reports which modality drove the verdict, a signal no compared method produces.",
         "Trained and evaluated across five public deepfake datasets, running faster than real time on a consumer laptop GPU. Accepted at ICoDSA 2026."
@@ -619,6 +619,10 @@
     {
       "pattern": "Telplastina: Multi-Task",
       "reason": "Name collision. Telplastina is the bone scintigraphy workstation; the chest X-ray platform is Telrax."
+    },
+    {
+      "pattern": "Agung Toto Wibowo",
+      "reason": "Removed as supervisor on the deepfake detection project 2026-08-20: he declined to fund the research and is not on the official ICoDSA 2026 Letter of Acceptance author list. Ema Rachmawati is the correct supervisor and 4th author."
     }
   ],
   "variants": [
