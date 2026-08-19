@@ -775,6 +775,33 @@
       ],
       "experience_heading": "Experience",
       "projects_heading": "Projects"
+    },
+    {
+      "key": "huawei",
+      "file": "rifqi-cv-huawei.docx",
+      "label": "Huawei AIOps",
+      "subtitle": "AI Engineer · Production ML and Reliability",
+      "summary": "AI engineer with production experience building and operating machine learning services at scale, GPA 4.0/4.0, Telkom University. Primary engineer on a production inference service for a fleet telematics client: FastAPI, Celery and Redis on CPU-only infrastructure, serving 40,000 to 50,000 videos with 163 automated tests and a documented API contract. Built CI pipelines and automated test suites from scratch, including 84 unit and 17 end-to-end tests, for a separate production application.",
+      "order": [
+        "summary",
+        "skills",
+        "experience",
+        "projects",
+        "awards",
+        "education",
+        "languages_certs"
+      ],
+      "experience": [
+        "transtrack",
+        "coe-bht",
+        "sg-coordinator"
+      ],
+      "projects": [
+        "deepfake-detection"
+      ],
+      "experience_heading": "Experience",
+      "projects_heading": "Projects",
+      "pageBreaks": false
     }
   ]
 }
