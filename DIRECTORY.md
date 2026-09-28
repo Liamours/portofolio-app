@@ -19,7 +19,7 @@ Static assets served by the site.
 
 | Path | Purpose |
 |---|---|
-| `public/data/` | site content as JSON (hero, about, projects, experience, publications, skills, figures) |
+| `public/data/` | site content as JSON, fetched by the app (hero, about, projects, experience, publications, skills) |
 | `public/images/` | photos, one folder per project or context |
 | `public/images/ui/` | screenshots of the site itself, used in README.md |
 | `public/favicon.svg`, `public/robots.txt` | standalone static files |
@@ -38,6 +38,7 @@ CV build pipeline. Not served by the site, a separate npm project.
 | `docs/scripts/verify.js` | checks generated files for banned phrasing and staleness |
 | `docs/templates/cover-letter-template.md` | fill-in cover letter template |
 | `docs/templates/media-candidates-260624.md` | notes on which photos suit which portfolio section |
+| `docs/templates/figures.json` | catalog of every photo in `public/images/`, subject and description, not fetched by the app |
 | `docs/output/` | generated .docx and PDF files, gitignored |
 
 ## Root files
