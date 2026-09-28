@@ -1,83 +1,36 @@
-# portofolio-app
+# M. Rifqi Dzaky Azhad
 
-Portfolio website for M. Rifqi Dzaky Azhad — medical imaging ML researcher at Telkom University.
+![Live Demo](https://img.shields.io/badge/demo-live-brightgreen) ![Medical Imaging](https://img.shields.io/badge/focus-medical%20imaging-blue) ![Industrial AI](https://img.shields.io/badge/focus-industrial%20AI-blue) ![Nuxt](https://img.shields.io/badge/built%20with-Nuxt-00DC82) ![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black)
 
-Live: https://portofolio-app-puce.vercel.app
+Medical Imaging and Industrial AI researcher at Telkom University. This repository hosts the source for my personal portfolio site.
 
-## Stack
+**Live site: [portofolio-app-puce.vercel.app](https://portofolio-app-puce.vercel.app)**
 
-Nuxt 4, Vue 3, TypeScript, deployed on Vercel (CSR/SPA).
+## About
 
-## Structure
+Fourth-year Informatics student at Telkom University, working across medical imaging and industrial AI.
 
-```
-app/
-  components/sections/   # HeroSection, AboutSection, ProjectsSection, etc.
-  components/ui/         # ProjectCard
-  pages/
-    index.vue            # Main portfolio page
-    projects/[id].vue    # Project detail pages
-  assets/css/main.css    # Global styles
-  composables/           # usePortfolio.ts — data fetching
+- Automated bone scan diagnosis pipeline published in *Knowledge-Based Systems*, with patient-level AUC 0.956, ahead of the commercial systems EXINI and BONENAVI
+- Five-module chest X-ray analysis platform shipping as web and desktop apps
+- Production inference service running on live mining fleet dashcams
+- Provider-aware retrieval system for B2B travel inventory, 1st Winner at the Travlr Data Challenge
+- Three published papers, three more accepted at IEEE conferences
+- GPA 4.0/4.0, graduating 2027
 
-public/
-  data/                  # Portfolio JSON data files
-    about.json           # Bio, institution, graduation
-    experience.json      # All experience entries (portfolio: true filters display)
-    hero.json            # Name, title, tagline, links
-    projects.json        # All projects (featured: true filters display)
-    publications.json    # Publications list
-    skills.json          # Skills by category
-    figures.json         # Image asset descriptions
-  images/                # Photos and figures
-  favicon.svg
+## Screenshots
 
-docs/                    # CV and cover letter documents (not served)
-  cv-260624.json         # Master CV data
-  cv-draft-260624.md     # CV draft (plain text)
-  cv-formula-260624.md   # CV show/not-show formula reference
-  cv-template-260624.md  # CV format research notes
-  cv-260624.md           # CV research notes
-  portfolio-draft-260624.md
-  media-candidates-260624.md
-  build-cv.js            # Builds rifqi-cv-260624.docx (hybrid)
-  build-cv-variants.js   # Builds industry, research, DS variants
-  build-cover.js         # Builds rifqi-cover-letter.docx
-  rifqi-cv-260624.docx
-  rifqi-cv-industry.docx
-  rifqi-cv-research.docx
-  rifqi-cv-ds.docx
-  rifqi-cover-letter.docx
-```
+![Homepage](.github/screenshots/home.png)
 
-## Data conventions
+![Projects section](.github/screenshots/projects.png)
 
-- `experience.json`: set `"portfolio": true` on entries to show on the portfolio page. All entries are included in the CV.
-- `projects.json`: set `"featured": true` on entries to show on the portfolio page.
-- Full month names everywhere. No abbreviated months (Jan, Feb, etc.).
-- No em dashes. No AI buzzwords (robust, seamless, leverage, curated, etc.).
+## Find me
 
-## Dev
+| | |
+|---|---|
+| Portfolio | [portofolio-app-puce.vercel.app](https://portofolio-app-puce.vercel.app) |
+| GitHub | [github.com/Liamours](https://github.com/Liamours) |
+| LinkedIn | [linkedin.com/in/rifqiazhad0210](https://www.linkedin.com/in/rifqiazhad0210/) |
+| Email | [rifqiazhad21@gmail.com](mailto:rifqiazhad21@gmail.com) |
+| Certificates | [t.ly/MPcDg](https://t.ly/MPcDg) |
 
-```bash
-npm install
-npm run dev        # http://localhost:3000
-```
-
-## CV rebuild
-
-```bash
-cd docs
-npm install        # first time only
-node build-cv.js                  # hybrid CV
-node build-cv-variants.js         # industry + research + DS variants
-node build-cover.js               # cover letter
-```
-
-## Deploy
-
-Pushed to GitHub master triggers manual deploy via Vercel CLI:
-
-```bash
-npx vercel --prod
-```
+Open to internships and research collaborations in medical imaging, ML engineering, and full-stack deployment.
