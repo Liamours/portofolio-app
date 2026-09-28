@@ -1,5 +1,5 @@
 // Checks every reader-facing file against the guardrails in cv-260624.json.
-// Usage: npm run verify (from docs/)        (exit 0 clean, exit 1 on any finding)
+// Usage: npm run verify (from cv/)        (exit 0 clean, exit 1 on any finding)
 //
 // Two failure modes are covered. A banned claim reaching a file is a content
 // failure. An export older than the source that produced it is a staleness
@@ -14,10 +14,10 @@ const fs = require('fs');
 const path = require('path');
 
 const SCRIPTS = __dirname;
-const DOCS = path.join(SCRIPTS, '..');
-const ROOT = path.join(DOCS, '..');
-const DATA = path.join(DOCS, 'data');
-const OUTPUT = path.join(DOCS, 'output');
+const CV_DIR = path.join(SCRIPTS, '..');
+const ROOT = path.join(CV_DIR, '..');
+const DATA = path.join(CV_DIR, 'data');
+const OUTPUT = path.join(CV_DIR, 'output');
 const cv = require('../data/cv-260624.json');
 
 // A rule is case-insensitive unless it sets cs, which exists for patterns whose

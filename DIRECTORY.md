@@ -24,22 +24,22 @@ Static assets served by the site.
 | `public/images/ui/` | screenshots of the site itself, used in README.md |
 | `public/favicon.svg`, `public/robots.txt` | standalone static files |
 
-## docs/
+## cv/
 CV build pipeline. Not served by the site, a separate npm project.
 
 | Path | Purpose |
 |---|---|
-| `docs/data/cv-260624.json` | master CV data, source of truth |
-| `docs/data/portfolio-overlay.json` | site-only presentation data layered on top of the CV facts |
-| `docs/scripts/sync.js` | generates `public/data/publications.json`, `skills.json`, `experience.json` from the CV and overlay |
-| `docs/scripts/build-cv.js`, `docs/scripts/build-cv-variants.js` | build the CV as .docx, hybrid and role-targeted variants |
-| `docs/scripts/build-cover.js` | builds the cover letter .docx from the template |
-| `docs/scripts/build-pdf.js` | converts the built .docx files to PDF |
-| `docs/scripts/verify.js` | checks generated files for banned phrasing and staleness |
-| `docs/templates/cover-letter-template.md` | fill-in cover letter template |
-| `docs/templates/media-candidates-260624.md` | notes on which photos suit which portfolio section |
-| `docs/templates/figures.json` | catalog of every photo in `public/images/`, subject and description, not fetched by the app |
-| `docs/output/` | generated .docx and PDF files, gitignored |
+| `cv/data/cv-260624.json` | master CV data, source of truth |
+| `cv/data/portfolio-overlay.json` | site-only presentation data layered on top of the CV facts |
+| `cv/scripts/sync.js` | generates `public/data/publications.json`, `skills.json`, `experience.json` from the CV and overlay |
+| `cv/scripts/build-cv.js`, `cv/scripts/build-cv-variants.js` | build the CV as .docx, hybrid and role-targeted variants |
+| `cv/scripts/build-cover.js` | builds the cover letter .docx from the template |
+| `cv/scripts/build-pdf.js` | converts the built .docx files to PDF |
+| `cv/scripts/verify.js` | checks generated files for banned phrasing and staleness |
+| `cv/templates/cover-letter-template.md` | fill-in cover letter template |
+| `cv/templates/media-candidates-260624.md` | notes on which photos suit which portfolio section |
+| `cv/templates/figures.json` | catalog of every photo in `public/images/`, subject and description, not fetched by the app |
+| `cv/output/` | generated .docx and PDF files, gitignored |
 
 ## Root files
 

@@ -1,5 +1,5 @@
 // Cover letter base template — fills [PLACEHOLDERS] before sending
-// Usage: npm run build:cover (from docs/)
+// Usage: npm run build:cover (from cv/)
 // Then open rifqi-cover-letter.docx and replace all [BRACKETS]
 
 const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('docx');

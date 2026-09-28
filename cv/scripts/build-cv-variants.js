@@ -1,5 +1,5 @@
 // Builds every role-targeted CV variant declared in cv-260624.json.
-// Usage: npm run build:variants (from docs/)
+// Usage: npm run build:variants (from cv/)
 //
 // This file holds layout only. Every reader-facing string lives in
 // cv-260624.json, so a corrected fact reaches all variants at once. Adding a

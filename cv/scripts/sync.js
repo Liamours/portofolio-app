@@ -1,5 +1,5 @@
 // Generates the site data files that duplicate cv-260624.json.
-// Usage: npm run sync (from docs/)
+// Usage: npm run sync (from cv/)
 //
 // publications.json, skills.json and experience.json are derived, because their
 // content is the same facts the CV states. projects.json is NOT generated: its

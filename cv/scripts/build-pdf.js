@@ -1,5 +1,5 @@
 // Converts every DOCX in output/ to PDF through Word.
-// Usage: npm run build:pdf (from docs/)
+// Usage: npm run build:pdf (from cv/)
 //
 // Word is driven over COM from PowerShell, so this needs Windows with Word
 // installed. Run it after the DOCX builders; verify.js treats a PDF older than
