@@ -19,9 +19,9 @@ Fourth-year Informatics student at Telkom University, working across medical ima
 
 ## Screenshots
 
-![Homepage](.github/screenshots/home.png)
+![Homepage](public/images/ui/home.png)
 
-![Projects section](.github/screenshots/projects.png)
+![Projects section](public/images/ui/projects.png)
 
 ## Find me
 
