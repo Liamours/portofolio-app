@@ -1,9 +1,12 @@
 // Cover letter base template — fills [PLACEHOLDERS] before sending
-// Usage: node build-cover.js
+// Usage: npm run build:cover (from docs/)
 // Then open rifqi-cover-letter.docx and replace all [BRACKETS]
 
-const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('./node_modules/docx');
+const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('docx');
 const fs = require('fs');
+const path = require('path');
+
+const OUT = path.join(__dirname, '../output');
 
 const FONT = "Calibri";
 const BODY = 20;  // 10pt
@@ -88,6 +91,7 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync('output/rifqi-cover-letter.docx', buf);
+  fs.mkdirSync(OUT, { recursive: true });
+  fs.writeFileSync(path.join(OUT, 'rifqi-cover-letter.docx'), buf);
   console.log('done: output/rifqi-cover-letter.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
 });

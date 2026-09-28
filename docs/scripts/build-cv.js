@@ -1,9 +1,12 @@
 const {
   Document, Packer, Paragraph, TextRun, ExternalHyperlink,
   AlignmentType, BorderStyle, TabStopType, LevelFormat
-} = require('./node_modules/docx');
+} = require('docx');
 const fs = require('fs');
-const cv = require('./cv-260624.json');
+const path = require('path');
+const cv = require('../data/cv-260624.json');
+
+const OUT = path.join(__dirname, '../output');
 
 // A4 with 0.75" margins
 const FONT   = "Calibri";
@@ -292,6 +295,7 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync('output/rifqi-cv-260624.docx', buf);
+  fs.mkdirSync(OUT, { recursive: true });
+  fs.writeFileSync(path.join(OUT, 'rifqi-cv-260624.docx'), buf);
   console.log('done: output/rifqi-cv-260624.docx (' + (buf.length / 1024).toFixed(1) + ' KB)');
 });

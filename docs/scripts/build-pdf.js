@@ -1,5 +1,5 @@
 // Converts every DOCX in output/ to PDF through Word.
-// Usage: node build-pdf.js
+// Usage: npm run build:pdf (from docs/)
 //
 // Word is driven over COM from PowerShell, so this needs Windows with Word
 // installed. Run it after the DOCX builders; verify.js treats a PDF older than
@@ -14,8 +14,8 @@ if (process.platform !== 'win32') {
   process.exit(1);
 }
 
-const OUT = path.join(__dirname, 'output');
-const cv = require('./cv-260624.json');
+const OUT = path.join(__dirname, '../output');
+const cv = require('../data/cv-260624.json');
 
 // Only what this pipeline builds. output/ also holds archived CV-Base-* files
 // kept as a record, and regenerating those would churn frozen history.

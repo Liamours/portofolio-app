@@ -1,5 +1,5 @@
 // Generates the site data files that duplicate cv-260624.json.
-// Usage: node docs/sync.js
+// Usage: npm run sync (from docs/)
 //
 // publications.json, skills.json and experience.json are derived, because their
 // content is the same facts the CV states. projects.json is NOT generated: its
@@ -12,9 +12,9 @@
 const fs = require('fs')
 const path = require('path')
 
-const cv = require('./cv-260624.json')
-const overlay = require('./portfolio-overlay.json')
-const OUT = path.join(__dirname, '../public/data')
+const cv = require('../data/cv-260624.json')
+const overlay = require('../data/portfolio-overlay.json')
+const OUT = path.join(__dirname, '../../public/data')
 
 const write = (name, data, unit) => {
   fs.writeFileSync(path.join(OUT, name), JSON.stringify(data, null, 2) + '\n')

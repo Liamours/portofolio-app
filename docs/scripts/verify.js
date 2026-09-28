@@ -1,5 +1,5 @@
 // Checks every reader-facing file against the guardrails in cv-260624.json.
-// Usage: node docs/verify.js        (exit 0 clean, exit 1 on any finding)
+// Usage: npm run verify (from docs/)        (exit 0 clean, exit 1 on any finding)
 //
 // Two failure modes are covered. A banned claim reaching a file is a content
 // failure. An export older than the source that produced it is a staleness
@@ -13,9 +13,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOCS = __dirname;
+const SCRIPTS = __dirname;
+const DOCS = path.join(SCRIPTS, '..');
 const ROOT = path.join(DOCS, '..');
-const cv = require('./cv-260624.json');
+const DATA = path.join(DOCS, 'data');
+const OUTPUT = path.join(DOCS, 'output');
+const cv = require('../data/cv-260624.json');
 
 // A rule is case-insensitive unless it sets cs, which exists for patterns whose
 // casing carries the meaning. "mAP" is a detection metric; ".map(" is not.
@@ -78,9 +81,9 @@ function walkDir(dir, exts, out = []) {
   return out;
 }
 
-scanJson(path.join(DOCS, 'cv-260624.json'));
+scanJson(path.join(DATA, 'cv-260624.json'));
 listFiles(path.join(ROOT, 'public/data'), '.json').forEach(scanJson);
-listFiles(DOCS, '.js').filter(f => path.basename(f) !== 'verify.js').forEach(scanText);
+listFiles(SCRIPTS, '.js').filter(f => path.basename(f) !== 'verify.js').forEach(scanText);
 walkDir(path.join(ROOT, 'app'), ['.vue', '.ts']).forEach(scanText);
 [path.join(ROOT, 'README.md')].filter(fs.existsSync).forEach(scanText);
 
@@ -181,13 +184,13 @@ const mtime = f => fs.existsSync(f) ? fs.statSync(f).mtimeMs : null;
 const stale = [];
 
 const SOURCES = [
-  path.join(DOCS, 'cv-260624.json'),
-  path.join(DOCS, 'build-cv-variants.js'),
+  path.join(DATA, 'cv-260624.json'),
+  path.join(SCRIPTS, 'build-cv-variants.js'),
 ];
 const newestSource = Math.max(...SOURCES.map(mtime).filter(Boolean));
 
 for (const v of cv.variants || []) {
-  const docx = path.join(DOCS, 'output', v.file);
+  const docx = path.join(OUTPUT, v.file);
   const t = mtime(docx);
   if (t === null) {
     stale.push(`${v.file} has never been built`);

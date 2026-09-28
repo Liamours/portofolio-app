@@ -1,5 +1,5 @@
 // Builds every role-targeted CV variant declared in cv-260624.json.
-// Usage: node build-cv-variants.js
+// Usage: npm run build:variants (from docs/)
 //
 // This file holds layout only. Every reader-facing string lives in
 // cv-260624.json, so a corrected fact reaches all variants at once. Adding a
@@ -8,10 +8,10 @@
 const {
   Document, Packer, Paragraph, TextRun, ExternalHyperlink,
   AlignmentType, BorderStyle, TabStopType, LevelFormat
-} = require('./node_modules/docx');
+} = require('docx');
 const fs = require('fs');
 const path = require('path');
-const cv = require('./cv-260624.json');
+const cv = require('../data/cv-260624.json');
 
 const FONT   = "Garamond";
 const BODY   = 20;
@@ -355,7 +355,8 @@ const PAGE = {
 // ── build all ────────────────────────────────────────────────────────────────
 
 async function buildAll() {
-  const outDir = path.join(__dirname, 'output');
+  const outDir = path.join(__dirname, '../output');
+  fs.mkdirSync(outDir, { recursive: true });
   for (const v of cv.variants) {
     const buf = await Packer.toBuffer(buildVariant(v));
     const out = path.join(outDir, v.file);

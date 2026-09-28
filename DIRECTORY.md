@@ -29,15 +29,15 @@ CV build pipeline. Not served by the site, a separate npm project.
 
 | Path | Purpose |
 |---|---|
-| `docs/cv-260624.json` | master CV data, source of truth |
-| `docs/portfolio-overlay.json` | site-only presentation data layered on top of the CV facts |
-| `docs/sync.js` | generates `public/data/publications.json`, `skills.json`, `experience.json` from the CV and overlay |
-| `docs/build-cv.js`, `docs/build-cv-variants.js` | build the CV as .docx, hybrid and role-targeted variants |
-| `docs/build-cover.js` | builds the cover letter .docx from the template |
-| `docs/build-pdf.js` | converts the built .docx files to PDF |
-| `docs/verify.js` | checks generated files for banned phrasing and staleness |
-| `docs/cover-letter-template.md` | fill-in cover letter template |
-| `docs/media-candidates-260624.md` | notes on which photos suit which portfolio section |
+| `docs/data/cv-260624.json` | master CV data, source of truth |
+| `docs/data/portfolio-overlay.json` | site-only presentation data layered on top of the CV facts |
+| `docs/scripts/sync.js` | generates `public/data/publications.json`, `skills.json`, `experience.json` from the CV and overlay |
+| `docs/scripts/build-cv.js`, `docs/scripts/build-cv-variants.js` | build the CV as .docx, hybrid and role-targeted variants |
+| `docs/scripts/build-cover.js` | builds the cover letter .docx from the template |
+| `docs/scripts/build-pdf.js` | converts the built .docx files to PDF |
+| `docs/scripts/verify.js` | checks generated files for banned phrasing and staleness |
+| `docs/templates/cover-letter-template.md` | fill-in cover letter template |
+| `docs/templates/media-candidates-260624.md` | notes on which photos suit which portfolio section |
 | `docs/output/` | generated .docx and PDF files, gitignored |
 
 ## Root files

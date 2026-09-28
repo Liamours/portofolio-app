@@ -1,5 +1,5 @@
 {
-  "_readme": "Site-only presentation for experience.json. Facts (role, organization, period, highlights) come from cv-260624.json; this file supplies ordering, the type badge, the portfolio flag, and the competition entries, which exist only on the site. Regenerate with: node docs/sync.js",
+  "_readme": "Site-only presentation for experience.json. Facts (role, organization, period, highlights) come from cv-260624.json; this file supplies ordering, the type badge, the portfolio flag, and the competition entries, which exist only on the site. Regenerate with: npm run sync (from docs/)",
   "experience_order": [
     "cxr-ra",
     "coe-bht",
