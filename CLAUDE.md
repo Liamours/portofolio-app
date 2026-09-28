@@ -6,6 +6,8 @@ Source of truth: `cv/data/cv-260624.json` holds every fact (experience, projects
 
 Below are named protocols for recurring work. Refer to a protocol by name when asking for it or reporting on it, for example "ran CV-SYNC" or "this is a TIDY-PASS task."
 
+Every `cd cv && ...` command below runs from the repo root. `cv/` is its own npm project: if `cv/node_modules` doesn't exist yet, run `npm install` inside `cv/` first, regardless of which protocol step you're on.
+
 ---
 
 ## CV-SYNC
@@ -20,7 +22,7 @@ Below are named protocols for recurring work. Refer to a protocol by name when a
 3. Update `cv-260624.json` with new or changed facts. Never hand-edit a `public/data/*.json` file that `sync.js` generates.
 4. If experience entries changed, update `cv/data/portfolio-overlay.json` (`experience_order`, `experience_meta`, `competitions`) to match. `sync.js` errors on a mismatch.
 5. If projects changed, update `public/data/projects.json` by hand, keeping `period` and the project key in sync with `cv.projects`.
-6. `cd cv && npm install` (first time only), then `npm run sync`.
+6. `cd cv && npm run sync`.
 7. `npm run build:cv`, `build:variants`, `build:cover` if a fresh docx is needed. Skip `build:pdf` outside Windows with Word.
 8. `npm run verify`. Fix every finding: banned claim, schema, drift, staleness.
 9. Commit.
@@ -53,14 +55,14 @@ Below are named protocols for recurring work. Refer to a protocol by name when a
 
 **Purpose**: keep the folder structure conventional, keep `DIRECTORY.md` accurate, and catch content that has drifted into the wrong place.
 
-**Steps** (run as a loop until one full pass makes zero changes):
-1. Pick the next folder not yet reviewed this pass.
+**Steps**:
+1. Pick the next top-level folder not yet reviewed this pass (`app/`, `public/`, `cv/`, and so on, one level deep, matching `DIRECTORY.md`'s existing granularity, not every nested subfolder).
 2. List its contents, update its section in `DIRECTORY.md`.
-3. Check `DIRECTORY.md` for folder-purpose overlap. Flag it, don't merge automatically, that's a judgment call for the user.
-4. Check the folder for misplaced files: content that doesn't match the folder's purpose, or an unusual mix of kinds. If the right home is obvious and matches an existing convention in this repo, move it and fix every reference, then verify nothing broke. If it's ambiguous, ask.
+3. Check `DIRECTORY.md` for folder-purpose overlap: two folders whose one-line purposes could be swapped without changing anything true. Flag it in your report, don't merge automatically, that's a judgment call for the user.
+4. Check the folder for misplaced files: a file whose kind (code, data, prose, generated output) doesn't match what the folder otherwise holds, or that nothing in the app/scripts actually reads (check with a repo-wide grep for its filename before deciding). If the right home is a folder that already exists in this repo for that kind of content, move it and fix every reference, then verify nothing broke. If no existing folder fits, or it's genuinely unclear, flag it and ask rather than inventing a new folder.
 5. Repeat from step 1.
 
-**Done when**: a full pass over every folder finds nothing to flag and nothing to move.
+**Done when**: one full pass over every top-level folder produces zero flags and zero moves. A pass that only flags something (without moving it) has not met done-when, run another pass after the flag is resolved.
 
 ---
 
