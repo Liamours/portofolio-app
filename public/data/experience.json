@@ -5,20 +5,20 @@
     "period": "2026 – Present",
     "type": "research",
     "highlights": [
-      "Built a hierarchical pathology classifier covering 14 disease categories, expanding to 20+ aligned to Indonesian healthcare organization standards, with fallback uncertainty estimation for ambiguous cases.",
+      "Built a hierarchical pathology classifier aligned to Indonesian clinical-authority disease categories, with fallback uncertainty estimation for ambiguous cases.",
       "Delivered the classifier and organ segmentation as microservices, and contributed to the deployed web application and the report-generation model.",
-      "First-authored a study pooling seven public chest radiograph datasets into 527,745 images to test whether hierarchy-consistency regularization improves multi-label classification. Submitted to IBIOMED 2026."
+      "First-authored a study pooling seven public chest radiograph datasets to test whether hierarchy-consistency regularization improves multi-label classification. Accepted at IBIOMED 2026, pending TPC approval."
     ],
     "portfolio": true
   },
   {
     "role": "Dashboard Automation Specialist",
     "organization": "CoE BHT, Telkom University",
-    "period": "June 2026 – Present",
+    "period": "June 2026 – October 2026",
     "type": "research",
     "highlights": [
-      "Built a retrieval-augmented generation pipeline on Ollama-served Llama models with regex-based heuristic parsing, structuring CoE BHT's document-based research records for natural-language query.",
-      "Built a scraper pulling researcher publication and citation data from SINTA and the DOI API, automating data collection for CoE BHT's research KPI dashboards."
+      "Built a retrieval-augmented generation pipeline over CoE BHT's research documents: Docling for document extraction, text embeddings for retrieval, and both local Ollama-served Llama models and API-based models for natural-language query.",
+      "Built scrapers pulling researcher publication and citation data from SINTA, Google Scholar and the DOI API, automating data collection for CoE BHT's research KPI dashboards."
     ],
     "portfolio": false
   },
@@ -28,8 +28,8 @@
     "period": "March 2025 – June 2026",
     "type": "research",
     "highlights": [
-      "Built the data cleaning, labelling, and pairing pipeline that produced the 71,129-clip training set from raw MDVR alarm footage across three mining fleets.",
-      "Primary engineer on the production inference service: a FastAPI, Celery, and Redis Docker stack on a CPU-only VM, serving 40,000 to 50,000 videos for a fleet telematics client, with 163 tests and a documented API contract."
+      "Built the data cleaning, labelling, and pairing pipeline that prepared raw MDVR alarm footage from three mining fleets for fatigue model training.",
+      "Primary engineer on the production inference service: a FastAPI, Celery, and Redis Docker stack on a CPU-only VM that serves a fleet telematics client, with automated tests and a documented API contract."
     ],
     "portfolio": true
   },
@@ -46,11 +46,11 @@
   },
   {
     "role": "Data Scientist Intern",
-    "organization": "HUMIC Engineering",
+    "organization": "HUMIC Engineering, Telkom University",
     "period": "April 2026 – June 2026",
     "type": "research",
     "highlights": [
-      "Screened 212+ papers using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction.",
+      "Screened papers for a systematic literature review using Zotero and Parsifal with AI-assisted triage, applying PRISMA-aligned quality assessment and structured data extraction.",
       "Produced a synthesis mapping publication trends by year, covering the full reviewed corpus."
     ],
     "portfolio": true
@@ -61,7 +61,7 @@
     "period": "August 2024 – February 2025",
     "type": "research",
     "highlights": [
-      "Annotated 600+ bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
+      "Annotated bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
       "Built a skeletal segmentation and biomarker quantification pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
     ],
     "portfolio": true

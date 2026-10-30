@@ -108,10 +108,10 @@
     "title": "Does Hierarchy-Consistency Regularization Help Multi-Label Chest Radiograph Classification? Evidence from a Seven-Dataset Pooled Corpus",
     "venue": "IBIOMED 2026, 6th International Conference on Biomedical Engineering",
     "year": 2026,
-    "type": "Conference Paper (Under Review)",
+    "type": "Conference Paper (Accepted)",
     "role": "author",
     "authors": "M. Rifqi Dzaky Azhad, Muhammad Al Abrar, Ema Rachmawati",
-    "context": "Seven public chest radiograph datasets pooled into 527,745 images and evaluated over 25 findings drawn from Indonesian clinical guidelines. First author."
+    "context": "Seven public chest radiograph datasets (CheXpert, COVIDx-CXR4, NIH ChestX-ray14, PadChest, TBX11K, VinDr-CXR, VinDr-PCXR) pooled into 527,745 images across 51 Indonesian clinical-authority disease categories (PDPI/PNPK/KKI taxonomy). First author."
   },
   {
     "title": "Mask Image of Whole-Body Bone Scan Image Dataset",

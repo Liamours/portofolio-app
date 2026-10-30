@@ -140,7 +140,7 @@
     "id": "telplastina",
     "title": "Telplastina: Offline Bone Scintigraphy Workstation",
     "type": "software",
-    "period": "2025 – Present",
+    "period": "July 2026 – Present",
     "institution": "Telkom University",
     "summary": "The studies cannot leave the building, the acquisition workstation has restricted network access, and there is no budget for a vendor licence. So it ships as one offline executable that never opens a socket to the outside.",
     "stats": [
@@ -255,6 +255,85 @@
     ],
     "featured": true,
     "narrative": "Reading a chest X-ray involves multiple simultaneous tasks: identifying pathologies, locating organs, generating a structured report, and answering clinical questions. This project builds a five-module platform where each task is a separate AI module, delivered together as a unified clinical tool for radiologist-assisted diagnosis."
+  },
+  {
+    "id": "tb-lesion-localization",
+    "title": "Tuberculosis Lesion Localization in Chest X-Rays",
+    "type": "research",
+    "period": "August 2026 – Present",
+    "institution": "Telkom University",
+    "summary": "Five public tuberculosis datasets audited for hidden data-quality problems, and one turned out to be a byte-identical copy of another. A two-stage pipeline then screens chest X-rays for TB and draws a box around the lesion, benchmarked against 17 detector variants across three architecture paradigms.",
+    "stats": [
+      {
+        "value": "17",
+        "label": "Detectors compared"
+      },
+      {
+        "value": "5",
+        "label": "Datasets audited"
+      },
+      {
+        "value": "23,837",
+        "label": "Images audited"
+      }
+    ],
+    "highlights": [
+      "Two-stage pipeline: a DenseNet121 classifier flags TB on the whole image, a YOLO detector then draws the lesion box, trained on TBX11K's 1,200 box-annotated images.",
+      "Compared 17 detector configurations across three paradigms, anchor-based, anchor-free, and transformer, isolating architecture as the only variable across 11 same-condition training runs.",
+      "Built a three-tier deduplication pipeline (byte hash, decoded-pixel hash, calibrated near-duplicate detection) that caught a data-leakage bug misattributing TB-positive images between sources, and found one of five 'independent' datasets was a full duplicate of another.",
+      "Reproduced and re-verified all 21 trained models from checkpoint, catching a bug in the project's own evaluation script that had understated every YOLO model's accuracy by 8 to 11 percentage points.",
+      "Target deployment is inference on real hospital data from RSUP Dr. Hasan Sadikin Bandung, in collaboration with a teammate preparing the clinical images."
+    ],
+    "stack": [
+      "Python",
+      "PyTorch",
+      "YOLO",
+      "torchvision",
+      "HuggingFace Transformers",
+      "DenseNet121"
+    ],
+    "featured": false,
+    "narrative": "A TB screening model is only as trustworthy as the data it learned from. Before training anything, this project audited five public datasets against a reproducibility checklist and found a labeling bug that had been silently reassigning positive cases between sources, an error that made one dataset look almost entirely negative and hid the fact that another was a straight copy of a third. The detection pipeline built on the corrected data compares 17 architectures rather than picking one and assuming it generalizes."
+  },
+  {
+    "id": "tb-timika-severity",
+    "title": "Automated Tuberculosis Detection and Timika Severity Scoring from Chest X-Rays",
+    "type": "research",
+    "period": "2026 – Present",
+    "institution": "Telkom University · Universitas Padjadjaran · RSUP Dr. Hasan Sadikin Bandung",
+    "summary": "Implements the Timika chest X-ray severity score end to end, lung segmentation to per-zone opacification to cavity bonus, and builds the large, quality-checked chest X-ray corpus that scoring pipeline needed to exist.",
+    "stats": [
+      {
+        "value": "55,588",
+        "label": "Images verified"
+      },
+      {
+        "value": "37,033",
+        "label": "Derived training corpus"
+      },
+      {
+        "value": "138",
+        "label": "Ground-truth masks"
+      }
+    ],
+    "highlights": [
+      "Implemented the Timika score's 6-zone geometric method end to end: zone derivation from lung segmentation, per-zone opacification percentage, and cavity-bonus scoring, with full test coverage.",
+      "Benchmarked lung-segmentation candidates against 138 radiologist-drawn ground-truth masks and selected PSPNet over an anatomy-aware alternative.",
+      "Built and quality-verified an 8-dataset, 55,588-image public chest X-ray corpus, then assembled a derived 37,033-image training corpus with automated 6-zone pseudolabels from the benchmarked segmentation model.",
+      "Evaluated 7 candidate methods, including SAM and MedSAM, for localizing disease regions without pixel-level ground truth, benchmarked against real annotated masks from an independent dataset."
+    ],
+    "stack": [
+      "Python",
+      "PyTorch",
+      "YOLO",
+      "DenseNet",
+      "PSPNet",
+      "SAM",
+      "MedSAM",
+      "Grad-CAM"
+    ],
+    "featured": false,
+    "narrative": "A severity score is only useful if it can be computed automatically at the scale a hospital actually needs. This project implements the Timika scoring method end to end on top of a benchmarked lung-segmentation model, and along the way builds and verifies the chest X-ray corpus the scoring pipeline runs on, since no existing public dataset carried the zone-level labels the method requires."
   },
   {
     "id": "travlr-embeddings",
