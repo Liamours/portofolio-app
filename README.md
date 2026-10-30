@@ -31,18 +31,6 @@ public/
     figures.json         # Image asset descriptions
   images/                # Photos and figures
   favicon.svg
-
-docs/                    # CV and cover letter documents (not served)
-  cv-260624.json         # Master CV data
-  cv-draft-260624.md     # CV draft (plain text)
-  cv-formula-260624.md   # CV show/not-show formula reference
-  cv-template-260624.md  # CV format research notes
-  cv-260624.md           # CV research notes
-  portfolio-draft-260624.md
-  media-candidates-260624.md
-  build-cv.js            # Builds rifqi-cv-260624.docx (hybrid)
-  build-cv-variants.js   # Builds industry, research, DS variants
-  build-cover.js         # Builds rifqi-cover-letter.docx
   rifqi-cv-260624.docx
   rifqi-cv-industry.docx
   rifqi-cv-research.docx
@@ -66,13 +54,7 @@ npm run dev        # http://localhost:3000
 
 ## CV rebuild
 
-```bash
-cd docs
-npm install        # first time only
-node build-cv.js                  # hybrid CV
-node build-cv-variants.js         # industry + research + DS variants
-node build-cover.js               # cover letter
-```
+CV, resume and cover letter builds live in `../document-builder`; this repo only serves the site.
 
 ## Deploy
 
