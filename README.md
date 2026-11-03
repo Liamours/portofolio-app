@@ -54,7 +54,7 @@ npm run dev        # http://localhost:3000
 
 ## CV rebuild
 
-CV, resume and cover letter builds live in `../document-builder`; this repo only serves the site.
+CV, resume and cover letter builds live in `../document_builder`; this repo only serves the site.
 
 ## Deploy
 
