@@ -45,6 +45,10 @@ public/
 - Full month names everywhere. No abbreviated months (Jan, Feb, etc.).
 - No em dashes. No AI buzzwords (robust, seamless, leverage, curated, etc.).
 
+## Data
+
+`public/data/*.json` is generated from `information/` by `repo/document_builder` (`npm run build`); edit the sources there, not here. The files stay in this repo because Vercel builds from git.
+
 ## Dev
 
 ```bash
