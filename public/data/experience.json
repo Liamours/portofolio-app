@@ -62,7 +62,7 @@
     "type": "research",
     "highlights": [
       "Annotated bone scan images supervised by nuclear medicine physicians at Dr. Hasan Sadikin Hospital, Universitas Padjadjaran.",
-      "Built a skeletal segmentation and biomarker quantification pipeline covering 12 anatomical regions. Patient-level AUC 0.956, surpassing EXINI and BONENAVI."
+      "Built a skeletal segmentation and biomarker quantification pipeline covering 12 anatomical regions. Patient-level AUC 0.956."
     ],
     "portfolio": true
   },

@@ -6,7 +6,7 @@
     "type": "Journal Paper",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Yolanda Rahma Chrysti, Nasywa Kamila",
-    "context": "Bone scan segmentation pipeline achieving patient-level AUC 0.956, above EXINI and BONENAVI. Second author and main coder.",
+    "context": "Self-configuring nnU-Net v2 segmentation of whole-body bone scans on the BS-80K dataset, compared against FCN, DeepLabv3+, DANet and SegFormer. Second author.",
     "link": "https://doi.org/10.22266/ijies2026.0731.46"
   },
   {
@@ -26,17 +26,18 @@
     "type": "Journal Paper",
     "role": "author",
     "authors": "Ema Rachmawati, M. Rifqi Dzaky Azhad, Ida Bagus Indrabudhi Kusuma, Yolanda Rahma Chrysti, Nasywa Kamila",
-    "context": "Full diagnostic framework from bone scan segmentation through BSI biomarker quantification. Second author and main coder.",
+    "context": "Whole-body bone scan segmentation into 12 anatomical regions with hotspot-based biomarker quantification. Second author and main coder.",
     "link": "https://doi.org/10.1016/j.knosys.2026.116681"
   },
   {
     "title": "Provider-Aware Contrastive Learning for Accommodation Quality Embeddings in Multi-Provider B2B Travel Platforms",
-    "venue": "ICoICT 2026, Challenge Track, IEEE Xplore (pending presentation)",
+    "venue": "ICoICT 2026, Challenge Track, IEEE Xplore",
     "year": 2026,
-    "type": "Conference Paper (Accepted)",
+    "type": "Conference Paper",
     "role": "author",
     "authors": "M. Rifqi Dzaky Azhad, Hilya Tsaniya",
-    "context": "First author and presenter. Built on the Travlr Data Challenge dataset and placed 1st in that challenge."
+    "context": "First author and presenter. Built on the Travlr Data Challenge dataset and placed 1st in that challenge.",
+    "link": "https://ieeexplore.ieee.org/document/11664785"
   },
   {
     "title": "Gated Mixture-of-Experts Fusion for Multimodal Deepfake Detection Under Mixed Manipulation Scenarios",
@@ -49,12 +50,13 @@
   },
   {
     "title": "PACT: Compliance Reporting in PPE Detection Based on Pose-Anchored Body Region Assignment",
-    "venue": "ICERA 2026, IEEE Xplore (pending presentation)",
+    "venue": "ICERA 2026, IEEE Xplore",
     "year": 2026,
-    "type": "Conference Paper (Accepted)",
+    "type": "Conference Paper",
     "role": "author",
     "authors": "Nabila Putri Azhari, Fathan Arya Maulana, M. Rifqi Dzaky Azhad, Ema Rachmawati, Hilya Tsaniya",
-    "context": "PPE compliance reporting anchored to pose-derived body regions. Third author."
+    "context": "PPE compliance reporting anchored to pose-derived body regions. Third author.",
+    "link": "https://ieeexplore.ieee.org/document/11666600"
   },
   {
     "title": "Bone Scan Biomarker Quantification Dataset",

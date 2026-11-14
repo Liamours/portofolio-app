@@ -47,12 +47,8 @@
       "/images/bonescan/bonescan-team-1.jpg",
       "/images/bonescan/bonescan-team-2.jpg"
     ],
-    "summary": "Open-source bone scan diagnosis pipeline. Patient-level AUC 0.956, above EXINI and BONENAVI, both commercial systems used in clinics today.",
+    "summary": "Open-source bone scan diagnosis pipeline: annotation, skeletal segmentation, biomarker quantification and patient-level classification.",
     "stats": [
-      {
-        "value": "0.956",
-        "label": "Patient AUC"
-      },
       {
         "value": "12",
         "label": "Anatomical regions"
@@ -60,12 +56,16 @@
       {
         "value": "600+",
         "label": "Images annotated"
+      },
+      {
+        "value": "0.956",
+        "label": "Patient AUC"
       }
     ],
     "highlights": [
       "Annotated 600+ whole-body bone scans under nuclear medicine physicians at Dr. Hasan Sadikin Hospital.",
       "Skeletal segmentation with nnU-Net v2 across 12 anatomical regions, feeding automated Bone Scan Index quantification.",
-      "Patient-level classification with XGBoost and LightGBM reaching AUC 0.956, above the two commercial systems in clinical use at the time.",
+      "Patient-level classification with XGBoost and LightGBM, AUC 0.956.",
       "Published in Knowledge-Based Systems with code and dataset released open access."
     ],
     "stack": [
@@ -81,7 +81,7 @@
       "paper": "https://doi.org/10.1016/j.knosys.2026.116681"
     },
     "featured": true,
-    "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task currently done by two proprietary commercial systems with no open alternative. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training segmentation models, and quantifying BSI automatically. The goal was clinical-grade accuracy with complete transparency."
+    "narrative": "Staging bone metastasis requires computing a Bone Scan Index from whole-body scintigraphy images, a task usually done by proprietary systems. This project built a fully open pipeline: annotating scans from scratch under physician supervision, training segmentation models, and quantifying BSI automatically. The goal was an open pipeline whose every step can be inspected."
   },
   {
     "id": "fatigue-detection",
