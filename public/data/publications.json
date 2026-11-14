@@ -90,7 +90,7 @@
     "title": "ScintiGround-38K: A Grounded Visual Question Answering Benchmark for Paired Anterior-Posterior Bone Scintigraphy",
     "venue": "Journal of Imaging Informatics in Medicine",
     "year": 2026,
-    "type": "Journal Paper (Under Review)",
+    "type": "Journal Paper (Accepted)",
     "role": "author",
     "authors": "M. Rifqi Dzaky Azhad, Ema Rachmawati",
     "context": "38,469 instances for visual question answering, image localization and grounded VQA, built from 23,967 anterior and posterior image pairs across 2,815 patients. First author."
